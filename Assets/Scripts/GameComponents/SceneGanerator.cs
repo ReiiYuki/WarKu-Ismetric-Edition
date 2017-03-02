@@ -5,15 +5,16 @@ using UnityEngine;
 public class SceneGanerator : MonoBehaviour {
 
     public GameObject landPrototype,rockPrototype,forestPrototype;
+    public GameObject riverCurveLeftUp, riverCurveLeftDown, riverCurveRightUp, riverCurveRightDown, riverLeft, riverDown;
 
     GameObject[,] boardObject;
-    int numForest;
-    int numRock;
+    Vector3[,] boardPosition;
+
+    const int BOARD_SIZE = 12;
 
 	// Use this for initialization
 	void Start () {
         InitializeBoard();
-        GenerateScene();
 	}
 	
 	// Update is called once per frame
@@ -23,42 +24,157 @@ public class SceneGanerator : MonoBehaviour {
 
     void InitializeBoard()
     {
-        boardObject = new GameObject[8,8];
-        numForest = Random.Range(1,16);
-        numRock = Random.Range(1,8);
+        boardObject = new GameObject[BOARD_SIZE, BOARD_SIZE];
+        boardPosition = new Vector3[BOARD_SIZE, BOARD_SIZE];
+        GeneratePosition();
+        GenerateGeo();
     }
 
-    void GenerateScene()
+    void GeneratePosition()
     {
-        //int assignNum;
-        float origin_y = 2f;
-        int assignNum;
-        for (int i = 0; i < 8; i++)
+        const float ORIGIN_Y = 3.5f;
+        for (int i = 0; i < BOARD_SIZE; i++)
         {
-            float constant_x = i * -0.65f;
-            float constant_y = i * -0.325f+origin_y;
-            for (int j = 0; j < 8; )
+            float offsetX = i * -0.65f;
+            float offsetY = i * -0.325f + ORIGIN_Y;
+            for (int j = 0; j < BOARD_SIZE; j++)
+                boardPosition[i, j] = new Vector3(j * 0.65f + offsetX, j * -0.325f + offsetY, -1 * (j + i));
+        }
+    }
+
+    void GenerateGeo()
+    {
+        GenerateRiver();
+        GenerateGround();
+    }
+
+    void GenerateRiver()
+    {
+        bool hasRiver = true;//Mathf.Round(Random.Range(0f, 1f))==1;
+        if (hasRiver)
+        {
+            int y = Random.Range(1, BOARD_SIZE-1);
+            int x = 0;
+            string currentType;
+            int selection = Random.Range(0, 3);
+            if (selection == 0)
             {
-                assignNum = (int)Random.Range(0, 3);
-                if (assignNum == 1)
+                boardObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity);
+                currentType = "l";
+            }else if (selection == 1)
+            {
+                boardObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity);
+                currentType = "ld";
+            }else
+            {
+                boardObject[x, y] = Instantiate(riverCurveRightDown, boardPosition[x, y], Quaternion.identity);
+                currentType = "rd";
+            }
+            while ( (x< BOARD_SIZE  && x>=0) && (y< BOARD_SIZE && y>=0) )
+            {
+                Debug.Log(currentType+" "+x+" "+y);
+                if (currentType == "ld")
                 {
-                    if (numForest <= 0) continue;
-                    numForest--;
-                    Vector3 position = new Vector3(j * 0.65f + constant_x, j * -0.325f + constant_y+0.14f, -1 * (j + i));
-                    boardObject[i,j] = Instantiate(forestPrototype, position , Quaternion.identity);
+                    selection = Random.Range(0, 2);
+                    y++;
+                    if (y > BOARD_SIZE-1) break; 
+                    if (selection == 0)
+                    {
+                        boardObject[x, y] = Instantiate(riverCurveRightUp, boardPosition[x, y], Quaternion.identity);
+                        currentType = "ru";
+                    }else
+                    {
+                        boardObject[x, y] = Instantiate(riverDown, boardPosition[x, y], Quaternion.identity);
+                        currentType = "d";
+                    }
                 }
-                else if (assignNum == 2)
+                else if (currentType == "rd")
                 {
-                    if (numRock <= 0) continue;
-                    numRock--;
-                    Vector3 position = new Vector3(j * 0.65f + constant_x, j * -0.325f + constant_y, -1 * (j + i));
-                    boardObject[i, j] = Instantiate(rockPrototype, position , Quaternion.identity);
-                }else
-                {
-                    Vector3 position = new Vector3(j * 0.65f + constant_x, j * -0.325f + constant_y, -1 * (j + i));
-                    boardObject[i, j] = Instantiate(landPrototype, position, Quaternion.identity);
+                    y--;
+                    if (y < 0) break;
+                    boardObject[x, y] = Instantiate(riverCurveLeftUp, boardPosition[x, y], Quaternion.identity);
+                    currentType = "lu";
                 }
-                j++;
+                else if (currentType == "ru")
+                {
+                    x++;
+                    if (x > BOARD_SIZE-1) break;
+                    selection = Random.Range(0, 2);
+                    if (selection == 0)
+                    {
+                        boardObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity);
+                        currentType = "ld";
+                    }
+                    else
+                    {
+                        boardObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity);
+                        currentType = "l";
+                    }
+                }
+                else if (currentType == "lu")
+                {
+                    x++;
+                    if (x > BOARD_SIZE-1) break;
+                    selection = Random.Range(0, 2);
+                    if (selection == 0)
+                    {
+                        boardObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity);
+                        currentType = "ld";
+                    }
+                    else
+                    {
+                        boardObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity);
+                        currentType = "l";
+                    }
+                }
+                else if (currentType == "d")
+                {
+                    y++;
+                    if (y > BOARD_SIZE-1) break;
+                    selection = Random.Range(0, 2);
+                    if (selection == 0)
+                    {
+                        boardObject[x, y] = Instantiate(riverCurveRightUp, boardPosition[x, y], Quaternion.identity);
+                        currentType = "ru";
+                    }
+                    else
+                    {
+                        boardObject[x, y] = Instantiate(riverDown, boardPosition[x, y], Quaternion.identity);
+                        currentType = "d";
+                    }
+                }
+                else if (currentType == "l")
+                {
+                    selection = Random.Range(0, 3);
+                    x++;
+                    if (x > BOARD_SIZE-1) break;
+                    if (selection == 0)
+                    {
+                        boardObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity);
+                        currentType = "ld";
+                    }
+                    else if (selection==1)
+                    {
+                        boardObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity);
+                        currentType = "l";
+                    }else
+                    {
+                        boardObject[x, y] = Instantiate(riverCurveRightDown, boardPosition[x, y], Quaternion.identity);
+                        currentType = "rd";
+                    }
+                }
+            }
+        }
+    }
+
+    void GenerateGround()
+    {
+        for (int i = 0; i < BOARD_SIZE; i++)
+        {
+            for (int j = 0; j < BOARD_SIZE; j++)
+            {
+                if (boardObject[i, j] == null)
+                    boardObject[i, j] = Instantiate(landPrototype, boardPosition[i, j], Quaternion.identity);
             }
         }
     }
