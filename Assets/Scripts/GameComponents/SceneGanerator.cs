@@ -72,7 +72,6 @@ public class SceneGanerator : MonoBehaviour {
             }
             while ( (x< BOARD_SIZE  && x>=0) && (y< BOARD_SIZE && y>=0) )
             {
-                Debug.Log(currentType+" "+x+" "+y);
                 if (currentType == "ld")
                 {
                     selection = Random.Range(0, 2);
@@ -165,6 +164,11 @@ public class SceneGanerator : MonoBehaviour {
                 }
             }
         }
+    }
+
+    void GenerateMountain()
+    {
+
     }
 
     void GenerateGround()
