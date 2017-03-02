@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class SceneGanerator : MonoBehaviour {
 
-    public GameObject landPrototype;
+    public GameObject landPrototype,rockPrototype,forestPrototype;
 
-    int[,] board;
+    GameObject[,] boardObject;
     int numForest;
     int numRock;
 
@@ -23,52 +23,43 @@ public class SceneGanerator : MonoBehaviour {
 
     void InitializeBoard()
     {
-        board = new int[8,8];
-        numForest = 16;
-        numRock = 8;
+        boardObject = new GameObject[8,8];
+        numForest = Random.Range(1,16);
+        numRock = Random.Range(1,8);
     }
 
     void GenerateScene()
     {
         //int assignNum;
         float origin_y = 2f;
+        int assignNum;
         for (int i = 0; i < 8; i++)
         {
             float constant_x = i * -0.65f;
             float constant_y = i * -0.325f+origin_y;
-            for (int j = 0; j < 8; j++)
-            {
-                Instantiate(landPrototype, new Vector3(j * 0.65f+ constant_x, j * -0.325f+ constant_y, -1 * (j + i)), Quaternion.identity);
-            }
-        }
-       /* for(int i = 0; i < 8; i++)
-        {
             for (int j = 0; j < 8; )
             {
                 assignNum = (int)Random.Range(0, 3);
-                Debug.Log(assignNum);
                 if (assignNum == 1)
                 {
                     if (numForest <= 0) continue;
                     numForest--;
-                }else if (assignNum == 2)
+                    Vector3 position = new Vector3(j * 0.65f + constant_x, j * -0.325f + constant_y+0.14f, -1 * (j + i));
+                    boardObject[i,j] = Instantiate(forestPrototype, position , Quaternion.identity);
+                }
+                else if (assignNum == 2)
                 {
                     if (numRock <= 0) continue;
                     numRock--;
+                    Vector3 position = new Vector3(j * 0.65f + constant_x, j * -0.325f + constant_y, -1 * (j + i));
+                    boardObject[i, j] = Instantiate(rockPrototype, position , Quaternion.identity);
+                }else
+                {
+                    Vector3 position = new Vector3(j * 0.65f + constant_x, j * -0.325f + constant_y, -1 * (j + i));
+                    boardObject[i, j] = Instantiate(landPrototype, position, Quaternion.identity);
                 }
-                board[i, j] = assignNum;
-                Instantiate(landPrototype, new Vector3(j * -0.65f, j * -0.325f),Quaternion.identity);
                 j++;
             }
-        }*/
-   /*     for (int i = 0; i < 8; i++)
-        {
-            string s = "";
-            for (int j = 0; j < 8; j++)
-            {
-                s += board[i, j] + " ";
-            }
-            Debug.Log(s);
-        }*/
+        }
     }
 }
