@@ -6,6 +6,7 @@ public class SceneGanerator : MonoBehaviour {
 
     public GameObject landPrototype,rockPrototype,forestPrototype;
     public GameObject riverCurveLeftUp, riverCurveLeftDown, riverCurveRightUp, riverCurveRightDown, riverLeft, riverDown;
+    public GameObject mountPeak, mountSlopeUp, mountSlopeLeft, mountSlopeRight, mountSlopeDown, mountRidgeLeftUp, mountRidgeRightUp, mountRidgeRightDown, mountRidgeLeftDown;
 
     GameObject[,] boardObject;
     Vector3[,] boardPosition;
@@ -15,19 +16,14 @@ public class SceneGanerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         InitializeBoard();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        GenerateGeo();
+    }
 
     void InitializeBoard()
     {
         boardObject = new GameObject[BOARD_SIZE, BOARD_SIZE];
         boardPosition = new Vector3[BOARD_SIZE, BOARD_SIZE];
         GeneratePosition();
-        GenerateGeo();
     }
 
     void GeneratePosition()
@@ -45,12 +41,13 @@ public class SceneGanerator : MonoBehaviour {
     void GenerateGeo()
     {
         GenerateRiver();
+        GenerateMountain();
         GenerateGround();
     }
 
     void GenerateRiver()
     {
-        bool hasRiver = true;//Mathf.Round(Random.Range(0f, 1f))==1;
+        bool hasRiver = Mathf.Round(Random.Range(0f, 1f))==1;
         if (hasRiver)
         {
             int y = Random.Range(1, BOARD_SIZE-1);
@@ -167,6 +164,80 @@ public class SceneGanerator : MonoBehaviour {
     }
 
     void GenerateMountain()
+    {
+        int numberOfPeak = Random.Range(0, 10);
+        int[][] peakPosition = new int[numberOfPeak][]; 
+        for (int i = 0;i<numberOfPeak;i++)
+        {
+            peakPosition[i] = new int[2];
+            peakPosition[i][0] = Random.Range(0, BOARD_SIZE);
+            peakPosition[i][1] = Random.Range(0, BOARD_SIZE);
+        }
+        Vector3 mountainOffset = new Vector3(0f, 0.1f);
+        int x, y,topPos,downPos,leftPos,rightPos;
+        foreach (int[] mountPos in peakPosition)
+        {
+            x = mountPos[0];
+            y = mountPos[1];
+            if (boardObject[x, y] == null|| boardObject[x, y].tag=="Slope" || boardObject[x, y].tag=="Ridge")
+            {
+                if (boardObject[x, y] != null)
+                    Destroy(boardObject[x, y]);
+                boardObject[x, y] = Instantiate(mountPeak, boardPosition[x, y] + mountainOffset, Quaternion.identity);
+                topPos = y - 1;
+                downPos = y + 1;
+                leftPos = x + 1;
+                rightPos = x - 1;
+                if (topPos >= 0)
+                {
+                    if (boardObject[x, topPos] == null)
+                        boardObject[x, topPos] = Instantiate(mountSlopeUp, boardPosition[x, topPos], Quaternion.identity);
+                    if (rightPos >= 0)
+                    {
+                        if (boardObject[rightPos, topPos] == null)
+                            boardObject[rightPos, topPos] = Instantiate(mountRidgeLeftUp, boardPosition[rightPos, topPos], Quaternion.identity);
+                    }
+                    if (leftPos < BOARD_SIZE)
+                    {
+                        if (boardObject[leftPos, topPos] == null)
+                            boardObject[leftPos, topPos] = Instantiate(mountRidgeLeftDown, boardPosition[leftPos, topPos] , Quaternion.identity);
+                    }
+                }
+                if (downPos < BOARD_SIZE)
+                {
+                    if (boardObject[x, downPos] == null)
+                        boardObject[x, downPos] = Instantiate(mountSlopeDown, boardPosition[x, downPos] + mountainOffset, Quaternion.identity);
+                    if (rightPos >= 0)
+                    {
+                        if (boardObject[rightPos, downPos] == null)
+                            boardObject[rightPos, downPos] = Instantiate(mountRidgeRightUp, boardPosition[rightPos, downPos], Quaternion.identity);
+                    }
+                    if (leftPos < BOARD_SIZE)
+                    {
+                        if (boardObject[leftPos, downPos] == null)
+                            boardObject[leftPos, downPos] = Instantiate(mountRidgeRightDown, boardPosition[leftPos, downPos] + mountainOffset, Quaternion.identity);
+                    }
+                }
+                if (rightPos >= 0)
+                {
+                    if (boardObject[rightPos, y] == null)
+                        boardObject[rightPos, y] = Instantiate(mountSlopeRight, boardPosition[rightPos, y] , Quaternion.identity);
+                }
+                if (leftPos < BOARD_SIZE)
+                {
+                    if (boardObject[leftPos, y] == null)
+                        boardObject[leftPos, y] = Instantiate(mountSlopeLeft, boardPosition[leftPos, y] + mountainOffset, Quaternion.identity);
+                }
+            }
+        }
+    }
+
+    void GenerateRock()
+    {
+
+    }
+
+    void GenerateForest()
     {
 
     }
