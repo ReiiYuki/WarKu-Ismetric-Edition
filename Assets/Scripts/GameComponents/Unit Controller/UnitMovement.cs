@@ -8,7 +8,7 @@ public class UnitMovement : MonoBehaviour {
 
     public string direction;
     Vector3 right = new Vector3(2f, 1f);
-    Vector3 down = new Vector3(1f, -2f);
+    Vector3 down = new Vector3(2f, -1f);
 
     // Use this for initialization
     void Start () {
