@@ -42,6 +42,8 @@ public class SceneGanerator : MonoBehaviour {
     {
         GenerateRiver();
         GenerateMountain();
+        GenerateRock();
+        GenerateForest();
         GenerateGround();
     }
 
@@ -234,12 +236,28 @@ public class SceneGanerator : MonoBehaviour {
 
     void GenerateRock()
     {
-
+        int numberOfStone = Random.Range(0, 10);
+        int x, y;
+        for (int i = 0; i < numberOfStone; i++)
+        {
+            x = Random.Range(0, BOARD_SIZE);
+            y = Random.Range(0, BOARD_SIZE);
+            if (boardObject[x, y] == null)
+                boardObject[x, y] = Instantiate(rockPrototype, boardPosition[x, y], Quaternion.identity);
+        }
     }
 
     void GenerateForest()
     {
-
+        int numberOfForest = Random.Range(0, 15);
+        int x, y;
+        for (int i = 0; i < numberOfForest; i++)
+        {
+            x = Random.Range(0, BOARD_SIZE);
+            y = Random.Range(0, BOARD_SIZE);
+            if (boardObject[x, y] == null)
+                boardObject[x, y] = Instantiate(forestPrototype, boardPosition[x, y]+new Vector3(0,0.13f), Quaternion.identity);
+        }
     }
 
     void GenerateGround()
