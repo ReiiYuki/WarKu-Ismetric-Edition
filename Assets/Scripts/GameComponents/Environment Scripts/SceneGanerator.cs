@@ -8,8 +8,8 @@ public class SceneGanerator : MonoBehaviour {
     public GameObject riverCurveLeftUp, riverCurveLeftDown, riverCurveRightUp, riverCurveRightDown, riverLeft, riverDown;
     public GameObject mountPeak, mountSlopeUp, mountSlopeLeft, mountSlopeRight, mountSlopeDown, mountRidgeLeftUp, mountRidgeRightUp, mountRidgeRightDown, mountRidgeLeftDown;
 
-    GameObject[,] boardObject;
-    Vector3[,] boardPosition;
+    public GameObject[,] boardObject;
+    public Vector3[,] boardPosition;
 
     const int BOARD_SIZE = 12;
 
