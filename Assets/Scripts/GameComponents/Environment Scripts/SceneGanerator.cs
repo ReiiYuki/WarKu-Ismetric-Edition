@@ -60,15 +60,15 @@ public class SceneGanerator : MonoBehaviour {
             int selection = Random.Range(0, 3);
             if (selection == 0)
             {
-                boardFloorObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity);
+                boardFloorObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x,y);
                 currentType = "l";
             }else if (selection == 1)
             {
-                boardFloorObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity);
+                boardFloorObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                 currentType = "ld";
             }else
             {
-                boardFloorObject[x, y] = Instantiate(riverCurveRightDown, boardPosition[x, y], Quaternion.identity);
+                boardFloorObject[x, y] = Instantiate(riverCurveRightDown, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                 currentType = "rd";
             }
             while ( (x< BOARD_SIZE  && x>=0) && (y< BOARD_SIZE && y>=0) )
@@ -80,11 +80,11 @@ public class SceneGanerator : MonoBehaviour {
                     if (y > BOARD_SIZE-1) break; 
                     if (selection == 0)
                     {
-                        boardFloorObject[x, y] = Instantiate(riverCurveRightUp, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverCurveRightUp, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "ru";
                     }else
                     {
-                        boardFloorObject[x, y] = Instantiate(riverDown, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverDown, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "d";
                     }
                 }
@@ -92,7 +92,7 @@ public class SceneGanerator : MonoBehaviour {
                 {
                     y--;
                     if (y < 0) break;
-                    boardFloorObject[x, y] = Instantiate(riverCurveLeftUp, boardPosition[x, y], Quaternion.identity);
+                    boardFloorObject[x, y] = Instantiate(riverCurveLeftUp, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                     currentType = "lu";
                 }
                 else if (currentType == "ru")
@@ -102,12 +102,12 @@ public class SceneGanerator : MonoBehaviour {
                     selection = Random.Range(0, 2);
                     if (selection == 0)
                     {
-                        boardFloorObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "ld";
                     }
                     else
                     {
-                        boardFloorObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "l";
                     }
                 }
@@ -118,12 +118,12 @@ public class SceneGanerator : MonoBehaviour {
                     selection = Random.Range(0, 2);
                     if (selection == 0)
                     {
-                        boardFloorObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "ld";
                     }
                     else
                     {
-                        boardFloorObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "l";
                     }
                 }
@@ -134,12 +134,12 @@ public class SceneGanerator : MonoBehaviour {
                     selection = Random.Range(0, 2);
                     if (selection == 0)
                     {
-                        boardFloorObject[x, y] = Instantiate(riverCurveRightUp, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverCurveRightUp, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "ru";
                     }
                     else
                     {
-                        boardFloorObject[x, y] = Instantiate(riverDown, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverDown, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "d";
                     }
                 }
@@ -150,16 +150,16 @@ public class SceneGanerator : MonoBehaviour {
                     if (x > BOARD_SIZE-1) break;
                     if (selection == 0)
                     {
-                        boardFloorObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverCurveLeftDown, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "ld";
                     }
                     else if (selection==1)
                     {
-                        boardFloorObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverLeft, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "l";
                     }else
                     {
-                        boardFloorObject[x, y] = Instantiate(riverCurveRightDown, boardPosition[x, y], Quaternion.identity);
+                        boardFloorObject[x, y] = Instantiate(riverCurveRightDown, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                         currentType = "rd";
                     }
                 }
@@ -187,7 +187,7 @@ public class SceneGanerator : MonoBehaviour {
             {
                 if (boardFloorObject[x, y] != null)
                     Destroy(boardFloorObject[x, y]);
-                boardFloorObject[x, y] = Instantiate(mountPeak, boardPosition[x, y] + mountainOffset, Quaternion.identity);
+                boardFloorObject[x, y] = Instantiate(mountPeak, boardPosition[x, y] + mountainOffset, Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
                 topPos = y - 1;
                 downPos = y + 1;
                 leftPos = x + 1;
@@ -195,42 +195,42 @@ public class SceneGanerator : MonoBehaviour {
                 if (topPos >= 0)
                 {
                     if (boardFloorObject[x, topPos] == null)
-                        boardFloorObject[x, topPos] = Instantiate(mountSlopeUp, boardPosition[x, topPos], Quaternion.identity);
+                        boardFloorObject[x, topPos] = Instantiate(mountSlopeUp, boardPosition[x, topPos], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, topPos);
                     if (rightPos >= 0)
                     {
                         if (boardFloorObject[rightPos, topPos] == null)
-                            boardFloorObject[rightPos, topPos] = Instantiate(mountRidgeLeftUp, boardPosition[rightPos, topPos], Quaternion.identity);
+                            boardFloorObject[rightPos, topPos] = Instantiate(mountRidgeLeftUp, boardPosition[rightPos, topPos], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(rightPos, y);
                     }
                     if (leftPos < BOARD_SIZE)
                     {
                         if (boardFloorObject[leftPos, topPos] == null)
-                            boardFloorObject[leftPos, topPos] = Instantiate(mountRidgeLeftDown, boardPosition[leftPos, topPos] , Quaternion.identity);
+                            boardFloorObject[leftPos, topPos] = Instantiate(mountRidgeLeftDown, boardPosition[leftPos, topPos] , Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(leftPos, topPos);
                     }
                 }
                 if (downPos < BOARD_SIZE)
                 {
                     if (boardFloorObject[x, downPos] == null)
-                        boardFloorObject[x, downPos] = Instantiate(mountSlopeDown, boardPosition[x, downPos] + mountainOffset, Quaternion.identity);
+                        boardFloorObject[x, downPos] = Instantiate(mountSlopeDown, boardPosition[x, downPos] + mountainOffset, Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, downPos);
                     if (rightPos >= 0)
                     {
                         if (boardFloorObject[rightPos, downPos] == null)
-                            boardFloorObject[rightPos, downPos] = Instantiate(mountRidgeRightUp, boardPosition[rightPos, downPos], Quaternion.identity);
+                            boardFloorObject[rightPos, downPos] = Instantiate(mountRidgeRightUp, boardPosition[rightPos, downPos], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(rightPos, downPos);
                     }
                     if (leftPos < BOARD_SIZE)
                     {
                         if (boardFloorObject[leftPos, downPos] == null)
-                            boardFloorObject[leftPos, downPos] = Instantiate(mountRidgeRightDown, boardPosition[leftPos, downPos] + mountainOffset, Quaternion.identity);
+                            boardFloorObject[leftPos, downPos] = Instantiate(mountRidgeRightDown, boardPosition[leftPos, downPos] + mountainOffset, Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(leftPos, downPos);
                     }
                 }
                 if (rightPos >= 0)
                 {
                     if (boardFloorObject[rightPos, y] == null)
-                        boardFloorObject[rightPos, y] = Instantiate(mountSlopeRight, boardPosition[rightPos, y] , Quaternion.identity);
+                        boardFloorObject[rightPos, y] = Instantiate(mountSlopeRight, boardPosition[rightPos, y] , Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(rightPos, y);
                 }
                 if (leftPos < BOARD_SIZE)
                 {
                     if (boardFloorObject[leftPos, y] == null)
-                        boardFloorObject[leftPos, y] = Instantiate(mountSlopeLeft, boardPosition[leftPos, y] + mountainOffset, Quaternion.identity);
+                        boardFloorObject[leftPos, y] = Instantiate(mountSlopeLeft, boardPosition[leftPos, y] + mountainOffset, Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(leftPos, y);
                 }
             }
         }
@@ -245,7 +245,7 @@ public class SceneGanerator : MonoBehaviour {
             x = Random.Range(0, BOARD_SIZE);
             y = Random.Range(0, BOARD_SIZE);
             if (boardFloorObject[x, y] == null)
-                boardFloorObject[x, y] = Instantiate(rockPrototype, boardPosition[x, y], Quaternion.identity);
+                boardFloorObject[x, y] = Instantiate(rockPrototype, boardPosition[x, y], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
         }
     }
 
@@ -258,7 +258,7 @@ public class SceneGanerator : MonoBehaviour {
             x = Random.Range(0, BOARD_SIZE);
             y = Random.Range(0, BOARD_SIZE);
             if (boardFloorObject[x, y] == null)
-                boardFloorObject[x, y] = Instantiate(forestPrototype, boardPosition[x, y]+new Vector3(0,0.13f), Quaternion.identity);
+                boardFloorObject[x, y] = Instantiate(forestPrototype, boardPosition[x, y]+new Vector3(0,0.13f), Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(x, y);
         }
     }
 
@@ -269,7 +269,7 @@ public class SceneGanerator : MonoBehaviour {
             for (int j = 0; j < BOARD_SIZE; j++)
             {
                 if (boardFloorObject[i, j] == null)
-                    boardFloorObject[i, j] = Instantiate(landPrototype, boardPosition[i, j], Quaternion.identity);
+                    boardFloorObject[i, j] = Instantiate(landPrototype, boardPosition[i, j], Quaternion.identity).GetComponent<TileBehaviour>().SetPosition(i, j);
             }
         }
     }
