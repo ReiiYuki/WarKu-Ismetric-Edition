@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b7130771d46cd5040825f62dc4fcb90f
+timeCreated: 1489078372
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - landTile: {fileID: 1700542789586064, guid: 67cb69a10ce93c742a34629d3df97275, type: 2}
+  - rockTile: {fileID: 1747714234639516, guid: dac2ca28a09d14a4c98f3870f8e5a844, type: 2}
+  - forestTile: {fileID: 1481971566156718, guid: bda947a6a8b35ca42a5e051ca0ca3257,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class SpawnButton : MonoBehaviour {
 
+    public GameObject unitPrototype;
+
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public void SpawnSprite()
+    {
+
+    }
 }
