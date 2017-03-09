@@ -41,6 +41,7 @@ public class BoardController : MonoBehaviour {
 
     void GenerateFloor()
     {
+        PlaceMountain();
         PlaceForestTile();
         PlaceRockTile();
         PlaceLandFloor();
@@ -62,6 +63,29 @@ public class BoardController : MonoBehaviour {
     void PlaceForestTile()
     {
         PlaceSpecificTiles(Random.Range(0, 20), forestTile);
+    }
+
+    void PlaceMountain()
+    {
+        for (int i = 0; i < Random.Range(0, 10);i++)
+        {
+            int x = Random.Range(0, BOARD_SIZE);
+            int y = Random.Range(0, BOARD_SIZE);
+            if (boardFloor[x, y] == null || boardFloor[x, y].tag == "Slope" || boardFloor[x, y].tag == "Ridge")
+            {
+                if (boardFloor[x, y] != null)
+                    Destroy(boardFloor[x, y]);
+                PlaceTile(x, y, mountainTile[4]);
+                PlaceTileWithCondition(x - 1, y, mountainTile[7], x - 1 >= 0);
+                PlaceTileWithCondition(x + 1, y, mountainTile[1], x + 1 < boardFloor.GetLength(0));
+                PlaceTileWithCondition(x, y-1, mountainTile[3], y - 1 >= 0);
+                PlaceTileWithCondition(x , y+1, mountainTile[5], y + 1 < boardFloor.GetLength(1));
+                PlaceTileWithCondition(x - 1, y-1, mountainTile[6], x - 1 >= 0 && y - 1 >= 0);
+                PlaceTileWithCondition(x - 1, y + 1, mountainTile[8], x - 1 >= 0 && y + 1 < boardFloor.GetLength(1));
+                PlaceTileWithCondition(x + 1, y-1, mountainTile[0], x + 1 < boardFloor.GetLength(0) && y - 1 >= 0);
+                PlaceTileWithCondition(x + 1, y + 1, mountainTile[2], x + 1 < boardFloor.GetLength(0) && y + 1 < boardFloor.GetLength(1));
+            }
+        }
     }
 
     //Generator Utility
@@ -87,5 +111,11 @@ public class BoardController : MonoBehaviour {
             if (!boardFloor[x, y])
                 PlaceTile(x, y, tile);
         }
+    }
+    void PlaceTileWithCondition(int x,int y,GameObject tile,bool condition)
+    {
+        if (condition)
+            if (!boardFloor[x,y])
+                PlaceTile(x, y, tile);
     }
 }
