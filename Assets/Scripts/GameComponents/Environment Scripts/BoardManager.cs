@@ -7,6 +7,8 @@ public class BoardManager : MonoBehaviour {
     GameObject[,] boardFloorObject, boardUnitObject;
     Vector3[,] boardPosition;
 
+    public int selectX, selectY;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -27,5 +29,10 @@ public class BoardManager : MonoBehaviour {
     public Vector3 GetPosition(int x,int y)
     {
         return boardPosition[x, y];
+    }
+
+    public void SelectPosition(int x,int y)
+    {
+        
     }
 }
