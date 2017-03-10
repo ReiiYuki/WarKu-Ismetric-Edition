@@ -41,6 +41,7 @@ public class BoardController : MonoBehaviour {
 
     void GenerateFloor()
     {
+        PlaceRiver();
         PlaceMountain();
         PlaceForestTile();
         PlaceRockTile();
@@ -71,9 +72,9 @@ public class BoardController : MonoBehaviour {
         {
             int x = Random.Range(0, BOARD_SIZE);
             int y = Random.Range(0, BOARD_SIZE);
-            if (boardFloor[x, y] == null || boardFloor[x, y].tag == "Slope" || boardFloor[x, y].tag == "Ridge")
+            if (!boardFloor[x, y] || boardFloor[x, y].tag == "Slope" || boardFloor[x, y].tag == "Ridge")
             {
-                if (boardFloor[x, y] != null)
+                if (boardFloor[x, y])
                     Destroy(boardFloor[x, y]);
                 PlaceTile(x, y, mountainTile[4]);
                 PlaceTileWithCondition(x - 1, y, mountainTile[7], x - 1 >= 0);
@@ -86,6 +87,50 @@ public class BoardController : MonoBehaviour {
                 PlaceTileWithCondition(x + 1, y + 1, mountainTile[2], x + 1 < boardFloor.GetLength(0) && y + 1 < boardFloor.GetLength(1));
             }
         }
+    }
+
+    void PlaceRiver()
+    {
+        if (hasRiver())
+        {
+            int y = Random.Range(2, boardFloor.GetLength(1)-2);
+            int x = 0;
+            int state = 0;
+            PlaceRiverTile(ref x, ref y,new int[]{ 0, 3, 4 }, ref state);
+            while (x < boardFloor.GetLength(0) && y >= 0 && y < boardFloor.GetLength(1))
+            {
+                if (state == 0 || state == 5)
+                    PlaceRiverTile(ref x, ref y, new int[] { 2, 5 }, ref state);
+                else if (state == 1 || state == 2)
+                    PlaceRiverTile(ref x, ref y, new int[] { 0, 4 }, ref state);
+                else if (state == 3)
+                    PlaceRiverTile(ref x, ref y, new int[] { 1 }, ref state);
+                else if (state == 4)
+                    PlaceRiverTile(ref x, ref y, new int[] { 0, 3, 4 }, ref state);
+            }
+        }
+
+    }
+
+    bool hasRiver()
+    {
+        return Random.Range(0, 2)==1;
+    }
+
+    void UpdateRiverPosition(ref int state,ref int x,ref int y)
+    {
+        if (state == 0 || state == 5)
+            y++;
+        else if (state == 1 || state == 2 || state == 4)
+            x++;
+        else if (state == 3)
+            y--;
+    }
+
+    void PlaceRiverTile(ref int x,ref int y,int[] tilesIndex,ref int state)
+    {
+        PlaceRandomTile(ref x,ref  y,tilesIndex, riverTile,ref  state);
+        UpdateRiverPosition(ref state, ref x, ref y);
     }
 
     //Generator Utility
@@ -118,4 +163,12 @@ public class BoardController : MonoBehaviour {
             if (!boardFloor[x,y])
                 PlaceTile(x, y, tile);
     }
+
+    void PlaceRandomTile(ref int x,ref int y,int[] stateSets,GameObject[] tileSet,ref int state)
+    {
+        int selectedIndex = Random.Range(0, stateSets.Length);
+        PlaceTile(x, y, tileSet[stateSets[selectedIndex]]);
+        state = stateSets[selectedIndex];
+    }
+
 }
