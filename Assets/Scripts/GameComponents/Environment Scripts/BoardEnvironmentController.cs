@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoardController : MonoBehaviour {
+public class BoardEnvironmentController : MonoBehaviour {
 
     //Prefabs
     public GameObject landTile, rockTile, forestTile;
