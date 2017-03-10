@@ -21,10 +21,9 @@ public class TileBehaviour : MonoBehaviour {
         Debug.Log(x+ " " + y);
     }
 
-    public GameObject SetPosition(int x,int y)
+    public void SetPosition(int x,int y)
     {
         this.x = x;
         this.y = y;
-        return gameObject;
     }
 }

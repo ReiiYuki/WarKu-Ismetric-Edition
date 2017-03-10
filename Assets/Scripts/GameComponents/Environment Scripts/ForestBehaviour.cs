@@ -19,7 +19,6 @@ public class ForestBehaviour : MonoBehaviour {
         offsetY = GetComponent<SpriteRenderer>().sprite.bounds.size.y/10f;
         GetComponent<SpriteRenderer>().sprite = forestSprites[spriteIndex];
         offsetY -= GetComponent<SpriteRenderer>().sprite.bounds.size.y / 10f;
-        Debug.Log(offsetY);
         if (offsetY > 0.0011)
             offsetY += 0.038f;
         transform.position -= new Vector3(0, offsetY);
