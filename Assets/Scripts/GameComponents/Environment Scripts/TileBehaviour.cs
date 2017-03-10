@@ -23,7 +23,6 @@ public class TileBehaviour : MonoBehaviour {
     private void OnMouseDown()
     {
         transform.GetChild(0).gameObject.SetActive(true);
-        Debug.Log(x+ " " + y);
     }
 
     public void SetPosition(int x,int y)
