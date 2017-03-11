@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnButton : MonoBehaviour {
 
     public GameObject unit;
+    public Texture2D cursorTexture;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,7 @@ public class SpawnButton : MonoBehaviour {
 	
 	public void SpawnSprite()
     {
+        Cursor.SetCursor(cursorTexture,Vector2.zero,CursorMode.Auto);
         Debug.Log("Spawn");
     }
 }
