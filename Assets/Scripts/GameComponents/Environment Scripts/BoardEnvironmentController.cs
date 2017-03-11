@@ -26,6 +26,12 @@ public class BoardEnvironmentController : MonoBehaviour {
 		
 	}
 
+    // Utility for game
+    public GameObject GetUnit(int x,int y)
+    {
+        return boardUnit[x, y];
+    }
+
     //Generator
     void GenerateBoard()
     {

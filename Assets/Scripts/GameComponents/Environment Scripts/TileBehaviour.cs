@@ -20,8 +20,12 @@ public class TileBehaviour : MonoBehaviour {
 		
 	}
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
+        if (!transform.parent.GetComponent<BoardEnvironmentController>().GetUnit(x, y))
+            Debug.Log("No Action");
+        else
+            Debug.Log("state = 2");
         transform.GetChild(0).gameObject.SetActive(true);
     }
 

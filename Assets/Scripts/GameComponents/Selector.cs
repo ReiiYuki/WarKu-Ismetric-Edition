@@ -2,9 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameController : MonoBehaviour {
+public class Selector : MonoBehaviour {
 
-    int state;
+    /**
+     * 0 = Non Select
+     * 1 = Spawn button clicked
+     * 2 = Unit clicked
+     */
+    public int state = 0;
 
 	// Use this for initialization
 	void Start () {
