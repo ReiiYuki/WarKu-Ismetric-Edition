@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnButton : MonoBehaviour {
 
-    public GameObject unitPrototype;
+    public GameObject unit;
 
 	// Use this for initialization
 	void Start () {
@@ -13,6 +13,6 @@ public class SpawnButton : MonoBehaviour {
 	
 	public void SpawnSprite()
     {
-
+        Debug.Log("Spawn");
     }
 }
