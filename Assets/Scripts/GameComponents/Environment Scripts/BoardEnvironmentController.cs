@@ -32,6 +32,11 @@ public class BoardEnvironmentController : MonoBehaviour {
         return boardUnit[x, y];
     }
 
+    public void SpawnUnit(int x,int y,GameObject unit)
+    {
+        boardUnit[x, y] = Instantiate(unit, GetPosition(x, y), Quaternion.identity);
+    }
+
     //Generator
     void GenerateBoard()
     {

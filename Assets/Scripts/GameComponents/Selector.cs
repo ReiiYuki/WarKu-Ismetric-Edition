@@ -10,6 +10,7 @@ public class Selector : MonoBehaviour {
      * 2 = Unit clicked
      */
     public int state = 0;
+    GameObject selectedUnit;
 
 	// Use this for initialization
 	void Start () {
@@ -20,4 +21,15 @@ public class Selector : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void SelectUnit(GameObject unit)
+    {
+        selectedUnit = unit;
+        state = 1;
+    }
+
+    public GameObject GetSelectUnit()
+    {
+        return selectedUnit;
+    }
 }
