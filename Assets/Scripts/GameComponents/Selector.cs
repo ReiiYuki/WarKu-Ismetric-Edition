@@ -21,4 +21,15 @@ public class Selector : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void SelectUnit(GameObject unit)
+    {
+        selectedUnit = unit;
+        state = 1;
+    }
+
+    public GameObject GetSelectUnit()
+    {
+        return selectedUnit;
+    }
 }

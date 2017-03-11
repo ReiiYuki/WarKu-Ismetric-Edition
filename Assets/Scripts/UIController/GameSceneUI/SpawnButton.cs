@@ -15,6 +15,7 @@ public class SpawnButton : MonoBehaviour {
 	public void SpawnSprite()
     {
         Cursor.SetCursor(cursorTexture,Vector2.zero,CursorMode.Auto);
-        Debug.Log("Spawn");
+        Debug.Log(unit);
+        GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().SelectUnit(unit);
     }
 }

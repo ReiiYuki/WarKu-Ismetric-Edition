@@ -22,11 +22,10 @@ public class TileBehaviour : MonoBehaviour {
 
     void OnMouseDown()
     {
-        if (!transform.parent.GetComponent<BoardEnvironmentController>().GetUnit(x, y))
-            Debug.Log("No Action");
-        else
-            Debug.Log("state = 2");
-        transform.GetChild(0).gameObject.SetActive(true);
+        if (GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().state == 1)
+            if (!transform.parent.GetComponent<BoardEnvironmentController>().GetUnit(x, y))
+                GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().SpawnUnit(x, y, GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().GetSelectUnit());
+        GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().state = 0;
     }
 
     public void SetPosition(int x,int y)
