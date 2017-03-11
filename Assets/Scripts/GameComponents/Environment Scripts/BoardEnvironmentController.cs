@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoardController : MonoBehaviour {
+public class BoardEnvironmentController : MonoBehaviour {
 
     //Prefabs
     public GameObject landTile, rockTile, forestTile;
@@ -25,6 +25,12 @@ public class BoardController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    // Utility for game
+    public GameObject GetUnit(int x,int y)
+    {
+        return boardUnit[x, y];
+    }
 
     //Generator
     void GenerateBoard()
@@ -145,6 +151,8 @@ public class BoardController : MonoBehaviour {
         if (tile.GetComponent<SpriteRenderer>().sprite.bounds.size.y > landTile.GetComponent<SpriteRenderer>().sprite.bounds.size.y)
             offsetY = tile.GetComponent<SpriteRenderer>().sprite.bounds.size.y / 10f;
         boardFloor[x, y] = Instantiate(tile, GetPosition(x, y)+new Vector3(0,offsetY), Quaternion.identity);
+        boardFloor[x, y].GetComponent<TileBehaviour>().SetPosition(x, y);
+        boardFloor[x, y].transform.SetParent(transform);
     }
 
     void PlaceSpecificTiles(int size,GameObject tile)

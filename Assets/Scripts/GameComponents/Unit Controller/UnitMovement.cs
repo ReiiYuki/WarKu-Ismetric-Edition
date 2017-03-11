@@ -9,7 +9,7 @@ public class UnitMovement : MonoBehaviour {
     public int offset;
     public int x,y,targetX,targetY;
 
-    BoardManager boardManager;
+   // BoardManager boardManager;
 
     Vector3 right = new Vector3(2f, 1f);
     Vector3 down = new Vector3(2f, -1f);
@@ -17,11 +17,11 @@ public class UnitMovement : MonoBehaviour {
     // Use this for initialization
     void Start () {
         direction = "s";
-        boardManager = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<BoardManager>();
-        transform.position = boardManager.GetPosition(x, y);
+//        boardManager = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<BoardManager>();
+       // transform.position = boardManager.GetPosition(x, y);
     }
 	
-    void Move() 
+ /*   void Move() 
     {
         if (y < targetY)
         {
@@ -82,10 +82,10 @@ public class UnitMovement : MonoBehaviour {
             }
         }
     }
-
+    */
 	// Update is called once per frame
 	void Update () {
-        Move();
+    //    Move();
         if (direction == "r")
             transform.Translate(right * Time.deltaTime * speed);
         else if (direction == "l")
