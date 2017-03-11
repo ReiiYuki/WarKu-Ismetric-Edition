@@ -5,6 +5,7 @@ using UnityEngine;
 public class WorldUIAnimation : MonoBehaviour {
 
     float size = 0;
+    bool disappear = false;
     float time = 0;
 
 	// Use this for initialization
@@ -17,13 +18,21 @@ public class WorldUIAnimation : MonoBehaviour {
 		if (transform.localScale.y<1)
         {
             transform.localScale += new Vector3(0f, Time.deltaTime*10 );
-            StartCoroutine(Hide());
+            disappear = true;
+        }
+        if (disappear)
+        {
+            time += Time.deltaTime;
+            if (time >= 1)
+                gameObject.SetActive(false);
         }
 	}
 
-    IEnumerator Hide()
+    void OnDisable()
     {
-        yield return new WaitForSeconds(1);
-        gameObject.SetActive(false);
+        transform.localScale = new Vector3(1f, 0f);
+        size = 0;
+        disappear = false;
+        time = 0;
     }
 }
