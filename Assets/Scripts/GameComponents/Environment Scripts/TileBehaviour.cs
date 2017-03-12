@@ -56,4 +56,14 @@ public class TileBehaviour : MonoBehaviour {
         this.x = x;
         this.y = y;
     }
+
+    void OnMouseOver()
+    {
+        GameObject.FindGameObjectWithTag("Core").GetComponent<Zoomer>().onTile = true;
+    }
+
+    void OnMouseExit()
+    {
+        GameObject.FindGameObjectWithTag("Core").GetComponent<Zoomer>().onTile = false;
+    }
 }
