@@ -10,25 +10,48 @@ public class WorldUIAnimation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        GetComponentInChildren<MeshRenderer>().sortingLayerName = "UpperUI";
+        SetSortingLayer();
     }
 	
+    void SetSortingLayer()
+    {
+        GetComponentInChildren<MeshRenderer>().sortingLayerName = "UpperUI";
+    }
+
 	// Update is called once per frame
 	void Update () {
-		if (transform.localScale.y<1)
+        IncreaseScale();
+        Disappear();
+	}
+
+    void IncreaseScale()
+    {
+        if (transform.localScale.y < 1)
         {
-            transform.localScale += new Vector3(0f, Time.deltaTime*10 );
+            transform.localScale += new Vector3(0f, Time.deltaTime * 10);
+        }
+        else
+        {
             disappear = true;
         }
+    }
+
+    void Disappear()
+    {
         if (disappear)
         {
             time += Time.deltaTime;
             if (time >= 1)
                 gameObject.SetActive(false);
         }
-	}
+    }
 
     void OnDisable()
+    {
+        Reset();
+    }
+
+    void Reset()
     {
         transform.localScale = new Vector3(1f, 0f);
         size = 0;

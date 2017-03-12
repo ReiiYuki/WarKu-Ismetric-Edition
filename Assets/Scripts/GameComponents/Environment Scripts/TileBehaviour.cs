@@ -7,9 +7,14 @@ public class TileBehaviour : MonoBehaviour {
     public GameObject tooltipText;
 
     int x, y;
+    Selector selector;
+    Zoomer zoomer;
+    BoardEnvironmentController boardCon;
 
 	// Use this for initialization
 	void Start () {
+        ConnectToBoard();
+        ConnectToCore();
         InitializeToolTip();
     }
 	
@@ -17,6 +22,17 @@ public class TileBehaviour : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void ConnectToCore()
+    {
+        selector = GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>();
+        zoomer = GameObject.FindGameObjectWithTag("Core").GetComponent<Zoomer>();
+    }
+
+    void ConnectToBoard()
+    {
+        boardCon = transform.parent.GetComponent<BoardEnvironmentController>();
+    }
 
     void InitializeToolTip()
     {
@@ -27,27 +43,24 @@ public class TileBehaviour : MonoBehaviour {
 
     void OnMouseDown()
     {
-        if (GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().state == 1)
+        if (selector.state == 1)
         {
-            if (!transform.parent.GetComponent<BoardEnvironmentController>().GetUnit(x, y) && GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsSpawnZone(x, y))
+            if (!boardCon.GetUnit(x, y) && boardCon.IsSpawnZone(x, y))
             {
-                transform.GetChild(0).gameObject.SetActive(true);
-                transform.GetChild(0).gameObject.GetComponentInChildren<TextMesh>().text = "Unit Spawn!";
-                GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().SpawnUnit(x, y, GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().GetSelectUnit());
+                ShowTextToolTip("Unit is spawn!!");
+                boardCon.SpawnUnit(x, y, selector.GetSelectUnit());
             }
             else
             {
-                transform.GetChild(0).gameObject.SetActive(true);
-                transform.GetChild(0).gameObject.GetComponentInChildren<TextMesh>().text = "Invalid Tile!";
+                ShowTextToolTip("Invalid Tile!");
             }
         }
-        else if (GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().state == 0)
-            if (!transform.parent.GetComponent<BoardEnvironmentController>().GetUnit(x, y))
+        else if (selector.state == 0)
+            if (!boardCon.GetUnit(x, y))
             {
-                transform.GetChild(0).gameObject.SetActive(true);
-                transform.GetChild(0).gameObject.GetComponentInChildren<TextMesh>().text = "No Action!";
+                ShowTextToolTip("No Action!");
             }
-        GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().state = 0;
+        selector.state = 0;
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
 
@@ -59,11 +72,17 @@ public class TileBehaviour : MonoBehaviour {
 
     void OnMouseOver()
     {
-        GameObject.FindGameObjectWithTag("Core").GetComponent<Zoomer>().onTile = true;
+        zoomer.onTile = true;
     }
 
     void OnMouseExit()
     {
-        GameObject.FindGameObjectWithTag("Core").GetComponent<Zoomer>().onTile = false;
+        zoomer.onTile = false;
+    }
+
+    void ShowTextToolTip(string text)
+    {
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(0).gameObject.GetComponentInChildren<TextMesh>().text = text;
     }
 }
