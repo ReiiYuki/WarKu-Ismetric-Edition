@@ -53,6 +53,13 @@ public class BoardEnvironmentController : MonoBehaviour {
         return position == 0;
     }
 
+    public void MoveSprite(int x,int y,int changeX,int changeY)
+    {
+        boardUnit[changeX, changeY] = boardUnit[x, y];
+        boardUnit[changeX, changeY].transform.position = GetPosition(changeX, changeY);
+        boardUnit[x, y] = null;
+    }
+
     //Generator
     void GenerateBoard()
     {
