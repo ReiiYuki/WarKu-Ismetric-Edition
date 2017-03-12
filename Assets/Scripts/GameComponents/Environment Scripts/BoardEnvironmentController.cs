@@ -37,6 +37,11 @@ public class BoardEnvironmentController : MonoBehaviour {
         boardUnit[x, y] = Instantiate(unit, GetPosition(x, y), Quaternion.identity);
     }
 
+    public bool IsSpawnZone(int x,int y)
+    {
+        return y == BOARD_SIZE - 1;
+    }
+
     //Generator
     void GenerateBoard()
     {
