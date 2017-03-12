@@ -60,6 +60,11 @@ public class BoardEnvironmentController : MonoBehaviour {
         boardUnit[x, y] = null;
     }
 
+    public bool CanMoveInto(int x,int y)
+    {
+        return !(boardFloor[x, y].tag == "Ridge" || boardFloor[x, y].tag == "River" || boardFloor[x, y].tag == "RiverCurve" || boardFloor[x,y].tag == "Stone");
+    }
+
     //Generator
     void GenerateBoard()
     {
