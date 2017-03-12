@@ -115,7 +115,7 @@ public class UnitMovement : MonoBehaviour {
         if (axis == 0)
             if (transform.position.x > boardCon.GetPosition(position, y).x)
                 x = position;
-        if (axis == 1)
+        else if (axis == 1)
             if (transform.position.x > boardCon.GetPosition(x, position).x)
                 y = position;
     }
