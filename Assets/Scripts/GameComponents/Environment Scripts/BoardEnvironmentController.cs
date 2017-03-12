@@ -35,6 +35,7 @@ public class BoardEnvironmentController : MonoBehaviour {
     public void SpawnUnit(int x,int y,GameObject unit)
     {
         boardUnit[x, y] = Instantiate(unit, GetPosition(x, y), Quaternion.identity);
+        boardUnit[x, y].GetComponent<UnitMovement>().SetPosition(x, y);
     }
 
     public bool IsSpawnZone(int x,int y)
@@ -160,7 +161,7 @@ public class BoardEnvironmentController : MonoBehaviour {
     }
 
     //Generator Utility
-    Vector3 GetPosition(int x, int y)
+    public Vector3 GetPosition(int x, int y)
     {
         return new Vector3(y * 0.65f + x * -0.65f, y * -0.325f + x * -0.325f + Y_REAL_OFFSET, -1 * (x + y));
     }

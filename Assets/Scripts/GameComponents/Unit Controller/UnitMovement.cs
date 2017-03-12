@@ -81,14 +81,54 @@ public class UnitMovement : MonoBehaviour {
     */
 	// Update is called once per frame
 	void Update () {
+        Move();
+        UpdatePosition();
+	}
+    
+    public void SetPosition(int x,int y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+
+    public void UpdatePosition()
+    {
+        if (direction == "r")
+        {
+            if (transform.position.x > GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().GetPosition(x - 1, y).x)
+            {
+                x -= 1;
+            }
+        } else if (direction == "l")
+        {
+            if (transform.position.x < GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().GetPosition(x + 1, y).x)
+            {
+                x += 1;
+            }
+        } else if (direction == "d")
+        {
+            if (transform.position.x > GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().GetPosition(x, y+1).x)
+            {
+                y += 1;
+            }
+        } else if (direction == "u")
+        {
+            if (transform.position.x < GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().GetPosition(x, y - 1).x)
+            {
+                y -= 1;
+            }
+        }
+    }
+
+    void Move()
+    {
         if (direction == "r")
             transform.Translate(right * Time.deltaTime * speed);
-        else if (direction == "l" )
+        else if (direction == "l")
             transform.Translate(right * Time.deltaTime * speed * -1);
         else if (direction == "d")
             transform.Translate(down * Time.deltaTime * speed);
         else if (direction == "u")
             transform.Translate(down * Time.deltaTime * speed * -1);
-	}
-    
+    }
 }
