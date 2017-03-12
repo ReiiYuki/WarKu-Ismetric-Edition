@@ -101,22 +101,21 @@ public class UnitMovement : MonoBehaviour {
     void UpdatePosition()
     {
         if (direction == "r")
-            CheckAndUpdatePosition(0, x - 1);
+            CheckAndUpdatePosition(0, x - 1, transform.position.x < boardCon.GetPosition(x-1, y).x);
         else if (direction == "l")
-            CheckAndUpdatePosition(0, x + 1);
+            CheckAndUpdatePosition(0, x + 1, transform.position.x > boardCon.GetPosition(x+1, y).x);
         else if (direction == "d")
-            CheckAndUpdatePosition(1, y + 1);
+            CheckAndUpdatePosition(1, y + 1, transform.position.x > boardCon.GetPosition(x, y+1).x);
         else if (direction == "u")
-            CheckAndUpdatePosition(1, y - 1);
+            CheckAndUpdatePosition(1, y - 1, transform.position.x < boardCon.GetPosition(x, y-1).x);
     }
 
-    void CheckAndUpdatePosition(int axis, int position)
+    void CheckAndUpdatePosition(int axis, int position,bool condition)
     {
-        if (axis == 0)
-            if (transform.position.x > boardCon.GetPosition(position, y).x)
+        if (condition)
+            if (axis==0)
                 x = position;
-        else if (axis == 1)
-            if (transform.position.x > boardCon.GetPosition(x, position).x)
+            else
                 y = position;
     }
 
