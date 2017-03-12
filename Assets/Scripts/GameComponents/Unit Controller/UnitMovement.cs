@@ -114,9 +114,12 @@ public class UnitMovement : MonoBehaviour {
     {
         if (condition)
         {
-            boardCon.MoveSprite(x,y,changeX,changeY);
+            boardCon.MoveSprite(x, y, changeX, changeY);
             x = changeX;
             y = changeY;
+        }else
+        {
+            transform.Translate(new Vector3(0f,0f,boardCon.GetPositionOfTile(changeX,changeY).z-transform.position.z)*Time.deltaTime*speed);
         }
     }
 
