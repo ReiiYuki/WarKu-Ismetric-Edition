@@ -101,34 +101,34 @@ public class UnitMovement : MonoBehaviour {
     void UpdatePosition()
     {
         if (direction == "r")
-            CheckAndUpdatePosition(0, x - 1);
+            CheckAndUpdatePosition( x - 1,y, transform.position.x < boardCon.GetPosition(x-1, y).x );
         else if (direction == "l")
-            CheckAndUpdatePosition(0, x + 1);
+            CheckAndUpdatePosition(x + 1, y, transform.position.x > boardCon.GetPosition(x+1, y).x );
         else if (direction == "d")
-            CheckAndUpdatePosition(1, y + 1);
+            CheckAndUpdatePosition(x, y + 1, transform.position.x > boardCon.GetPosition(x, y+1).x );
         else if (direction == "u")
-            CheckAndUpdatePosition(1, y - 1);
+            CheckAndUpdatePosition(x, y - 1, transform.position.x < boardCon.GetPosition(x, y-1).x );
     }
 
-    void CheckAndUpdatePosition(int axis, int position)
+    void CheckAndUpdatePosition(int changeX, int changeY,bool condition)
     {
-        if (axis == 0)
-            if (transform.position.x > boardCon.GetPosition(position, y).x)
-                x = position;
-        if (axis == 1)
-            if (transform.position.x > boardCon.GetPosition(x, position).x)
-                y = position;
+        if (condition)
+        {
+            boardCon.MoveSprite(x,y,changeX,changeY);
+            x = changeX;
+            y = changeY;
+        }
     }
 
     void Move()
     {
-        if (direction == "r" && !boardCon.IsLowerBound(x))
+        if (direction == "r" && !boardCon.IsLowerBound(x) && boardCon.CanMoveInto(x - 1, y))
             transform.Translate(right * Time.deltaTime * speed);
-        else if (direction == "l" && !boardCon.IsUpperBound(x))
+        else if (direction == "l" && !boardCon.IsUpperBound(x) && boardCon.CanMoveInto(x + 1, y))
             transform.Translate(right * Time.deltaTime * speed * -1);
-        else if (direction == "d" && !boardCon.IsUpperBound(y))
+        else if (direction == "d" && !boardCon.IsUpperBound(y) && boardCon.CanMoveInto(x, y + 1))
             transform.Translate(down * Time.deltaTime * speed);
-        else if (direction == "u" && !boardCon.IsLowerBound(y))
+        else if (direction == "u" && !boardCon.IsLowerBound(y) && boardCon.CanMoveInto(x, y - 1))
             transform.Translate(down * Time.deltaTime * speed * -1);
         else
             direction = "s";
