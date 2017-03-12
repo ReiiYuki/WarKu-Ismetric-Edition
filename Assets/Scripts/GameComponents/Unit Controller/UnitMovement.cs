@@ -122,13 +122,15 @@ public class UnitMovement : MonoBehaviour {
 
     void Move()
     {
-        if (direction == "r")
+        if (direction == "r" && !GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsLowerBound(x))
             transform.Translate(right * Time.deltaTime * speed);
-        else if (direction == "l")
+        else if (direction == "l" && !GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsUpperBound(x))
             transform.Translate(right * Time.deltaTime * speed * -1);
-        else if (direction == "d")
+        else if (direction == "d" && !GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsUpperBound(y))
             transform.Translate(down * Time.deltaTime * speed);
-        else if (direction == "u")
+        else if (direction == "u" && !GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsLowerBound(y))
             transform.Translate(down * Time.deltaTime * speed * -1);
+        else
+            direction = "s";
     }
 }
