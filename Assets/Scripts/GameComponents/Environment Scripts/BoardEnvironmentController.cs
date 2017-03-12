@@ -42,6 +42,16 @@ public class BoardEnvironmentController : MonoBehaviour {
         return y == BOARD_SIZE - 1;
     }
 
+    public bool IsUpperBound(int position)
+    {
+        return position == BOARD_SIZE-1;
+    }
+
+    public bool IsLowerBound(int position)
+    {
+        return position == 0;
+    }
+
     //Generator
     void GenerateBoard()
     {

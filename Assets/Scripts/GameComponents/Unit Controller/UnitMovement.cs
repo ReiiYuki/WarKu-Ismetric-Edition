@@ -83,7 +83,7 @@ public class UnitMovement : MonoBehaviour {
 	void Update () {
         if (direction == "r")
             transform.Translate(right * Time.deltaTime * speed);
-        else if (direction == "l")
+        else if (direction == "l" )
             transform.Translate(right * Time.deltaTime * speed * -1);
         else if (direction == "d")
             transform.Translate(down * Time.deltaTime * speed);
