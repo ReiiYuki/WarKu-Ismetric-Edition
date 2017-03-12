@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class UnitMovement : MonoBehaviour {
 
-    public float speed;
-    public string direction;
-    public int offset;
+    float speed = 1;
+    string direction = "u";
+    int offset;
     public int x,y,targetX,targetY;
-
-   // BoardManager boardManager;
 
     Vector3 right = new Vector3(2f, 1f);
     Vector3 down = new Vector3(2f, -1f);
 
     // Use this for initialization
     void Start () {
-        direction = "s";
-//        boardManager = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<BoardManager>();
-       // transform.position = boardManager.GetPosition(x, y);
+
     }
 	
  /*   void Move() 
@@ -85,7 +81,6 @@ public class UnitMovement : MonoBehaviour {
     */
 	// Update is called once per frame
 	void Update () {
-    //    Move();
         if (direction == "r")
             transform.Translate(right * Time.deltaTime * speed);
         else if (direction == "l")
