@@ -45,21 +45,14 @@ public class TileBehaviour : MonoBehaviour {
     {
         if (selector.state == 1)
         {
-            if (!boardCon.GetUnit(x, y) && boardCon.IsSpawnZone(x, y))
-            {
+            if (boardCon.SpawnUnit(x, y, selector.GetSelectUnit()))
                 ShowTextToolTip("Unit is spawn!!");
-                boardCon.SpawnUnit(x, y, selector.GetSelectUnit());
-            }
             else
-            {
                 ShowTextToolTip("Invalid Tile!");
-            }
         }
         else if (selector.state == 0)
             if (!boardCon.GetUnit(x, y))
-            {
                 ShowTextToolTip("No Action!");
-            }
         selector.state = 0;
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
