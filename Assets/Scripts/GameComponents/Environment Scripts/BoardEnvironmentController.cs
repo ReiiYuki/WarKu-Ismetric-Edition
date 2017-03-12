@@ -36,7 +36,7 @@ public class BoardEnvironmentController : MonoBehaviour {
     {
         if (!GetUnit(x, y) && IsSpawnZone(x, y) && CanMoveInto(x, y))
         {
-            boardUnit[x, y] = Instantiate(unit, GetPosition(x, y), Quaternion.identity);
+            boardUnit[x, y] = Instantiate(unit, GetPositionOfTile(x, y), Quaternion.identity);
             boardUnit[x, y].GetComponent<UnitMovement>().SetPosition(x, y);
             return true;
         }
@@ -61,13 +61,18 @@ public class BoardEnvironmentController : MonoBehaviour {
     public void MoveSprite(int x,int y,int changeX,int changeY)
     {
         boardUnit[changeX, changeY] = boardUnit[x, y];
-        boardUnit[changeX, changeY].transform.position = GetPosition(changeX, changeY);
+        boardUnit[changeX, changeY].transform.position = GetPositionOfTile(changeX, changeY);
         boardUnit[x, y] = null;
     }
 
     public bool CanMoveInto(int x,int y)
     {
         return !(boardFloor[x, y].tag == "Ridge" || boardFloor[x, y].tag == "River" || boardFloor[x, y].tag == "RiverCurve" || boardFloor[x,y].tag == "Stone")&&!GetUnit(x,y);
+    }
+
+    public Vector3 GetPositionOfTile(int x,int y)
+    {
+        return boardFloor[x, y].transform.position;
     }
 
     //Generator
