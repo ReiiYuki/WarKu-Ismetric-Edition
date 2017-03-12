@@ -98,33 +98,26 @@ public class UnitMovement : MonoBehaviour {
         this.y = y;
     }
 
-    public void UpdatePosition()
+    void UpdatePosition()
     {
         if (direction == "r")
-        {
-            if (transform.position.x > boardCon.GetPosition(x - 1, y).x)
-            {
-                x -= 1;
-            }
-        } else if (direction == "l")
-        {
-            if (transform.position.x < boardCon.GetPosition(x + 1, y).x)
-            {
-                x += 1;
-            }
-        } else if (direction == "d")
-        {
-            if (transform.position.x > boardCon.GetPosition(x, y+1).x)
-            {
-                y += 1;
-            }
-        } else if (direction == "u")
-        {
-            if (transform.position.x < boardCon.GetPosition(x, y - 1).x)
-            {
-                y -= 1;
-            }
-        }
+            CheckAndUpdatePosition(0, x - 1);
+        else if (direction == "l")
+            CheckAndUpdatePosition(0, x + 1);
+        else if (direction == "d")
+            CheckAndUpdatePosition(1, y + 1);
+        else if (direction == "u")
+            CheckAndUpdatePosition(1, y - 1);
+    }
+
+    void CheckAndUpdatePosition(int axis, int position)
+    {
+        if (axis == 0)
+            if (transform.position.x > boardCon.GetPosition(position, y).x)
+                x = position;
+        if (axis == 1)
+            if (transform.position.x > boardCon.GetPosition(x, position).x)
+                y = position;
     }
 
     void Move()
