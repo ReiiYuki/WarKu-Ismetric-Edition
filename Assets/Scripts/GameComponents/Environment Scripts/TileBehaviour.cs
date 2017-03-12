@@ -25,12 +25,18 @@ public class TileBehaviour : MonoBehaviour {
     {
         if (GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().state == 1)
         {
-            if (!transform.parent.GetComponent<BoardEnvironmentController>().GetUnit(x, y))
+            if (!transform.parent.GetComponent<BoardEnvironmentController>().GetUnit(x, y) && GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsSpawnZone(x, y))
+            {
                 GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().SpawnUnit(x, y, GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().GetSelectUnit());
+            }
+            else
+                Debug.Log("Can't Spawn HERE");
         }
         else if (GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().state == 0)
+            if (!transform.parent.GetComponent<BoardEnvironmentController>().GetUnit(x, y))
             transform.GetChild(0).gameObject.SetActive(true);
         GameObject.FindGameObjectWithTag("Core").GetComponent<Selector>().state = 0;
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);s
     }
 
     public void SetPosition(int x,int y)
