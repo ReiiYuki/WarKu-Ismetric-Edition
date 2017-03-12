@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoardController : MonoBehaviour {
+public class BoardEnvironmentController : MonoBehaviour {
 
     //Prefabs
     public GameObject landTile, rockTile, forestTile;
@@ -25,6 +25,33 @@ public class BoardController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    // Utility for game
+    public GameObject GetUnit(int x,int y)
+    {
+        return boardUnit[x, y];
+    }
+
+    public void SpawnUnit(int x,int y,GameObject unit)
+    {
+        boardUnit[x, y] = Instantiate(unit, GetPosition(x, y), Quaternion.identity);
+        boardUnit[x, y].GetComponent<UnitMovement>().SetPosition(x, y);
+    }
+
+    public bool IsSpawnZone(int x,int y)
+    {
+        return y == BOARD_SIZE - 1;
+    }
+
+    public bool IsUpperBound(int position)
+    {
+        return position == BOARD_SIZE-1;
+    }
+
+    public bool IsLowerBound(int position)
+    {
+        return position == 0;
+    }
 
     //Generator
     void GenerateBoard()
@@ -134,7 +161,7 @@ public class BoardController : MonoBehaviour {
     }
 
     //Generator Utility
-    Vector3 GetPosition(int x, int y)
+    public Vector3 GetPosition(int x, int y)
     {
         return new Vector3(y * 0.65f + x * -0.65f, y * -0.325f + x * -0.325f + Y_REAL_OFFSET, -1 * (x + y));
     }
