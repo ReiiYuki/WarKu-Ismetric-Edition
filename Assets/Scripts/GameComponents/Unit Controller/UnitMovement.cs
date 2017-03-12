@@ -12,75 +12,82 @@ public class UnitMovement : MonoBehaviour {
     Vector3 right = new Vector3(2f, 1f);
     Vector3 down = new Vector3(2f, -1f);
 
+    BoardEnvironmentController boardCon;
+
     // Use this for initialization
     void Start () {
-
+        ConnectToBoardController();
     }
 	
- /*   void Move() 
+    void ConnectToBoardController()
     {
-        if (y < targetY)
-        {
-            int nextY = y + 1;
-            if (transform.position.x < boardManager.GetPosition(x, nextY).x)
-            {
-                direction = "d";
-            }else
-            {
-                y = nextY;
-                transform.position = boardManager.GetPosition(x, nextY);
-            }
-        }else if (y > targetY)
-        {
-            int nextY = y - 1;
-            if (transform.position.x > boardManager.GetPosition(x, nextY).x)
-            {
-                direction = "u";
-            }
-            else
-            {
-                y = nextY;
-                transform.position = boardManager.GetPosition(x, nextY);
-            }
-        }
-        else
-        {
-            if (x < targetX)
-            {
-                int nextX = x + 1;
-                if (transform.position.x > boardManager.GetPosition(nextX, y).x)
-                {
-                    direction = "l";
-                }
-                else
-                {
-                    x = nextX;
-                    transform.position = boardManager.GetPosition(nextX, y);
-                }
-            }
-            else if (x > targetX)
-            {
-                int nextX = x - 1;
-                if (transform.position.x < boardManager.GetPosition(nextX, y).x)
-                {
-                    direction = "r";
-                }
-                else
-                {
-                    x = nextX;
-                    transform.position = boardManager.GetPosition(nextX, y);
-                }
-            }
-            else
-            {
-                direction = "s";
-                transform.position = boardManager.GetPosition(targetX, targetY);
-            }
-        }
+        boardCon = GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>();
     }
-    */
-	// Update is called once per frame
-	void Update () {
+
+    /*   void Move() 
+       {
+           if (y < targetY)
+           {
+               int nextY = y + 1;
+               if (transform.position.x < boardManager.GetPosition(x, nextY).x)
+               {
+                   direction = "d";
+               }else
+               {
+                   y = nextY;
+                   transform.position = boardManager.GetPosition(x, nextY);
+               }
+           }else if (y > targetY)
+           {
+               int nextY = y - 1;
+               if (transform.position.x > boardManager.GetPosition(x, nextY).x)
+               {
+                   direction = "u";
+               }
+               else
+               {
+                   y = nextY;
+                   transform.position = boardManager.GetPosition(x, nextY);
+               }
+           }
+           else
+           {
+               if (x < targetX)
+               {
+                   int nextX = x + 1;
+                   if (transform.position.x > boardManager.GetPosition(nextX, y).x)
+                   {
+                       direction = "l";
+                   }
+                   else
+                   {
+                       x = nextX;
+                       transform.position = boardManager.GetPosition(nextX, y);
+                   }
+               }
+               else if (x > targetX)
+               {
+                   int nextX = x - 1;
+                   if (transform.position.x < boardManager.GetPosition(nextX, y).x)
+                   {
+                       direction = "r";
+                   }
+                   else
+                   {
+                       x = nextX;
+                       transform.position = boardManager.GetPosition(nextX, y);
+                   }
+               }
+               else
+               {
+                   direction = "s";
+                   transform.position = boardManager.GetPosition(targetX, targetY);
+               }
+           }
+       }
+       */
+    // Update is called once per frame
+    void Update () {
         Move();
         UpdatePosition();
 	}
@@ -95,25 +102,25 @@ public class UnitMovement : MonoBehaviour {
     {
         if (direction == "r")
         {
-            if (transform.position.x > GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().GetPosition(x - 1, y).x)
+            if (transform.position.x > boardCon.GetPosition(x - 1, y).x)
             {
                 x -= 1;
             }
         } else if (direction == "l")
         {
-            if (transform.position.x < GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().GetPosition(x + 1, y).x)
+            if (transform.position.x < boardCon.GetPosition(x + 1, y).x)
             {
                 x += 1;
             }
         } else if (direction == "d")
         {
-            if (transform.position.x > GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().GetPosition(x, y+1).x)
+            if (transform.position.x > boardCon.GetPosition(x, y+1).x)
             {
                 y += 1;
             }
         } else if (direction == "u")
         {
-            if (transform.position.x < GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().GetPosition(x, y - 1).x)
+            if (transform.position.x < boardCon.GetPosition(x, y - 1).x)
             {
                 y -= 1;
             }
@@ -122,13 +129,13 @@ public class UnitMovement : MonoBehaviour {
 
     void Move()
     {
-        if (direction == "r" && !GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsLowerBound(x))
+        if (direction == "r" && !boardCon.IsLowerBound(x))
             transform.Translate(right * Time.deltaTime * speed);
-        else if (direction == "l" && !GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsUpperBound(x))
+        else if (direction == "l" && !boardCon.IsUpperBound(x))
             transform.Translate(right * Time.deltaTime * speed * -1);
-        else if (direction == "d" && !GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsUpperBound(y))
+        else if (direction == "d" && !boardCon.IsUpperBound(y))
             transform.Translate(down * Time.deltaTime * speed);
-        else if (direction == "u" && !GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().IsLowerBound(y))
+        else if (direction == "u" && !boardCon.IsLowerBound(y))
             transform.Translate(down * Time.deltaTime * speed * -1);
         else
             direction = "s";
