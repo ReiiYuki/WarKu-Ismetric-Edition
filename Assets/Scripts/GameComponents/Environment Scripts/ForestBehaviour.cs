@@ -5,6 +5,7 @@ using UnityEngine;
 public class ForestBehaviour : MonoBehaviour {
 
     public Sprite[] forestSprites;
+    public float offsetY;
 
     int healthPoint;
 	// Use this for initialization
@@ -15,9 +16,12 @@ public class ForestBehaviour : MonoBehaviour {
     void RandomTypeOfForest()
     {
         int spriteIndex = Random.Range(0,forestSprites.Length);
+        offsetY = GetComponent<SpriteRenderer>().sprite.bounds.size.y/10f;
         GetComponent<SpriteRenderer>().sprite = forestSprites[spriteIndex];
-        if (spriteIndex < 8)
-            transform.position = transform.position - new Vector3(0, 0.025f);
+        offsetY -= GetComponent<SpriteRenderer>().sprite.bounds.size.y / 10f;
+        if (offsetY > 0.0011)
+            offsetY += 0.038f;
+        transform.position -= new Vector3(0, offsetY);
         healthPoint = spriteIndex < 8 ? 2 : 3;
     }
 
