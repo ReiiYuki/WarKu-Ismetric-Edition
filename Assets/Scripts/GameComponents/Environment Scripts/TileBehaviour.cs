@@ -58,7 +58,10 @@ public class TileBehaviour : MonoBehaviour {
             if (!boardCon.GetUnit(x, y))
                 ShowTextToolTip("No Action!");
             else
+            {
                 ShowActionToolTip();
+                boardCon.GetUnit(x, y).GetComponent<UnitMovement>().Stop();
+            }
         }
         selector.state = 0;
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);

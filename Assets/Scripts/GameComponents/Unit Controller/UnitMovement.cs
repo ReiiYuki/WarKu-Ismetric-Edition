@@ -136,4 +136,9 @@ public class UnitMovement : MonoBehaviour {
         else
             direction = "s";
     }
+
+    public void Stop()
+    {
+        direction = "s";
+    }
 }
