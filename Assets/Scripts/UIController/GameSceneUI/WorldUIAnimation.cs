@@ -8,6 +8,8 @@ public class WorldUIAnimation : MonoBehaviour {
     bool disappear = false;
     float time = 0;
 
+    public bool isText;
+
 	// Use this for initialization
 	void Start () {
         SetSortingLayer();
@@ -15,7 +17,8 @@ public class WorldUIAnimation : MonoBehaviour {
 	
     void SetSortingLayer()
     {
-        GetComponentInChildren<MeshRenderer>().sortingLayerName = "UpperUI";
+        if (isText)
+            GetComponentInChildren<MeshRenderer>().sortingLayerName = "UpperUI";
     }
 
 	// Update is called once per frame
