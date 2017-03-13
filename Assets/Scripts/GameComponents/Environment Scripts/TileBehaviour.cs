@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TileBehaviour : MonoBehaviour {
 
-    public GameObject tooltipText;
+    public GameObject tooltipText,tooltipAction;
 
     int x, y;
     Selector selector;
@@ -36,9 +36,12 @@ public class TileBehaviour : MonoBehaviour {
 
     void InitializeToolTip()
     {
-        GameObject tooltip = Instantiate(tooltipText, transform.position + new Vector3(0f, 1f), Quaternion.identity);
-        tooltip.transform.SetParent(transform);
-        tooltip.SetActive(false);
+        GameObject noActionTooltip = Instantiate(tooltipText, transform.position + new Vector3(0f, 1f), Quaternion.identity);
+        noActionTooltip.transform.SetParent(transform);
+        noActionTooltip.SetActive(false);
+        GameObject actionTooltip = Instantiate(tooltipAction, transform.position + new Vector3(0f, 1f), Quaternion.identity);
+        actionTooltip.transform.SetParent(transform);
+        actionTooltip.SetActive(false);
     }
 
     void OnMouseDown()
@@ -51,8 +54,12 @@ public class TileBehaviour : MonoBehaviour {
                 ShowTextToolTip("Invalid Tile!");
         }
         else if (selector.state == 0)
+        {
             if (!boardCon.GetUnit(x, y))
                 ShowTextToolTip("No Action!");
+            else
+                ShowActionToolTip();
+        }
         selector.state = 0;
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
     }
@@ -77,5 +84,10 @@ public class TileBehaviour : MonoBehaviour {
     {
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(0).gameObject.GetComponentInChildren<TextMesh>().text = text;
+    }
+
+    void ShowActionToolTip()
+    {
+        transform.GetChild(1).gameObject.SetActive(true);
     }
 }
