@@ -8,6 +8,8 @@ public class WorldUIAnimation : MonoBehaviour {
     bool disappear = false;
     float time = 0;
 
+    public bool isText;
+
 	// Use this for initialization
 	void Start () {
         SetSortingLayer();
@@ -15,13 +17,14 @@ public class WorldUIAnimation : MonoBehaviour {
 	
     void SetSortingLayer()
     {
-        GetComponentInChildren<MeshRenderer>().sortingLayerName = "UpperUI";
+        if (isText)
+            GetComponentInChildren<MeshRenderer>().sortingLayerName = "UpperUI";
     }
 
 	// Update is called once per frame
 	void Update () {
-        IncreaseScale();
-        Disappear();
+        //IncreaseScale();
+        //Disappear();
 	}
 
     void IncreaseScale()
@@ -44,18 +47,18 @@ public class WorldUIAnimation : MonoBehaviour {
             if (time >= 1)
                 gameObject.SetActive(false);
         }
-    }
+    }   
 
-    void OnDisable()
+   /* void OnDisable()
     {
         Reset();
-    }
+    }*/
 
-    void Reset()
+   /* void Reset()
     {
         transform.localScale = new Vector3(1f, 0f);
         size = 0;
         disappear = false;
         time = 0;
-    }
+    }*/
 }

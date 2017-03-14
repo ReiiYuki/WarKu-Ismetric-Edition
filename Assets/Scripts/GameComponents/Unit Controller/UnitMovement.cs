@@ -117,9 +117,6 @@ public class UnitMovement : MonoBehaviour {
             boardCon.MoveSprite(x, y, changeX, changeY);
             x = changeX;
             y = changeY;
-        }else
-        {
-            transform.Translate(new Vector3(0f,0f,boardCon.GetPositionOfTile(changeX,changeY).z-transform.position.z)*Time.deltaTime*speed);
         }
     }
 
@@ -135,5 +132,11 @@ public class UnitMovement : MonoBehaviour {
             transform.Translate(down * Time.deltaTime * speed * -1);
         else
             direction = "s";
+    }
+
+    public void Stop()
+    {
+        direction = "s";
+        transform.position = boardCon.GetPositionOfTile(x, y);  
     }
 }
