@@ -137,6 +137,6 @@ public class UnitMovement : MonoBehaviour {
     public void Stop()
     {
         direction = "s";
-        transform.position = boardCon.GetPositionOfTile(x, y);
+        transform.position = boardCon.GetPositionOfTile(x, y);  
     }
 }

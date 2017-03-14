@@ -23,8 +23,8 @@ public class WorldUIAnimation : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        IncreaseScale();
-        Disappear();
+        //IncreaseScale();
+        //Disappear();
 	}
 
     void IncreaseScale()
@@ -47,18 +47,18 @@ public class WorldUIAnimation : MonoBehaviour {
             if (time >= 1)
                 gameObject.SetActive(false);
         }
-    }
+    }   
 
-    void OnDisable()
+   /* void OnDisable()
     {
         Reset();
-    }
+    }*/
 
-    void Reset()
+   /* void Reset()
     {
         transform.localScale = new Vector3(1f, 0f);
         size = 0;
         disappear = false;
         time = 0;
-    }
+    }*/
 }
