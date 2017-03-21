@@ -11,12 +11,15 @@ public class UnitMovement : MonoBehaviour {
 
     Vector3 right = new Vector3(2f, 1f);
     Vector3 down = new Vector3(2f, -1f);
+    public Vector3 offsetVector;
 
     BoardEnvironmentController boardCon;
 
     // Use this for initialization
     void Start () {
         ConnectToBoardController();
+        offsetVector = new Vector3(0, GetComponent<SpriteRenderer>().sprite.bounds.size.y/2 );
+        transform.position += offsetVector;
     }
 	
     void ConnectToBoardController()
@@ -24,68 +27,6 @@ public class UnitMovement : MonoBehaviour {
         boardCon = GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>();
     }
 
-    /*   void Move() 
-       {
-           if (y < targetY)
-           {
-               int nextY = y + 1;
-               if (transform.position.x < boardManager.GetPosition(x, nextY).x)
-               {
-                   direction = "d";
-               }else
-               {
-                   y = nextY;
-                   transform.position = boardManager.GetPosition(x, nextY);
-               }
-           }else if (y > targetY)
-           {
-               int nextY = y - 1;
-               if (transform.position.x > boardManager.GetPosition(x, nextY).x)
-               {
-                   direction = "u";
-               }
-               else
-               {
-                   y = nextY;
-                   transform.position = boardManager.GetPosition(x, nextY);
-               }
-           }
-           else
-           {
-               if (x < targetX)
-               {
-                   int nextX = x + 1;
-                   if (transform.position.x > boardManager.GetPosition(nextX, y).x)
-                   {
-                       direction = "l";
-                   }
-                   else
-                   {
-                       x = nextX;
-                       transform.position = boardManager.GetPosition(nextX, y);
-                   }
-               }
-               else if (x > targetX)
-               {
-                   int nextX = x - 1;
-                   if (transform.position.x < boardManager.GetPosition(nextX, y).x)
-                   {
-                       direction = "r";
-                   }
-                   else
-                   {
-                       x = nextX;
-                       transform.position = boardManager.GetPosition(nextX, y);
-                   }
-               }
-               else
-               {
-                   direction = "s";
-                   transform.position = boardManager.GetPosition(targetX, targetY);
-               }
-           }
-       }
-       */
     // Update is called once per frame
     void Update () {
         Move();
@@ -123,7 +64,7 @@ public class UnitMovement : MonoBehaviour {
     void Move()
     {
         if (direction == "r" && !boardCon.IsLowerBound(x) && boardCon.CanMoveInto(x - 1, y))
-            transform.Translate(right * Time.deltaTime * speed);
+            transform.Translate(right * Time.deltaTime * speed );
         else if (direction == "l" && !boardCon.IsUpperBound(x) && boardCon.CanMoveInto(x + 1, y))
             transform.Translate(right * Time.deltaTime * speed * -1);
         else if (direction == "d" && !boardCon.IsUpperBound(y) && boardCon.CanMoveInto(x, y + 1))
@@ -138,5 +79,10 @@ public class UnitMovement : MonoBehaviour {
     {
         direction = "s";
         transform.position = boardCon.GetPositionOfTile(x, y);  
+    }
+
+    public void SetDirection(string direction)
+    {
+        this.direction = direction;
     }
 }

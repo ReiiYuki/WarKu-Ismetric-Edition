@@ -13,7 +13,7 @@ public class BoardEnvironmentController : MonoBehaviour {
     GameObject[,] boardFloor,boardUnit;
 
     //Constant
-    const int BOARD_SIZE = 12;
+    const int BOARD_SIZE = 16;
     const float Y_REAL_OFFSET = 3.5f;
 
 	// Use this for initialization
@@ -61,7 +61,7 @@ public class BoardEnvironmentController : MonoBehaviour {
     public void MoveSprite(int x,int y,int changeX,int changeY)
     {
         boardUnit[changeX, changeY] = boardUnit[x, y];
-        boardUnit[changeX, changeY].transform.position = GetPositionOfTile(changeX, changeY);
+        boardUnit[changeX, changeY].transform.position = GetPositionOfTile(changeX, changeY) + boardUnit[x, y].GetComponent<UnitMovement>().offsetVector;
         boardUnit[x, y] = null;
     }
 

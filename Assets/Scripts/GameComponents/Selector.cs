@@ -10,7 +10,7 @@ public class Selector : MonoBehaviour {
      * 2 = Unit clicked
      */
     public int state = 0;
-    GameObject selectedUnit;
+    GameObject selectedUnit,currentUnit;
 
 	// Use this for initialization
 	void Start () {
@@ -31,5 +31,16 @@ public class Selector : MonoBehaviour {
     public GameObject GetSelectUnit()
     {
         return selectedUnit;
+    }
+
+    public void SelectTile(GameObject unit)
+    {
+        state = 2;
+        currentUnit = unit;
+    }
+
+    public void Move()
+    {
+        state = 3;
     }
 }
