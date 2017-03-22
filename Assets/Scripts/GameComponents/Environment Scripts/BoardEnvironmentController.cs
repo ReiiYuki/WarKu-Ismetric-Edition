@@ -38,6 +38,8 @@ public class BoardEnvironmentController : MonoBehaviour {
         {
             boardUnit[x, y] = Instantiate(unit, GetPositionOfTile(x, y), Quaternion.identity);
             boardUnit[x, y].GetComponent<UnitMovement>().SetPosition(x, y);
+            boardUnit[x, y].tag = "PlayerUnit";
+            Debug.Log(boardUnit[x, y].tag);
             return true;
         }
         return false;
