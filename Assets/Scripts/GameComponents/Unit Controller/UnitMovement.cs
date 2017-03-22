@@ -45,9 +45,9 @@ public class UnitMovement : MonoBehaviour {
     void UpdatePosition()
     {
         if (direction == "r")
-            CheckAndUpdatePosition( x - 1,y, transform.position.x < boardCon.GetPosition(x-1, y).x );
+            CheckAndUpdatePosition( x - 1,y, transform.position.x > boardCon.GetPosition(x-1, y).x );
         else if (direction == "l")
-            CheckAndUpdatePosition(x + 1, y, transform.position.x > boardCon.GetPosition(x+1, y).x );
+            CheckAndUpdatePosition(x + 1, y, transform.position.x < boardCon.GetPosition(x+1, y).x );
         else if (direction == "d")
             CheckAndUpdatePosition(x, y + 1, transform.position.x > boardCon.GetPosition(x, y+1).x );
         else if (direction == "u")
