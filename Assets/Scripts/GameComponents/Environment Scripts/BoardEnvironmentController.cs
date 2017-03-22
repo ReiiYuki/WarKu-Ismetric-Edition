@@ -78,6 +78,11 @@ public class BoardEnvironmentController : MonoBehaviour {
         return boardFloor[x, y].transform.position;
     }
 
+    public bool IsEnemySpawnZone(int x,int y)
+    {
+        return y == 0;
+    }
+
     //Generator
     void GenerateBoard()
     {
