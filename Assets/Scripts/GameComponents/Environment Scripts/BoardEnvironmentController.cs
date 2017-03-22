@@ -39,7 +39,7 @@ public class BoardEnvironmentController : MonoBehaviour {
             boardUnit[x, y] = Instantiate(unit, GetPositionOfTile(x, y), Quaternion.identity);
             boardUnit[x, y].GetComponent<UnitMovement>().SetPosition(x, y);
             boardUnit[x, y].tag = "PlayerUnit";
-            Debug.Log(boardUnit[x, y].tag);
+            boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
             return true;
         }
         return false;
@@ -64,6 +64,7 @@ public class BoardEnvironmentController : MonoBehaviour {
     {
         boardUnit[changeX, changeY] = boardUnit[x, y];
         boardUnit[changeX, changeY].transform.position = GetPositionOfTile(changeX, changeY) + boardUnit[x, y].GetComponent<UnitMovement>().offsetVector;
+        boardUnit[changeX, changeY].transform.SetParent(boardFloor[changeX, changeY].transform);
         boardUnit[x, y] = null;
     }
 
