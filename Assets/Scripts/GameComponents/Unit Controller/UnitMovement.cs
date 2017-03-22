@@ -69,11 +69,11 @@ public class UnitMovement : MonoBehaviour {
         if (direction == "r" && !boardCon.IsLowerBound(x) && boardCon.CanMoveInto(x - 1, y))
             transform.Translate(right * Time.deltaTime * speed );
         else if (direction == "l" && !boardCon.IsUpperBound(x) && boardCon.CanMoveInto(x + 1, y))
-            transform.Translate(right * Time.deltaTime * speed * -1);
+            transform.Translate(right * Time.deltaTime * speed * -1 + GetDifferentZ(boardCon.GetPositionOfTile(x + 1, y)));
         else if (direction == "d" && !boardCon.IsUpperBound(y) && boardCon.CanMoveInto(x, y + 1))
-            transform.Translate(down * Time.deltaTime * speed);
+            transform.Translate(down * Time.deltaTime * speed + GetDifferentZ(boardCon.GetPositionOfTile(x , y+1)));
         else if (direction == "u" && !boardCon.IsLowerBound(y) && boardCon.CanMoveInto(x, y - 1))
-            transform.Translate(down * Time.deltaTime * speed * -1);
+            transform.Translate(down * Time.deltaTime * speed * -1 );
         else
             direction = "s";
     }
@@ -119,5 +119,10 @@ public class UnitMovement : MonoBehaviour {
     {
         targetX = x;
         targetY = y;
+    }
+
+    Vector3 GetDifferentZ(Vector3 nextTilePosition)
+    {
+        return new Vector3(0f, 0f, nextTilePosition.z - transform.position.z);
     }
 }
