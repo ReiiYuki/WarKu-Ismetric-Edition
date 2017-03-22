@@ -34,6 +34,11 @@ public class Selector : MonoBehaviour {
         return selectedUnit;
     }
 
+    public GameObject GetCurrentUnit()
+    {
+        return currentUnit;
+    }
+
     public void MoveListen(GameObject unit)
     {
         state = 2;

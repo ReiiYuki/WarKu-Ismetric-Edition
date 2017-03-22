@@ -85,4 +85,9 @@ public class UnitMovement : MonoBehaviour {
     {
         this.direction = direction;
     }
+
+    public void SetTarget(int x,int y)
+    {
+        Debug.Log("Ready to move to" + x + " " + y);
+    }
 }

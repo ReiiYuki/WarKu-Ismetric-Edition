@@ -64,7 +64,7 @@ public class TileBehaviour : MonoBehaviour {
             }
         }else if (selector.state == 2)
         {
-            Debug.Log("Let's Move to here"+x+" "+y);
+            selector.GetCurrentUnit().GetComponent<UnitMovement>().SetTarget(x, y);
         }
         selector.state = 0;
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
