@@ -6,7 +6,7 @@ public class TileBehaviour : MonoBehaviour {
 
     public GameObject tooltipText,tooltipAction;
 
-    int x, y;
+    public int x, y;
     Selector selector;
     Zoomer zoomer;
     BoardEnvironmentController boardCon;
@@ -94,4 +94,5 @@ public class TileBehaviour : MonoBehaviour {
         transform.GetChild(1).position = boardCon.GetUnit(x, y).GetComponent<UnitMovement>().transform.position+boardCon.GetUnit(x, y).GetComponent<UnitMovement>().offsetVector*2;
         transform.GetChild(1).gameObject.SetActive(true);
     }
+
 }
