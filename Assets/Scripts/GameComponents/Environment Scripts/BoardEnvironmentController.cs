@@ -13,7 +13,7 @@ public class BoardEnvironmentController : MonoBehaviour {
     GameObject[,] boardFloor,boardUnit;
 
     //Constant
-    const int BOARD_SIZE = 16;
+    public int BOARD_SIZE = 16;
     const float Y_REAL_OFFSET = 3.5f;
 
 	// Use this for initialization
