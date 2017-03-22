@@ -91,6 +91,7 @@ public class TileBehaviour : MonoBehaviour {
 
     void ShowActionToolTip()
     {
+        transform.GetChild(1).position = boardCon.GetUnit(x, y).GetComponent<UnitMovement>().transform.position+boardCon.GetUnit(x, y).GetComponent<UnitMovement>().offsetVector*2;
         transform.GetChild(1).gameObject.SetActive(true);
     }
 }

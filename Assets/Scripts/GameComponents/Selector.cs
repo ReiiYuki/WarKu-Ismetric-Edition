@@ -8,6 +8,7 @@ public class Selector : MonoBehaviour {
      * 0 = Non Select
      * 1 = Spawn button clicked
      * 2 = Unit clicked
+     * 3 = Move Listen
      */
     public int state = 0;
     GameObject selectedUnit,currentUnit;
@@ -39,7 +40,7 @@ public class Selector : MonoBehaviour {
         currentUnit = unit;
     }
 
-    public void Move()
+    public void MoveListen()
     {
         state = 3;
     }
