@@ -20,6 +20,8 @@ public class UnitMovement : MonoBehaviour {
         ConnectToBoardController();
         offsetVector = new Vector3(0, GetComponent<SpriteRenderer>().sprite.bounds.size.y/2 );
         transform.position += offsetVector;
+        targetX = -999;
+        targetY = -999;
     }
 	
     void ConnectToBoardController()
@@ -30,6 +32,7 @@ public class UnitMovement : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         Move();
+        MoveToTarget();
         UpdatePosition();
 	}
     
@@ -86,8 +89,35 @@ public class UnitMovement : MonoBehaviour {
         this.direction = direction;
     }
 
+    void MoveToTarget()
+    {
+        if (targetX > -1 && targetY > -1)
+        {
+            if (y > targetY)
+            {
+                SetDirection("u");
+            }else if (y < targetY)
+            {
+                SetDirection("d");
+            }
+            else if (x > targetX)
+            {
+                SetDirection("r");
+            }else if (x < targetX)
+            {
+                SetDirection("l");
+            }else 
+            {
+                Stop();
+                targetX = -999;
+                targetY = -999;
+            }
+        }
+    }
+
     public void SetTarget(int x,int y)
     {
-        Debug.Log("Ready to move to" + x + " " + y);
+        targetX = x;
+        targetY = y;
     }
 }
