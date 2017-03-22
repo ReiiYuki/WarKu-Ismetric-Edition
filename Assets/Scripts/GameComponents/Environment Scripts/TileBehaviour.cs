@@ -62,6 +62,9 @@ public class TileBehaviour : MonoBehaviour {
                 ShowActionToolTip();
                 boardCon.GetUnit(x, y).GetComponent<UnitMovement>().Stop();
             }
+        }else if (selector.state == 2)
+        {
+            Debug.Log("Let's Move to here"+x+" "+y);
         }
         selector.state = 0;
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);

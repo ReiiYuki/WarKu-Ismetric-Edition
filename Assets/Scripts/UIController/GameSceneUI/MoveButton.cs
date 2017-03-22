@@ -24,6 +24,5 @@ public class MoveButton : MonoBehaviour {
     void SetMoveListenerState()
     {
         selector.MoveListen(boardCon.GetUnit(x, y));
-        Debug.Log("Listening");
     }
 }
