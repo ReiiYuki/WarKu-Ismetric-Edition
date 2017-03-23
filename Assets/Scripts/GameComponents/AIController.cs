@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AIController : MonoBehaviour {
 
+    public GameObject enemyPrefab;
+
     float time;
     bool readySpawn;
 
@@ -24,6 +26,7 @@ public class AIController : MonoBehaviour {
     void RandomTileSpawn()
     {
         int tile = Random.Range(0, GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().BOARD_SIZE);
+        GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().SpawnUnit(tile, 0,enemyPrefab, "EnemyUnit");
     }
 
     IEnumerator SpawnByRandomTime()
@@ -31,6 +34,6 @@ public class AIController : MonoBehaviour {
         readySpawn = false;
         yield return new WaitForSeconds(time);
         readySpawn = true;
-        Debug.Log("Spawn");
+        RandomTileSpawn();
     }
 }

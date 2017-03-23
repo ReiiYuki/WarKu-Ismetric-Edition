@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnitMovement : MonoBehaviour {
 
     float speed = 1;
-    string direction = "u";
+    string direction;
     int offset;
     public int x,y,targetX,targetY;
 
@@ -22,6 +22,7 @@ public class UnitMovement : MonoBehaviour {
         transform.position += offsetVector;
         targetX = -999;
         targetY = -999;
+        direction = tag == "PlayerUnit" ? "u" : "d";
     }
 	
     void ConnectToBoardController()
