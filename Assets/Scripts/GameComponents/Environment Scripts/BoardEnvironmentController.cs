@@ -13,7 +13,7 @@ public class BoardEnvironmentController : MonoBehaviour {
     GameObject[,] boardFloor,boardUnit;
 
     //Constant
-    const int BOARD_SIZE = 16;
+    public int BOARD_SIZE = 16;
     const float Y_REAL_OFFSET = 3.5f;
 
 	// Use this for initialization
@@ -32,20 +32,22 @@ public class BoardEnvironmentController : MonoBehaviour {
         return boardUnit[x, y];
     }
 
-    public bool SpawnUnit(int x,int y,GameObject unit)
+    public bool SpawnUnit(int x,int y,GameObject unit,string type)
     {
-        if (!GetUnit(x, y) && IsSpawnZone(x, y) && CanMoveInto(x, y))
+        if (!GetUnit(x, y) && IsSpawnZone(x, y,type) && CanMoveInto(x, y))
         {
             boardUnit[x, y] = Instantiate(unit, GetPositionOfTile(x, y), Quaternion.identity);
             boardUnit[x, y].GetComponent<UnitMovement>().SetPosition(x, y);
+            boardUnit[x, y].tag = type;
+            boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
             return true;
         }
         return false;
     }
 
-    public bool IsSpawnZone(int x,int y)
+    public bool IsSpawnZone(int x,int y,string type)
     {
-        return y == BOARD_SIZE - 1;
+        return type=="PlayerUnit"?y == BOARD_SIZE - 1:IsEnemySpawnZone(x,y);
     }
 
     public bool IsUpperBound(int position)
@@ -62,6 +64,7 @@ public class BoardEnvironmentController : MonoBehaviour {
     {
         boardUnit[changeX, changeY] = boardUnit[x, y];
         boardUnit[changeX, changeY].transform.position = GetPositionOfTile(changeX, changeY) + boardUnit[x, y].GetComponent<UnitMovement>().offsetVector;
+        boardUnit[changeX, changeY].transform.SetParent(boardFloor[changeX, changeY].transform);
         boardUnit[x, y] = null;
     }
 
@@ -73,6 +76,11 @@ public class BoardEnvironmentController : MonoBehaviour {
     public Vector3 GetPositionOfTile(int x,int y)
     {
         return boardFloor[x, y].transform.position;
+    }
+
+    public bool IsEnemySpawnZone(int x,int y)
+    {
+        return y == 0;
     }
 
     //Generator
