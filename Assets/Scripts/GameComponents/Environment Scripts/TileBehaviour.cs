@@ -48,10 +48,7 @@ public class TileBehaviour : MonoBehaviour {
     {
         if (selector.state == 1)
         {
-            if (boardCon.SpawnUnit(x, y, selector.GetSelectUnit()))
-                ShowTextToolTip("Unit is spawn!!");
-            else
-                ShowTextToolTip("Invalid Tile!");
+            SpawnUnit(selector.GetSelectUnit(),"PlayerUnit");
         }
         else if (selector.state == 0)
         {
@@ -98,4 +95,11 @@ public class TileBehaviour : MonoBehaviour {
         transform.GetChild(1).gameObject.SetActive(true);
     }
 
+    public void SpawnUnit(GameObject unit,string type)
+    {
+        if (boardCon.SpawnUnit(x, y, unit,type))
+            ShowTextToolTip("Unit is spawn!!");
+        else
+            ShowTextToolTip("Invalid Tile!");
+    }
 }
