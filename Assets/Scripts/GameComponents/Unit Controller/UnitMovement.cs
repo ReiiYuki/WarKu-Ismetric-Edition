@@ -13,6 +13,8 @@ public class UnitMovement : MonoBehaviour {
     Vector3 down = new Vector3(2f, -1f);
     public Vector3 offsetVector;
 
+    List<int[]> path;
+
     BoardEnvironmentController boardCon;
 
     // Use this for initialization
@@ -120,11 +122,66 @@ public class UnitMovement : MonoBehaviour {
     {
         targetX = x;
         targetY = y;
+        UpdatePath(x, y);
     }
 
     Vector3 GetDifferentZ(Vector3 nextTilePosition)
     {
         return new Vector3(0f, 0f, nextTilePosition.z - transform.position.z);
     }
+
+    public void UpdatePath(int toX,int toY)
+    {
+        Dictionary<int[], int[]> history = new Dictionary<int[], int[]>();
+        Queue<int[]> queue = new Queue<int[]>();
+        List<int[]> marker = new List<int[]>();
+        bool reach = false;
+        marker.Add(new int[] { x, y });
+        queue.Enqueue(new int[] { x, y });
+        while (queue.Count > 0 || !reach)
+        {
+            int[] current = queue.Dequeue();
+            int x = current[0];
+            int y = current[1];
+            if (x==toX && y == toY)
+                reach = true;
+            else
+            {
+                if (marker.Contains(new int[] { x+1, y })&&x+1<boardCon.BOARD_SIZE&&boardCon.CanMoveInto(x+1,y))
+                {
+                    marker.Add(new int[] { x + 1, y });
+                    queue.Enqueue(new int[] { x + 1, y });
+                    history.Add(new int[] { x + 1, y }, current);
+                }
+                if (marker.Contains(new int[] { x-1, y })&&x-1>=0 && boardCon.CanMoveInto(x + 1, y))
+                {
+                    marker.Add(new int[] { x - 1, y });
+                    queue.Enqueue(new int[] { x - 1, y });
+                    history.Add(new int[] { x - 1, y }, current);
+                }
+                if (marker.Contains(new int[] { x, y+1 }) && y + 1 < boardCon.BOARD_SIZE && boardCon.CanMoveInto(x + 1, y))
+                {
+                    marker.Add(new int[] { x , y+1 });
+                    queue.Enqueue(new int[] { x , y+1 });
+                    history.Add(new int[] { x, y+1 }, current);
+                }
+                if (marker.Contains(new int[] { x, y-1 }) && y - 1 >= 0 && boardCon.CanMoveInto(x + 1, y))
+                {
+                    marker.Add(new int[] { x, y-1 });
+                    queue.Enqueue(new int[] { x, y-1 });
+                    history.Add(new int[] { x, y-1 }, current);
+                }
+            }
+        }
+        int[] now = new int[] { toX, toY };
+        path.Add(now);
+        while (history.ContainsKey(now))
+        {
+            now = history[now];
+            path.Add(now);
+        }
+        path.Reverse();
+    }
+
 
 }
