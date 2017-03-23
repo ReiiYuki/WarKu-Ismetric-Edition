@@ -61,7 +61,10 @@ public class TileBehaviour : MonoBehaviour {
             }
         }else if (selector.state == 2)
         {
-            selector.GetCurrentUnit().GetComponent<UnitMovement>().SetTarget(x, y);
+            if (boardCon.CanMoveInto(x, y))
+                selector.GetCurrentUnit().GetComponent<UnitMovement>().SetTarget(x, y);
+            else
+                ShowTextToolTip("Can't Move to here");
         }
         selector.state = 0;
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
