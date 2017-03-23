@@ -32,22 +32,22 @@ public class BoardEnvironmentController : MonoBehaviour {
         return boardUnit[x, y];
     }
 
-    public bool SpawnUnit(int x,int y,GameObject unit)
+    public bool SpawnUnit(int x,int y,GameObject unit,string type)
     {
-        if (!GetUnit(x, y) && IsSpawnZone(x, y) && CanMoveInto(x, y))
+        if (!GetUnit(x, y) && IsSpawnZone(x, y,type) && CanMoveInto(x, y))
         {
             boardUnit[x, y] = Instantiate(unit, GetPositionOfTile(x, y), Quaternion.identity);
             boardUnit[x, y].GetComponent<UnitMovement>().SetPosition(x, y);
-            boardUnit[x, y].tag = "PlayerUnit";
+            boardUnit[x, y].tag = type;
             boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
             return true;
         }
         return false;
     }
 
-    public bool IsSpawnZone(int x,int y)
+    public bool IsSpawnZone(int x,int y,string type)
     {
-        return y == BOARD_SIZE - 1;
+        return type=="PlayerUnit"?y == BOARD_SIZE - 1:IsEnemySpawnZone(x,y);
     }
 
     public bool IsUpperBound(int position)
