@@ -23,7 +23,7 @@ public class AIController : MonoBehaviour {
             StartCoroutine(SpawnByRandomTime());
 	}
 
-    void RandomTileSpawn()
+    void Spawn()
     {
         int tile = Random.Range(0, GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().BOARD_SIZE);
         GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().SpawnUnit(tile, 0,enemyPrefab, "EnemyUnit");
@@ -34,6 +34,6 @@ public class AIController : MonoBehaviour {
         readySpawn = false;
         yield return new WaitForSeconds(time);
         readySpawn = true;
-        RandomTileSpawn();
+        Spawn();
     }
 }
