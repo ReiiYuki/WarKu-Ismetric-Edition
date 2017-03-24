@@ -28,6 +28,12 @@ public class UnitMovement : MonoBehaviour {
         targetY = -999;
         canWalk = false;
         direction = tag == "PlayerUnit" ? "u" : "d";
+        if (tag == "EnemyUnit")
+        {
+            int randomTile = Random.Range(0, boardCon.BOARD_SIZE);
+            Debug.Log(randomTile);
+            SetTarget(randomTile, boardCon.BOARD_SIZE - 1);
+        }
     }
 	
     void ConnectToBoardController()
@@ -143,7 +149,8 @@ public class UnitMovement : MonoBehaviour {
 
     public void UpdatePath(int toX,int toY)
     {
-        path.Clear();
+        ConnectToBoardController();
+        path = new List<int[]>();
         Dictionary<string, int[]> history = new Dictionary<string, int[]>();
         List<int[]> queue = new List<int[]>();
         List<string> marker = new List<string>();
