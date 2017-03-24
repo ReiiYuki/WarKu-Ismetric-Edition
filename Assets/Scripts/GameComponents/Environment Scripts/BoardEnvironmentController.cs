@@ -70,6 +70,8 @@ public class BoardEnvironmentController : MonoBehaviour {
 
     public bool CanMoveInto(int x,int y)
     {
+        if (x < 0 || y < 0 || x >= BOARD_SIZE || y >= BOARD_SIZE)
+            return false;
         return !(boardFloor[x, y].tag == "Ridge" || boardFloor[x, y].tag == "River" || boardFloor[x, y].tag == "RiverCurve" || boardFloor[x,y].tag == "Stone")&&!GetUnit(x,y);
     }
 

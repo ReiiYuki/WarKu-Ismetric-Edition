@@ -13,6 +13,9 @@ public class UnitMovement : MonoBehaviour {
     Vector3 down = new Vector3(2f, -1f);
     public Vector3 offsetVector;
 
+    List<int[]> path;
+    bool canWalk;
+
     BoardEnvironmentController boardCon;
 
     // Use this for initialization
@@ -20,8 +23,10 @@ public class UnitMovement : MonoBehaviour {
         ConnectToBoardController();
         offsetVector = new Vector3(0, GetComponent<SpriteRenderer>().sprite.bounds.size.y/2 );
         transform.position += offsetVector;
+        path = new List<int[]>();
         targetX = -999;
         targetY = -999;
+        canWalk = false;
         direction = tag == "PlayerUnit" ? "u" : "d";
     }
 	
@@ -110,20 +115,85 @@ public class UnitMovement : MonoBehaviour {
             }else 
             {
                 Stop();
-                targetX = -999;
-                targetY = -999;
+                if (canWalk && path.Count > 0)
+                {
+                    targetX = path[0][0];
+                    targetY = path[0][1];
+                    path.RemoveAt(0);
+                    if (path.Count == 0)
+                    {
+                        canWalk = false;
+                    }
+                }
             }
         }
     }
 
-    public void SetTarget(int x,int y)
+    public void SetTarget(int toX,int toY)
     {
         targetX = x;
         targetY = y;
+        UpdatePath(toX, toY);
     }
 
     Vector3 GetDifferentZ(Vector3 nextTilePosition)
     {
         return new Vector3(0f, 0f, nextTilePosition.z - transform.position.z);
     }
+
+    public void UpdatePath(int toX,int toY)
+    {
+        path.Clear();
+        Dictionary<string, int[]> history = new Dictionary<string, int[]>();
+        List<int[]> queue = new List<int[]>();
+        List<string> marker = new List<string>();
+        marker.Add(x+" "+y);
+        queue.Add(new int[] { x, y });
+        while (queue.Count > 0)
+        {
+            int[] current = queue[0];
+            queue.RemoveAt(0);
+            int x = current[0];
+            int y = current[1];
+            if (x == toX && y == toY)
+                break;
+            else
+            {
+                if (!marker.Contains((x+1)+" "+y)&& boardCon.CanMoveInto(x + 1, y))
+                {
+                    marker.Add(( x + 1)+" " +y );
+                    queue.Add(new int[] { x + 1, y });
+                    history[(x+1)+" "+y] = current;
+                }
+                if (!marker.Contains(( x - 1)+" "+ y )&&  boardCon.CanMoveInto(x - 1, y))
+                {
+                    marker.Add(( x - 1)+" "+ y );
+                    queue.Add(new int[] { x - 1, y });
+                    history[(x-1)+" "+y] = current;
+                }
+                if (!marker.Contains( x+" "+( y + 1 )) && boardCon.CanMoveInto(x , y+1))
+                {
+                    marker.Add( x+" "+( y + 1 ));
+                    queue.Add(new int[] { x, y + 1 });
+                    history[x+" "+(y+1)] =  current;
+                }
+                if (!marker.Contains( x +" "+( y - 1 ))  && boardCon.CanMoveInto(x , y-1))
+                {
+                    marker.Add(x+" "+( y - 1 ));
+                    queue.Add(new int[] { x, y - 1 });
+                    history[x+" "+(y-1)] = current;
+                }
+            }
+        }
+        int[] now = new int[] { toX, toY };
+        path.Add(now);
+        while (history.ContainsKey(now[0]+" "+now[1]))
+        {
+            now = history[now[0]+" "+now[1]];
+            path.Add(now);
+        }
+        path.Reverse();
+        canWalk = true;
+    }
+
 }
