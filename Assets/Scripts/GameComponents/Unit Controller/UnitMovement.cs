@@ -93,10 +93,19 @@ public class UnitMovement : MonoBehaviour {
             Stop();
     }
 
+    public void ForceStop()
+    {
+        path.Clear();
+        canWalk = false;
+        targetX = x;
+        targetY = y;
+        Stop();
+    }
+
     public void Stop()
     {
         direction = "s";
-        transform.position = boardCon.GetPositionOfTile(x, y)+offsetVector;  
+        transform.position = boardCon.GetPositionOfTile(x, y)+offsetVector;
     }
 
     public void SetDirection(string direction)
@@ -212,10 +221,11 @@ public class UnitMovement : MonoBehaviour {
         {
             for (int j = y - 1; j <= y + 1; j++)
             {
-                if (i>=0&&j>=0&&i<boardCon.BOARD_SIZE&&j<boardCon.BOARD_SIZE)
+                if (i>=0&&j>=0&&i<boardCon.BOARD_SIZE&&j<boardCon.BOARD_SIZE&&i!=x&&j!=y)
                     if (boardCon.GetUnit(i, j))
                     {
                         target = boardCon.GetUnit(i, j);
+                        //ForceStop();
                         return;
                     }
             }
