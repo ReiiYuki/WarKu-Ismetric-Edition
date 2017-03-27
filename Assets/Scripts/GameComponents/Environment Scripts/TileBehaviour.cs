@@ -57,7 +57,7 @@ public class TileBehaviour : MonoBehaviour {
             else
             {
                 ShowActionToolTip();
-                boardCon.GetUnit(x, y).GetComponent<UnitMovement>().Stop();
+                boardCon.GetUnit(x, y).GetComponent<UnitMovement>().ForceStop();
             }
         }else if (selector.state == 2)
         {

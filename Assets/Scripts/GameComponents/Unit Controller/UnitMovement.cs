@@ -16,6 +16,8 @@ public class UnitMovement : MonoBehaviour {
     List<int[]> path;
     bool canWalk;
 
+    public int attackRange;
+    public GameObject target;
     BoardEnvironmentController boardCon;
 
     // Use this for initialization
@@ -27,11 +29,11 @@ public class UnitMovement : MonoBehaviour {
         targetX = -999;
         targetY = -999;
         canWalk = false;
+        attackRange = 1;
         direction = tag == "PlayerUnit" ? "u" : "d";
         if (tag == "EnemyUnit")
         {
             int randomTile = Random.Range(0, boardCon.BOARD_SIZE);
-            Debug.Log(randomTile);
             SetTarget(randomTile, boardCon.BOARD_SIZE - 1);
         }
     }
@@ -46,6 +48,7 @@ public class UnitMovement : MonoBehaviour {
         Move();
         MoveToTarget();
         UpdatePosition();
+        CheckAttackRange();
 	}
     
     public void SetPosition(int x,int y)
@@ -90,10 +93,19 @@ public class UnitMovement : MonoBehaviour {
             Stop();
     }
 
+    public void ForceStop()
+    {
+        path.Clear();
+        canWalk = false;
+        targetX = x;
+        targetY = y;
+        Stop();
+    }
+
     public void Stop()
     {
         direction = "s";
-        transform.position = boardCon.GetPositionOfTile(x, y)+offsetVector;  
+        transform.position = boardCon.GetPositionOfTile(x, y)+offsetVector;
     }
 
     public void SetDirection(string direction)
@@ -203,4 +215,20 @@ public class UnitMovement : MonoBehaviour {
         canWalk = true;
     }
 
+    public void CheckAttackRange()
+    {
+        for (int i = x - 1; i <= x + 1; i++)
+        {
+            for (int j = y - 1; j <= y + 1; j++)
+            {
+                if (i>=0&&j>=0&&i<boardCon.BOARD_SIZE&&j<boardCon.BOARD_SIZE&&i!=x&&j!=y)
+                    if (boardCon.GetUnit(i, j))
+                    {
+                        target = boardCon.GetUnit(i, j);
+                        //ForceStop();
+                        return;
+                    }
+            }
+        }
+    }
 }
