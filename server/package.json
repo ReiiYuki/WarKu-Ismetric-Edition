@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "https://github.com/ReiiYuki/WarKu-Isometric-Edition.git",
   "author": "Voraton Lertrattanapaisal",
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "dependencies": {
+    "dgt-net": "^1.0.1"
+  }
 }
