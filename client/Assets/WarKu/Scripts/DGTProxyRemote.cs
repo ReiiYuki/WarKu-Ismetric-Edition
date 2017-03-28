@@ -10,7 +10,9 @@ public class DGTProxyRemote : MonoBehaviour {
         DISCONNECTED = 0,
         DISCONNECTING,
         CONNECTED,
-        CONNECTING
+        CONNECTING,
+        LOGGED_IN,
+        LOGGING_IN
     }
 
     void SetState(State state)
@@ -62,7 +64,7 @@ public class DGTProxyRemote : MonoBehaviour {
 
     public void Disconnect()
     {
-        if (state != State.CONNECTED) return;
+        if (state != State.CONNECTED || state != State.LOGGED_IN) return;
         SetState(State.DISCONNECTING);
         packet.Disconnect();
     }
@@ -86,7 +88,7 @@ public class DGTProxyRemote : MonoBehaviour {
 
     public bool IsConnected()
     {
-        return packet.Connected && state == State.CONNECTED;
+        return packet.Connected && (state == State.CONNECTED||state == State.LOGGED_IN);
     }
 
     public bool IsConnectionFailed()
@@ -104,6 +106,12 @@ public class DGTProxyRemote : MonoBehaviour {
     public void Login(string name)
     {
         packet.Login(name);
+        SetState(State.LOGGING_IN);
+    }
+    public void OnLoggedInSuccess()
+    {
+        SetState(State.LOGGED_IN);
+        Debug.Log("Success");
     }
     #endregion
 }
