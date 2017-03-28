@@ -30,7 +30,10 @@ public class DGTController : MonoBehaviour {
             yield return new WaitForSeconds(0.1f);
         }
         if (remote.IsConnected())
+        {
             Debug.Log("Success");
+            remote.Login("Kuy");
+        }
         else
             Debug.Log("Failed");
         yield break;

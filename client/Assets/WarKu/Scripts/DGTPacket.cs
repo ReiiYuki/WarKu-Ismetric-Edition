@@ -21,7 +21,8 @@ public class DGTPacket : PacketManager {
     #region id
     private enum PacketID
     {
-        CLIENT_CONNECT = 10000
+        CLIENT_LOGIN = 10000,
+        CLIENT_DISCONNECT = 10001
     }
     #endregion
 
@@ -58,4 +59,12 @@ public class DGTPacket : PacketManager {
     }
     #endregion
 
+    #region login/logout
+    public void Login(string name)
+    {
+        PacketWriter packetWriter = BeginSend((int)PacketID.CLIENT_LOGIN);
+        packetWriter.WriteString(name);
+        EndSend();
+    }
+    #endregion
 }

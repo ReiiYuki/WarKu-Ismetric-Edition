@@ -100,4 +100,10 @@ public class DGTProxyRemote : MonoBehaviour {
     }
     #endregion
 
+    #region login/logout
+    public void Login(string name)
+    {
+        packet.Login(name);
+    }
+    #endregion
 }
