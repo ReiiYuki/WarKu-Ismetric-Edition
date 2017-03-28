@@ -1,11 +1,9 @@
-import {server} from 'dgt-net'
-import Packet from './packet'
-import RemoteProxy from './remoteproxy'
+let server = require('dgt-net').server
+let packet = require('./packet')
+let remoteProxy = require('./remoteproxy')
 
 const PORT = 1111
 
-server.setRemoteProxyClass(RemoteProxy)
-server.setPacketObject(Packet)
+server.setRemoteProxyClass(remoteProxy)
+server.setPacketObject(packet)
 server.listen(PORT)
-
-export default server

@@ -1,7 +1,7 @@
-import {packet_writer} from 'dgt-net'
+let packetWriter = require('dgt-net').packet_writer
 
-const packet = {
+let packet = {
   CLIENT_CONNECT : 10000
 }
 
-export default packet
+module.exports = packet
