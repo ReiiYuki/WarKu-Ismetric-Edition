@@ -31,7 +31,6 @@ public class DGTController : MonoBehaviour {
         }
         if (remote.IsConnected())
         {
-            Debug.Log("Success");
             remote.Login("Kuy");
         }
         else

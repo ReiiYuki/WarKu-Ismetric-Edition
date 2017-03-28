@@ -22,7 +22,10 @@ public class DGTPacket : PacketManager {
     private enum PacketID
     {
         CLIENT_LOGIN = 10000,
-        CLIENT_DISCONNECT = 10001
+        CLIENT_DISCONNECT = 10001,
+
+
+        SERVER_LOGIN_SUCCESS = 20000
     }
     #endregion
 
@@ -32,6 +35,7 @@ public class DGTPacket : PacketManager {
     public DGTPacket (DGTProxyRemote remote) : base()
     {
         this.remote = remote;
+        PacketMapper();
     }
     #endregion
 
@@ -55,7 +59,7 @@ public class DGTPacket : PacketManager {
     #region packet mapper
     private void PacketMapper()
     {
-        
+        _Mapper[(int)PacketID.SERVER_LOGIN_SUCCESS] = ReceiveLoggedInResponse;
     }
     #endregion
 
@@ -65,6 +69,10 @@ public class DGTPacket : PacketManager {
         PacketWriter packetWriter = BeginSend((int)PacketID.CLIENT_LOGIN);
         packetWriter.WriteString(name);
         EndSend();
+    }
+    private void ReceiveLoggedInResponse(int packet_id,PacketReader pr)
+    {
+        DGTProxyRemote.GetInstance().OnLoggedInSuccess();
     }
     #endregion
 }

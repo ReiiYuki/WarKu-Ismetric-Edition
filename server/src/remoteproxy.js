@@ -17,6 +17,10 @@ class RemoteProxy extends server.RemoteProxy {
     this.name = name
     lobby.addRemote(this)
   }
+
+  responseLoginSuccess(){
+    this.send(packet.responseLoginSuccess())
+  }
 }
 
 module.exports = RemoteProxy

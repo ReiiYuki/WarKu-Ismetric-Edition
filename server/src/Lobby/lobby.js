@@ -6,6 +6,7 @@ class Lobby {
 
   addRemote(remote){
     this.remotes.push(remote)
+    remote.responseLoginSuccess()
   }
 
   removeRemote(remote){
