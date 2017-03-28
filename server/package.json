@@ -1,0 +1,18 @@
+{
+  "name": "warku-isometric-server",
+  "version": "1.0.0",
+  "description": "-",
+  "main": "index.js",
+  "repository": "https://github.com/ReiiYuki/WarKu-Isometric-Edition.git",
+  "author": "Voraton Lertrattanapaisal",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "dgt-net": "^1.0.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-preset-latest": "^6.24.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.24.0"
+  }
+}
