@@ -52,13 +52,14 @@ class Board {
       else if (state==6) y--
       else if (state==8) x++
       while (x<this.SIZE&&y<this.SIZE&&x>=0&&y>=0){
-        if (state==3||state==5||state==8) state = [4,6,8][Math.floor(Math.random()*3)]
+        if (state==5||state==8) state = [4,6,8][Math.floor(Math.random()*3)]
+        else if (state==3) state = [4,8][Math.floor(Math.random()*2)]
         else if (state==4||state==7) state = [7,5][Math.floor(Math.random()*2)]
-        else if (state==6) state = [3,7][Math.floor(Math.random()*2)]
+        else if (state==6) state = 3
         this.floors[x][y] = state
         if (state==3||state==5||state==8) x++
-        else if (state==4) y++
-        else if (state==6||state==4) y--
+        else if (state==4||state==7) y++
+        else if (state==6) y--
       }
     }
   }
@@ -68,7 +69,7 @@ class Board {
     for (let i =0;i<numMount;i++ ){
       var x = Math.floor(Math.random()*this.SIZE)
       var y = Math.floor(Math.random()*this.SIZE)
-      if (this.floors[x][y]==0||[9,10,11,12,14,15,16,17].indexOf(this.floors[x][y])){
+      if (this.floors[x][y]==0||[9,10,11,12,14,15,16,17].indexOf(this.floors[x][y])>0){
         this.floors[x][y] = 13
         if (x-1>=0&&y-1>=0&&this.floors[x-1][y-1]==0) this.floors[x-1][y-1] = 9
         if (x-1>=0&&this.floors[x-1][y]==0) this.floors[x-1][y] = 10
