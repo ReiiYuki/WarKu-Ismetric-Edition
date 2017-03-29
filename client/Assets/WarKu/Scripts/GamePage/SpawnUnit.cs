@@ -8,6 +8,7 @@ public class SpawnUnit : MonoBehaviour {
 
 	public void SelectUnit()
     {
+        //TODO Add Cursor Changing Here
         GameObject.FindObjectOfType<Selector>().SelectUnit(unitType);
     }
 

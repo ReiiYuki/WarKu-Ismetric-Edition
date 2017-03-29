@@ -57,7 +57,7 @@ public class BoardController : MonoBehaviour {
         if (tile.GetComponent<SpriteRenderer>().sprite.bounds.size.y > tilePrototype[0].GetComponent<SpriteRenderer>().sprite.bounds.size.y)
             offsetY = tile.GetComponent<SpriteRenderer>().sprite.bounds.size.y / 10f;
         boardFloor[x, y] = Instantiate(tile, GetPosition(x, y) + new Vector3(0, offsetY), Quaternion.identity);
-    //    boardFloor[x, y].GetComponent<TileBehaviour>().SetPosition(x, y);
+        boardFloor[x, y].GetComponent<TileBehaviour>().SetPosition(x, y);
         boardFloor[x, y].transform.SetParent(transform);
     }
     #endregion
