@@ -4,6 +4,7 @@ let packet = {
   CLIENT_LOGIN : 10000,
   CLIENT_DISCONNECT : 10001,
   CLIENT_CREATE_ROOM : 10002,
+  CLIENT_REQUEST_BOARD : 10003,
 
   SERVER_LOGIN_SUCCESS : 20000,
   SERVER_CREATE_ROOM_SUCCESS : 20001,
@@ -43,6 +44,10 @@ packet.updateBoard = (floors,units)=>{
   pw.append_string(units)
   pw.finish()
   return pw.buffer
+}
+
+packet[packet.CLIENT_REQUEST_BOARD] = (remote,data) =>{
+  remote.requestBoard()
 }
 
 module.exports = packet

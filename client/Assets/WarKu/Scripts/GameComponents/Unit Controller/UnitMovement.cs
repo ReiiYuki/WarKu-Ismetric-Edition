@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitMovement : MonoBehaviour {
-
+    /*
     float speed = 1;
     string direction;
     int offset;
@@ -230,5 +230,5 @@ public class UnitMovement : MonoBehaviour {
                     }
             }
         }
-    }
+    }*/
 }

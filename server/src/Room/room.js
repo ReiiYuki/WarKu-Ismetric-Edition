@@ -7,7 +7,6 @@ class Room {
     this.remotes = []
     this.addPlayer(remote)
     remote.responseCreateRoomSuccess(type,id)
-    this.sendBoard()
   }
 
   addPlayer(remote){

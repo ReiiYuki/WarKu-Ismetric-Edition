@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TileBehaviour : MonoBehaviour {
 
-    public GameObject tooltipText,tooltipAction;
+ /*   public GameObject tooltipText,tooltipAction;
 
     public int x, y;
     Selector selector;
@@ -104,5 +104,5 @@ public class TileBehaviour : MonoBehaviour {
             ShowTextToolTip("Unit is spawn!!");
         else
             ShowTextToolTip("Invalid Tile!");
-    }
+    }*/
 }

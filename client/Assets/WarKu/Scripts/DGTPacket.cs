@@ -24,6 +24,7 @@ public class DGTPacket : PacketManager {
         CLIENT_LOGIN = 10000,
         CLIENT_DISCONNECT = 10001,
         CLIENT_CREATE_ROOM = 10002,
+        CLIENT_REQUEST_BOARD = 10003,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
@@ -101,6 +102,11 @@ public class DGTPacket : PacketManager {
         string boardFloorsStr = pr.ReadString();
         string boardUnitsStr = pr.ReadString();
         DGTProxyRemote.GetInstance().OnUpdateBoard(boardFloorsStr, boardUnitsStr);
+    }
+    public void RequestBoard()
+    {
+        PacketWriter packetWriter = BeginSend((int)PacketID.CLIENT_REQUEST_BOARD);
+        EndSend();
     }
     #endregion
 }
