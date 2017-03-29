@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoardEnvironmentController : MonoBehaviour {
-
+    /*
     //Prefabs
     public GameObject landTile, rockTile, forestTile;
     public GameObject[] riverTile;
@@ -231,5 +231,5 @@ public class BoardEnvironmentController : MonoBehaviour {
         PlaceTile(x, y, tileSet[stateSets[selectedIndex]]);
         state = stateSets[selectedIndex];
     }
-
+    */
 }

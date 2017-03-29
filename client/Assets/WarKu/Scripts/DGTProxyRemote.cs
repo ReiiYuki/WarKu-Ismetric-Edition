@@ -114,4 +114,29 @@ public class DGTProxyRemote : MonoBehaviour {
         Debug.Log("Success");
     }
     #endregion
+
+    #region room
+    public void CreateRoom(int type)
+    {
+        packet.CreateRoom(type);
+    }
+    public void OnCreatedRoom(int id,int type)
+    {
+        PlayerPrefs.SetInt("RoomID", id);
+        PlayerPrefs.SetInt("RoomType", type);
+        Debug.Log(id + " " + type);
+    }
+    #endregion
+
+    #region board
+    public void OnUpdateBoard(string boardFloorsStr,string boardUnitsStr)
+    {
+        if (!GameObject.FindGameObjectWithTag("Board")) return;
+        GameObject.FindGameObjectWithTag("Board").GetComponent<BoardController>().UpdateBoard(boardFloorsStr, boardUnitsStr);
+    }
+    public void RequestBoard()
+    {
+        packet.RequestBoard();
+    }
+    #endregion
 }

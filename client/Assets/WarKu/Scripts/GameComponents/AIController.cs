@@ -25,8 +25,8 @@ public class AIController : MonoBehaviour {
 
     void Spawn()
     {
-        int tile = Random.Range(0, GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().BOARD_SIZE);
-        GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().SpawnUnit(tile, 0,enemyPrefab, "EnemyUnit");
+      //  int tile = Random.Range(0, GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().BOARD_SIZE);
+     //   GameObject.FindGameObjectWithTag("Board").GetComponent<BoardEnvironmentController>().SpawnUnit(tile, 0,enemyPrefab, "EnemyUnit");
     }
 
     IEnumerator SpawnByRandomTime()

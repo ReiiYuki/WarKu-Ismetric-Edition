@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveButton : MonoBehaviour {
-
+/*
     Selector selector;
     BoardEnvironmentController boardCon;
     int x, y;
@@ -24,5 +24,5 @@ public class MoveButton : MonoBehaviour {
     void SetMoveListenerState()
     {
         selector.MoveListen(boardCon.GetUnit(x, y));
-    }
+    }*/
 }
