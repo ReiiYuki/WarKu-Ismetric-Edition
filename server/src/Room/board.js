@@ -1,7 +1,20 @@
 class Board {
+
   constructor(){
     this.SIZE = 16
     this.createFloor()
+  }
+
+  spawnUnit(remote,x,y,type){
+    if (isSpawnZone(remote,x,y)){
+      this.units[x][y] = type
+      return true
+    }
+    return false
+  }
+
+  isSpawnZone(remote,x,y){
+    return y==this.SIZE-1 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>0 && !this.units[x][y]
   }
 
   createFloor(){
@@ -19,7 +32,6 @@ class Board {
     this.placeMountain()
     this.placeForest()
     this.placeStone()
-
   }
 
   formatFloors(){
@@ -101,8 +113,8 @@ class Board {
 }
 
 /**
-0 = Normal Tile
-1 = Forest Tile
+0 = Normal Tile *
+1 = Forest Tile *
 2 = Stone Tile
 3 = RiverRightUp
 4 = RiverLeftUp
@@ -111,13 +123,13 @@ class Board {
 7 = RiverDown
 8 = RiverLeft
 9 = MountainRidgeRightUp
-10 = MountainSlopeRight
+10 = MountainSlopeRight *
 11 = MountainRidgeRightDown
-12 = MountainSlopeUp
-13 = MountainPeak
-14 = MountainSlopeDown
+12 = MountainSlopeUp *
+13 = MountainPeak *
+14 = MountainSlopeDown *
 15 = MountainRidgeLeftUp
-16 = MountainSlopeLeft
+16 = MountainSlopeLeft *
 17 = MountainRidgeLeftDown
 **/
 module.exports = Board

@@ -16,6 +16,10 @@ class Room {
   sendBoard(){
     this.remotes[0].updateBoard(this.board.formatFloors(),this.board.formatUnits())
   }
+
+  spawnUnit(remote,x,y,type){
+    return this.board.spawnUnit(remote,x,y,type)
+  }
 }
 
 module.exports = Room

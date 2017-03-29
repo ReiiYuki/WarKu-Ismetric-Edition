@@ -131,12 +131,25 @@ public class DGTProxyRemote : MonoBehaviour {
     #region board
     public void OnUpdateBoard(string boardFloorsStr,string boardUnitsStr)
     {
-        if (!GameObject.FindGameObjectWithTag("Board")) return;
-        GameObject.FindGameObjectWithTag("Board").GetComponent<BoardController>().UpdateBoard(boardFloorsStr, boardUnitsStr);
+        if (!GameObject.FindObjectOfType<BoardController>()) return;
+        GameObject.FindObjectOfType<BoardController>().UpdateBoard(boardFloorsStr, boardUnitsStr);
     }
     public void RequestBoard()
     {
         packet.RequestBoard();
     }
+    #endregion
+
+    #region unit
+    public void RequestSpawnUnit(int x,int y,int type)
+    {
+        packet.SpawnUnitRequest(x,y,type);
+    }
+
+    public void OnSpawnUnit(int x,int y,int type)
+    {
+        GameObject.FindObjectOfType<BoardController>().SpawnUnit(x, y, type);
+    }
+
     #endregion
 }
