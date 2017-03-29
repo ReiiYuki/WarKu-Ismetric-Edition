@@ -127,4 +127,12 @@ public class DGTProxyRemote : MonoBehaviour {
         Debug.Log(id + " " + type);
     }
     #endregion
+
+    #region board
+    public void OnUpdateBoard(string boardFloorsStr,string boardUnitsStr)
+    {
+        Debug.Log(boardFloorsStr);
+        Debug.Log(boardUnitsStr);
+    }
+    #endregion
 }

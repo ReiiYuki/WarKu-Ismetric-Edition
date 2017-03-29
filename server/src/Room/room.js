@@ -7,12 +7,16 @@ class Room {
     this.remotes = []
     this.addPlayer(remote)
     remote.responseCreateRoomSuccess(type,id)
+    this.sendBoard()
   }
 
   addPlayer(remote){
     this.remotes.push(remote)
   }
 
+  sendBoard(){
+    this.remotes[0].updateBoard(this.board.formatFloors(),this.board.formatUnits())
+  }
 }
 
 module.exports = Room

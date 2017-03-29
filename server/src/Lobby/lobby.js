@@ -21,7 +21,7 @@ class Lobby {
     this.room.push(remote)
     this.removeRemote(remote)
   }
-
+  
 }
 
 module.exports = Lobby

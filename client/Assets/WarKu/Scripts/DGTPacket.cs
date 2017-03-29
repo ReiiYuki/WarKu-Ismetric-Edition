@@ -26,7 +26,8 @@ public class DGTPacket : PacketManager {
         CLIENT_CREATE_ROOM = 10002,
 
         SERVER_LOGIN_SUCCESS = 20000,
-        SERVER_CREATE_ROOM_SUCCESS = 20001
+        SERVER_CREATE_ROOM_SUCCESS = 20001,
+        SERVER_UPDATE_BOARD = 20002
     }
     #endregion
 
@@ -62,6 +63,7 @@ public class DGTPacket : PacketManager {
     {
         _Mapper[(int)PacketID.SERVER_LOGIN_SUCCESS] = ReceiveLoggedInResponse;
         _Mapper[(int)PacketID.SERVER_CREATE_ROOM_SUCCESS] = ReceiveCreatedRoomResponse;
+        _Mapper[(int)PacketID.SERVER_UPDATE_BOARD] = UpdateBoard;
     }
     #endregion
 
@@ -90,6 +92,15 @@ public class DGTPacket : PacketManager {
         int type = pr.ReadUInt8();
         int id = pr.ReadUInt32();
         DGTProxyRemote.GetInstance().OnCreatedRoom(id, type);
+    }
+    #endregion
+
+    #region board
+    public void UpdateBoard(int packed_id,PacketReader pr)
+    {
+        string boardFloorsStr = pr.ReadString();
+        string boardUnitsStr = pr.ReadString();
+        DGTProxyRemote.GetInstance().OnUpdateBoard(boardFloorsStr, boardUnitsStr);
     }
     #endregion
 }

@@ -19,14 +19,27 @@ class Board {
     this.placeMountain()
     this.placeForest()
     this.placeStone()
+
+  }
+
+  formatFloors(){
+    let str = ""
     for (let i = 0;i<this.SIZE;i++){
-      let str = ""
       for (let j  =0;j<this.SIZE;j++){
-        str+= this.floors[i][j]+"\t"
+        str+= this.floors[i][j]+" "
       }
-      console.log(str)
     }
-    console.log(" ");
+    return str
+  }
+
+  formatUnits(){
+    let str = ""
+    for (let i = 0;i<this.SIZE;i++){
+      for (let j  =0;j<this.SIZE;j++){
+        str+= this.units[i][j]+" "
+      }
+    }
+    return str
   }
 
   placeRiver(){
@@ -76,6 +89,7 @@ class Board {
       if (this.floors[x][y]==0) this.floors[x][y] = 1
     }
   }
+
   placeStone(){
     for (let i = 0;i<Math.floor(Math.random()*10);i++){
       var x = Math.floor(Math.random()*this.SIZE)
