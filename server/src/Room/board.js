@@ -16,10 +16,13 @@ class Board {
       }
     }
     this.placeRiver()
+    this.placeMountain()
+    this.placeForest()
+    this.placeStone()
     for (let i = 0;i<this.SIZE;i++){
       let str = ""
       for (let j  =0;j<this.SIZE;j++){
-        str+= this.floors[i][j]+" "
+        str+= this.floors[i][j]+"\t"
       }
       console.log(str)
     }
@@ -44,6 +47,40 @@ class Board {
         else if (state==4) y++
         else if (state==6||state==4) y--
       }
+    }
+  }
+
+  placeMountain(){
+    let numMount = Math.floor(Math.random()*11)
+    for (let i =0;i<numMount;i++ ){
+      var x = Math.floor(Math.random()*this.SIZE)
+      var y = Math.floor(Math.random()*this.SIZE)
+      if (this.floors[x][y]==0||[9,10,11,12,14,15,16,17].indexOf(this.floors[x][y])){
+        this.floors[x][y] = 13
+        if (x-1>=0&&y-1>=0&&this.floors[x-1][y-1]==0) this.floors[x-1][y-1] = 9
+        if (x-1>=0&&this.floors[x-1][y]==0) this.floors[x-1][y] = 10
+        if (x-1>=0&&y+1<this.SIZE&&this.floors[x-1][y+1]==0) this.floors[x-1][y+1] = 11
+        if (y-1>=0&&this.floors[x][y-1]==0) this.floors[x][y-1] = 12
+        if (y+1<this.SIZE&&this.floors[x][y+1]==0) this.floors[x][y+1] = 14
+        if (x+1<this.SIZE&&y-1>=0&&this.floors[x+1][y-1]==0) this.floors[x+1][y-1] = 15
+        if (x+1<this.SIZE&&this.floors[x+1][y]==0) this.floors[x+1][y] = 16
+        if (x+1<this.SIZE&&y+1<this.SIZE&&this.floors[x+1][y+1]==0) this.floors[x+1][y+1] = 17
+      }
+    }
+  }
+
+  placeForest(){
+    for (let i = 0;i<Math.floor(Math.random()*20);i++){
+      var x = Math.floor(Math.random()*this.SIZE)
+      var y = Math.floor(Math.random()*this.SIZE)
+      if (this.floors[x][y]==0) this.floors[x][y] = 1
+    }
+  }
+  placeStone(){
+    for (let i = 0;i<Math.floor(Math.random()*10);i++){
+      var x = Math.floor(Math.random()*this.SIZE)
+      var y = Math.floor(Math.random()*this.SIZE)
+      if (this.floors[x][y]==0) this.floors[x][y] = 2
     }
   }
 }
