@@ -25,10 +25,13 @@ public class DGTPacket : PacketManager {
         CLIENT_DISCONNECT = 10001,
         CLIENT_CREATE_ROOM = 10002,
         CLIENT_REQUEST_BOARD = 10003,
+        CLIENT_SPAWN_UNIT = 10004,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
-        SERVER_UPDATE_BOARD = 20002
+        SERVER_UPDATE_BOARD = 20002,
+        SEREVER_SPAWN_UNIT_RESPONSE : 20003,
+        SERVER_UPDATE_UNIT = 20004
     }
     #endregion
 
@@ -109,4 +112,20 @@ public class DGTPacket : PacketManager {
         EndSend();
     }
     #endregion
+
+    #region unit
+    public void SpawnUnitRequest(int x,int y,int type)
+    {
+        PacketWriter pw = BeginSend((int)PacketID.CLIENT_SPAWN_UNIT);
+        pw.WriteUInt8(x);
+        pw.WriteUInt8(y);
+        pw.WriteUInt8(type);
+        EndSend();
+    }
+
+    public void OnSpawn(int packed_id, PacketReader pr)
+    {
+
+    }
+    #endregion 
 }

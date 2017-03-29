@@ -12,4 +12,9 @@ public class TileBehaviour : MonoBehaviour {
         this.y = y;
     }
 
+    void OnMouseDown()
+    {
+        if (GameObject.FindObjectOfType<Selector>().IsCreation())
+            DGTProxyRemote.GetInstance().RequestSpawnUnit(x, y, GameObject.FindObjectOfType<Selector>().GetUnitCreationType());
+    }
 }

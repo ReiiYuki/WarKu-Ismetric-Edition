@@ -42,7 +42,11 @@ public class Selector : MonoBehaviour {
     {
         selectUnitIndex = type;
         SetState(State.UNIT_CREATION_SELECT);
-        Debug.Log(selectUnitIndex);
+    }
+
+    public int GetUnitCreationType()
+    {
+        return selectUnitIndex;
     }
     #endregion
 }

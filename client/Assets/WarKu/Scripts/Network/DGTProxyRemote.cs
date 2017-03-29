@@ -139,4 +139,11 @@ public class DGTProxyRemote : MonoBehaviour {
         packet.RequestBoard();
     }
     #endregion
+
+    #region unit
+    public void RequestSpawnUnit(int x,int y,int type)
+    {
+        packet.SpawnUnitRequest(x,y,type);
+    }
+    #endregion
 }
