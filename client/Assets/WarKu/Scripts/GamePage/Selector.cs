@@ -4,49 +4,36 @@ using UnityEngine;
 
 public class Selector : MonoBehaviour {
 
-    /**
-     * 0 = Non Select
-     * 1 = Spawn button clicked
-     * 2 = Unit clicked
-     * 3 = Move Listen  
-     */
-    public int state = 0;
-    GameObject selectedUnit,currentUnit;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void SelectUnit(GameObject unit)
+    #region state
+    public enum State
     {
-        selectedUnit = unit;
-        state = 1;
+        NO_SELECTION = 0,
+        UNIT_CREATION_SELECT
+    }
+    
+    public void SetState(State state)
+    {
+        this.state = state;
     }
 
-    public GameObject GetSelectUnit()
+    public bool IsSelected()
     {
-        return selectedUnit;
+        return state != State.NO_SELECTION;
     }
 
-    public GameObject GetCurrentUnit()
+    public bool IsCreation()
     {
-        return currentUnit;
+        return state == State.UNIT_CREATION_SELECT;
+    }
+    #endregion
+
+    #region attribute
+    State state;
+    #endregion
+
+    void Start()
+    {
+        SetState(State.NO_SELECTION);
     }
 
-    public void MoveListen(GameObject unit)
-    {
-        state = 2;
-        currentUnit = unit;
-    }
-
-    public void Move()
-    {
-        state = 3;
-    }
 }
