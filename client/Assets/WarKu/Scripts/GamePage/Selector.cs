@@ -29,6 +29,7 @@ public class Selector : MonoBehaviour {
 
     #region attribute
     State state;
+    int selectUnitIndex;
     #endregion
 
     void Start()
@@ -36,4 +37,12 @@ public class Selector : MonoBehaviour {
         SetState(State.NO_SELECTION);
     }
 
+    #region unit creation
+    public void SelectUnit(int type)
+    {
+        selectUnitIndex = type;
+        SetState(State.UNIT_CREATION_SELECT);
+        Debug.Log(selectUnitIndex);
+    }
+    #endregion
 }

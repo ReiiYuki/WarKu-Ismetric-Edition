@@ -30,7 +30,6 @@ public class BoardController : MonoBehaviour {
     {
         int x = 0;
         int y = 0;
-        Debug.Log(floors.Split(' ').Length);
         foreach (string element in floors.Split(' '))
         {
             int index;
