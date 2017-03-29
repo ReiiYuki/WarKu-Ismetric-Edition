@@ -1,4 +1,5 @@
 class Board {
+
   constructor(){
     this.SIZE = 16
     this.createFloor()
