@@ -37,6 +37,15 @@ class RemoteProxy extends server.RemoteProxy {
   updateBoard(floors,units){
     this.send(packet.updateBoard(floors,units))
   }
+
+  spawnUnit(x,y,type){
+    if (!this.room.spawnUnit(this,x,y,type)) type = -1
+    this.responseSpawnUnit(x,y,type)
+  }
+
+  responseSpawnUnit(x,y,type){
+    this.send(packet.spawnUnitResponse(x,y,type))
+  }
 }
 
 module.exports = RemoteProxy

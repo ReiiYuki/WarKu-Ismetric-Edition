@@ -6,7 +6,7 @@ class Board {
   }
 
   spawnUnit(remote,x,y,type){
-    if (isSpawnZone(remote,x,y)){
+    if (this.isSpawnZone(remote,x,y)){
       this.units[x][y] = type
       return true
     }
@@ -14,7 +14,7 @@ class Board {
   }
 
   isSpawnZone(remote,x,y){
-    return y==this.SIZE-1 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>0 && !this.units[x][y]
+    return y==this.SIZE-1 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
   }
 
   createFloor(){

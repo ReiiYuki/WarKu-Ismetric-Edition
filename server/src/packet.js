@@ -53,4 +53,19 @@ packet[packet.CLIENT_REQUEST_BOARD] = (remote,data) =>{
   remote.requestBoard()
 }
 
+packet[packet.CLIENT_SPAWN_UNIT] = (remote,data) => {
+  let x = data.read_uint8()
+  let y = data.read_uint8()
+  let type = data.read_uint8()
+  remote.spawnUnit(x,y,type)
+}
+
+packet.spawnUnitResponse = (x,y,type) => {
+  let pw = new packetWriter(packet.SEREVER_SPAWN_UNIT_RESPONSE)
+  pw.append_uint8(x)
+  pw.append_uint8(y)
+  pw.append_int8(type)
+  pw.finish()
+  return pw.buffer
+}
 module.exports = packet

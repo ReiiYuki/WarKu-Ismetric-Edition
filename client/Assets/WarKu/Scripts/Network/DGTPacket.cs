@@ -30,7 +30,7 @@ public class DGTPacket : PacketManager {
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
         SERVER_UPDATE_BOARD = 20002,
-        SEREVER_SPAWN_UNIT_RESPONSE : 20003,
+        SEREVER_SPAWN_UNIT_RESPONSE = 20003,
         SERVER_UPDATE_UNIT = 20004
     }
     #endregion
@@ -126,8 +126,8 @@ public class DGTPacket : PacketManager {
 
     public void OnSpawn(int packed_id, PacketReader pr)
     {
-        int x = pr.ReadInt8();
-        int y = pr.ReadInt8();
+        int x = pr.ReadUInt8();
+        int y = pr.ReadUInt8();
         int type = pr.ReadInt8();
         DGTProxyRemote.GetInstance().OnSpawnUnit(x, y, type);
     }
