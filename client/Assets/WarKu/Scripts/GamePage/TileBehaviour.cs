@@ -17,4 +17,12 @@ public class TileBehaviour : MonoBehaviour {
         if (GameObject.FindObjectOfType<Selector>().IsCreation())
             DGTProxyRemote.GetInstance().RequestSpawnUnit(x, y, GameObject.FindObjectOfType<Selector>().GetUnitCreationType());
     }
+
+    public void OnSpawnUnit(int status)
+    {
+        if (status == -1)
+            Debug.Log("Nooooooooooooooooo");
+        else
+            Debug.Log("Spawn");
+    }
 }

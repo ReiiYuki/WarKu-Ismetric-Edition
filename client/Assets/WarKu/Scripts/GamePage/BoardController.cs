@@ -6,7 +6,7 @@ public class BoardController : MonoBehaviour {
 
     #region attribute
     private float Y_REAL_OFFSET = 3.5f;
-    public GameObject[] tilePrototype;
+    public GameObject[] tilePrototype,unitPrototype;
     GameObject[,] boardFloor, boardUnit;
     #endregion
 
@@ -59,6 +59,16 @@ public class BoardController : MonoBehaviour {
         boardFloor[x, y] = Instantiate(tile, GetPosition(x, y) + new Vector3(0, offsetY), Quaternion.identity);
         boardFloor[x, y].GetComponent<TileBehaviour>().SetPosition(x, y);
         boardFloor[x, y].transform.SetParent(transform);
+    }
+    #endregion
+
+    #region unit
+    public void SpawnUnit(int x,int y,int type)
+    {
+        boardFloor[x, y].GetComponent<TileBehaviour>().OnSpawnUnit(type);
+        if (type == -1) return;
+        boardUnit[x, y] = Instantiate(unitPrototype[type], boardFloor[x, y].transform.position, Quaternion.identity);
+        boardUnit[x, y].transform.SetParent(boardFloor[x,y].transform);
     }
     #endregion
 }

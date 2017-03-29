@@ -125,7 +125,10 @@ public class DGTPacket : PacketManager {
 
     public void OnSpawn(int packed_id, PacketReader pr)
     {
-
+        int x = pr.ReadInt8();
+        int y = pr.ReadInt8();
+        int type = pr.ReadInt8();
+        DGTProxyRemote.GetInstance().OnSpawnUnit(x, y, type);
     }
     #endregion 
 }
