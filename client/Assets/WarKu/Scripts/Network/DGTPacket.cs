@@ -68,6 +68,7 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_LOGIN_SUCCESS] = ReceiveLoggedInResponse;
         _Mapper[(int)PacketID.SERVER_CREATE_ROOM_SUCCESS] = ReceiveCreatedRoomResponse;
         _Mapper[(int)PacketID.SERVER_UPDATE_BOARD] = UpdateBoard;
+        _Mapper[(int)PacketID.SEREVER_SPAWN_UNIT_RESPONSE] = OnSpawn;
     }
     #endregion
 
