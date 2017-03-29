@@ -19,7 +19,6 @@ class Board {
     this.placeMountain()
     this.placeForest()
     this.placeStone()
-
   }
 
   formatFloors(){
