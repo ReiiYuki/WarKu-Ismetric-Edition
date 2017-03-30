@@ -1,5 +1,6 @@
 let packetWriter = require('dgt-net').packet_writer
 
+//<editor-fold> PACKET ID
 let packet = {
   CLIENT_LOGIN : 10000,
   CLIENT_DISCONNECT : 10001,
@@ -13,7 +14,9 @@ let packet = {
   SEREVER_SPAWN_UNIT_RESPONSE : 20003,
   SERVER_UPDATE_UNIT : 20004
 }
+//</editor-fold>
 
+//<editor-fold> LOGIN
 packet[packet.CLIENT_LOGIN] = (remote,data) => {
   let name = data.read_string()
   if (!data.completed()) return true
@@ -25,8 +28,9 @@ packet.responseLoginSuccess = () => {
   pw.finish();
   return pw.buffer
 }
+//</editor-fold>
 
-
+//<editor-fold> Room
 packet[packet.CLIENT_CREATE_ROOM] = (remote,data) =>{
   let type = data.read_uint8()
   if (!data.completed()) return true
@@ -40,7 +44,9 @@ packet.responseCreateRoomSuccess = (type,id) =>{
   pw.finish()
   return pw.buffer
 }
+//</editor-fold>
 
+//<editor-fold> Board
 packet.updateBoard = (floors,units)=>{
   let pw = new packetWriter(packet.SERVER_UPDATE_BOARD)
   pw.append_string(floors)
@@ -52,7 +58,9 @@ packet.updateBoard = (floors,units)=>{
 packet[packet.CLIENT_REQUEST_BOARD] = (remote,data) =>{
   remote.requestBoard()
 }
+//</editor-fold>
 
+//<editor-fold> Unit
 packet[packet.CLIENT_SPAWN_UNIT] = (remote,data) => {
   let x = data.read_uint8()
   let y = data.read_uint8()
@@ -68,4 +76,5 @@ packet.spawnUnitResponse = (x,y,type) => {
   pw.finish()
   return pw.buffer
 }
+//</editor-fold>
 module.exports = packet

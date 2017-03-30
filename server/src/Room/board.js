@@ -1,10 +1,12 @@
 class Board {
-
+//<editor-fold> Constructor
   constructor(){
     this.SIZE = 16
     this.createFloor()
   }
+//</editor-fold>
 
+//<editor-fold> Unit
   spawnUnit(remote,x,y,type){
     if (this.isSpawnZone(remote,x,y)){
       this.units[x][y] = type
@@ -16,23 +18,9 @@ class Board {
   isSpawnZone(remote,x,y){
     return y==this.SIZE-1 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
   }
+//</editor-fold>
 
-  createFloor(){
-    this.floors = []
-    this.units = []
-    for (let i = 0;i<this.SIZE;i++){
-      this.floors.push([])
-      this.units.push([])
-      for (let j = 0;j<this.SIZE;j++){
-        this.floors[i].push(0)
-        this.units[i].push(null)
-      }
-    }
-    this.placeRiver()
-    this.placeMountain()
-    this.placeForest()
-    this.placeStone()
-  }
+//<editor-fold> Formatting
 
   formatFloors(){
     let str = ""
@@ -52,6 +40,27 @@ class Board {
       }
     }
     return str
+  }
+
+//</editor-fold>
+
+// <editor-fold> Place Tile
+
+  createFloor(){
+    this.floors = []
+    this.units = []
+    for (let i = 0;i<this.SIZE;i++){
+      this.floors.push([])
+      this.units.push([])
+      for (let j = 0;j<this.SIZE;j++){
+        this.floors[i].push(0)
+        this.units[i].push(null)
+      }
+    }
+    this.placeRiver()
+    this.placeMountain()
+    this.placeForest()
+    this.placeStone()
   }
 
   placeRiver(){
@@ -110,8 +119,12 @@ class Board {
       if (this.floors[x][y]==0) this.floors[x][y] = 2
     }
   }
+
+// </editor-fold>
+
 }
 
+//<editor-fold> Tile Description
 /**
 0 = Normal Tile *
 1 = Forest Tile *
@@ -132,4 +145,5 @@ class Board {
 16 = MountainSlopeLeft *
 17 = MountainRidgeLeftDown
 **/
+//</editor-fold>
 module.exports = Board

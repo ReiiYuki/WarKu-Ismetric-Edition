@@ -5,6 +5,7 @@ const Lobby = require('./Lobby/lobby')
 let lobby = new Lobby()
 class RemoteProxy extends server.RemoteProxy {
 
+//<editor-fold> connection
   onConnected() {
     console.log("RemoteProxy There is a connection from " + this.getPeerName())
   }
@@ -12,7 +13,9 @@ class RemoteProxy extends server.RemoteProxy {
   onDisconnected() {
     console.log("RemoteProxy Disconnected from " + this.getPeerName())
   }
+//</editor-fold>
 
+//<editor-fold> Login
   login(name){
     this.name = name
     lobby.addRemote(this)
@@ -21,7 +24,9 @@ class RemoteProxy extends server.RemoteProxy {
   responseLoginSuccess(){
     this.send(packet.responseLoginSuccess())
   }
+//</editor-fold>
 
+//<editor-fold> Room & Board
   createRoom(type){
     lobby.createRoom(this,type)
   }
@@ -38,6 +43,9 @@ class RemoteProxy extends server.RemoteProxy {
     this.send(packet.updateBoard(floors,units))
   }
 
+//</editor-fold>
+
+//<editor-fold> Unit
   spawnUnit(x,y,type){
     if (!this.room.spawnUnit(this,x,y,type)) type = -1
     this.responseSpawnUnit(x,y,type)
@@ -47,5 +55,5 @@ class RemoteProxy extends server.RemoteProxy {
     this.send(packet.spawnUnitResponse(x,y,type))
   }
 }
-
+//</editor-fold>
 module.exports = RemoteProxy
