@@ -11,8 +11,7 @@ let packet = {
   SERVER_LOGIN_SUCCESS : 20000,
   SERVER_CREATE_ROOM_SUCCESS : 20001,
   SERVER_UPDATE_BOARD : 20002,
-  SEREVER_SPAWN_UNIT_RESPONSE : 20003,
-  SERVER_UPDATE_UNIT : 20004
+  SERVER_UPDATE_UNIT : 20003,
 }
 //</editor-fold>
 
@@ -69,7 +68,7 @@ packet[packet.CLIENT_SPAWN_UNIT] = (remote,data) => {
 }
 
 packet.spawnUnitResponse = (x,y,type) => {
-  let pw = new packetWriter(packet.SEREVER_SPAWN_UNIT_RESPONSE)
+  let pw = new packetWriter(packet.SERVER_UPDATE_UNIT)
   pw.append_uint8(x)
   pw.append_uint8(y)
   pw.append_int8(type)

@@ -7,17 +7,38 @@ class Board {
 //</editor-fold>
 
 //<editor-fold> Unit
+
+//<editor-fold> SpawnUnit
   spawnUnit(remote,x,y,type){
     if (this.isSpawnZone(remote,x,y)){
-      this.units[x][y] = type
-      return true
+      this.units[x][y] = type+","+3
     }
-    return false
+    getUnit(x,y)
   }
 
   isSpawnZone(remote,x,y){
     return y==this.SIZE-1 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
   }
+//</editor-fold>
+
+//<editor-fold> MoveUnit
+  updateUnit(x,y){
+    if (direction==1) this.units[x-1][y] = this.units[x][y].split(",")[0]+","+0
+    else if (direction==2) this.units[x+1][y] = this.units[x][y].split(",")[0]+","+0
+    else if (direction==3) this.units[x][y-1] = this.units[x][y].split(",")[0]+","+0
+    else if (direction==4) this.units[x][y+1] = this.units[x][y].split(",")[0]+","+0
+    if (direction!=0) delete this.units[x][y]
+  }
+
+  moveUnit(x,y,direction){
+      this.units[x][y] = this.units[x][y].split(",")[0]+","+direction
+  }
+
+  getUnit(x,y){
+    //TODO Send unit to Client
+  }
+//</editor-fold>
+
 //</editor-fold>
 
 //<editor-fold> Formatting
@@ -146,4 +167,5 @@ class Board {
 17 = MountainRidgeLeftDown
 **/
 //</editor-fold>
+
 module.exports = Board
