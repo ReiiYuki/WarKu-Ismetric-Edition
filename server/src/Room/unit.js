@@ -17,7 +17,6 @@ class Unit {
     this.owner = owner
   }
 
-  setDirection(direction) {
-    this.direction = direction
-  }
 }
+
+module.exports = Unit

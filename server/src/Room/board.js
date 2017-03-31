@@ -1,3 +1,4 @@
+let Unit = require('./unit')
 class Board {
 //<editor-fold> Constructor
   constructor(){
@@ -11,7 +12,7 @@ class Board {
 //<editor-fold> SpawnUnit
   spawnUnit(remote,x,y,type){
     if (this.isSpawnZone(remote,x,y)){
-      this.units[x][y] = type+","+3
+      this.units[x][y] = new Unit(0,0)
     }
     getUnit(x,y)
   }
@@ -23,19 +24,22 @@ class Board {
 
 //<editor-fold> MoveUnit
   updateUnit(x,y){
-    if (direction==1) this.units[x-1][y] = this.units[x][y].split(",")[0]+","+0
-    else if (direction==2) this.units[x+1][y] = this.units[x][y].split(",")[0]+","+0
-    else if (direction==3) this.units[x][y-1] = this.units[x][y].split(",")[0]+","+0
-    else if (direction==4) this.units[x][y+1] = this.units[x][y].split(",")[0]+","+0
+    let direction = this.units[x][y].direction
+    this.units[x][y].direction = 0
+    if (direction==1) this.units[x-1][y] = this.units[x][y]
+    else if (direction==2) this.units[x+1][y] = this.units[x][y]
+    else if (direction==3) this.units[x][y-1] = this.units[x][y]
+    else if (direction==4) this.units[x][y+1] = this.units[x][y]
     if (direction!=0) delete this.units[x][y]
+    getUnit(x,y)
   }
 
   moveUnit(x,y,direction){
-      this.units[x][y] = this.units[x][y].split(",")[0]+","+direction
+      this.units[x][y].direction = direction
   }
 
   getUnit(x,y){
-    //TODO Send unit to Client
+    this.remotes[0].updateUnit(x,y,this.units[x][y])
   }
 //</editor-fold>
 

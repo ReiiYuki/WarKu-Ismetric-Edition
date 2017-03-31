@@ -46,10 +46,9 @@ packet.responseCreateRoomSuccess = (type,id) =>{
 //</editor-fold>
 
 //<editor-fold> Board
-packet.updateBoard = (floors,units)=>{
+packet.updateBoard = (floors)=>{
   let pw = new packetWriter(packet.SERVER_UPDATE_BOARD)
   pw.append_string(floors)
-  pw.append_string(units)
   pw.finish()
   return pw.buffer
 }
@@ -67,11 +66,16 @@ packet[packet.CLIENT_SPAWN_UNIT] = (remote,data) => {
   remote.spawnUnit(x,y,type)
 }
 
-packet.spawnUnitResponse = (x,y,type) => {
+packet.updateUnit = (x,y,unit) => {
   let pw = new packetWriter(packet.SERVER_UPDATE_UNIT)
-  pw.append_uint8(x)
-  pw.append_uint8(y)
-  pw.append_int8(type)
+  if (unit){
+    pw.append_int8(x)
+    pw.append_uint8(y)
+    pw.append_int8(unit.type)
+    pw.append_int8(unit.direction)
+  }else {
+    pw.append_int8(-1)
+  }
   pw.finish()
   return pw.buffer
 }

@@ -18,7 +18,11 @@ class Room {
   }
 
   spawnUnit(remote,x,y,type){
-    return this.board.spawnUnit(remote,x,y,type)
+    this.board.spawnUnit(remote,x,y,type)
+  }
+
+  moveUnit(remote,x,y,direction){
+    this.board.moveUnit(x,y,direction)
   }
 }
 
