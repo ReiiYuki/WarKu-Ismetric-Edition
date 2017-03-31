@@ -68,11 +68,12 @@ packet[packet.CLIENT_SPAWN_UNIT] = (remote,data) => {
 
 packet.updateUnit = (x,y,unit) => {
   let pw = new packetWriter(packet.SERVER_UPDATE_UNIT)
+
+  pw.append_int8(x)
+  pw.append_uint8(y)
   if (unit){
-    pw.append_int8(x)
-    pw.append_uint8(y)
     pw.append_int8(unit.type)
-    pw.append_int8(unit.direction)
+    pw.append_uint8(unit.direction)
   }else {
     pw.append_int8(-1)
   }

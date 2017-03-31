@@ -30,7 +30,7 @@ public class DGTPacket : PacketManager {
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
         SERVER_UPDATE_BOARD = 20002,
-        SERVER_UPDATE_UNIT = 20004
+        SERVER_UPDATE_UNIT = 20003
     }
     #endregion
 
@@ -67,7 +67,7 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_LOGIN_SUCCESS] = ReceiveLoggedInResponse;
         _Mapper[(int)PacketID.SERVER_CREATE_ROOM_SUCCESS] = ReceiveCreatedRoomResponse;
         _Mapper[(int)PacketID.SERVER_UPDATE_BOARD] = UpdateBoard;
-        _Mapper[(int)PacketID.SERVER_UPDATE_UNIT] = OnSpawn;
+        _Mapper[(int)PacketID.SERVER_UPDATE_UNIT] = OnUpdateUnit;
     }
     #endregion
 
@@ -103,8 +103,7 @@ public class DGTPacket : PacketManager {
     public void UpdateBoard(int packed_id,PacketReader pr)
     {
         string boardFloorsStr = pr.ReadString();
-        string boardUnitsStr = pr.ReadString();
-        DGTProxyRemote.GetInstance().OnUpdateBoard(boardFloorsStr, boardUnitsStr);
+        DGTProxyRemote.GetInstance().OnUpdateBoard(boardFloorsStr);
     }
     public void RequestBoard()
     {
@@ -123,12 +122,17 @@ public class DGTPacket : PacketManager {
         EndSend();
     }
 
-    public void OnSpawn(int packed_id, PacketReader pr)
+    public void OnUpdateUnit(int packed_id, PacketReader pr)
     {
-        int x = pr.ReadUInt8();
+        int x = pr.ReadUInt8(); 
         int y = pr.ReadUInt8();
         int type = pr.ReadInt8();
-        DGTProxyRemote.GetInstance().OnSpawnUnit(x, y, type);
+        if (type != -1)
+        {
+            int direction = pr.ReadUInt8();
+            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y, type,direction);
+        }
+        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y, type,0);
     }
     #endregion 
 }

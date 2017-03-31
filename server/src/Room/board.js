@@ -1,9 +1,10 @@
 let Unit = require('./unit')
 class Board {
 //<editor-fold> Constructor
-  constructor(){
+  constructor(remotes){
     this.SIZE = 16
     this.createFloor()
+    this.remotes = remotes
   }
 //</editor-fold>
 
@@ -14,7 +15,7 @@ class Board {
     if (this.isSpawnZone(remote,x,y)){
       this.units[x][y] = new Unit(0,0)
     }
-    getUnit(x,y)
+    this.getUnit(x,y)
   }
 
   isSpawnZone(remote,x,y){
@@ -31,7 +32,7 @@ class Board {
     else if (direction==3) this.units[x][y-1] = this.units[x][y]
     else if (direction==4) this.units[x][y+1] = this.units[x][y]
     if (direction!=0) delete this.units[x][y]
-    getUnit(x,y)
+    this.getUnit(x,y)
   }
 
   moveUnit(x,y,direction){

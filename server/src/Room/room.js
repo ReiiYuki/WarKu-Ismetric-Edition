@@ -3,9 +3,9 @@ class Room {
   constructor(id,type,remote) {
     this.id = id
     this.type = type
-    this.board = new Board()
     this.remotes = []
     this.addPlayer(remote)
+    this.board = new Board(this.remotes)
     remote.responseCreateRoomSuccess(type,id)
   }
 

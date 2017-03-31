@@ -26,7 +26,7 @@ public class BoardController : MonoBehaviour {
 
     #region initialize
 
-    public void UpdateBoard(string floors, string units)
+    public void UpdateBoard(string floors)
     {
         int x = 0;
         int y = 0;
@@ -63,12 +63,16 @@ public class BoardController : MonoBehaviour {
     #endregion
 
     #region unit
-    public void SpawnUnit(int x,int y,int type)
+    public void UpdateUnit(int x,int y,int type,int direction)
     {
-        boardFloor[x, y].GetComponent<TileBehaviour>().OnSpawnUnit(type);
-        if (type == -1) return;
-        boardUnit[x, y] = Instantiate(unitPrototype[type], boardFloor[x, y].transform.position, Quaternion.identity);
-        boardUnit[x, y].transform.SetParent(boardFloor[x,y].transform);
+        if (!boardUnit[x, y])
+        {
+            boardFloor[x, y].GetComponent<TileBehaviour>().OnSpawnUnit(type);
+            if (type == -1) return;
+            boardUnit[x, y] = Instantiate(unitPrototype[type], boardFloor[x, y].transform.position, Quaternion.identity);
+            boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
+        }
+
     }
     #endregion
 }
