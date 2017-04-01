@@ -85,8 +85,8 @@ public class BoardController : MonoBehaviour {
         if (x != changeX || y != changeY)
         {
             boardUnit[changeX, changeY] = boardUnit[x, y];
-            boardUnit[changeX, changeY].transform.position = GetPositionOfTile(changeX, changeY) + boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().offsetVector;
             boardUnit[changeX, changeY].transform.SetParent(boardFloor[changeX, changeY].transform);
+            boardUnit[changeX, changeY].transform.position = GetPositionOfTile(changeX, changeY) + boardUnit[x, y].GetComponent<UnitBehaviour>().offsetVector;
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().SetPosition(changeX, changeY);
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().UpdateDirection();
             boardUnit[x, y] = null;
