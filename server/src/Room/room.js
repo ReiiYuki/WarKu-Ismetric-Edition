@@ -24,6 +24,10 @@ class Room {
   moveUnit(remote,x,y,direction){
     this.board.moveUnit(x,y,direction)
   }
+
+  updateUnit(x,y){
+    this.board.updateUnit(x,y)
+  }
 }
 
 module.exports = Room

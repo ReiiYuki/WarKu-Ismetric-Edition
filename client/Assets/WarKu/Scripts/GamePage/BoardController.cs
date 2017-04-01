@@ -46,7 +46,7 @@ public class BoardController : MonoBehaviour {
         }
     }
 
-    Vector3 GetPosition(int x, int y)
+    public Vector3 GetPosition(int x, int y)
     {
         return new Vector3(y * 0.65f + x * -0.65f, y * -0.325f + x * -0.325f + Y_REAL_OFFSET, -1 * (x + y));
     }
@@ -63,16 +63,26 @@ public class BoardController : MonoBehaviour {
     #endregion
 
     #region unit
-    public void UpdateUnit(int x,int y,int type,int direction)
+    public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction)
     {
+        Debug.Log(x+" "+ y+","+changeX+" "+changeY);
         if (!boardUnit[x, y])
         {
             boardFloor[x, y].GetComponent<TileBehaviour>().OnSpawnUnit(type);
             if (type == -1) return;
             boardUnit[x, y] = Instantiate(unitPrototype[type], boardFloor[x, y].transform.position, Quaternion.identity);
             boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
+            boardUnit[x, y].GetComponent<UnitBehaviour>().SetPosition(x,y);
+            boardUnit[x, y].GetComponent<UnitBehaviour>().SetDirection(direction);
         }
-
+        if (x != changeX || y != changeY)
+        {
+            boardUnit[changeX, changeY] = boardUnit[x, y];
+            boardUnit[changeX, changeY].transform.SetParent(boardFloor[changeX, changeY].transform);
+            boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().SetPosition(changeX, changeY);
+            boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().SetDirection(direction);
+            boardUnit[x, y] = null;
+        }
     }
     #endregion
 }

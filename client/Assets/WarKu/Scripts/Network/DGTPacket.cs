@@ -26,6 +26,7 @@ public class DGTPacket : PacketManager {
         CLIENT_CREATE_ROOM = 10002,
         CLIENT_REQUEST_BOARD = 10003,
         CLIENT_SPAWN_UNIT = 10004,
+        CLIENT_UPDATE_UNIT = 10005,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
@@ -126,13 +127,24 @@ public class DGTPacket : PacketManager {
     {
         int x = pr.ReadUInt8(); 
         int y = pr.ReadUInt8();
+        int changeX = pr.ReadUInt8();
+        int changeY = pr.ReadUInt8();
         int type = pr.ReadInt8();
         if (type != -1)
         {
             int direction = pr.ReadUInt8();
-            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y, type,direction);
+            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction);
+            return;
         }
-        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y, type,0);
+        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0);
+    }
+
+    public void UpdateUnitRequest(int x,int y)
+    {
+        PacketWriter pw = BeginSend((int)PacketID.CLIENT_UPDATE_UNIT);
+        pw.WriteUInt8(x);
+        pw.WriteUInt8(y);
+        EndSend();
     }
     #endregion 
 }
