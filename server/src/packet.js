@@ -91,7 +91,10 @@ packet.updateUnit = (x,y,changeX,changeY,unit) => {
   return pw.buffer
 }
 packet[packet.CLIENT_CHANGE_UNIT_DIRECTION] = (remote,data) => {
-
+  let x = data.read_uint8()
+  let y = data.read_uint8()
+  let direction = data.read_uint8()
+  remote.changeDirection(x,y,direction)
 }
 //</editor-fold>
 module.exports = packet

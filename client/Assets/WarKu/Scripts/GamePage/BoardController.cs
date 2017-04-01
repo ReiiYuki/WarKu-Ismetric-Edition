@@ -65,7 +65,6 @@ public class BoardController : MonoBehaviour {
     #region unit
     public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction)
     {
-        Debug.Log(x+" "+ y+","+changeX+" "+changeY);
         if (!boardUnit[x, y])
         {
             boardFloor[x, y].GetComponent<TileBehaviour>().OnSpawnUnit(type);
@@ -73,6 +72,9 @@ public class BoardController : MonoBehaviour {
             boardUnit[x, y] = Instantiate(unitPrototype[type], boardFloor[x, y].transform.position, Quaternion.identity);
             boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetPosition(x,y);
+            DGTProxyRemote.GetInstance().RequestChangeDirection(x, y, 3);
+        }else
+        {
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetDirection(direction);
         }
         if (x != changeX || y != changeY)
@@ -80,9 +82,14 @@ public class BoardController : MonoBehaviour {
             boardUnit[changeX, changeY] = boardUnit[x, y];
             boardUnit[changeX, changeY].transform.SetParent(boardFloor[changeX, changeY].transform);
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().SetPosition(changeX, changeY);
-            boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().SetDirection(direction);
+            boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().UpdateDirection();
             boardUnit[x, y] = null;
         }
     }
     #endregion
+
+    public bool CanMoveInto(int x,int y)
+    {
+        return x>=0&&y>=0&&x<16&&y<16&&this.boardFloor[x, y].GetComponent<TileBehaviour>().canMove;
+    }
 }

@@ -13,7 +13,7 @@ class Unit {
 
   constructor(type,owner){
     this.type = type
-    this.direction = 3
+    this.direction = 0
     this.owner = owner
   }
 

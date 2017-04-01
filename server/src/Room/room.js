@@ -28,6 +28,10 @@ class Room {
   updateUnit(x,y){
     this.board.updateUnit(x,y)
   }
+
+  changeDirection(x,y,direction){
+    this.board.changeDirection(x,y,direction)
+  }
 }
 
 module.exports = Room

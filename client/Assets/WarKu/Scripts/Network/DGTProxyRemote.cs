@@ -155,5 +155,10 @@ public class DGTProxyRemote : MonoBehaviour {
     {
         packet.UpdateUnitRequest(x, y);
     }
+
+    public void RequestChangeDirection(int x,int y,int direction)
+    {
+        packet.ChangeDirectionRequest(x, y, direction);
+    }
     #endregion
 }

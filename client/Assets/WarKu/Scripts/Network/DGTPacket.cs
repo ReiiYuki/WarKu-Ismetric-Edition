@@ -27,6 +27,7 @@ public class DGTPacket : PacketManager {
         CLIENT_REQUEST_BOARD = 10003,
         CLIENT_SPAWN_UNIT = 10004,
         CLIENT_UPDATE_UNIT = 10005,
+        CLIENT_CHANGE_UNIT_DIRECTION = 10006,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
@@ -144,6 +145,15 @@ public class DGTPacket : PacketManager {
         PacketWriter pw = BeginSend((int)PacketID.CLIENT_UPDATE_UNIT);
         pw.WriteUInt8(x);
         pw.WriteUInt8(y);
+        EndSend();
+    }
+
+    public void ChangeDirectionRequest(int x,int y,int direction)
+    {
+        PacketWriter pw = BeginSend((int)PacketID.CLIENT_CHANGE_UNIT_DIRECTION);
+        pw.WriteUInt8(x);
+        pw.WriteUInt8(y);
+        pw.WriteUInt8(direction);
         EndSend();
     }
     #endregion 

@@ -25,6 +25,7 @@ class Board {
 
 //<editor-fold> MoveUnit
   updateUnit(x,y){
+    if (!this.units[x][y]) return;
     let direction = this.units[x][y].direction
     let changeX = x
     let changeY = y
@@ -47,6 +48,26 @@ class Board {
 
   getUnit(x,y,changeX,changeY){
     this.remotes[0].updateUnit(x,y,changeX,changeY,this.units[x][y])
+  }
+
+  changeDirection(x,y,direction){
+    if (direction==1)
+      if (this.canMove(x-1,y))
+        this.units[x][y].direction = direction
+    if (direction==2)
+      if (this.canMove(x+1,y))
+        this.units[x][y].direction = direction
+    if (direction==3)
+      if (this.canMove(x,y-1))
+        this.units[x][y].direction = direction
+    if (direction==4)
+      if (this.canMove(x,y+1))
+        this.units[x][y].direction = direction
+    this.getUnit(x,y,x,y)
+  }
+
+  canMove(x,y){
+    return y<this.SIZE && x<this.SIZE && y>=0 && x>=0 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
   }
 //</editor-fold>
 

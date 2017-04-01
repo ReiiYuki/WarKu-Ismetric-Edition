@@ -62,6 +62,11 @@ class RemoteProxy extends server.RemoteProxy {
   updateUnitR(x,y){
     this.room.updateUnit(x,y)
   }
+
+  changeDirection(x,y,direction){
+    this.room.changeDirection(x,y,direction)
+  }
+
   //</editor-fold>
 
 }
