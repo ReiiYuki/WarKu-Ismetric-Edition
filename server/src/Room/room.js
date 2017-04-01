@@ -3,9 +3,9 @@ class Room {
   constructor(id,type,remote) {
     this.id = id
     this.type = type
-    this.board = new Board()
     this.remotes = []
     this.addPlayer(remote)
+    this.board = new Board(this.remotes)
     remote.responseCreateRoomSuccess(type,id)
   }
 
@@ -18,7 +18,19 @@ class Room {
   }
 
   spawnUnit(remote,x,y,type){
-    return this.board.spawnUnit(remote,x,y,type)
+    this.board.spawnUnit(remote,x,y,type)
+  }
+
+  moveUnit(remote,x,y,direction){
+    this.board.moveUnit(x,y,direction)
+  }
+
+  updateUnit(x,y){
+    this.board.updateUnit(x,y)
+  }
+
+  changeDirection(x,y,direction){
+    this.board.changeDirection(x,y,direction)
   }
 }
 

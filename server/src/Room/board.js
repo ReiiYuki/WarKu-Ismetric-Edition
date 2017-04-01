@@ -1,38 +1,79 @@
+let Unit = require('./unit')
 class Board {
-
-  constructor(){
+//<editor-fold> Constructor
+  constructor(remotes){
     this.SIZE = 16
     this.createFloor()
+    this.remotes = remotes
   }
+//</editor-fold>
 
+//<editor-fold> Unit
+
+//<editor-fold> SpawnUnit
   spawnUnit(remote,x,y,type){
-    if (isSpawnZone(remote,x,y)){
-      this.units[x][y] = type
-      return true
+    if (this.isSpawnZone(remote,x,y)){
+      this.units[x][y] = new Unit(0,0)
     }
-    return false
+    this.getUnit(x,y,x,y)
   }
 
   isSpawnZone(remote,x,y){
-    return y==this.SIZE-1 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>0 && !this.units[x][y]
+    return y==this.SIZE-1 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
+  }
+//</editor-fold>
+
+//<editor-fold> MoveUnit
+  updateUnit(x,y){
+    if (!this.units[x][y]) return;
+    let direction = this.units[x][y].direction
+    let changeX = x
+    let changeY = y
+    this.units[x][y].direction = 0
+    if (direction==1) changeX = x-1
+    else if (direction==2) changeX = x+1
+    else if (direction==3) changeY = y-1
+    else if (direction==4) changeY = y+1
+    if (direction!=0) {
+      this.units[changeX][changeY] = this.units[x][y]
+      delete this.units[x][y]
+    }
+    this.getUnit(x,y,changeX,changeY)
   }
 
-  createFloor(){
-    this.floors = []
-    this.units = []
-    for (let i = 0;i<this.SIZE;i++){
-      this.floors.push([])
-      this.units.push([])
-      for (let j = 0;j<this.SIZE;j++){
-        this.floors[i].push(0)
-        this.units[i].push(null)
-      }
-    }
-    this.placeRiver()
-    this.placeMountain()
-    this.placeForest()
-    this.placeStone()
+  moveUnit(x,y,direction){
+      this.units[x][y].direction = direction
+      this.getUnit(x,y,x,y)
   }
+
+  getUnit(x,y,changeX,changeY){
+    this.remotes[0].updateUnit(x,y,changeX,changeY,this.units[x][y])
+  }
+
+  changeDirection(x,y,direction){
+    if (direction==1)
+      if (this.canMove(x-1,y))
+        this.units[x][y].direction = direction
+    if (direction==2)
+      if (this.canMove(x+1,y))
+        this.units[x][y].direction = direction
+    if (direction==3)
+      if (this.canMove(x,y-1))
+        this.units[x][y].direction = direction
+    if (direction==4)
+      if (this.canMove(x,y+1))
+        this.units[x][y].direction = direction
+    this.getUnit(x,y,x,y)
+  }
+
+  canMove(x,y){
+    return y<this.SIZE && x<this.SIZE && y>=0 && x>=0 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
+  }
+//</editor-fold>
+
+//</editor-fold>
+
+//<editor-fold> Formatting
 
   formatFloors(){
     let str = ""
@@ -52,6 +93,27 @@ class Board {
       }
     }
     return str
+  }
+
+//</editor-fold>
+
+// <editor-fold> Place Tile
+
+  createFloor(){
+    this.floors = []
+    this.units = []
+    for (let i = 0;i<this.SIZE;i++){
+      this.floors.push([])
+      this.units.push([])
+      for (let j = 0;j<this.SIZE;j++){
+        this.floors[i].push(0)
+        this.units[i].push(null)
+      }
+    }
+    this.placeRiver()
+    this.placeMountain()
+    this.placeForest()
+    this.placeStone()
   }
 
   placeRiver(){
@@ -110,8 +172,12 @@ class Board {
       if (this.floors[x][y]==0) this.floors[x][y] = 2
     }
   }
+
+// </editor-fold>
+
 }
 
+//<editor-fold> Tile Description
 /**
 0 = Normal Tile *
 1 = Forest Tile *
@@ -132,4 +198,6 @@ class Board {
 16 = MountainSlopeLeft *
 17 = MountainRidgeLeftDown
 **/
+//</editor-fold>
+
 module.exports = Board

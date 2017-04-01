@@ -26,12 +26,13 @@ public class DGTPacket : PacketManager {
         CLIENT_CREATE_ROOM = 10002,
         CLIENT_REQUEST_BOARD = 10003,
         CLIENT_SPAWN_UNIT = 10004,
+        CLIENT_UPDATE_UNIT = 10005,
+        CLIENT_CHANGE_UNIT_DIRECTION = 10006,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
         SERVER_UPDATE_BOARD = 20002,
-        SEREVER_SPAWN_UNIT_RESPONSE : 20003,
-        SERVER_UPDATE_UNIT = 20004
+        SERVER_UPDATE_UNIT = 20003
     }
     #endregion
 
@@ -68,7 +69,7 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_LOGIN_SUCCESS] = ReceiveLoggedInResponse;
         _Mapper[(int)PacketID.SERVER_CREATE_ROOM_SUCCESS] = ReceiveCreatedRoomResponse;
         _Mapper[(int)PacketID.SERVER_UPDATE_BOARD] = UpdateBoard;
-        _Mapper[(int)PacketID.SEREVER_SPAWN_UNIT_RESPONSE] = OnSpawn;
+        _Mapper[(int)PacketID.SERVER_UPDATE_UNIT] = OnUpdateUnit;
     }
     #endregion
 
@@ -104,8 +105,7 @@ public class DGTPacket : PacketManager {
     public void UpdateBoard(int packed_id,PacketReader pr)
     {
         string boardFloorsStr = pr.ReadString();
-        string boardUnitsStr = pr.ReadString();
-        DGTProxyRemote.GetInstance().OnUpdateBoard(boardFloorsStr, boardUnitsStr);
+        DGTProxyRemote.GetInstance().OnUpdateBoard(boardFloorsStr);
     }
     public void RequestBoard()
     {
@@ -124,12 +124,37 @@ public class DGTPacket : PacketManager {
         EndSend();
     }
 
-    public void OnSpawn(int packed_id, PacketReader pr)
+    public void OnUpdateUnit(int packed_id, PacketReader pr)
     {
-        int x = pr.ReadInt8();
-        int y = pr.ReadInt8();
+        int x = pr.ReadUInt8(); 
+        int y = pr.ReadUInt8();
+        int changeX = pr.ReadUInt8();
+        int changeY = pr.ReadUInt8();
         int type = pr.ReadInt8();
-        DGTProxyRemote.GetInstance().OnSpawnUnit(x, y, type);
+        if (type != -1)
+        {
+            int direction = pr.ReadUInt8();
+            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction);
+            return;
+        }
+        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0);
+    }
+
+    public void UpdateUnitRequest(int x,int y)
+    {
+        PacketWriter pw = BeginSend((int)PacketID.CLIENT_UPDATE_UNIT);
+        pw.WriteUInt8(x);
+        pw.WriteUInt8(y);
+        EndSend();
+    }
+
+    public void ChangeDirectionRequest(int x,int y,int direction)
+    {
+        PacketWriter pw = BeginSend((int)PacketID.CLIENT_CHANGE_UNIT_DIRECTION);
+        pw.WriteUInt8(x);
+        pw.WriteUInt8(y);
+        pw.WriteUInt8(direction);
+        EndSend();
     }
     #endregion 
 }

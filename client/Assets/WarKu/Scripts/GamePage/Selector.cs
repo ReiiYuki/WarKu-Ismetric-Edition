@@ -8,7 +8,8 @@ public class Selector : MonoBehaviour {
     public enum State
     {
         NO_SELECTION = 0,
-        UNIT_CREATION_SELECT
+        UNIT_CREATION_SELECT,
+        UNIT_MOVE_LISTEN
     }
     
     public void SetState(State state)
@@ -25,11 +26,16 @@ public class Selector : MonoBehaviour {
     {
         return state == State.UNIT_CREATION_SELECT;
     }
+    public bool IsListen()
+    {
+        return state == State.UNIT_MOVE_LISTEN;
+    }
     #endregion
 
     #region attribute
     State state;
     int selectUnitIndex;
+    GameObject willMoveUnit;
     #endregion
 
     void Start()
@@ -48,5 +54,22 @@ public class Selector : MonoBehaviour {
     {
         return selectUnitIndex;
     }
+
     #endregion
+
+    public void ReadyToMove(GameObject willMoveUnit)
+    {
+        this.willMoveUnit = willMoveUnit;
+        SetState(State.UNIT_MOVE_LISTEN);
+    }
+
+    public GameObject GetWillMoveUnit()
+    {
+        return willMoveUnit;
+    }
+
+    public void ResetState()
+    {
+        SetState(State.NO_SELECTION);
+    }
 }
