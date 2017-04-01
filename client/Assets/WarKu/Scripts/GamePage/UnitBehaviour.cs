@@ -15,7 +15,7 @@ public class UnitBehaviour : MonoBehaviour {
     }
     int x, y,targetX,targetY,direction;
     public int speed = 1;
-    Vector3 offsetVector;
+    public Vector3 offsetVector;
     Vector3 right = new Vector3(2f, 1f);
     Vector3 down = new Vector3(2f, -1f);
     List<int[]> path;
@@ -40,7 +40,6 @@ public class UnitBehaviour : MonoBehaviour {
     public void SetDirection(int direction)
     {
         this.direction = direction;
-        Debug.Log(direction);
     }
 
     public void SetPosition(int x,int y)
@@ -56,9 +55,9 @@ public class UnitBehaviour : MonoBehaviour {
         if (direction == (int)Direction.RIGHT)
             transform.Translate(right * Time.deltaTime * speed);
         else if (direction == (int)Direction.LEFT)
-            transform.Translate(right * Time.deltaTime * speed * -1 );
+            transform.Translate(right * Time.deltaTime * speed * -1 + GetDifferentZ(GameObject.FindObjectOfType<BoardController>().GetPositionOfTile(x + 1, y)));
         else if (direction == (int)Direction.DOWN )
-            transform.Translate(down * Time.deltaTime * speed );
+            transform.Translate(down * Time.deltaTime * speed + GetDifferentZ(GameObject.FindObjectOfType<BoardController>().GetPositionOfTile(x , y+1)));
         else if (direction == (int)Direction.UP )
             transform.Translate(down * Time.deltaTime * speed * -1);
         MoveToNextTile();
@@ -147,7 +146,6 @@ public class UnitBehaviour : MonoBehaviour {
             now = history[now[0] + " " + now[1]];
             path.Add(now);
         }
-        
         path.Reverse();
         path.RemoveAt(0);
         UpdateDirection();
@@ -165,6 +163,11 @@ public class UnitBehaviour : MonoBehaviour {
             else if (y == targetY && x > targetX) DGTProxyRemote.GetInstance().RequestChangeDirection(x, y, 1);
             else if (y == targetY && x < targetX) DGTProxyRemote.GetInstance().RequestChangeDirection(x, y, 2);
         }
+    }
+
+    Vector3 GetDifferentZ(Vector3 nextTilePosition)
+    {
+        return new Vector3(0f, 0f, nextTilePosition.z - transform.position.z);
     }
     #endregion
 }

@@ -51,6 +51,11 @@ public class BoardController : MonoBehaviour {
         return new Vector3(y * 0.65f + x * -0.65f, y * -0.325f + x * -0.325f + Y_REAL_OFFSET, -1 * (x + y));
     }
 
+    public Vector3 GetPositionOfTile(int x, int y)
+    {
+        return boardFloor[x, y].transform.position;
+    }
+
     void PlaceTile(int x, int y, GameObject tile)
     {
         float offsetY = 0f;
@@ -69,7 +74,7 @@ public class BoardController : MonoBehaviour {
         {
             boardFloor[x, y].GetComponent<TileBehaviour>().OnSpawnUnit(type);
             if (type == -1) return;
-            boardUnit[x, y] = Instantiate(unitPrototype[type], boardFloor[x, y].transform.position, Quaternion.identity);
+            boardUnit[x, y] = Instantiate(unitPrototype[type], GetPositionOfTile(x,y), Quaternion.identity);
             boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetPosition(x,y);
             DGTProxyRemote.GetInstance().RequestChangeDirection(x, y, 3);
@@ -80,6 +85,7 @@ public class BoardController : MonoBehaviour {
         if (x != changeX || y != changeY)
         {
             boardUnit[changeX, changeY] = boardUnit[x, y];
+            boardUnit[changeX, changeY].transform.position = GetPositionOfTile(changeX, changeY) + boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().offsetVector;
             boardUnit[changeX, changeY].transform.SetParent(boardFloor[changeX, changeY].transform);
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().SetPosition(changeX, changeY);
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().UpdateDirection();
