@@ -142,13 +142,14 @@ public class UnitBehaviour : MonoBehaviour {
         }
         int[] now = new int[] { toX, toY };
         path.Add(now);
+        while (history.ContainsKey(now[0] + " " + now[1]))
+        {
+            now = history[now[0] + " " + now[1]];
+            path.Add(now);
+        }
+        
         path.Reverse();
         path.RemoveAt(0);
-        foreach (int[] p in path)
-        {
-            Debug.Log(p[0] + " " + p[1]);
-        }
-        Debug.Log("SetTarget");
         UpdateDirection();
     }
 
