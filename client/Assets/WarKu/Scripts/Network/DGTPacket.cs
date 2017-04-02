@@ -162,13 +162,21 @@ public class DGTPacket : PacketManager {
     #endregion
 
     #region worker unit
-    public void BuildRequest()
+    public void BuildRequest(int x,int y,int targetX,int targetY)
     {
         PacketWriter pw = BeginSend((int)PacketID.CLIENT_WORKER_UNIT_BUILD);
+        pw.WriteUInt8(x);
+        pw.WriteUInt8(y);
+        pw.WriteUInt8(targetX);
+        pw.WriteUInt8(targetY);
+        EndSend();
     }
 
     public void OnUpdateTile(int packed_id, PacketReader pr)
     {
+        int x = pr.ReadUInt8();
+        int y = pr.ReadUInt8();
+        int type = pr.ReadUInt8();
 
     }
     #endregion
