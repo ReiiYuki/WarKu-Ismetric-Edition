@@ -71,6 +71,20 @@ class Board {
   }
 //</editor-fold>
 
+//<editor-fold>
+  build(x,y,targetX,targetY){
+    if (this.units[x][y]==0){
+      if ([0,13].indexOf(this.floors[targetX][targetY])>=0){
+
+      }else if (this.floors[targetX][targetY]==7) {
+
+      }else if (this.floors[targetX][targetY]==8){
+        
+      }
+    }
+  }
+//</editor-fold>
+
 //</editor-fold>
 
 //<editor-fold> Formatting
@@ -179,20 +193,20 @@ class Board {
 
 //<editor-fold> Tile Description
 /**
-0 = Normal Tile *
+0 = Normal Tile * -
 1 = Forest Tile *
 2 = Stone Tile
 3 = RiverRightUp
 4 = RiverLeftUp
 5 = RiverRightDown
 6 = RiverLeftDown
-7 = RiverDown
-8 = RiverLeft
+7 = RiverDown -
+8 = RiverLeft -
 9 = MountainRidgeRightUp
 10 = MountainSlopeRight *
 11 = MountainRidgeRightDown
 12 = MountainSlopeUp *
-13 = MountainPeak *
+13 = MountainPeak * -
 14 = MountainSlopeDown *
 15 = MountainRidgeLeftUp
 16 = MountainSlopeLeft *
