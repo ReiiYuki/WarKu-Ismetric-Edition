@@ -32,6 +32,10 @@ class Room {
   changeDirection(x,y,direction){
     this.board.changeDirection(x,y,direction)
   }
+
+  build(x,y,targetX,targetY){
+    this.board.build(x,y,targetX,targetY)
+  }
 }
 
 module.exports = Room

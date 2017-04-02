@@ -71,6 +71,29 @@ class Board {
   }
 //</editor-fold>
 
+//<editor-fold> Worker Unit
+  build(x,y,targetX,targetY){
+    if (this.units[x][y]==0){
+      if (!this.units[targetX][targetY]){
+        if ([0,13].indexOf(this.floors[targetX][targetY])>=0){
+          this.floors[targetX][targetY] = 18
+        }else if (this.floors[targetX][targetY]==7) {
+          this.floors[targetX][targetY] = 21
+        }else if (this.floors[targetX][targetY]==8){
+          this.floors[targetX][targetY] = 20
+        }
+        this.units[x][y] = null
+        this.updateTile(x,y)
+        this.getUnit(x,y)
+      }
+    }
+  }
+
+  updateTile(x,y){
+    this.remotes[0].updateTile(x,y,this.floors[x][y])
+  }
+//</editor-fold>
+
 //</editor-fold>
 
 //<editor-fold> Formatting
@@ -179,24 +202,28 @@ class Board {
 
 //<editor-fold> Tile Description
 /**
-0 = Normal Tile *
+0 = Normal Tile * -
 1 = Forest Tile *
 2 = Stone Tile
 3 = RiverRightUp
 4 = RiverLeftUp
 5 = RiverRightDown
 6 = RiverLeftDown
-7 = RiverDown
-8 = RiverLeft
+7 = RiverDown -
+8 = RiverLeft -
 9 = MountainRidgeRightUp
 10 = MountainSlopeRight *
 11 = MountainRidgeRightDown
 12 = MountainSlopeUp *
-13 = MountainPeak *
+13 = MountainPeak * -
 14 = MountainSlopeDown *
 15 = MountainRidgeLeftUp
 16 = MountainSlopeLeft *
 17 = MountainRidgeLeftDown
+18 = tower0
+19 = tower1
+20 = bridgeLeft
+21 = bridgeDown
 **/
 //</editor-fold>
 

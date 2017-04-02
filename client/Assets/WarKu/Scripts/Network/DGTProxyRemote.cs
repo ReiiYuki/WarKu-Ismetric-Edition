@@ -161,4 +161,16 @@ public class DGTProxyRemote : MonoBehaviour {
         packet.ChangeDirectionRequest(x, y, direction);
     }
     #endregion
+
+    #region worker unit
+    public void OnUpdateTile(int x,int y,int type)
+    {
+        GameObject.FindObjectOfType<BoardController>();
+    }
+
+    public void BuildRequest(int x,int y,int targetX,int targetY)
+    {
+        packet.BuildRequest(x, y, targetX, targetY);
+    }
+    #endregion
 }

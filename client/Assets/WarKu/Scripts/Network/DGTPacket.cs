@@ -28,11 +28,13 @@ public class DGTPacket : PacketManager {
         CLIENT_SPAWN_UNIT = 10004,
         CLIENT_UPDATE_UNIT = 10005,
         CLIENT_CHANGE_UNIT_DIRECTION = 10006,
+        CLIENT_WORKER_UNIT_BUILD = 10007,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
         SERVER_UPDATE_BOARD = 20002,
-        SERVER_UPDATE_UNIT = 20003
+        SERVER_UPDATE_UNIT = 20003,
+        SERVER_UPDATE_TILE = 20004
     }
     #endregion
 
@@ -70,6 +72,7 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_CREATE_ROOM_SUCCESS] = ReceiveCreatedRoomResponse;
         _Mapper[(int)PacketID.SERVER_UPDATE_BOARD] = UpdateBoard;
         _Mapper[(int)PacketID.SERVER_UPDATE_UNIT] = OnUpdateUnit;
+        _Mapper[(int)PacketID.SERVER_UPDATE_TILE] = OnUpdateTile;
     }
     #endregion
 
@@ -156,5 +159,25 @@ public class DGTPacket : PacketManager {
         pw.WriteUInt8(direction);
         EndSend();
     }
-    #endregion 
+    #endregion
+
+    #region worker unit
+    public void BuildRequest(int x,int y,int targetX,int targetY)
+    {
+        PacketWriter pw = BeginSend((int)PacketID.CLIENT_WORKER_UNIT_BUILD);
+        pw.WriteUInt8(x);
+        pw.WriteUInt8(y);
+        pw.WriteUInt8(targetX);
+        pw.WriteUInt8(targetY);
+        EndSend();
+    }
+
+    public void OnUpdateTile(int packed_id, PacketReader pr)
+    {
+        int x = pr.ReadUInt8();
+        int y = pr.ReadUInt8();
+        int type = pr.ReadUInt8();
+        DGTProxyRemote.GetInstance().OnUpdateTile(x, y, type);
+    }
+    #endregion
 }

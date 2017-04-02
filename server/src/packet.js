@@ -9,11 +9,13 @@ let packet = {
   CLIENT_SPAWN_UNIT : 10004,
   CLIENT_UPDATE_UNIT : 10005,
   CLIENT_CHANGE_UNIT_DIRECTION : 10006,
+  CLIENT_WORKER_UNIT_BUILD : 10007,
 
   SERVER_LOGIN_SUCCESS : 20000,
   SERVER_CREATE_ROOM_SUCCESS : 20001,
   SERVER_UPDATE_BOARD : 20002,
   SERVER_UPDATE_UNIT : 20003,
+  SERVER_UPDATE_TILE : 20004
 }
 //</editor-fold>
 
@@ -95,6 +97,22 @@ packet[packet.CLIENT_CHANGE_UNIT_DIRECTION] = (remote,data) => {
   let y = data.read_uint8()
   let direction = data.read_uint8()
   remote.changeDirection(x,y,direction)
+}
+
+packet[packet.CLIENT_WORKER_UNIT_BUILD] = (remtoe,data) => {
+  let x = data.read_uint8()
+  let y = data.read_uint8()
+  let targetX = data.read_uint8()
+  let targetY = data.read_uint8()
+  remote.build(x,y,targetX,targetY)
+}
+packet.updateTile = (x,y,type) => {
+  let pw = new packetWriter(packet.SERVER_UPDATE_TILE)
+  pw.append_uint8(x)
+  pw.append_uint8(y)
+  pw.append_uint8(type)
+  pw.finish()
+  return pw.buffer
 }
 //</editor-fold>
 module.exports = packet

@@ -24,14 +24,13 @@ public class TileBehaviour : MonoBehaviour {
         {
             GameObject.FindObjectOfType<Selector>().GetWillMoveUnit().GetComponent<UnitBehaviour>().SetTarget(x, y);
             GameObject.FindObjectOfType<Selector>().ResetState();
-            Debug.Log("Move");
         }
         else
         {
             if (GetComponentInChildren<UnitBehaviour>())
             {
+                GetComponentInChildren<UnitBehaviour>().Stop();
                 GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.GetChild(0).gameObject);
-                Debug.Log("Select");
             }
         }
     }

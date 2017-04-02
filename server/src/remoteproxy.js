@@ -67,6 +67,13 @@ class RemoteProxy extends server.RemoteProxy {
     this.room.changeDirection(x,y,direction)
   }
 
+  build(x,y,targetX,targetY){
+    this.room.build(x,y,targetX,targetY)
+  }
+
+  updateTile(x,y,type){
+    this.send(packet.updateTile(x,y,type))
+  }
   //</editor-fold>
 
 }
