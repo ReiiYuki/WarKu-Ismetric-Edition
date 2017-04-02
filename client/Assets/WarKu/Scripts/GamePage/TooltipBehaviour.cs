@@ -13,4 +13,9 @@ public class TooltipBehaviour : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void Disappear()
+    {
+        gameObject.SetActive(false);
+    }
 }
