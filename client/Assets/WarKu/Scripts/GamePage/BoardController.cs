@@ -98,4 +98,10 @@ public class BoardController : MonoBehaviour {
     {
         return x>=0&&y>=0&&x<16&&y<16&&this.boardFloor[x, y].GetComponent<TileBehaviour>().canMove;
     }
+
+    public void UpdateTile(int x,int y,int type)
+    {
+        Destroy(boardFloor[x, y]);
+        PlaceTile(x, y, tilePrototype[type]);
+    }
 }

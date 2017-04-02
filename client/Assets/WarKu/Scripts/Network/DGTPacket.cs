@@ -177,7 +177,7 @@ public class DGTPacket : PacketManager {
         int x = pr.ReadUInt8();
         int y = pr.ReadUInt8();
         int type = pr.ReadUInt8();
-
+        DGTProxyRemote.GetInstance().OnUpdateTile(x, y, type);
     }
     #endregion
 }
