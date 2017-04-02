@@ -72,6 +72,7 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_CREATE_ROOM_SUCCESS] = ReceiveCreatedRoomResponse;
         _Mapper[(int)PacketID.SERVER_UPDATE_BOARD] = UpdateBoard;
         _Mapper[(int)PacketID.SERVER_UPDATE_UNIT] = OnUpdateUnit;
+        _Mapper[(int)PacketID.SERVER_UPDATE_TILE] = OnUpdateTile;
     }
     #endregion
 
@@ -158,5 +159,17 @@ public class DGTPacket : PacketManager {
         pw.WriteUInt8(direction);
         EndSend();
     }
-    #endregion 
+    #endregion
+
+    #region worker unit
+    public void BuildRequest()
+    {
+        PacketWriter pw = BeginSend((int)PacketID.CLIENT_WORKER_UNIT_BUILD);
+    }
+
+    public void OnUpdateTile(int packed_id, PacketReader pr)
+    {
+
+    }
+    #endregion
 }
