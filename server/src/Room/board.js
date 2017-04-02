@@ -75,11 +75,11 @@ class Board {
   build(x,y,targetX,targetY){
     if (this.units[x][y]==0){
       if ([0,13].indexOf(this.floors[targetX][targetY])>=0){
-
+        this.floors[targetX][targetY] = 18
       }else if (this.floors[targetX][targetY]==7) {
-
+        this.floors[targetX][targetY] = 21
       }else if (this.floors[targetX][targetY]==8){
-        
+        this.floors[targetX][targetY] = 20
       }
     }
   }
@@ -211,6 +211,10 @@ class Board {
 15 = MountainRidgeLeftUp
 16 = MountainSlopeLeft *
 17 = MountainRidgeLeftDown
+18 = tower0
+19 = tower1
+20 = bridgeLeft
+21 = bridgeDown
 **/
 //</editor-fold>
 
