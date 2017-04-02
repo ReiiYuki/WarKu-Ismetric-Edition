@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class TileBehaviour : MonoBehaviour {
 
+    public GameObject tooltip;
     public bool canMove;
     int x, y;
+
+    void Start()
+    {
+        tooltip = Instantiate(tooltip, transform.position+new Vector3(0f,1.5f),Quaternion.identity);
+        tooltip.transform.SetParent(transform);
+        tooltip.SetActive(false);
+    }
 
     public void SetPosition(int x, int y)
     {
@@ -30,7 +38,8 @@ public class TileBehaviour : MonoBehaviour {
             if (GetComponentInChildren<UnitBehaviour>())
             {
                 GetComponentInChildren<UnitBehaviour>().Stop();
-                GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.GetChild(0).gameObject);
+                transform.GetChild(0).gameObject.SetActive(true);
+                GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.GetChild(1).gameObject);
             }
         }
     }
