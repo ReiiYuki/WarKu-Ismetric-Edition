@@ -4,7 +4,7 @@ let packetWriter = require('dgt-net').packet_writer
 let packet = {
   CLIENT_LOGIN : 10000,
   CLIENT_DISCONNECT : 10001,
-  CLIENT_CREATE_ROOM : 10002,
+  CLIENT_JOIN_ROOM : 10002,
   CLIENT_REQUEST_BOARD : 10003,
   CLIENT_SPAWN_UNIT : 10004,
   CLIENT_UPDATE_UNIT : 10005,
@@ -13,7 +13,7 @@ let packet = {
   CLIENT_UNIT_HIDE : 10008,
 
   SERVER_LOGIN_SUCCESS : 20000,
-  SERVER_CREATE_ROOM_SUCCESS : 20001,
+  SERVER_JOIN_ROOM_SUCCESS : 20001,
   SERVER_UPDATE_BOARD : 20002,
   SERVER_UPDATE_UNIT : 20003,
   SERVER_UPDATE_TILE : 20004
@@ -35,14 +35,14 @@ packet.responseLoginSuccess = () => {
 //</editor-fold>
 
 //<editor-fold> Room
-packet[packet.CLIENT_CREATE_ROOM] = (remote,data) =>{
+packet[packet.CLIENT_JOIN_ROOM] = (remote,data) =>{
   let type = data.read_uint8()
   if (!data.completed()) return true
-  remote.createRoom(type)
+  remote.joinRoom(type)
 }
 
 packet.responseCreateRoomSuccess = (type,id) =>{
-  let pw = new packetWriter(packet.SERVER_CREATE_ROOM_SUCCESS)
+  let pw = new packetWriter(packet.SERVER_JOIN_ROOM_SUCCESS)
   pw.append_uint8(type)
   pw.append_uint32(id)
   pw.finish()

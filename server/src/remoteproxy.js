@@ -27,8 +27,8 @@ class RemoteProxy extends server.RemoteProxy {
 //</editor-fold>
 
 //<editor-fold> Room & Board
-  createRoom(type){
-    lobby.createRoom(this,type)
+  joinRoom(type){
+    lobby.joinRoom(this,type)
   }
 
   requestBoard(){

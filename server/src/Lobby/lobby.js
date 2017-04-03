@@ -15,13 +15,26 @@ class Lobby {
     this.remotes.splice(this.remotes.indexOf(remote), 1)
   }
 
-  createRoom(remote,type){
-    let room = new Room(this.roomCounter++,type,remote)
-    remote.room = room
-    this.room.push(remote)
+  joinRoom(remote,type){
+    let rooms = this.room.filter((room)=>(room.remotes.length<2))
+    if (rooms.length==0) {
+      let room = new Room(this.roomCounter++,type,remote)
+      remote.room = room
+      this.room.push(room)
+      this.print(room)
+    }else {
+      remote.room = rooms[0]
+      rooms[0].addPlayer(remote)
+      this.print(rooms[0])
+    }
     this.removeRemote(remote)
   }
-  
+
+  print(room){
+    room.remotes.forEach((remote,index)=>{
+      console.log(index+" "+remote.getPeerName())
+    })
+  }
 }
 
 module.exports = Lobby
