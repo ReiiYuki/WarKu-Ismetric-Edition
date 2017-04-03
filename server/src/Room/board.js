@@ -48,6 +48,11 @@ class Board {
 
   getUnit(x,y,changeX,changeY){
     this.remotes[0].updateUnit(x,y,changeX,changeY,this.units[x][y])
+    this.remotes[1].updateUnit(this.inversePosition(x),this.inversePosition(y),this.inversePosition(changeX),this.inversePosition(changeY),this.units[x][y])
+  }
+
+  inversePosition(x) {
+    return (x-15)*-1
   }
 
   changeDirection(x,y,direction){
@@ -93,6 +98,7 @@ class Board {
 
   updateTile(x,y){
     this.remotes[0].updateTile(x,y,this.floors[x][y])
+    this.remotes[1].updateTile(this.inversePosition(x),this.inversePosition(y),this.floors[x][y])
   }
 //</editor-fold>
 

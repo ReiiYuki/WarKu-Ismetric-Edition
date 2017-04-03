@@ -21,27 +21,55 @@ class Room {
   }
 
   spawnUnit(remote,x,y,type){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+    }
     this.board.spawnUnit(remote,x,y,type)
   }
 
   moveUnit(remote,x,y,direction){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+    }
     this.board.moveUnit(x,y,direction)
   }
 
-  updateUnit(x,y){
+  updateUnit(remote,x,y){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+    }
     this.board.updateUnit(x,y)
   }
 
-  changeDirection(x,y,direction){
+  changeDirection(remote,x,y,direction){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+    }
     this.board.changeDirection(x,y,direction)
   }
 
-  build(x,y,targetX,targetY){
+  build(remote,x,y,targetX,targetY){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+    }
     this.board.build(x,y,targetX,targetY)
   }
 
-  hide(x,y){
+  hide(remote,x,y){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+    }
     this.board.hide(x,y)
+  }
+
+  inversePosition(x) {
+    return (x-15)*-1
   }
 }
 
