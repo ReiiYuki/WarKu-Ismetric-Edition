@@ -14,7 +14,8 @@ class Room {
   }
 
   sendBoard(){
-    this.remotes[0].updateBoard(this.board.formatFloors(),this.board.formatUnits())
+    this.remotes[0].updateBoard(this.board.formatFloors(0))
+    this.remotes[1].updateBoard(this.board.formatFloors(1))
   }
 
   spawnUnit(remote,x,y,type){

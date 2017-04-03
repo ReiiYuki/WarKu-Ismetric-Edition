@@ -108,21 +108,19 @@ class Board {
 
 //<editor-fold> Formatting
 
-  formatFloors(){
+  formatFloors(index){
     let str = ""
-    for (let i = 0;i<this.SIZE;i++){
-      for (let j  =0;j<this.SIZE;j++){
-        str+= this.floors[i][j]+" "
+    if (index==0){
+      for (let i = 0;i<this.SIZE;i++){
+        for (let j  =0;j<this.SIZE;j++){
+          str+= this.floors[i][j]+" "
+        }
       }
-    }
-    return str
-  }
-
-  formatUnits(){
-    let str = ""
-    for (let i = 0;i<this.SIZE;i++){
-      for (let j  =0;j<this.SIZE;j++){
-        str+= this.units[i][j]+" "
+    }else {
+      for (let i = this.SIZE-1;i>=0;i--){
+        for (let j =this.SIZE-1;j>=0;j--){
+          str+= this.floors[i][j]+" "
+        }
       }
     }
     return str
