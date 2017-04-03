@@ -35,8 +35,8 @@ class RemoteProxy extends server.RemoteProxy {
     this.room.sendBoard()
   }
 
-  responseCreateRoomSuccess(type,id){
-    this.send(packet.responseCreateRoomSuccess(type,id))
+  responseCreateRoomSuccess(id){
+    this.send(packet.responseCreateRoomSuccess(id))
   }
 
   updateBoard(floors){

@@ -2,11 +2,10 @@ let Board = require('./board')
 class Room {
   constructor(id,type,remote) {
     this.id = id
-    this.type = type
     this.remotes = []
     this.addPlayer(remote)
     this.board = new Board(this.remotes)
-    remote.responseCreateRoomSuccess(type,id)
+    remote.responseCreateRoomSuccess(id)
   }
 
   addPlayer(remote){

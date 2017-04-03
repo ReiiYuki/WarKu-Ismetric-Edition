@@ -41,9 +41,8 @@ packet[packet.CLIENT_JOIN_ROOM] = (remote,data) =>{
   remote.joinRoom(type)
 }
 
-packet.responseCreateRoomSuccess = (type,id) =>{
+packet.responseCreateRoomSuccess = (id) =>{
   let pw = new packetWriter(packet.SERVER_JOIN_ROOM_SUCCESS)
-  pw.append_uint8(type)
   pw.append_uint32(id)
   pw.finish()
   return pw.buffer
