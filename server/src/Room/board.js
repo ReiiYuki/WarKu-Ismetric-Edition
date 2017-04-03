@@ -120,10 +120,20 @@ class Board {
       for (let i = this.SIZE-1;i>=0;i--){
         for (let j =this.SIZE-1;j>=0;j--){
           let tile = this.floors[i][j]
+          //River
           if (tile==3) tile = 6
           else if (tile==6) tile = 3
           else if (tile == 4) tile = 5
           else if (tile == 5 ) tile = 4
+          //Mountain
+          else if (tile == 9) tile = 17
+          else if (tile == 10) tile = 16
+          else if (tile == 11) tile = 15
+          else if (tile == 12) tile = 14
+          else if (tile == 14) tile = 12
+          else if (tile == 15) tile = 11
+          else if (tile == 16) tile = 10
+          else if (tile == 17) tile = 9
           str+= tile+" "
         }
       }
