@@ -59,7 +59,7 @@ class Unit {
     this.isHide = !this.isHide
   }
 
-  getDirection(){
+  getDirection(remote){
     if (this.owner.playerNum == 0) return this.direction
     return this.inverseDirection(this.direction)
   }
