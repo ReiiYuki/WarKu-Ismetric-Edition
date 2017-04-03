@@ -88,6 +88,8 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
     pw.append_float(unit.hp)
     if (unit.isHide) pw.append_uint8(1)
     else pw.append_uint8(0)
+    if (unit.isOwner(remote)) pw.append_uint8(1)
+    else pw.append_uint8(0)
   }else {
     pw.append_int8(-1)
   }

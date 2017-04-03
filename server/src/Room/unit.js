@@ -74,6 +74,10 @@ class Unit {
     else if (direction==3) return 4
     else if (direction==4) return 3
   }
+
+  isOwner(remote) {
+    return this.owner == remote
+  }
 }
 
 module.exports = Unit

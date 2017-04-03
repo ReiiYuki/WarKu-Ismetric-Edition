@@ -139,10 +139,11 @@ public class DGTPacket : PacketManager {
             int direction = pr.ReadUInt8();
             float hp = pr.ReadFloat();
             bool isHide = pr.ReadUInt8() == 1;
-            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction,hp,isHide);
+            bool isOwner = pr.ReadUInt8() == 1;
+            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction,hp,isHide,isOwner);
             return;
         }
-        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false);
+        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false,false);
     }
 
     public void UpdateUnitRequest(int x,int y)

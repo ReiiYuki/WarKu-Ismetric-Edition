@@ -70,9 +70,8 @@ public class BoardController : MonoBehaviour {
     #endregion
 
     #region unit
-    public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction,float hp,bool isHide)
+    public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction,float hp,bool isHide,bool isOwner)
     {
-        Debug.Log("x = " + x + " y = " + y + " changeX = " + changeX + " changeY = " + changeY + " type = " + type + " direction = " + direction + " hp = " + hp + " isHide = " + isHide);
         if (!boardUnit[x, y])
         {
             boardFloor[x, y].GetComponent<TileBehaviour>().OnSpawnUnit(type);
@@ -80,6 +79,7 @@ public class BoardController : MonoBehaviour {
             boardUnit[x, y] = Instantiate(unitPrototype[type], GetPositionOfTile(x,y)+new Vector3(0f,0f,-1f), Quaternion.identity);
             boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetPosition(x,y);
+            boardUnit[x, y].GetComponent<UnitBehaviour>().isOwner = isOwner;
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
             DGTProxyRemote.GetInstance().RequestChangeDirection(x, y, 3);
         }else
