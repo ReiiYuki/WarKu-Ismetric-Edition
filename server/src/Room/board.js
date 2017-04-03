@@ -97,7 +97,8 @@ class Board {
 //</editor-fold>
 
   hide(x,y){
-
+    if(this.canHide(x,y)) this.units[x,y].hide()
+    this.getUnit(x,y,x,y)
   }
 
   canHide(x,y){

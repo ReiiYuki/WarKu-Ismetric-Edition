@@ -56,7 +56,7 @@ class Unit {
   }
 
   hide(){
-    this.isHide = true
+    this.isHide = !this.isHide
   }
 }
 
