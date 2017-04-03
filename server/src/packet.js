@@ -99,7 +99,7 @@ packet[packet.CLIENT_CHANGE_UNIT_DIRECTION] = (remote,data) => {
   remote.changeDirection(x,y,direction)
 }
 
-packet[packet.CLIENT_WORKER_UNIT_BUILD] = (remtoe,data) => {
+packet[packet.CLIENT_WORKER_UNIT_BUILD] = (remote,data) => {
   let x = data.read_uint8()
   let y = data.read_uint8()
   let targetX = data.read_uint8()
@@ -112,6 +112,7 @@ packet.updateTile = (x,y,type) => {
   pw.append_uint8(y)
   pw.append_uint8(type)
   pw.finish()
+  console.log("EEEEE");
   return pw.buffer
 }
 //</editor-fold>

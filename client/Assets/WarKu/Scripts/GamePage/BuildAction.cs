@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class BuildAction : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void OnMouseDown()
+    {
+        GameObject.FindObjectOfType<Selector>().ReadyToBuild(transform.parent.parent.gameObject);
+        transform.parent.parent.GetChild(0).gameObject.SetActive(false);
+    }
 }

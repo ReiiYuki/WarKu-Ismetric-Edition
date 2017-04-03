@@ -165,6 +165,7 @@ public class DGTProxyRemote : MonoBehaviour {
     #region worker unit
     public void OnUpdateTile(int x,int y,int type)
     {
+        Debug.Log("Yea");
         GameObject.FindObjectOfType<BoardController>();
     }
 

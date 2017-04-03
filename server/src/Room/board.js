@@ -73,7 +73,7 @@ class Board {
 
 //<editor-fold> Worker Unit
   build(x,y,targetX,targetY){
-    if (this.units[x][y]==0){
+    if (this.units[x][y].type==0){
       if (!this.units[targetX][targetY]){
         if ([0,13].indexOf(this.floors[targetX][targetY])>=0){
           this.floors[targetX][targetY] = 18
@@ -84,7 +84,7 @@ class Board {
         }
         this.units[x][y] = null
         this.updateTile(x,y)
-        this.getUnit(x,y)
+        this.getUnit(x,y,x,y)
       }
     }
   }

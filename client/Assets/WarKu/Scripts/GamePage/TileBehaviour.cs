@@ -6,7 +6,7 @@ public class TileBehaviour : MonoBehaviour {
 
     public GameObject tooltip;
     public bool canMove;
-    int x, y;
+    public int x, y;
 
     void Start()
     {
@@ -31,6 +31,15 @@ public class TileBehaviour : MonoBehaviour {
         else if (GameObject.FindObjectOfType<Selector>().IsListen())
         {
             GameObject.FindObjectOfType<Selector>().GetWillMoveUnit().GetComponent<UnitBehaviour>().SetTarget(x, y);
+            GameObject.FindObjectOfType<Selector>().ResetState();
+        }
+        else if (GameObject.FindObjectOfType<Selector>().IsBuild())
+        {
+            TileBehaviour currentTile = GameObject.FindObjectOfType<Selector>().GetCurrentTile().GetComponent<TileBehaviour>();
+            if (x== currentTile.x+1|| x == currentTile.x - 1 || y == currentTile.y + 1 || y == currentTile.y - 1)
+            {
+                DGTProxyRemote.GetInstance().BuildRequest(currentTile.x, currentTile.y, x, y);
+            } 
             GameObject.FindObjectOfType<Selector>().ResetState();
         }
         else
