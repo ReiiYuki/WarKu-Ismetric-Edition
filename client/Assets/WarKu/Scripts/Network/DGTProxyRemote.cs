@@ -146,9 +146,9 @@ public class DGTProxyRemote : MonoBehaviour {
         packet.SpawnUnitRequest(x,y,type);
     }
 
-    public void OnUpdateUnit(int x,int y,int changeX,int changeY,int type,int direction)
+    public void OnUpdateUnit(int x,int y,int changeX,int changeY,int type,int direction,float hp,bool isHide)
     {
-        GameObject.FindObjectOfType<BoardController>().UpdateUnit(x, y,changeX,changeY, type,direction);
+        GameObject.FindObjectOfType<BoardController>().UpdateUnit(x, y,changeX,changeY, type,direction,hp,isHide);
     }
 
     public void RequestUpdateUnit(int x,int y)
