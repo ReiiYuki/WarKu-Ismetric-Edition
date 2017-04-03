@@ -19,7 +19,9 @@ class Board {
   }
 
   isSpawnZone(remote,x,y){
-    return y==this.SIZE-1 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
+    let isSpawnLine = y==this.SIZE-1
+    if (this.remotes.indexOf(remote)==1) isSpawnLine = y==0
+    return isSpawnLine && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
   }
 //</editor-fold>
 

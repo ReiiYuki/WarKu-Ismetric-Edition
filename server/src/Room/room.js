@@ -32,6 +32,7 @@ class Room {
     if (this.remotes.indexOf(remote)==1){
       x = this.inversePosition(x)
       y = this.inversePosition(y)
+      direction = this.inverseDirection(direction)
     }
     this.board.moveUnit(x,y,direction)
   }
@@ -48,6 +49,7 @@ class Room {
     if (this.remotes.indexOf(remote)==1){
       x = this.inversePosition(x)
       y = this.inversePosition(y)
+      direction = this.inverseDirection(direction)
     }
     this.board.changeDirection(x,y,direction)
   }
@@ -56,6 +58,8 @@ class Room {
     if (this.remotes.indexOf(remote)==1){
       x = this.inversePosition(x)
       y = this.inversePosition(y)
+      targetX = this.inversePosition(targetX)
+      targetY = this.inversePosition(targetY)
     }
     this.board.build(x,y,targetX,targetY)
   }
@@ -70,6 +74,13 @@ class Room {
 
   inversePosition(x) {
     return (x-15)*-1
+  }
+
+  inverseDirection(direction){
+    if (direction==1) return 2
+    else if (direction==2) return 1
+    else if (direction==3) return 4
+    else if (direction==4) return 3
   }
 }
 

@@ -58,6 +58,7 @@ class Unit {
   hide(){
     this.isHide = !this.isHide
   }
+
 }
 
 module.exports = Unit
