@@ -96,6 +96,13 @@ class Board {
   }
 //</editor-fold>
 
+  hide(x,y){
+
+  }
+
+  canHide(x,y){
+    return [1,18,19].indexOf(this.floors[x][y])>=0
+  }
 //</editor-fold>
 
 //<editor-fold> Formatting
@@ -205,7 +212,7 @@ class Board {
 //<editor-fold> Tile Description
 /**
 0 = Normal Tile * -
-1 = Forest Tile *
+1 = Forest Tile * +
 2 = Stone Tile
 3 = RiverRightUp
 4 = RiverLeftUp
@@ -222,10 +229,10 @@ class Board {
 15 = MountainRidgeLeftUp
 16 = MountainSlopeLeft *
 17 = MountainRidgeLeftDown
-18 = tower0
-19 = tower1
-20 = bridgeLeft
-21 = bridgeDown
+18 = tower0 +
+19 = tower1 +
+20 = bridgeLeft *
+21 = bridgeDown *
 **/
 //</editor-fold>
 
