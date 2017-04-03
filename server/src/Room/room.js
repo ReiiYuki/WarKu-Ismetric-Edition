@@ -2,19 +2,22 @@ let Board = require('./board')
 class Room {
   constructor(id,type,remote) {
     this.id = id
-    this.type = type
     this.remotes = []
     this.addPlayer(remote)
     this.board = new Board(this.remotes)
-    remote.responseCreateRoomSuccess(type,id)
   }
 
   addPlayer(remote){
     this.remotes.push(remote)
+    if (this.remotes.length == 2){
+      this.remotes[0].responseCreateRoomSuccess(this.id)
+      this.remotes[1].responseCreateRoomSuccess(this.id)
+    }
   }
 
   sendBoard(){
-    this.remotes[0].updateBoard(this.board.formatFloors(),this.board.formatUnits())
+    this.remotes[0].updateBoard(this.board.formatFloors(0))
+    this.remotes[1].updateBoard(this.board.formatFloors(1))
   }
 
   spawnUnit(remote,x,y,type){
