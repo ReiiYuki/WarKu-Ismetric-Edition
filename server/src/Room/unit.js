@@ -60,7 +60,6 @@ class Unit {
   }
 
   getDirection(){
-    console.log("Direction" + this.owner.playerNum + " "+this.direction);
     if (this.owner.playerNum == 0) return this.direction
     return this.inverseDirection(this.direction)
   }

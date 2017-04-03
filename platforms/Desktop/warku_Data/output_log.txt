@@ -1,0 +1,566 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     4065 MB
+    Driver:   21.21.13.7866
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Begin MonoManager ReloadAssembly
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.023 seconds
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     4065 MB
+    Driver:   21.21.13.7866
+Begin MonoManager ReloadAssembly
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.019 seconds
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.295800 ms
+<RI> Initialized touch support.
+Success
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+UnloadTime: 1.769083 ms
+Success
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.322758 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 469.
+Total: 0.292740 ms (FindLiveObjects: 0.055703 ms CreateObjectMapping: 0.013432 ms MarkObjects: 0.176197 ms  DeleteObjects: 0.003555 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.267845 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 469.
+Total: 0.236246 ms (FindLiveObjects: 0.037135 ms CreateObjectMapping: 0.011061 ms MarkObjects: 0.179752 ms  DeleteObjects: 0.003555 ms)
+
+x = 8 y = 15 changeX = 8 changeY = 15 type = 0 direction = 0 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 8 changeY = 15 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 8 changeY = 14 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 14 changeX = 8 changeY = 14 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 14 changeX = 7 changeY = 14 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 14 changeX = 7 changeY = 14 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 14 changeX = 6 changeY = 14 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 14 changeX = 6 changeY = 14 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 14 changeX = 5 changeY = 14 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 13 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 0 changeX = 7 changeY = 0 type = 0 direction = 0 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 0 changeX = 7 changeY = 0 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 0 changeX = 7 changeY = 1 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 1 changeX = 7 changeY = 1 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 1 changeX = 8 changeY = 1 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 1 changeX = 8 changeY = 1 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 1 changeX = 9 changeY = 1 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 1 changeX = 9 changeY = 1 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 1 changeX = 10 changeY = 1 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 1 changeX = 10 changeY = 1 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 1 changeX = 10 changeY = 2 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 0 changeX = 7 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Nooooooooooooooooo
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 15 changeX = 12 changeY = 15 type = 0 direction = 0 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 15 changeX = 12 changeY = 15 type = 0 direction = 0 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 15 changeX = 12 changeY = 15 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 15 changeX = 11 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 11 y = 15 changeX = 11 changeY = 15 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 11 y = 15 changeX = 10 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 15 changeX = 10 changeY = 15 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 15 changeX = 9 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 15 changeX = 9 changeY = 15 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 8 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Nooooooooooooooooo
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 0 changeX = 3 changeY = 0 type = 0 direction = 0 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 0 changeX = 3 changeY = 0 type = 0 direction = 0 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 15 changeX = 12 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Nooooooooooooooooo
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 0 changeX = 3 changeY = 0 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 0 changeX = 4 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 0 changeX = 4 changeY = 0 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 0 changeX = 5 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 0 changeX = 5 changeY = 0 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 0 changeX = 6 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 0 changeX = 6 changeY = 0 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 0 changeX = 3 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Nooooooooooooooooo
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 0 changeX = 7 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 6 changeY = 13 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 13 changeX = 6 changeY = 13 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 13 changeX = 6 changeY = 12 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 12 changeX = 6 changeY = 12 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 15 changeX = 8 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 2 changeX = 10 changeY = 2 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 2 changeX = 9 changeY = 2 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 2 changeX = 9 changeY = 2 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 2 changeX = 9 changeY = 3 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 3 changeX = 9 changeY = 3 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 8 changeY = 15 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 3 changeX = 9 changeY = 4 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 7 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 15 changeX = 7 changeY = 15 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 15 changeX = 6 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 15 changeX = 6 changeY = 15 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 15 changeX = 5 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 15 changeX = 5 changeY = 15 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 15 changeX = 4 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 15 changeX = 4 changeY = 15 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 15 changeX = 3 changeY = 15 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 15 changeX = 3 changeY = 15 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 15 changeX = 3 changeY = 14 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 14 changeX = 3 changeY = 14 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 14 changeX = 3 changeY = 13 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 13 changeX = 3 changeY = 13 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 13 changeX = 3 changeY = 12 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 12 changeX = 3 changeY = 12 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 12 changeX = 3 changeY = 11 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 11 changeX = 3 changeY = 11 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 11 changeX = 4 changeY = 11 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 11 changeX = 4 changeY = 11 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 11 changeX = 5 changeY = 11 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 11 changeX = 5 changeY = 11 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 11 changeX = 6 changeY = 11 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 11 changeX = 6 changeY = 11 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 0 changeX = 7 changeY = 0 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 12 changeX = 6 changeY = 11 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 0 changeX = 8 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 0 changeX = 8 changeY = 0 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 0 changeX = 9 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 0 changeX = 9 changeY = 0 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 0 changeX = 10 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 0 changeX = 10 changeY = 0 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 0 changeX = 11 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 11 y = 0 changeX = 11 changeY = 0 type = 0 direction = 1 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 11 y = 0 changeX = 12 changeY = 0 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 0 changeX = 12 changeY = 0 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 0 changeX = 12 changeY = 1 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 1 changeX = 12 changeY = 1 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 1 changeX = 12 changeY = 2 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 2 changeX = 12 changeY = 2 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 2 changeX = 12 changeY = 3 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 3 changeX = 12 changeY = 3 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 3 changeX = 12 changeY = 4 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 4 changeX = 12 changeY = 4 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 12 y = 4 changeX = 11 changeY = 4 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 11 y = 4 changeX = 11 changeY = 4 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 11 y = 4 changeX = 10 changeY = 4 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 4 changeX = 10 changeY = 4 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 10 y = 4 changeX = 9 changeY = 4 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 4 changeX = 9 changeY = 4 type = 0 direction = 2 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 11 changeX = 6 changeY = 11 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 9 y = 4 changeX = 8 changeY = 4 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 11 changeX = 6 changeY = 10 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 10 changeX = 6 changeY = 10 type = 0 direction = 3 hp = 6 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 10 changeX = 6 changeY = 9 type = -1 direction = 0 hp = 0 isHide = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+RecceiveCallbvecCalltcba
+ 
+(Filencme c at/ch
+ 
+(lave/unmityC:/buildslave/ts/generated/ncommbuild/aon/runtimeeneDeragBindingted/commo n/runt5ime
+/
+DebugBindings.gen.cpp Line: 51)
+
