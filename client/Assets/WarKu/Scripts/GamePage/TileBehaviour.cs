@@ -39,7 +39,6 @@ public class TileBehaviour : MonoBehaviour {
             {
                 GetComponentInChildren<UnitBehaviour>().Stop();
                 transform.GetChild(0).gameObject.SetActive(true);
-                GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.GetChild(1).gameObject);
             }
         }
     }

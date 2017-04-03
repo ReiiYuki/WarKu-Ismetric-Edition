@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class MoveAction : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void OnMouseDown()
+    {
+        GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.parent.parent.GetChild(1).gameObject);
+        transform.parent.parent.GetChild(0).gameObject.SetActive(false);
+    }
 }
