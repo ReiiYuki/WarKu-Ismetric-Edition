@@ -99,9 +99,8 @@ public class DGTPacket : PacketManager {
     }
     public void ReceiveCreatedRoomResponse(int packet_id, PacketReader pr)
     {
-        int type = pr.ReadUInt8();
         int id = pr.ReadUInt32();
-        DGTProxyRemote.GetInstance().OnCreatedRoom(id, type);
+        DGTProxyRemote.GetInstance().OnCreatedRoom(id);
     }
     #endregion
 

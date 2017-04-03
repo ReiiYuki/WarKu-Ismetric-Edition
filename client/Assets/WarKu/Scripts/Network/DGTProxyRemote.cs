@@ -120,11 +120,9 @@ public class DGTProxyRemote : MonoBehaviour {
     {
         packet.CreateRoom(type);
     }
-    public void OnCreatedRoom(int id,int type)
+    public void OnCreatedRoom(int id)
     {
         PlayerPrefs.SetInt("RoomID", id);
-        PlayerPrefs.SetInt("RoomType", type);
-        Debug.Log(id + " " + type);
     }
     #endregion
 
