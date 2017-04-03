@@ -112,7 +112,6 @@ packet.updateTile = (x,y,type) => {
   pw.append_uint8(y)
   pw.append_uint8(type)
   pw.finish()
-  console.log("EEEEE");
   return pw.buffer
 }
 //</editor-fold>
