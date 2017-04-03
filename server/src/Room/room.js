@@ -8,6 +8,7 @@ class Room {
   }
 
   addPlayer(remote){
+    remote.playerNum = this.remotes.length
     this.remotes.push(remote)
     if (this.remotes.length == 2){
       this.remotes[0].responseCreateRoomSuccess(this.id)

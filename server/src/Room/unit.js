@@ -59,6 +59,18 @@ class Unit {
     this.isHide = !this.isHide
   }
 
+  getDirection(){
+    console.log("Direction" + this.owner.playerNum + " "+this.direction);
+    if (this.owner.playerNum == 0) return this.direction
+    return this.inverseDirection(this.direction)
+  }
+
+  inverseDirection(direction){
+    if (direction==1) return 2
+    else if (direction==2) return 1
+    else if (direction==3) return 4
+    else if (direction==4) return 3
+  }
 }
 
 module.exports = Unit

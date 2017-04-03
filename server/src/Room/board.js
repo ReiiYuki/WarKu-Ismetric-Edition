@@ -13,7 +13,7 @@ class Board {
 //<editor-fold> SpawnUnit
   spawnUnit(remote,x,y,type){
     if (this.isSpawnZone(remote,x,y)){
-      this.units[x][y] = new Unit(0,0)
+      this.units[x][y] = new Unit(0,remote)
     }
     this.getUnit(x,y,x,y)
   }

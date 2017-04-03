@@ -84,7 +84,7 @@ packet.updateUnit = (x,y,changeX,changeY,unit) => {
   pw.append_uint8(changeY)
   if (unit){
     pw.append_int8(unit.type)
-    pw.append_uint8(unit.direction)
+    pw.append_uint8(unit.getDirection())
     pw.append_float(unit.hp)
     if (unit.isHide) pw.append_uint8(1)
     else pw.append_uint8(0)
