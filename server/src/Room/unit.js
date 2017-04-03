@@ -60,6 +60,10 @@ class Unit {
   }
 
   getDirection(remote){
+    if (this.owner.playerNum != remote.playerNum){
+      if (this.owner.playerNum == 0) return this.inverseDirection(this.direction)
+      return this.direction
+    }
     if (this.owner.playerNum == 0) return this.direction
     return this.inverseDirection(this.direction)
   }
