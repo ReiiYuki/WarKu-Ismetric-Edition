@@ -80,6 +80,7 @@ public class BoardController : MonoBehaviour {
             boardUnit[x, y] = Instantiate(unitPrototype[type], GetPositionOfTile(x,y), Quaternion.identity);
             boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetPosition(x,y);
+            boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
             DGTProxyRemote.GetInstance().RequestChangeDirection(x, y, 3);
         }else
         {
@@ -97,6 +98,9 @@ public class BoardController : MonoBehaviour {
         {
             Destroy(boardUnit[x, y]);
             boardUnit[x, y] = null;
+        }else
+        {
+            boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
         }
     }
     #endregion

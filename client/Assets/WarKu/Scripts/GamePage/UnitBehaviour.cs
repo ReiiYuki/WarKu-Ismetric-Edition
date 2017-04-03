@@ -14,6 +14,7 @@ public class UnitBehaviour : MonoBehaviour {
         DOWN = 4
     }
     int x, y,targetX,targetY,direction;
+    float hp;
     public int speed = 1;
     public Vector3 offsetVector;
     Vector3 right = new Vector3(2f, 1f);
@@ -46,6 +47,11 @@ public class UnitBehaviour : MonoBehaviour {
     {
         this.x = x;
         this.y = y;
+    }
+
+    public void SetHp(float hp)
+    {
+        this.hp = hp;
     }
     #endregion
 
