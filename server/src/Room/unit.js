@@ -24,7 +24,7 @@ class Unit {
     this.type = type
     this.direction = 0
     this.owner = owner
-    assignPower()
+    this.assignPower()
   }
 
   assignPower(){
@@ -51,8 +51,12 @@ class Unit {
       this.speed = 1
       this.range = 1
       this.hp = 15
-      tthis.atkSpd = 2
+      this.atkSpd = 2
     }
+  }
+
+  hide(){
+    this.isHide = true
   }
 }
 
