@@ -6,6 +6,8 @@ public class HideAction : MonoBehaviour {
 
     void OnMouseDown()
     {
-        Debug.Log("Hide");
+        transform.parent.parent.GetComponentInChildren<UnitBehaviour>().HideRequest();
+        transform.parent.gameObject.SetActive(false);
     }
+
 }

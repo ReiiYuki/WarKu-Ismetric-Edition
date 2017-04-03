@@ -172,5 +172,10 @@ public class DGTProxyRemote : MonoBehaviour {
     {
         packet.BuildRequest(x, y, targetX, targetY);
     }
+
+    public void Hide(int x,int y)
+    {
+        packet.Hide(x, y);
+    }
     #endregion
 }

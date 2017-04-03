@@ -101,6 +101,7 @@ public class BoardController : MonoBehaviour {
         }else
         {
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
+            boardUnit[x, y].GetComponent<UnitBehaviour>().Hide(isHide);
         }
     }
     #endregion

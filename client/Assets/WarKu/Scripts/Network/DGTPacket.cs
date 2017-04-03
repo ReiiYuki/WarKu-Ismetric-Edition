@@ -29,6 +29,7 @@ public class DGTPacket : PacketManager {
         CLIENT_UPDATE_UNIT = 10005,
         CLIENT_CHANGE_UNIT_DIRECTION = 10006,
         CLIENT_WORKER_UNIT_BUILD = 10007,
+        CLIENT_UNIT_HIDE = 10008,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
@@ -180,6 +181,14 @@ public class DGTPacket : PacketManager {
         int y = pr.ReadUInt8();
         int type = pr.ReadUInt8();
         DGTProxyRemote.GetInstance().OnUpdateTile(x, y, type);
+    }
+
+    public void Hide(int x,int y)
+    {
+        PacketWriter pw = BeginSend((int)PacketID.CLIENT_UNIT_HIDE);
+        pw.WriteUInt8(x);
+        pw.WriteUInt8(y);
+        EndSend();
     }
     #endregion
 }
