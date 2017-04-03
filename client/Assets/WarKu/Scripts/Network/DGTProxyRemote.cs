@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DGTProxyRemote : MonoBehaviour {
 
@@ -123,7 +124,9 @@ public class DGTProxyRemote : MonoBehaviour {
     public void OnCreatedRoom(int id)
     {
         PlayerPrefs.SetInt("RoomID", id);
+        SceneManager.LoadScene(1);
     }
+
     #endregion
 
     #region board

@@ -1,0 +1,82 @@
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     4065 MB
+    Driver:   21.21.13.7866
+Begin MonoManager ReloadAssembly
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.021 seconds
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+UnloadTime: 0.932739 ms
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 960M (ID=0x139b)
+    Vendor:   NVIDIA
+    VRAM:     4065 MB
+    Driver:   21.21.13.7866
+Begin MonoManager ReloadAssembly
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.020 seconds
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: G:\workspace\Unity\WarKu-IsometricEdition\platforms\Desktop\warku_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.552590 ms
+Success
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Success
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.675548 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 469.
+Total: 0.186863 ms (FindLiveObjects: 0.018567 ms CreateObjectMapping: 0.010666 ms MarkObjects: 0.150123 ms  DeleteObjects: 0.003160 ms)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.174215 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 469.
+Total: 0.279308 ms (FindLiveObjects: 0.062419 ms CreateObjectMapping: 0.013827 ms MarkObjects: 0.179357 ms  DeleteObjects: 0.003555 ms)
+
+RRceceeveCallbackl catch
+ tc
+(Filenh
+ : C:
+(Filenbume: Ci/ldslasve/unity/builild/artiftcifs/generated/commocts/ge/rnerateeDebugBinon/runtdme/ingus.gen.ncpp Li.cp:p Li
+
+: 51)
+

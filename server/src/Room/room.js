@@ -5,11 +5,14 @@ class Room {
     this.remotes = []
     this.addPlayer(remote)
     this.board = new Board(this.remotes)
-    remote.responseCreateRoomSuccess(id)
   }
 
   addPlayer(remote){
     this.remotes.push(remote)
+    if (this.remotes.length == 2){
+      this.remotes[0].responseCreateRoomSuccess(this.id)
+      this.remotes[1].responseCreateRoomSuccess(this.id)
+    }
   }
 
   sendBoard(){

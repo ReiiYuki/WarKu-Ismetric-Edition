@@ -119,7 +119,12 @@ class Board {
     }else {
       for (let i = this.SIZE-1;i>=0;i--){
         for (let j =this.SIZE-1;j>=0;j--){
-          str+= this.floors[i][j]+" "
+          let tile = this.floors[i][j]
+          if (tile==3) tile = 6
+          else if (tile==6) tile = 3
+          else if (tile == 4) tile = 5
+          else if (tile == 5 ) tile = 4
+          str+= tile+" "
         }
       }
     }
