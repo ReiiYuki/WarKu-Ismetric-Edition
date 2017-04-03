@@ -15,6 +15,7 @@ public class UnitBehaviour : MonoBehaviour {
     }
     int x, y,targetX,targetY,direction;
     float hp;
+    public bool isOwner;
     public int speed = 1;
     public Vector3 offsetVector;
     Vector3 right = new Vector3(2f, 1f);
