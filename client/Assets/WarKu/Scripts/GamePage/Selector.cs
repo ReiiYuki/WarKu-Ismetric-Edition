@@ -9,7 +9,8 @@ public class Selector : MonoBehaviour {
     {
         NO_SELECTION = 0,
         UNIT_CREATION_SELECT,
-        UNIT_MOVE_LISTEN
+        UNIT_MOVE_LISTEN,
+        BUILD_LISTEN
     }
     
     public void SetState(State state)
@@ -29,6 +30,10 @@ public class Selector : MonoBehaviour {
     public bool IsListen()
     {
         return state == State.UNIT_MOVE_LISTEN;
+    }
+    public bool IsBuild()
+    {
+        return state == State.BUILD_LISTEN;
     }
     #endregion
 
