@@ -13,13 +13,15 @@ class Board {
 //<editor-fold> SpawnUnit
   spawnUnit(remote,x,y,type){
     if (this.isSpawnZone(remote,x,y)){
-      this.units[x][y] = new Unit(0,0)
+      this.units[x][y] = new Unit(0,remote)
     }
     this.getUnit(x,y,x,y)
   }
 
   isSpawnZone(remote,x,y){
-    return y==this.SIZE-1 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
+    let isSpawnLine = y==this.SIZE-1
+    if (this.remotes.indexOf(remote)==1) isSpawnLine = y==0
+    return isSpawnLine && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
   }
 //</editor-fold>
 
@@ -48,6 +50,11 @@ class Board {
 
   getUnit(x,y,changeX,changeY){
     this.remotes[0].updateUnit(x,y,changeX,changeY,this.units[x][y])
+    this.remotes[1].updateUnit(this.inversePosition(x),this.inversePosition(y),this.inversePosition(changeX),this.inversePosition(changeY),this.units[x][y])
+  }
+
+  inversePosition(x) {
+    return (x-15)*-1
   }
 
   changeDirection(x,y,direction){
@@ -93,6 +100,7 @@ class Board {
 
   updateTile(x,y){
     this.remotes[0].updateTile(x,y,this.floors[x][y])
+    this.remotes[1].updateTile(this.inversePosition(x),this.inversePosition(y),this.floors[x][y])
   }
 //</editor-fold>
 

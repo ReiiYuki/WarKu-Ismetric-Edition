@@ -8,6 +8,7 @@ class Room {
   }
 
   addPlayer(remote){
+    remote.playerNum = this.remotes.length
     this.remotes.push(remote)
     if (this.remotes.length == 2){
       this.remotes[0].responseCreateRoomSuccess(this.id)
@@ -21,27 +22,66 @@ class Room {
   }
 
   spawnUnit(remote,x,y,type){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+    }
     this.board.spawnUnit(remote,x,y,type)
   }
 
   moveUnit(remote,x,y,direction){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+      direction = this.inverseDirection(direction)
+    }
     this.board.moveUnit(x,y,direction)
   }
 
-  updateUnit(x,y){
+  updateUnit(remote,x,y){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+    }
     this.board.updateUnit(x,y)
   }
 
-  changeDirection(x,y,direction){
+  changeDirection(remote,x,y,direction){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+      direction = this.inverseDirection(direction)
+    }
     this.board.changeDirection(x,y,direction)
   }
 
-  build(x,y,targetX,targetY){
+  build(remote,x,y,targetX,targetY){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+      targetX = this.inversePosition(targetX)
+      targetY = this.inversePosition(targetY)
+    }
     this.board.build(x,y,targetX,targetY)
   }
 
-  hide(x,y){
+  hide(remote,x,y){
+    if (this.remotes.indexOf(remote)==1){
+      x = this.inversePosition(x)
+      y = this.inversePosition(y)
+    }
     this.board.hide(x,y)
+  }
+
+  inversePosition(x) {
+    return (x-15)*-1
+  }
+
+  inverseDirection(direction){
+    if (direction==1) return 2
+    else if (direction==2) return 1
+    else if (direction==3) return 4
+    else if (direction==4) return 3
   }
 }
 

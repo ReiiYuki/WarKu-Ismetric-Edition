@@ -52,7 +52,7 @@ class RemoteProxy extends server.RemoteProxy {
   }
 
   moveUnit(x,y,direction){
-    this.room.moveUnit(x,y,direction)
+    this.room.moveUnit(this,x,y,direction)
   }
 
   updateUnit(x,y,changeX,changeY,unit){
@@ -60,15 +60,15 @@ class RemoteProxy extends server.RemoteProxy {
   }
 
   updateUnitR(x,y){
-    this.room.updateUnit(x,y)
+    this.room.updateUnit(this,x,y)
   }
 
   changeDirection(x,y,direction){
-    this.room.changeDirection(x,y,direction)
+    this.room.changeDirection(this,x,y,direction)
   }
 
   build(x,y,targetX,targetY){
-    this.room.build(x,y,targetX,targetY)
+    this.room.build(this,x,y,targetX,targetY)
   }
 
   updateTile(x,y,type){
@@ -76,7 +76,7 @@ class RemoteProxy extends server.RemoteProxy {
   }
 
   hide(x,y){
-    this.room.hide(x,y)
+    this.room.hide(this,x,y)
   }
   //</editor-fold>
 
