@@ -78,7 +78,6 @@ packet[packet.CLIENT_UPDATE_UNIT] = (remote,data)=>{
 
 packet.updateUnit = (x,y,changeX,changeY,unit) => {
   let pw = new packetWriter(packet.SERVER_UPDATE_UNIT)
-
   pw.append_uint8(x)
   pw.append_uint8(y)
   pw.append_uint8(changeX)
@@ -86,6 +85,9 @@ packet.updateUnit = (x,y,changeX,changeY,unit) => {
   if (unit){
     pw.append_int8(unit.type)
     pw.append_uint8(unit.direction)
+    pw.append_float(unit.hp)
+    if (unit.isHide) pw.append_uint8(1)
+    else pw.append_uint8(0)
   }else {
     pw.append_int8(-1)
   }
