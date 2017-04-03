@@ -60,7 +60,9 @@ public class BoardController : MonoBehaviour {
     {
         float offsetY = 0f;
         if (tile.GetComponent<SpriteRenderer>().sprite.bounds.size.y > tilePrototype[0].GetComponent<SpriteRenderer>().sprite.bounds.size.y)
+        {
             offsetY = tile.GetComponent<SpriteRenderer>().sprite.bounds.size.y / 10f;
+        }
         boardFloor[x, y] = Instantiate(tile, GetPosition(x, y) + new Vector3(0, offsetY), Quaternion.identity);
         boardFloor[x, y].GetComponent<TileBehaviour>().SetPosition(x, y);
         boardFloor[x, y].transform.SetParent(transform);
@@ -68,8 +70,9 @@ public class BoardController : MonoBehaviour {
     #endregion
 
     #region unit
-    public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction)
+    public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction,float hp,bool isHide)
     {
+        Debug.Log("x = " + x + " y = " + y + " changeX = " + changeX + " changeY = " + changeY + " type = " + type + " direction = " + direction + " hp = " + hp + " isHide = " + isHide);
         if (!boardUnit[x, y])
         {
             boardFloor[x, y].GetComponent<TileBehaviour>().OnSpawnUnit(type);
@@ -77,6 +80,7 @@ public class BoardController : MonoBehaviour {
             boardUnit[x, y] = Instantiate(unitPrototype[type], GetPositionOfTile(x,y), Quaternion.identity);
             boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetPosition(x,y);
+            boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
             DGTProxyRemote.GetInstance().RequestChangeDirection(x, y, 3);
         }else
         {
@@ -94,6 +98,10 @@ public class BoardController : MonoBehaviour {
         {
             Destroy(boardUnit[x, y]);
             boardUnit[x, y] = null;
+        }else
+        {
+            boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
+            boardUnit[x, y].GetComponent<UnitBehaviour>().Hide(isHide);
         }
     }
     #endregion

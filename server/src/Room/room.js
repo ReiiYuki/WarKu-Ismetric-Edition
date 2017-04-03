@@ -36,6 +36,10 @@ class Room {
   build(x,y,targetX,targetY){
     this.board.build(x,y,targetX,targetY)
   }
+
+  hide(x,y){
+    this.board.hide(x,y)
+  }
 }
 
 module.exports = Room

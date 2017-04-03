@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TooltipBehaviour : MonoBehaviour {
+public class TowerBehaviour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,11 +11,6 @@ public class TooltipBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (transform.parent.childCount == 1) Disappear();
+		
 	}
-
-    public void Disappear()
-    {
-        gameObject.SetActive(false);
-    }
 }

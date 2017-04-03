@@ -67,7 +67,7 @@ class Board {
   }
 
   canMove(x,y){
-    return y<this.SIZE && x<this.SIZE && y>=0 && x>=0 && [0,1,10,12,13,14,16,20,21].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
+    return y<this.SIZE && x<this.SIZE && y>=0 && x>=0 && [0,1,10,12,13,14,16,18,19,20,21].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
   }
 //</editor-fold>
 
@@ -82,9 +82,11 @@ class Board {
         }else if (this.floors[targetX][targetY]==8){
           this.floors[targetX][targetY] = 21
         }
-        this.units[x][y] = null
-        this.updateTile(targetX,targetY)
-        this.getUnit(x,y,x,y)
+        if ([18,20,21].indexOf(this.floors[targetX][targetY])>=0){
+          this.units[x][y] = null
+          this.updateTile(targetX,targetY)
+          this.getUnit(x,y,x,y)
+        }
       }
     }
   }
@@ -94,6 +96,14 @@ class Board {
   }
 //</editor-fold>
 
+  hide(x,y){
+    if(this.canHide(x,y)) this.units[x][y].hide()
+    this.getUnit(x,y,x,y)
+  }
+
+  canHide(x,y){
+    return [1,18,19].indexOf(this.floors[x][y])>=0
+  }
 //</editor-fold>
 
 //<editor-fold> Formatting
@@ -203,7 +213,7 @@ class Board {
 //<editor-fold> Tile Description
 /**
 0 = Normal Tile * -
-1 = Forest Tile *
+1 = Forest Tile * +
 2 = Stone Tile
 3 = RiverRightUp
 4 = RiverLeftUp
@@ -220,10 +230,10 @@ class Board {
 15 = MountainRidgeLeftUp
 16 = MountainSlopeLeft *
 17 = MountainRidgeLeftDown
-18 = tower0
-19 = tower1
-20 = bridgeLeft
-21 = bridgeDown
+18 = tower0 +
+19 = tower1 +
+20 = bridgeLeft *
+21 = bridgeDown *
 **/
 //</editor-fold>
 

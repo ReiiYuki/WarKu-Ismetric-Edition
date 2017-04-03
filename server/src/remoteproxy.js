@@ -74,6 +74,10 @@ class RemoteProxy extends server.RemoteProxy {
   updateTile(x,y,type){
     this.send(packet.updateTile(x,y,type))
   }
+
+  hide(x,y){
+    this.room.hide(x,y)
+  }
   //</editor-fold>
 
 }

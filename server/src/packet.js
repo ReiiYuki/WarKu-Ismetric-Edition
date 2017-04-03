@@ -10,6 +10,7 @@ let packet = {
   CLIENT_UPDATE_UNIT : 10005,
   CLIENT_CHANGE_UNIT_DIRECTION : 10006,
   CLIENT_WORKER_UNIT_BUILD : 10007,
+  CLIENT_UNIT_HIDE : 10008,
 
   SERVER_LOGIN_SUCCESS : 20000,
   SERVER_CREATE_ROOM_SUCCESS : 20001,
@@ -78,7 +79,6 @@ packet[packet.CLIENT_UPDATE_UNIT] = (remote,data)=>{
 
 packet.updateUnit = (x,y,changeX,changeY,unit) => {
   let pw = new packetWriter(packet.SERVER_UPDATE_UNIT)
-
   pw.append_uint8(x)
   pw.append_uint8(y)
   pw.append_uint8(changeX)
@@ -86,6 +86,9 @@ packet.updateUnit = (x,y,changeX,changeY,unit) => {
   if (unit){
     pw.append_int8(unit.type)
     pw.append_uint8(unit.direction)
+    pw.append_float(unit.hp)
+    if (unit.isHide) pw.append_uint8(1)
+    else pw.append_uint8(0)
   }else {
     pw.append_int8(-1)
   }
@@ -112,8 +115,13 @@ packet.updateTile = (x,y,type) => {
   pw.append_uint8(y)
   pw.append_uint8(type)
   pw.finish()
-  console.log("EEEEE");
   return pw.buffer
+}
+
+packet[packet.CLIENT_UNIT_HIDE] = (remote,data) => {
+  let x = data.read_uint8()
+  let y = data.read_uint8()
+  remote.hide(x,y)
 }
 //</editor-fold>
 module.exports = packet
