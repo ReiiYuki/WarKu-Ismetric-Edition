@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class TileBehaviour : MonoBehaviour {
 
+    public GameObject tooltip;
     public bool canMove;
-    int x, y;
+    public int x, y;
+
+    void Start()
+    {
+        tooltip = Instantiate(tooltip, transform.position+new Vector3(0f,1.5f),Quaternion.identity);
+        tooltip.transform.SetParent(transform);
+        tooltip.SetActive(false);
+    }
 
     public void SetPosition(int x, int y)
     {
@@ -25,12 +33,21 @@ public class TileBehaviour : MonoBehaviour {
             GameObject.FindObjectOfType<Selector>().GetWillMoveUnit().GetComponent<UnitBehaviour>().SetTarget(x, y);
             GameObject.FindObjectOfType<Selector>().ResetState();
         }
+        else if (GameObject.FindObjectOfType<Selector>().IsBuild())
+        {
+            TileBehaviour currentTile = GameObject.FindObjectOfType<Selector>().GetCurrentTile().GetComponent<TileBehaviour>();
+            if (x== currentTile.x+1|| x == currentTile.x - 1 || y == currentTile.y + 1 || y == currentTile.y - 1)
+            {
+                DGTProxyRemote.GetInstance().BuildRequest(currentTile.x, currentTile.y, x, y);
+            } 
+            GameObject.FindObjectOfType<Selector>().ResetState();
+        }
         else
         {
             if (GetComponentInChildren<UnitBehaviour>())
             {
                 GetComponentInChildren<UnitBehaviour>().Stop();
-                GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.GetChild(0).gameObject);
+                transform.GetChild(0).gameObject.SetActive(true);
             }
         }
     }

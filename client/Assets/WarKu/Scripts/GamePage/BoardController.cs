@@ -90,6 +90,10 @@ public class BoardController : MonoBehaviour {
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().SetPosition(changeX, changeY);
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().UpdateDirection();
             boardUnit[x, y] = null;
+        }else if (x == changeX && y == changeY && type == -1)
+        {
+            Destroy(boardUnit[x, y]);
+            boardUnit[x, y] = null;
         }
     }
     #endregion

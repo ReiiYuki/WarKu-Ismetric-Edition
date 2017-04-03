@@ -67,24 +67,24 @@ class Board {
   }
 
   canMove(x,y){
-    return y<this.SIZE && x<this.SIZE && y>=0 && x>=0 && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
+    return y<this.SIZE && x<this.SIZE && y>=0 && x>=0 && [0,1,10,12,13,14,16,20,21].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
   }
 //</editor-fold>
 
 //<editor-fold> Worker Unit
   build(x,y,targetX,targetY){
-    if (this.units[x][y]==0){
+    if (this.units[x][y].type==0){
       if (!this.units[targetX][targetY]){
         if ([0,13].indexOf(this.floors[targetX][targetY])>=0){
           this.floors[targetX][targetY] = 18
         }else if (this.floors[targetX][targetY]==7) {
-          this.floors[targetX][targetY] = 21
-        }else if (this.floors[targetX][targetY]==8){
           this.floors[targetX][targetY] = 20
+        }else if (this.floors[targetX][targetY]==8){
+          this.floors[targetX][targetY] = 21
         }
         this.units[x][y] = null
-        this.updateTile(x,y)
-        this.getUnit(x,y)
+        this.updateTile(targetX,targetY)
+        this.getUnit(x,y,x,y)
       }
     }
   }

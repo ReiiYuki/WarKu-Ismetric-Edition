@@ -9,7 +9,8 @@ public class Selector : MonoBehaviour {
     {
         NO_SELECTION = 0,
         UNIT_CREATION_SELECT,
-        UNIT_MOVE_LISTEN
+        UNIT_MOVE_LISTEN,
+        BUILD_LISTEN
     }
     
     public void SetState(State state)
@@ -30,12 +31,16 @@ public class Selector : MonoBehaviour {
     {
         return state == State.UNIT_MOVE_LISTEN;
     }
+    public bool IsBuild()
+    {
+        return state == State.BUILD_LISTEN;
+    }
     #endregion
 
     #region attribute
     State state;
     int selectUnitIndex;
-    GameObject willMoveUnit;
+    GameObject willMoveUnit,currentTile;
     #endregion
 
     void Start()
@@ -56,7 +61,7 @@ public class Selector : MonoBehaviour {
     }
 
     #endregion
-
+    #region unitbuild
     public void ReadyToMove(GameObject willMoveUnit)
     {
         this.willMoveUnit = willMoveUnit;
@@ -67,7 +72,18 @@ public class Selector : MonoBehaviour {
     {
         return willMoveUnit;
     }
-
+    #endregion
+    #region build
+    public void ReadyToBuild(GameObject currentTile)
+    {
+        this.currentTile = currentTile;
+        SetState(State.BUILD_LISTEN);
+    }
+    public GameObject GetCurrentTile()
+    {
+        return currentTile;
+    }
+    #endregion
     public void ResetState()
     {
         SetState(State.NO_SELECTION);
