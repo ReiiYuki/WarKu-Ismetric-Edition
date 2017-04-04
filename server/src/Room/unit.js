@@ -20,10 +20,18 @@ class Unit {
 */
 //</editor-fold>
 
+//<editor-fold> State
+/*
+  0 = move/normal
+  1 = attacking
+*/
+//</editor-fold>
+
   constructor(type,owner){
     this.type = type
     this.direction = 0
     this.owner = owner
+    this.state = 0
     this.assignPower()
   }
 
