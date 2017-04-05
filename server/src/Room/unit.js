@@ -103,7 +103,8 @@ class Unit {
     let damage = attack-defense
     this.hp -= damage
     if (this.isDead()){
-
+      this.board.units[this.x][this.y] = null
+      this.board.getUnit(this.x,this.y,this.x,this.y)
     }
   }
 
