@@ -25,6 +25,21 @@ class Board {
   }
 //</editor-fold>
 
+//<editor-fold> Attack
+  checkAttackRange(x,y,remote){
+    for (var i = x-1;i<x+2;i++){
+      for (var j = y-1;j<y+2;j++){
+        if (this.units[i][j]&&this.units[x][y]==0){
+          if (this.units[i][j].owner!=remote){
+            this.units[x][y].capture(this.units[i][j])
+            break
+          }
+        }
+      }
+    }
+  }
+//</editor-fold>
+
 //<editor-fold> MoveUnit
   updateUnit(x,y){
     if (!this.units[x][y]) return;
@@ -104,6 +119,7 @@ class Board {
   }
 //</editor-fold>
 
+//<editor-fold> Hide
   hide(x,y){
     if(this.canHide(x,y)) this.units[x][y].hide()
     this.getUnit(x,y,x,y)

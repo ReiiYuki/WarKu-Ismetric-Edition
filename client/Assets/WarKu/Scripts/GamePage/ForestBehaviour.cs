@@ -7,7 +7,6 @@ public class ForestBehaviour : MonoBehaviour {
     public Sprite[] forestSprites;
     public float offsetY;
 
-    int healthPoint;
 	// Use this for initialization
 	void Start () {
         RandomTypeOfForest();
@@ -22,7 +21,6 @@ public class ForestBehaviour : MonoBehaviour {
         if (offsetY > 0.0011)
             offsetY += 0.038f;
         transform.position -= new Vector3(0, offsetY);
-        healthPoint = spriteIndex < 8 ? 2 : 3;
     }
 
 	// Update is called once per frame

@@ -1,7 +1,11 @@
 let packetWriter = require('dgt-net').packet_writer
-
+var timcount = 0
+var timeFun = {}
 //<editor-fold> PACKET ID
 let packet = {
+  CLIENT_PING: 1000,
+  SERVER_PING_SUCCESS : 2000,
+
   CLIENT_LOGIN : 10000,
   CLIENT_DISCONNECT : 10001,
   CLIENT_JOIN_ROOM : 10002,
@@ -17,6 +21,20 @@ let packet = {
   SERVER_UPDATE_BOARD : 20002,
   SERVER_UPDATE_UNIT : 20003,
   SERVER_UPDATE_TILE : 20004
+}
+//</editor-fold>
+
+//<editor-fold> PING
+packet[packet.CLIENT_PING] = function (remoteProxy, data) {
+  var pingTime = data.read_uint8();
+  if (!data.completed()) return true;
+  remoteProxy.ping(pingTime);
+}
+packet.make_ping_success = function (ping_time) {
+  var o = new packet_writer(packet.SERVER_PING_SUCCESS);
+  o.append_uint8(ping_time);
+  o.finish();
+  return o.buffer;
 }
 //</editor-fold>
 
@@ -73,6 +91,7 @@ packet[packet.CLIENT_SPAWN_UNIT] = (remote,data) => {
 packet[packet.CLIENT_UPDATE_UNIT] = (remote,data)=>{
   let x = data.read_uint8()
   let y = data.read_uint8()
+  timeFun = setInterval(()=>{timcount+=1},1)
   remote.updateUnitR(x,y)
 }
 
@@ -94,6 +113,9 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
     pw.append_int8(-1)
   }
   pw.finish()
+  clearInterval(timeFun)
+  console.log(timcount);
+  timcount = 0
   return pw.buffer
 }
 packet[packet.CLIENT_CHANGE_UNIT_DIRECTION] = (remote,data) => {
