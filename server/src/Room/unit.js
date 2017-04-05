@@ -23,15 +23,16 @@ class Unit {
 //<editor-fold> State
 /*
   0 = move/normal
-  1 = attacking
+  1 = running
 */
 //</editor-fold>
 
-  constructor(type,owner){
+  constructor(type,owner,board){
     this.type = type
     this.direction = 0
     this.owner = owner
     this.state = 0
+    this.board = board
     this.assignPower()
   }
 
@@ -104,6 +105,11 @@ class Unit {
 
   isDead(){
     return this.hp<=0
+  }
+
+  setPosition(x,y){
+    this.x = x
+    this.y = y
   }
 }
 

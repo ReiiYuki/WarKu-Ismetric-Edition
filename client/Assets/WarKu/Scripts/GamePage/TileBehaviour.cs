@@ -44,7 +44,7 @@ public class TileBehaviour : MonoBehaviour {
         }
         else
         {
-            if (GetComponentInChildren<UnitBehaviour>()&& GetComponentInChildren<UnitBehaviour>().isOwner)
+            if (GetComponentInChildren<UnitBehaviour>() && GetComponentInChildren<UnitBehaviour>().isOwner)
             {
                 GetComponentInChildren<UnitBehaviour>().Stop();
                 transform.GetChild(0).gameObject.SetActive(true);
