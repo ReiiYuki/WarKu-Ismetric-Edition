@@ -2,6 +2,9 @@ let packetWriter = require('dgt-net').packet_writer
 
 //<editor-fold> PACKET ID
 let packet = {
+  CLIENT_PING: 1000,
+  SERVER_PING_SUCCESS : 2000,
+
   CLIENT_LOGIN : 10000,
   CLIENT_DISCONNECT : 10001,
   CLIENT_JOIN_ROOM : 10002,
@@ -17,6 +20,20 @@ let packet = {
   SERVER_UPDATE_BOARD : 20002,
   SERVER_UPDATE_UNIT : 20003,
   SERVER_UPDATE_TILE : 20004
+}
+//</editor-fold>
+
+//<editor-fold> PING
+packet[packet.CS_PING] = function (remoteProxy, data) {
+  var pingTime = data.read_uint8();
+  if (!data.completed()) return true;
+  remoteProxy.ping(pingTime);
+}
+packet.make_ping_success = function (ping_time) {
+  var o = new packet_writer(packet.SC_PING_SUCCESS);
+  o.append_uint8(ping_time);
+  o.finish();
+  return o.buffer;
 }
 //</editor-fold>
 

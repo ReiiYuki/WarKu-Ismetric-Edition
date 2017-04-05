@@ -41,25 +41,25 @@ class Unit {
       this.speed = 1
       this.range = 1
       this.hp = 6
-      this.atkSpd = 1
+      this.atkSpd = 6
     }else if (this.type == 1){
       this.attack = 2
       this.speed = 3
       this.range = 2
       this.hp = 7
-      this.atkSpd = 5
+      this.atkSpd = 1
     }else if (this.type == 2){
       this.attack = 3
       this.speed = 3
       this.range = 1
       this.hp = 10
-      this.atkSpd = 3
+      this.atkSpd = 2
     }else if (this.type == 3){
       this.attack = 5
       this.speed = 1
       this.range = 1
       this.hp = 15
-      this.atkSpd = 2
+      this.atkSpd = 3
     }
   }
 
@@ -85,6 +85,25 @@ class Unit {
 
   isOwner(remote) {
     return this.owner == remote
+  }
+
+  capture(unit){
+    this.target = unit
+    this.state = 1
+    this.attackTask = setInterval(attack(this.target),this.atkSpd*500)
+  }
+
+  attack(unit){
+    unit.defense(this.attack)
+  }
+
+  defense(attack){
+    let damage = attack-defense
+    this.hp -= damage
+  }
+
+  isDead(){
+    return this.hp<=0
   }
 }
 
