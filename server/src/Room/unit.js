@@ -23,7 +23,8 @@ class Unit {
 //<editor-fold> State
 /*
   0 = move/normal
-  1 = running
+  1 = attacking
+  2 = running
 */
 //</editor-fold>
 
@@ -101,6 +102,9 @@ class Unit {
   defense(attack){
     let damage = attack-defense
     this.hp -= damage
+    if (this.isDead()){
+
+    }
   }
 
   isDead(){
@@ -110,6 +114,33 @@ class Unit {
   setPosition(x,y){
     this.x = x
     this.y = y
+  }
+
+  checkAttackRange(){
+    if (this.state == 0){
+      for (var x = this.x-1;x<=this.x+1&&this.state==0;x++){
+        for (var y = this.y-1;y<=this.y+1&&this.state==0;y++){
+          if (this.board.units[x][y]!=this){
+            if (this.board.units[x][y].state!=2&&this.board.units[x][y].owner != this.owner){
+              this.target = this.board.units[x][y]
+              this.state = 1
+            }
+          }
+        }
+      }
+    }
+    if (this.state == 1){
+      if ([this.x+1,this.x,this.x-1].indexOf(this.target.x)>=0&&[this.y+1,this.y,this.y-1].indexOf(this.target.y)>=0){
+        if (this.target){
+          this.attack(this.target)
+        }else {
+          this.state = 0
+        }
+      }else {
+        this.target = null
+        this.state = 0
+      }
+    }
   }
 }
 
