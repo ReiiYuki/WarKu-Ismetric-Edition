@@ -24,13 +24,13 @@ let packet = {
 //</editor-fold>
 
 //<editor-fold> PING
-packet[packet.CS_PING] = function (remoteProxy, data) {
+packet[packet.CLIENT_PING] = function (remoteProxy, data) {
   var pingTime = data.read_uint8();
   if (!data.completed()) return true;
   remoteProxy.ping(pingTime);
 }
 packet.make_ping_success = function (ping_time) {
-  var o = new packet_writer(packet.SC_PING_SUCCESS);
+  var o = new packet_writer(packet.SERVER_PING_SUCCESS);
   o.append_uint8(ping_time);
   o.finish();
   return o.buffer;
