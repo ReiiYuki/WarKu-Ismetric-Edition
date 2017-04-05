@@ -114,6 +114,7 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
   }
   pw.finish()
   clearInterval(timeFun)
+  timeFun = 0
   console.log(timcount);
   return pw.buffer
 }
