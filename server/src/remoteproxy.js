@@ -1,8 +1,6 @@
 let server = require('dgt-net').server
 let packet = require('./packet')
 const Lobby = require('./Lobby/lobby')
-var moveunit = []
-var time = 1
 let lobby = new Lobby()
 class RemoteProxy extends server.RemoteProxy {
 
@@ -53,7 +51,6 @@ class RemoteProxy extends server.RemoteProxy {
   }
 
   moveUnit(x,y,direction){
-    moveUnit=setInterval(()=>{time+=1;},1)
     this.room.moveUnit(this,x,y,direction)
   }
 
