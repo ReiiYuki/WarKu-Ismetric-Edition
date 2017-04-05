@@ -21,6 +21,9 @@ public class DGTPacket : PacketManager {
     #region id
     private enum PacketID
     {
+        CLIENT_PING = 1000,
+        SERVER_PING_SUCCESS = 2000,
+
         CLIENT_LOGIN = 10000,
         CLIENT_DISCONNECT = 10001,
         CLIENT_CREATE_ROOM = 10002,
@@ -74,6 +77,21 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_UPDATE_BOARD] = UpdateBoard;
         _Mapper[(int)PacketID.SERVER_UPDATE_UNIT] = OnUpdateUnit;
         _Mapper[(int)PacketID.SERVER_UPDATE_TILE] = OnUpdateTile;
+    }
+    #endregion
+
+    #region ping
+    public void RequestPing(int pingTime)
+    {
+        PacketWriter pw = BeginSend((int)PacketID.CLIENT_PING);
+        pw.WriteInt8(pingTime);
+        EndSend();
+    }
+
+    private void RecvPingSuccess(int packet_id, PacketReader pr)
+    {
+        int pingTime = pr.ReadUInt8();
+        Debug.Log("ping : " + pingTime);
     }
     #endregion
 

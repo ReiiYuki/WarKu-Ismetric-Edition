@@ -18,7 +18,7 @@ public class DGTController : MonoBehaviour {
 
     IEnumerator ConnectToServer()
     {
-        DGTPacket.Config pc = new DGTPacket.Config("localhost", 1111);
+        DGTPacket.Config pc = new DGTPacket.Config("54.169.98.129", 1111);
         remote = DGTProxyRemote.GetInstance();
         remote.Connect(pc.host, pc.port);
         remote.ProcessEvents();
