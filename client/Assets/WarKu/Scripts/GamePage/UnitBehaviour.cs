@@ -90,7 +90,6 @@ public class UnitBehaviour : MonoBehaviour {
     {
         if (condition)
         {
-            direction = 0;
             DGTProxyRemote.GetInstance().RequestUpdateUnit(x, y);
         }
     }
