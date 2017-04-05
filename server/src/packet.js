@@ -1,6 +1,5 @@
 let packetWriter = require('dgt-net').packet_writer
-var timcount = 0
-var timeFun = {}
+
 //<editor-fold> PACKET ID
 let packet = {
   CLIENT_PING: 1000,
@@ -91,7 +90,6 @@ packet[packet.CLIENT_SPAWN_UNIT] = (remote,data) => {
 packet[packet.CLIENT_UPDATE_UNIT] = (remote,data)=>{
   let x = data.read_uint8()
   let y = data.read_uint8()
-  timeFun = setInterval(()=>{timcount+=1},1)
   remote.updateUnitR(x,y)
 }
 
@@ -113,8 +111,6 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
     pw.append_int8(-1)
   }
   pw.finish()
-  clearInterval(timeFun)
-  console.log(timcount);
   timcount = 0
   return pw.buffer
 }
