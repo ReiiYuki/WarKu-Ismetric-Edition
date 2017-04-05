@@ -111,6 +111,8 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
     pw.append_int8(-1)
   }
   pw.finish()
+  clearInterval(moveUnit)
+  console.log(time);
   return pw.buffer
 }
 packet[packet.CLIENT_CHANGE_UNIT_DIRECTION] = (remote,data) => {
