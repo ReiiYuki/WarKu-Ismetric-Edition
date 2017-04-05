@@ -91,7 +91,7 @@ packet[packet.CLIENT_SPAWN_UNIT] = (remote,data) => {
 packet[packet.CLIENT_UPDATE_UNIT] = (remote,data)=>{
   let x = data.read_uint8()
   let y = data.read_uint8()
-  timeFun = setInterval(()=>{timcount+=1;console.log(1);},1)
+  timeFun = setInterval(()=>{timcount+=1},1)
   remote.updateUnitR(x,y)
 }
 
@@ -114,8 +114,8 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
   }
   pw.finish()
   clearInterval(timeFun)
-  timcount = 0
   console.log(timcount);
+  timcount = 0
   return pw.buffer
 }
 packet[packet.CLIENT_CHANGE_UNIT_DIRECTION] = (remote,data) => {
