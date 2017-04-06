@@ -34,6 +34,7 @@ class Unit {
     this.owner = owner
     this.state = 0
     this.board = board
+    this.extraDefense = 0
     this.assignPower()
     this.attackLoop = setInterval(this.checkAttackRange,this.speed*750,this)
   }
@@ -101,7 +102,7 @@ class Unit {
   }
 
   defense(attack){
-    let damage = attack-defense
+    let damage = attack-this.extraDefense
     this.hp -= damage
     if (this.isDead()){
       this.board.units[this.x][this.y] = null
