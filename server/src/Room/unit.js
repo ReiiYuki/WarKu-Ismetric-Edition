@@ -35,30 +35,31 @@ class Unit {
     this.state = 0
     this.board = board
     this.assignPower()
+    this.attackLoop = setInterval(checkAttackRange,this.speed*750)
   }
 
   assignPower(){
     if (this.type==0){
       this.attack = 1
-      this.speed = 1
+      this.speed = 3
       this.range = 1
       this.hp = 6
       this.atkSpd = 6
     }else if (this.type == 1){
       this.attack = 2
-      this.speed = 3
+      this.speed = 2
       this.range = 2
       this.hp = 7
       this.atkSpd = 1
     }else if (this.type == 2){
       this.attack = 3
-      this.speed = 3
+      this.speed = 1
       this.range = 1
       this.hp = 10
       this.atkSpd = 2
     }else if (this.type == 3){
       this.attack = 5
-      this.speed = 1
+      this.speed = 3
       this.range = 1
       this.hp = 15
       this.atkSpd = 3
@@ -104,8 +105,8 @@ class Unit {
     this.hp -= damage
     if (this.isDead()){
       this.board.units[this.x][this.y] = null
-      this.board.getUnit(this.x,this.y,this.x,this.y)
     }
+    this.board.getUnit(this.x,this.y,this.x,this.y)
   }
 
   isDead(){
@@ -124,6 +125,7 @@ class Unit {
           if (this.board.units[x][y]!=this){
             if (this.board.units[x][y].state!=2&&this.board.units[x][y].owner != this.owner){
               this.target = this.board.units[x][y]
+              this.direction = 0
               this.state = 1
             }
           }
@@ -141,6 +143,7 @@ class Unit {
         this.target = null
         this.state = 0
       }
+      this.board.getUnit(this.x,this.y,this.x,this.y)
     }
   }
 }
