@@ -131,6 +131,8 @@ class Unit {
               self.board.units[x][y].direction = 0
               self.direction = 0
               self.state = 1
+              self.board.getUnit(self.x,self.y,self.x,self.y)
+              self.board.getUnit(self.board.units[x][y].x,self.board.units[x][y].y,self.board.units[x][y].x,self.board.units[x][y].y)
               break
             }
           }
