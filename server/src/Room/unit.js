@@ -106,6 +106,7 @@ class Unit {
     this.hp -= damage
     if (this.isDead()){
       this.board.units[this.x][this.y] = null
+      clearInterval(this.attackLoop)
     }
     this.board.getUnit(this.x,this.y,this.x,this.y)
   }
@@ -121,11 +122,9 @@ class Unit {
 
   checkAttackRange(self){
     if (self.state == 0){
-      console.log("I'm working state 0");
       for (var x = self.x-self.range;x<=self.x+self.range;x++){
         for (var y = self.y-self.range;y<=self.y+self.range;y++){
           if (self.board.units[x][y]!=self&&self.board.units[x][y]){
-            console.log("Detect !");
             if (self.board.units[x][y].state!=2&&self.board.units[x][y].owner != self.owner){
               self.target = self.board.units[x][y]
               self.board.units[x][y].direction = 0
@@ -139,7 +138,6 @@ class Unit {
       }
     }
     if (self.state == 1){
-      console.log("I'm working state 1");
       if (self.target.x<=self.x+self.range&&self.target.x>=self.x-self.range&&self.target.y<=self.y+self.range&&self.target.y>=self.y-self.range){
         if (self.target){
           self.damage(self.target)
