@@ -72,6 +72,7 @@ public class BoardController : MonoBehaviour {
     #region unit
     public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction,float hp,bool isHide,bool isOwner)
     {
+        Debug.Log("x = " + x + " y = " + y + " changeX = " + changeX + " changeY = " + changeY + " direction = " + direction + " hp = " + hp + " isHide = " + isHide + " isOwner = " + isOwner);
         if (!boardUnit[x, y])
         {
             boardFloor[x, y].GetComponent<TileBehaviour>().OnSpawnUnit(type);
