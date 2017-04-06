@@ -123,7 +123,7 @@ class Unit {
       console.log("I'm working state 0");
       for (var x = self.x-self.range;x<=self.x+self.range&&!self.target;x++){
         for (var y = self.y-self.range;y<=self.y+this.range&&!self.target;y++){
-          if (self.board.units[x][y]!=this){
+          if (self.board.units[x][y]!=self){
             if (self.board.units[x][y].state!=2&&self.board.units[x][y].owner != self.owner){
               self.target = self.board.units[x][y]
               self.board.units[x][y].direction = 0
