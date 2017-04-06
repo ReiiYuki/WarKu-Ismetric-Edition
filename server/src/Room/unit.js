@@ -126,6 +126,7 @@ class Unit {
           if (this.board.units[x][y]!=this){
             if (this.board.units[x][y].state!=2&&this.board.units[x][y].owner != this.owner){
               this.target = this.board.units[x][y]
+              this.board.units[x][y].direction = 0
               this.direction = 0
               this.state = 1
             }
@@ -134,6 +135,7 @@ class Unit {
       }
     }
     if (this.state == 1){
+      console.log("I'm working state 1");
       if (this.target.x<=this.x+this.range&&this.target.x>=this.x-this.range&&this.target.y<=this.y+this.range&&this.target.y>=this.y-this.range){
         if (this.target){
           this.attack(this.target)
