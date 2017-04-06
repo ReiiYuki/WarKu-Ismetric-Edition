@@ -119,8 +119,8 @@ class Unit {
   }
 
   checkAttackRange(){
-    console.log("I'm working :D");
     if (this.state == 0){
+      console.log("I'm working state 0");
       for (var x = this.x-this.range;x<=this.x+this.range&&!this.target;x++){
         for (var y = this.y-this.range;y<=this.y+this.range&&!this.target;y++){
           if (this.board.units[x][y]!=this){
