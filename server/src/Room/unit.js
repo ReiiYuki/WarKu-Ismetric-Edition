@@ -35,7 +35,7 @@ class Unit {
     this.state = 0
     this.board = board
     this.assignPower()
-    this.attackLoop = setInterval(this.checkAttackRange(),this.speed*750)
+    this.attackLoop = setInterval(this.checkAttackRange,this.speed*750)
   }
 
   assignPower(){
