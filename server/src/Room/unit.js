@@ -35,7 +35,7 @@ class Unit {
     this.state = 0
     this.board = board
     this.assignPower()
-    this.attackLoop = setInterval(this.checkAttackRange,this.speed*750)
+    this.attackLoop = setInterval(this.checkAttackRange(),this.speed*750)
   }
 
   assignPower(){
@@ -119,6 +119,7 @@ class Unit {
   }
 
   checkAttackRange(){
+    console.log("I'm working :D");
     if (this.state == 0){
       for (var x = this.x-this.range;x<=this.x+this.range&&!this.target;x++){
         for (var y = this.y-this.range;y<=this.y+this.range&&!this.target;y++){
