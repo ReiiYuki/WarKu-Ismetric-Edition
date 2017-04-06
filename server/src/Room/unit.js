@@ -34,8 +34,9 @@ class Unit {
     this.owner = owner
     this.state = 0
     this.board = board
+    this.extraDefense = 0
     this.assignPower()
-    this.attackLoop = setInterval(checkAttackRange,this.speed*750)
+    this.attackLoop = setInterval(this.checkAttackRange,this.speed*750,this)
   }
 
   assignPower(){
@@ -96,15 +97,17 @@ class Unit {
     this.attackTask = setInterval(attack(this.target),this.atkSpd*500)
   }
 
-  attack(unit){
+  damage(unit){
     unit.defense(this.attack)
   }
 
   defense(attack){
-    let damage = attack-defense
+    let damage = attack-this.extraDefense
     this.hp -= damage
     if (this.isDead()){
       this.board.units[this.x][this.y] = null
+      clearInterval(this.attackLoop)
+      delete this
     }
     this.board.getUnit(this.x,this.y,this.x,this.y)
   }
@@ -118,32 +121,38 @@ class Unit {
     this.y = y
   }
 
-  checkAttackRange(){
-    if (this.state == 0){
-      for (var x = this.x-this.range;x<=this.x+this.range&&this.state==0;x++){
-        for (var y = this.y-this.range;y<=this.y+this.range&&this.state==0;y++){
-          if (this.board.units[x][y]!=this){
-            if (this.board.units[x][y].state!=2&&this.board.units[x][y].owner != this.owner){
-              this.target = this.board.units[x][y]
-              this.direction = 0
-              this.state = 1
+  checkAttackRange(self){
+    if (self.state == 0){
+      for (var x = self.x-self.range;x<=self.x+self.range;x++){
+        for (var y = self.y-self.range;y<=self.y+self.range;y++){
+          if (self.board.units[x][y]!=self&&self.board.units[x][y]){
+            if (self.board.units[x][y].state!=2&&self.board.units[x][y].owner != self.owner){
+              self.target = self.board.units[x][y]
+              self.board.units[x][y].direction = 0
+              self.direction = 0
+              self.state = 1
+              self.board.getUnit(self.x,self.y,self.x,self.y)
+              self.board.getUnit(self.board.units[x][y].x,self.board.units[x][y].y,self.board.units[x][y].x,self.board.units[x][y].y)
+              break
             }
           }
+          if (self.target) break
         }
       }
     }
-    if (this.state == 1){
-      if (this.target.x<=this.x+this.range&&this.target.x>=this.x-this.range&&this.target.y<=this.y+this.range&&this.target.y>=this.y-this.range){
-        if (this.target){
-          this.attack(this.target)
+    if (self.state == 1){
+      if (self.target.x<=self.x+self.range&&self.target.x>=self.x-self.range&&self.target.y<=self.y+self.range&&self.target.y>=self.y-self.range){
+        if (!self.target.isDead()){
+          self.damage(self.target)
         }else {
-          this.state = 0
+          this.target = null
+          self.state = 0
         }
       }else {
-        this.target = null
-        this.state = 0
+        self.target = null
+        self.state = 0
       }
-      this.board.getUnit(this.x,this.y,this.x,this.y)
+      self.board.getUnit(self.x,self.y,self.x,self.y)
     }
   }
 }
