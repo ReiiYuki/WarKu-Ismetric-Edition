@@ -96,7 +96,7 @@ class Unit {
     this.attackTask = setInterval(attack(this.target),this.atkSpd*500)
   }
 
-  attack(unit){
+  damage(unit){
     unit.defense(this.attack)
   }
 
@@ -141,8 +141,7 @@ class Unit {
       console.log("I'm working state 1");
       if (self.target.x<=self.x+self.range&&self.target.x>=self.x-self.range&&self.target.y<=self.y+self.range&&self.target.y>=self.y-self.range){
         if (self.target){
-          console.log(self.attack);
-          self.attack(self.target)
+          self.damage(self.target)
         }else {
           self.state = 0
         }
