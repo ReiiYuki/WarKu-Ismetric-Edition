@@ -120,8 +120,8 @@ class Unit {
 
   checkAttackRange(){
     if (this.state == 0){
-      for (var x = this.x-this.range;x<=this.x+this.range&&this.state==0;x++){
-        for (var y = this.y-this.range;y<=this.y+this.range&&this.state==0;y++){
+      for (var x = this.x-this.range;x<=this.x+this.range&&!this.target;x++){
+        for (var y = this.y-this.range;y<=this.y+this.range&&!this.target;y++){
           if (this.board.units[x][y]!=this){
             if (this.board.units[x][y].state!=2&&this.board.units[x][y].owner != this.owner){
               this.target = this.board.units[x][y]
