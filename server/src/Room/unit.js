@@ -107,6 +107,7 @@ class Unit {
     if (this.isDead()){
       this.board.units[this.x][this.y] = null
       clearInterval(this.attackLoop)
+      delete this
     }
     this.board.getUnit(this.x,this.y,this.x,this.y)
   }
