@@ -121,8 +121,8 @@ class Unit {
   checkAttackRange(self){
     if (self.state == 0){
       console.log("I'm working state 0");
-      for (var x = self.x-self.range;x<=self.x+self.range&&!self.target;x++){
-        for (var y = self.y-self.range;y<=self.y+this.range&&!self.target;y++){
+      for (var x = self.x-self.range;x<=self.x+self.range;x++){
+        for (var y = self.y-self.range;y<=self.y+this.range;y++){
           if (self.board.units[x][y]!=self){
             console.log("Detect !");
             if (self.board.units[x][y].state!=2&&self.board.units[x][y].owner != self.owner){
@@ -130,8 +130,10 @@ class Unit {
               self.board.units[x][y].direction = 0
               self.direction = 0
               self.state = 1
+              break
             }
           }
+          if (self.target) break
         }
       }
     }
