@@ -35,7 +35,8 @@ class Unit {
     this.state = 0
     this.board = board
     this.assignPower()
-    this.attackLoop = setInterval(this.checkAttackRange(this.state),this.speed*750)
+    let self = this
+    this.attackLoop = setInterval(()=>{this.checkAttackRange(self)},this.speed*750)
   }
 
   assignPower(){
@@ -118,35 +119,35 @@ class Unit {
     this.y = y
   }
 
-  checkAttackRange(state){
-    if (this.state == 0){
+  checkAttackRange(self){
+    if (self.state == 0){
       console.log("I'm working state 0");
-      for (var x = this.x-this.range;x<=this.x+this.range&&!this.target;x++){
-        for (var y = this.y-this.range;y<=this.y+this.range&&!this.target;y++){
-          if (this.board.units[x][y]!=this){
-            if (this.board.units[x][y].state!=2&&this.board.units[x][y].owner != this.owner){
-              this.target = this.board.units[x][y]
-              this.board.units[x][y].direction = 0
-              this.direction = 0
-              this.state = 1
+      for (var x = self.x-self.range;x<=self.x+this.range&&!self.target;x++){
+        for (var y = self.y-self.range;y<=self.y+self.range&&!self.target;y++){
+          if (self.board.units[x][y]!=self){
+            if (self.board.units[x][y].state!=2&&self.board.units[x][y].owner != self.owner){
+              self.target = self.board.units[x][y]
+              self.board.units[x][y].direction = 0
+              self.direction = 0
+              self.state = 1
             }
           }
         }
       }
     }
-    if (this.state == 1){
+    if (self.state == 1){
       console.log("I'm working state 1");
-      if (this.target.x<=this.x+this.range&&this.target.x>=this.x-this.range&&this.target.y<=this.y+this.range&&this.target.y>=this.y-this.range){
-        if (this.target){
-          this.attack(this.target)
+      if (self.target.x<=self.x+this.range&&self.target.x>=self.x-self.range&&self.target.y<=self.y+self.range&&self.target.y>=self.y-self.range){
+        if (self.target){
+          self.attack(self.target)
         }else {
-          this.state = 0
+          self.state = 0
         }
       }else {
-        this.target = null
-        this.state = 0
+        self.target = null
+        self.state = 0
       }
-      this.board.getUnit(this.x,this.y,this.x,this.y)
+      self.board.getUnit(this.x,this.y,this.x,this.y)
     }
   }
 }
