@@ -140,7 +140,7 @@ class Unit {
     }
     if (self.state == 1){
       if (self.target.x<=self.x+self.range&&self.target.x>=self.x-self.range&&self.target.y<=self.y+self.range&&self.target.y>=self.y-self.range){
-        if (self.target.isDead()){
+        if (!self.target.isDead()){
           self.damage(self.target)
         }else {
           this.target = null
