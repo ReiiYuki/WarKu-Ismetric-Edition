@@ -121,6 +121,7 @@ class Unit {
   checkAttackRange(self){
     if (self.state == 0){
       console.log("I'm working state 0");
+      console.log(self);
       for (var x = self.x-self.range;x<=self.x+self.range;x++){
         for (var y = self.y-self.range;y<=self.y+this.range;y++){
           console.log("In Loop");
