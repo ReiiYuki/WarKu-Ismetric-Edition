@@ -123,6 +123,7 @@ class Unit {
       console.log("I'm working state 0");
       for (var x = self.x-self.range;x<=self.x+self.range;x++){
         for (var y = self.y-self.range;y<=self.y+this.range;y++){
+          console.log("In Loop");
           if (self.board.units[x][y]!=self){
             console.log("Detect !");
             if (self.board.units[x][y].state!=2&&self.board.units[x][y].owner != self.owner){
