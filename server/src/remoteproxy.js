@@ -10,7 +10,17 @@ class RemoteProxy extends server.RemoteProxy {
   }
 
   onDisconnected() {
+    lobby.removeRoom(this)
+    lobby.removeRemote(this)
     console.log("RemoteProxy Disconnected from " + this.getPeerName())
+  }
+
+  notifyKickedToLobby(){
+    this.send(packet.notifyKickedToLobby())
+  }
+
+  cancelFindRoom(){
+    lobby.removeRoom(this)
   }
 //</editor-fold>
 

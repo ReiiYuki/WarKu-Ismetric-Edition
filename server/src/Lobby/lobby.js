@@ -15,6 +15,16 @@ class Lobby {
     this.remotes.splice(this.remotes.indexOf(remote), 1)
   }
 
+  removeRoom(remote){
+    let room = this.room.find((room)=>(room.remotes.indexOf(remote)>=0))
+    room.remotes.forEach((remote)=>{
+      this.addRemote(remote)
+      remote.notifyKickedToLobby()
+      remote.room = null
+    })
+    this.room.splice(this.room.indexOf(room),1)
+  }
+
   joinRoom(remote,type){
     let rooms = this.room.filter((room)=>(room.remotes.length<2))
     if (rooms.length==0) {

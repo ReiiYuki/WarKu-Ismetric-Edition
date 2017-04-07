@@ -14,12 +14,14 @@ let packet = {
   CLIENT_CHANGE_UNIT_DIRECTION : 10006,
   CLIENT_WORKER_UNIT_BUILD : 10007,
   CLIENT_UNIT_HIDE : 10008,
+  CLIENT_CANCEL_WAITING_QUEUE : 10009,
 
   SERVER_LOGIN_SUCCESS : 20000,
   SERVER_JOIN_ROOM_SUCCESS : 20001,
   SERVER_UPDATE_BOARD : 20002,
   SERVER_UPDATE_UNIT : 20003,
-  SERVER_UPDATE_TILE : 20004
+  SERVER_UPDATE_TILE : 20004,
+  SERVER_NOTIFY_KICK_ROOM : 20005
 }
 //</editor-fold>
 
@@ -61,6 +63,16 @@ packet[packet.CLIENT_JOIN_ROOM] = (remote,data) =>{
 packet.responseCreateRoomSuccess = (id) =>{
   let pw = new packetWriter(packet.SERVER_JOIN_ROOM_SUCCESS)
   pw.append_uint32(id)
+  pw.finish()
+  return pw.buffer
+}
+
+packet[packet.CLIENT_CANCEL_WAITING_QUEUE] = (remote,data) => {
+  remote.cancelFindRoom()
+}
+
+packet.notifyKickedToLobby = ()=>{
+  let pw = new packetWriter(packet.SERVER_NOTIFY_KICK_ROOM)
   pw.finish()
   return pw.buffer
 }
