@@ -31,10 +31,15 @@ public class DGTController : MonoBehaviour {
         }
         if (remote.IsConnected())
         {
-            remote.Login("Kuy");
+            string name = PlayerPrefs.GetString("name");
+            Debug.Log(name);
+            if (name != "") remote.Login(name);
+            else GameObject.FindObjectOfType<ConnectionManager>().AskName();
         }
         else
-            Debug.Log("Failed");
+        {
+            GameObject.FindObjectOfType<ConnectionManager>().ShowConnectionLost();
+        }
         yield break;
     }
 }

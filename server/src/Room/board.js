@@ -13,7 +13,8 @@ class Board {
 //<editor-fold> SpawnUnit
   spawnUnit(remote,x,y,type){
     if (this.isSpawnZone(remote,x,y)){
-      this.units[x][y] = new Unit(0,remote)
+      this.units[x][y] = new Unit(0,remote,this)
+      this.units[x][y].setPosition(x,y)
     }
     this.getUnit(x,y,x,y)
   }
@@ -23,6 +24,10 @@ class Board {
     if (this.remotes.indexOf(remote)==1) isSpawnLine = y==0
     return isSpawnLine && [0,1,10,12,13,14,16].indexOf(this.floors[x][y])>=0 && !this.units[x][y]
   }
+//</editor-fold>
+
+//<editor-fold> Attack
+
 //</editor-fold>
 
 //<editor-fold> MoveUnit
@@ -38,6 +43,7 @@ class Board {
     else if (direction==4) changeY = y+1
     if (direction!=0) {
       this.units[changeX][changeY] = this.units[x][y]
+      this.units[changeX][changeY].setPosition(changeX,changeY)
       delete this.units[x][y]
     }
     this.getUnit(x,y,changeX,changeY)
@@ -104,6 +110,7 @@ class Board {
   }
 //</editor-fold>
 
+//<editor-fold> Hide
   hide(x,y){
     if(this.canHide(x,y)) this.units[x][y].hide()
     this.getUnit(x,y,x,y)
@@ -112,6 +119,8 @@ class Board {
   canHide(x,y){
     return [1,18,19].indexOf(this.floors[x][y])>=0
   }
+//</editor-fold>
+
 //</editor-fold>
 
 //<editor-fold> Formatting

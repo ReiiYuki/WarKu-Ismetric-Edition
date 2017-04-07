@@ -1,7 +1,6 @@
 let server = require('dgt-net').server
 let packet = require('./packet')
 const Lobby = require('./Lobby/lobby')
-
 let lobby = new Lobby()
 class RemoteProxy extends server.RemoteProxy {
 
