@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class CreateRoom : MonoBehaviour {
 
-	public void Create()
+    private void OnMouseDown()
+    {
+        Create();
+    }
+
+    public void Create()
     {
         DGTProxyRemote.GetInstance().CreateRoom(0);
-        
+        GameObject.FindObjectOfType<ConnectionManager>().ShowCancel();
     }
 }

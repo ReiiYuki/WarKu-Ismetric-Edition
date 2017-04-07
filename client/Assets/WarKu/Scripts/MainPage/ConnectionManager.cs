@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConnectionManager : MonoBehaviour {
 
-    public GameObject join, lost,askname;
+    public GameObject join, lost,askname,cancel;
 
 	public void ShowJoin()
     {
@@ -19,5 +19,10 @@ public class ConnectionManager : MonoBehaviour {
     public void AskName()
     {
         askname.SetActive(true);
+    }
+
+    public void ShowCancel()
+    {
+        cancel.SetActive(true);
     }
 }
