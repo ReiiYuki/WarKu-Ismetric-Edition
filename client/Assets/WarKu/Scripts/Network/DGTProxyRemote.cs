@@ -112,7 +112,7 @@ public class DGTProxyRemote : MonoBehaviour {
     public void OnLoggedInSuccess()
     {
         SetState(State.LOGGED_IN);
-        Debug.Log("Success");
+        GameObject.FindObjectOfType<ConnectionManager>().ShowJoin();
     }
     #endregion
 
