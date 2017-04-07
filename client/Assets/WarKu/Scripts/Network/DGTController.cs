@@ -18,7 +18,7 @@ public class DGTController : MonoBehaviour {
 
     IEnumerator ConnectToServer()
     {
-        DGTPacket.Config pc = new DGTPacket.Config("54.169.98.129", 1111);
+        DGTPacket.Config pc = new DGTPacket.Config("localhost", 1111);
         remote = DGTProxyRemote.GetInstance();
         remote.Connect(pc.host, pc.port);
         remote.ProcessEvents();
@@ -31,10 +31,15 @@ public class DGTController : MonoBehaviour {
         }
         if (remote.IsConnected())
         {
-            remote.Login("Kuy");
+            string name = PlayerPrefs.GetString("name");
+            Debug.Log(name);
+            if (name != "") remote.Login(name);
+            else GameObject.FindObjectOfType<ConnectionManager>().AskName();
         }
         else
-            Debug.Log("Failed");
+        {
+            GameObject.FindObjectOfType<ConnectionManager>().ShowConnectionLost();
+        }
         yield break;
     }
 }
