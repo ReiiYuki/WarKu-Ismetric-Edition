@@ -71,7 +71,7 @@ packet[packet.CLIENT_CANCEL_WAITING_QUEUE] = (remote,data) => {
   remote.cancelFindRoom()
 }
 
-packet.notifyKickedToLobby(){
+packet.notifyKickedToLobby = ()=>{
   let pw = new packetWriter(packet.SERVER_NOTIFY_KICK_ROOM)
   pw.finish()
   return pw.buffer

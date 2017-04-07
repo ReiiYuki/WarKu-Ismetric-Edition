@@ -104,6 +104,12 @@ public class DGTProxyRemote : MonoBehaviour {
     #endregion
 
     #region login/logout
+
+    public bool IsLoggedIn()
+    {
+        return state == State.LOGGED_IN;
+    }
+
     public void Login(string name)
     {
         packet.Login(name);
@@ -112,8 +118,8 @@ public class DGTProxyRemote : MonoBehaviour {
     public void OnLoggedInSuccess()
     {
         SetState(State.LOGGED_IN);
-        GameObject.FindObjectOfType<ConnectionManager>().ShowJoin();
     }
+
     #endregion
 
     #region room
@@ -126,7 +132,22 @@ public class DGTProxyRemote : MonoBehaviour {
         PlayerPrefs.SetInt("RoomID", id);
         SceneManager.LoadScene(1);
     }
+    public void CancelRoom()
+    {
+        packet.CancelRoom();
+    }
 
+    public void OnCancelRoom()
+    {
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            SceneManager.LoadSceneAsync(0);
+        }
+        else if (GameObject.FindObjectOfType<CancelJoining>())
+        {
+            GameObject.FindObjectOfType<CancelJoining>().Cancel();
+        }
+    }
     #endregion
 
     #region board

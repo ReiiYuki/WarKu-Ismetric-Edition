@@ -6,8 +6,17 @@ public class ConnectionManager : MonoBehaviour {
 
     public GameObject join, lost,askname,cancel;
 
-	public void ShowJoin()
+    bool show = false;
+
+    void Update()
     {
+        if (DGTProxyRemote.GetInstance().IsLoggedIn()&&!show)
+            ShowJoin();
+    }
+
+    public void ShowJoin()
+    {
+        show = true;
         join.SetActive(true);
     }
 

@@ -33,12 +33,14 @@ public class DGTPacket : PacketManager {
         CLIENT_CHANGE_UNIT_DIRECTION = 10006,
         CLIENT_WORKER_UNIT_BUILD = 10007,
         CLIENT_UNIT_HIDE = 10008,
+        CLIENT_CANCEL_WAITING_QUEUE = 10009,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
         SERVER_UPDATE_BOARD = 20002,
         SERVER_UPDATE_UNIT = 20003,
-        SERVER_UPDATE_TILE = 20004
+        SERVER_UPDATE_TILE = 20004,
+        SERVER_NOTIFY_KICK_ROOM = 20005
     }
     #endregion
 
@@ -77,6 +79,7 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_UPDATE_BOARD] = UpdateBoard;
         _Mapper[(int)PacketID.SERVER_UPDATE_UNIT] = OnUpdateUnit;
         _Mapper[(int)PacketID.SERVER_UPDATE_TILE] = OnUpdateTile;
+        _Mapper[(int)PacketID.SERVER_NOTIFY_KICK_ROOM] = OnCancelRoom;
     }
     #endregion
 
@@ -120,8 +123,18 @@ public class DGTPacket : PacketManager {
         int id = pr.ReadUInt32();
         DGTProxyRemote.GetInstance().OnCreatedRoom(id);
     }
+
+    public void CancelRoom()
+    {
+        PacketWriter packetWriter = BeginSend((int)PacketID.CLIENT_CANCEL_WAITING_QUEUE);
+        EndSend();
+    }
     #endregion
 
+    public void OnCancelRoom(int packet_id, PacketReader pr)
+    {
+        DGTProxyRemote.GetInstance().OnCancelRoom();
+    }
     #region board
     public void UpdateBoard(int packed_id,PacketReader pr)
     {
