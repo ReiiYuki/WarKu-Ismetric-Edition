@@ -13,7 +13,8 @@ public class DGTProxyRemote : MonoBehaviour {
         CONNECTED,
         CONNECTING,
         LOGGED_IN,
-        LOGGING_IN
+        LOGGING_IN,
+        START,
     }
 
     void SetState(State state)
@@ -100,6 +101,28 @@ public class DGTProxyRemote : MonoBehaviour {
     public void ProcessEvents()
     {
         packet.ProcessEvents();
+    }
+    #endregion
+
+    #region Room Update Status
+    public void Ready()
+    {
+        packet.Ready();
+    }
+
+    public void NotifyStart()
+    {
+        SetState(State.START);
+    }
+    
+    public void UpdateTime(int time)
+    {
+
+    }
+
+    public void UpdateHP(float hp,float opHp)
+    {
+
     }
     #endregion
 

@@ -101,17 +101,18 @@ public class DGTPacket : PacketManager {
     {
         int hp = pr.ReadUInt8();
         int opHp = pr.ReadInt8();
-        //TODO 
+        DGTProxyRemote.GetInstance().UpdateHP(hp, opHp);
     }
 
     public void UpdateTime(int packet_id, PacketReader pr)
     {
         int time = pr.ReadUInt8();
+        DGTProxyRemote.GetInstance().UpdateTime(time);
     }
 
     public void NotifyStart(int packet_id, PacketReader pr)
     {
-        //TODO
+        DGTProxyRemote.GetInstance().NotifyStart();
     }
     #endregion
     #region ping
