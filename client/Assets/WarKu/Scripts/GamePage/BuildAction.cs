@@ -7,6 +7,6 @@ public class BuildAction : MonoBehaviour {
     void OnMouseDown()
     {
         GameObject.FindObjectOfType<Selector>().ReadyToBuild(transform.parent.parent.gameObject);
-        transform.parent.parent.GetChild(0).gameObject.SetActive(false);
+        transform.parent.parent.GetChild(1).gameObject.SetActive(false);
     }
 }

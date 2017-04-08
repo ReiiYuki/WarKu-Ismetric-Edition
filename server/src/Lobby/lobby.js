@@ -18,6 +18,7 @@ class Lobby {
 
   removeRoom(remote){
     let room = this.room.find((room)=>(room.remotes.indexOf(remote)>=0))
+    room.end()
     room.remotes.forEach((remote)=>{
       this.addRemote(remote)
       remote.notifyKickedToLobby()

@@ -10,8 +10,4 @@ public class BringToFront : MonoBehaviour {
         foreach (MeshRenderer r in GetComponentsInChildren<MeshRenderer>()) r.sortingLayerName = "Toppest";		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
