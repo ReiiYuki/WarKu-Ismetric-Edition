@@ -129,6 +129,11 @@ public class DGTProxyRemote : MonoBehaviour {
     {
 
     }
+
+    public void OnResult(int result)
+    {
+        Debug.Log(result);
+    }
     #endregion
 
     #region login/logout

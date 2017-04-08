@@ -250,7 +250,7 @@ class Board {
     this.timeloop = setInterval((self)=>{
       self.time-=1
       self.updateTime()
-      if (time==0){
+      if (self.time==0){
         self.end()
       }
     },1000,this)
@@ -268,7 +268,7 @@ class Board {
     }else if (this.remotes[0].hp>this.remotes[1].hp){
       this.remotes[0].showResult(0)
       this.remotes[1].showResult(2)
-    }else fi (this.remotes[0].hp<this.remotes[1].hp){
+    }else if (this.remotes[0].hp<this.remotes[1].hp){
       this.remotes[0].showResult(2)
       this.remotes[1].showResult(0)
     }

@@ -44,7 +44,9 @@ public class DGTPacket : PacketManager {
         SERVER_NOTIFY_KICK_ROOM = 20005,
         SERVER_UPDATE_HP = 20006,
         SERVER_UPDATE_TIME = 20007,
-        SERVER_NOTIFY_START = 20008
+        SERVER_NOTIFY_START = 20008,
+        SERVER_SHOW_RESULT = 20009
+
     }
     #endregion
 
@@ -87,6 +89,7 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_UPDATE_HP] = UpdateHP;
         _Mapper[(int)PacketID.SERVER_UPDATE_TIME] = UpdateTime;
         _Mapper[(int)PacketID.SERVER_NOTIFY_START] = NotifyStart;
+        _Mapper[(int)PacketID.SERVER_SHOW_RESULT] = OnResult;
     }
     #endregion
 
@@ -113,6 +116,12 @@ public class DGTPacket : PacketManager {
     public void NotifyStart(int packet_id, PacketReader pr)
     {
         DGTProxyRemote.GetInstance().NotifyStart();
+    }
+
+    public void OnResult(int packet_id, PacketReader pr)
+    {
+        int result = pr.ReadUInt8();
+        DGTProxyRemote.GetInstance().OnResult(result);
     }
     #endregion
     #region ping
