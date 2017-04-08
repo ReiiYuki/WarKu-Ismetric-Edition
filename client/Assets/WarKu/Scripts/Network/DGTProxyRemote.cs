@@ -112,6 +112,7 @@ public class DGTProxyRemote : MonoBehaviour {
 
     public void NotifyStart()
     {
+        Debug.Log("Start");
         SetState(State.START);
     }
     

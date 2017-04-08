@@ -94,7 +94,7 @@ class RemoteProxy extends server.RemoteProxy {
     this.send(packet.updateHp(hp,hpOp))
   }
 
-  updateTime(time) => {
+  updateTime(time) {
     this.send(packet.updateTime(time))
   }
 

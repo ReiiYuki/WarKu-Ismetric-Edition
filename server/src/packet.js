@@ -176,7 +176,7 @@ packet.updateTime = (time) => {
 packet[packet.CLIENT_READY] = (remote,data) =>{
   remote.ready()
 }
-packet.notifyStart(){
+packet.notifyStart = ()=>{
   let pw = new packetWriter(packet.SERVER_NOTIFY_START)
   pw.finish()
   return pw.buffer
