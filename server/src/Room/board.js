@@ -69,7 +69,16 @@ class Board {
       delete this.units[x][y]
       this.units[x][y] = null
       this.getUnit(x,y,x,y,3)
+      this.updateHp()
     }
+  }
+
+  updateHp(){
+    let hp = this.remotes[0].hp
+    let opHp = this.remotes[1].hp
+    console.log(hp+" "+opHp);
+    this.remotes[0].updateHp(hp,opHp)
+    this.remotes[1].updateHp(opHp,hp)
   }
 
   isEndLine(x,y){

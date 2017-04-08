@@ -128,18 +128,20 @@ class Unit {
     if (self.state == 0){
       for (var x = self.x-self.range;x<=self.x+self.range;x++){
         for (var y = self.y-self.range;y<=self.y+self.range;y++){
-          if (self.board.units[x][y]&&self.board.units[x][y]!=self){
-            if (self.board.units[x][y].state!=2&&self.board.units[x][y].owner != self.owner){
-              self.target = self.board.units[x][y]
-              self.board.units[x][y].direction = 0
-              self.direction = 0
-              self.state = 1
-              self.board.getUnit(self.x,self.y,self.x,self.y,0)
-              self.board.getUnit(self.board.units[x][y].x,self.board.units[x][y].y,self.board.units[x][y].x,self.board.units[x][y].y,0)
-              break
+          if (x>=0&&y>=0&&x<16&&y<16){
+            if (self.board.units[x][y]&&self.board.units[x][y]!=self){
+              if (self.board.units[x][y].state!=2&&self.board.units[x][y].owner != self.owner){
+                self.target = self.board.units[x][y]
+                self.board.units[x][y].direction = 0
+                self.direction = 0
+                self.state = 1
+                self.board.getUnit(self.x,self.y,self.x,self.y,0)
+                self.board.getUnit(self.board.units[x][y].x,self.board.units[x][y].y,self.board.units[x][y].x,self.board.units[x][y].y,0)
+                break
+              }
             }
+            if (self.target) break
           }
-          if (self.target) break
         }
       }
     }

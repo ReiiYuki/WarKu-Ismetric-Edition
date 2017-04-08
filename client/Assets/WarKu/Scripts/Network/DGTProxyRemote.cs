@@ -127,7 +127,7 @@ public class DGTProxyRemote : MonoBehaviour {
 
     public void UpdateHP(float hp,float opHp)
     {
-
+        Debug.Log(hp + " " + opHp);
     }
 
     public void OnResult(int result)
