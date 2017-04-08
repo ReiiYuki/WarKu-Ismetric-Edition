@@ -72,7 +72,17 @@ public class TileBehaviour : MonoBehaviour {
 
     public void Explosion()
     {
-        Debug.Log("AAAAAA");
+        Debug.Log("A");
         explosion.SetActive(true);
+    }
+
+    void OnMouseOver()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(193, 211, 255);
+    }
+
+    void OnMouseExit()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255);
     }
 }
