@@ -19,10 +19,11 @@ public class ReadyCloudBehaviour : MonoBehaviour {
             isStart = true;
             transform.parent.GetComponent<Animator>().SetTrigger("Start");
         }
-        if (transform.parent.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("PreState"))
+        if (transform.parent.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("PreState")&&!isReady)
         {
+            isReady = true;
             DGTProxyRemote.GetInstance().Ready();
         }
 	}
-
+    
 }
