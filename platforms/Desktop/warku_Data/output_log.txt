@@ -153,3 +153,6 @@ ReceiveCallback catch
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 490c -> priority: 1 
+  Thread -> id: 4108 -> priority: 1 

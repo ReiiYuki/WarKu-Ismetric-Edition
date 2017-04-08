@@ -25,7 +25,8 @@ let packet = {
   SERVER_NOTIFY_KICK_ROOM : 20005,
   SERVER_UPDATE_HP : 20006,
   SERVER_UPDATE_TIME : 20007,
-  SERVER_NOTIFY_START : 20008
+  SERVER_NOTIFY_START : 20008,
+  SERVER_SHOW_RESULT : 20009
 }
 //</editor-fold>
 
@@ -178,6 +179,13 @@ packet[packet.CLIENT_READY] = (remote,data) =>{
 }
 packet.notifyStart = ()=>{
   let pw = new packetWriter(packet.SERVER_NOTIFY_START)
+  pw.finish()
+  return pw.buffer
+}
+
+packet.showResult = (result) => {
+  let pw = new packetWriter(packet.SERVER_SHOW_RESULT)
+  pw.append_uint8(result)
   pw.finish()
   return pw.buffer
 }

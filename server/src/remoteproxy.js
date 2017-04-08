@@ -106,6 +106,10 @@ class RemoteProxy extends server.RemoteProxy {
   start(){
     this.send(packet.notifyStart())
   }
+
+  showResult(result){
+    this.send(packet.showResult(result))
+  }
 //</editor-fold>
 }
 module.exports = RemoteProxy
