@@ -98,6 +98,7 @@ class Unit {
   }
 
   damage(unit){
+    self.board.getUnit(self.x,self.y,self.x,self.y,1)
     unit.defense(this.attack)
   }
 
@@ -106,10 +107,11 @@ class Unit {
     this.hp -= damage
     if (this.isDead()){
       this.board.units[this.x][this.y] = null
+      self.board.getUnit(self.x,self.y,self.x,self.y,2)
       clearInterval(this.attackLoop)
       delete this
     }
-    this.board.getUnit(this.x,this.y,this.x,this.y)
+    this.board.getUnit(this.x,this.y,this.x,this.y,0)
   }
 
   isDead(){
@@ -131,8 +133,8 @@ class Unit {
               self.board.units[x][y].direction = 0
               self.direction = 0
               self.state = 1
-              self.board.getUnit(self.x,self.y,self.x,self.y)
-              self.board.getUnit(self.board.units[x][y].x,self.board.units[x][y].y,self.board.units[x][y].x,self.board.units[x][y].y)
+              self.board.getUnit(self.x,self.y,self.x,self.y,0)
+              self.board.getUnit(self.board.units[x][y].x,self.board.units[x][y].y,self.board.units[x][y].x,self.board.units[x][y].y,0)
               break
             }
           }
@@ -152,7 +154,7 @@ class Unit {
         self.target = null
         self.state = 0
       }
-      self.board.getUnit(self.x,self.y,self.x,self.y)
+      self.board.getUnit(self.x,self.y,self.x,self.y,0)
     }
   }
 }

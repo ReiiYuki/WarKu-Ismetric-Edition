@@ -110,7 +110,7 @@ packet[packet.CLIENT_UPDATE_UNIT] = (remote,data)=>{
   remote.updateUnitR(x,y)
 }
 
-packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
+packet.updateUnit = (x,y,changeX,changeY,unit,remote,status) => {
   let pw = new packetWriter(packet.SERVER_UPDATE_UNIT)
   pw.append_uint8(x)
   pw.append_uint8(y)
@@ -124,6 +124,7 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
     else pw.append_uint8(0)
     if (unit.isOwner(remote)) pw.append_uint8(1)
     else pw.append_uint8(0)
+    pw.append_uint8(status)
   }else {
     pw.append_int8(-1)
   }
