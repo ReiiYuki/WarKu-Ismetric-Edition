@@ -22,7 +22,8 @@ let packet = {
   SERVER_UPDATE_UNIT : 20003,
   SERVER_UPDATE_TILE : 20004,
   SERVER_NOTIFY_KICK_ROOM : 20005,
-  SERVER_UPDATE_HP : 20006
+  SERVER_UPDATE_HP : 20006,
+  SERVER_UPDATE_TIME : 20007
 }
 //</editor-fold>
 
@@ -162,6 +163,12 @@ packet.updateHp = (hp,opHp)=>{
   pw.append_float(hp)
   pw.append_float(opHp)
   pw.finish();
+  return pw.buffer
+}
+packet.updateTime = (time) => {
+  let pw = new packetWriter(packet.SERVER_UPDATE_TIME)
+  pw.append_uint8(time)
+  pw.finish()
   return pw.buffer
 }
 //</editor-fold>

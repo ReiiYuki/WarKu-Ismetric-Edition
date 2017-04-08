@@ -93,6 +93,10 @@ class RemoteProxy extends server.RemoteProxy {
   updateHp(hp,hpOp){
     this.send(packet.updateHp(hp,hpOp))
   }
+
+  updateTime(time) => {
+    this.send(packet.updateTime(time))
+  }
 //</editor-fold>
 }
 module.exports = RemoteProxy
