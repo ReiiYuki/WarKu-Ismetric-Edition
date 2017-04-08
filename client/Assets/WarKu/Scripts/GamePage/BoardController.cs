@@ -99,7 +99,7 @@ public class BoardController : MonoBehaviour {
             }
             else if (status == 3)
             {
-                Debug.Log("Special");
+                boardFloor[x, y].GetComponent<TileBehaviour>().Explosion();
             }
         }
         if (x != changeX || y != changeY)

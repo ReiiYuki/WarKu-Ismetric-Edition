@@ -77,7 +77,7 @@ class Board {
     if (direction==4)
       if (this.canMove(x,y+1))
         this.units[x][y].direction = direction
-    this.getUnit(x,y,x,y)
+    this.getUnit(x,y,x,y,0)
   }
 
   canMove(x,y){
@@ -97,9 +97,10 @@ class Board {
           this.floors[targetX][targetY] = 21
         }
         if ([18,20,21].indexOf(this.floors[targetX][targetY])>=0){
+          this.getUnit(x,y,x,y,3)
           this.units[x][y] = null
           this.updateTile(targetX,targetY)
-          this.getUnit(x,y,x,y,3)
+          this.getUnit(x,y,x,y,0)
         }
       }
     }
