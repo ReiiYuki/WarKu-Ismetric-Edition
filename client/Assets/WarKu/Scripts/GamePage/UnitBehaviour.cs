@@ -13,7 +13,7 @@ public class UnitBehaviour : MonoBehaviour {
         UP = 3,
         DOWN = 4
     }
-    public int x, y,targetX,targetY,direction;
+    public int x, y,targetX,targetY,direction,type;
     float hp;
     public bool isOwner;
     public int speed = 1;

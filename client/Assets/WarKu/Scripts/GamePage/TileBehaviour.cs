@@ -5,18 +5,15 @@ using UnityEngine;
 public class TileBehaviour : MonoBehaviour {
 
     public Texture2D cursor;
-    public GameObject tooltip,explosion;
-    public bool canMove;
+    public GameObject explosion;
+    public bool canMove,canHide;
     public int x, y;
 
     void Start()
     {
-       // tooltip = Instantiate(tooltip, transform.position+new Vector3(0f,1.5f),Quaternion.identity);
         explosion = Instantiate(explosion, transform.position + new Vector3(0f, 0.35f), Quaternion.identity);
         explosion.transform.SetParent(transform);
         explosion.SetActive(false);
-/*        tooltip.transform.SetParent(transform);
-        tooltip.SetActive(false);*/
     }
 
     void Update()
