@@ -7,6 +7,7 @@ class Lobby {
   }
 
   addRemote(remote){
+    remote.isReady = false
     this.remotes.push(remote)
     remote.responseLoginSuccess()
   }
@@ -47,7 +48,7 @@ class Lobby {
   }
 
   removeRemote(remote){
-    
+
   }
 }
 

@@ -90,6 +90,12 @@ class Room {
     remote.updateHp(remote.hp,opRemote.hp)
     opRemote.updateHp(opRemote.hp,remote.hp)
   }
+
+  shouldStart(){
+    if (this.remotes[0].isReady&&this.remotes[1].isReady){
+      
+    }
+  }
 }
 
 module.exports = Room
