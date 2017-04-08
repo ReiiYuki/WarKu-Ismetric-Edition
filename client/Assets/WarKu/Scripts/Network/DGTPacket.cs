@@ -34,13 +34,17 @@ public class DGTPacket : PacketManager {
         CLIENT_WORKER_UNIT_BUILD = 10007,
         CLIENT_UNIT_HIDE = 10008,
         CLIENT_CANCEL_WAITING_QUEUE = 10009,
+        CLIENT_READY = 10010,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
         SERVER_UPDATE_BOARD = 20002,
         SERVER_UPDATE_UNIT = 20003,
         SERVER_UPDATE_TILE = 20004,
-        SERVER_NOTIFY_KICK_ROOM = 20005
+        SERVER_NOTIFY_KICK_ROOM = 20005,
+        SERVER_UPDATE_HP = 20006,
+        SERVER_UPDATE_TIME = 20007,
+        SERVER_NOTIFY_START = 20008
     }
     #endregion
 
@@ -80,9 +84,36 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_UPDATE_UNIT] = OnUpdateUnit;
         _Mapper[(int)PacketID.SERVER_UPDATE_TILE] = OnUpdateTile;
         _Mapper[(int)PacketID.SERVER_NOTIFY_KICK_ROOM] = OnCancelRoom;
+        _Mapper[(int)PacketID.SERVER_UPDATE_HP] = UpdateHP;
+        _Mapper[(int)PacketID.SERVER_UPDATE_TIME] = UpdateTime;
+        _Mapper[(int)PacketID.SERVER_NOTIFY_START] = NotifyStart;
     }
     #endregion
 
+    #region Room Update Status
+    public void Ready()
+    {
+        PacketWriter packetWriter = BeginSend((int)PacketID.CLIENT_READY);
+        EndSend();
+    }
+
+    public void UpdateHP(int packet_id, PacketReader pr)
+    {
+        int hp = pr.ReadUInt8();
+        int opHp = pr.ReadInt8();
+        //TODO 
+    }
+
+    public void UpdateTime(int packet_id, PacketReader pr)
+    {
+        int time = pr.ReadUInt8();
+    }
+
+    public void NotifyStart(int packet_id, PacketReader pr)
+    {
+        //TODO
+    }
+    #endregion
     #region ping
     public void RequestPing(int pingTime)
     {
@@ -129,12 +160,12 @@ public class DGTPacket : PacketManager {
         PacketWriter packetWriter = BeginSend((int)PacketID.CLIENT_CANCEL_WAITING_QUEUE);
         EndSend();
     }
-    #endregion
-
     public void OnCancelRoom(int packet_id, PacketReader pr)
     {
         DGTProxyRemote.GetInstance().OnCancelRoom();
     }
+    #endregion
+
     #region board
     public void UpdateBoard(int packed_id,PacketReader pr)
     {
