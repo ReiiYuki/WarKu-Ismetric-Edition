@@ -130,7 +130,10 @@ public class DGTProxyRemote : MonoBehaviour {
 
     public void UpdateHP(float hp,float opHp)
     {
-        Debug.Log(hp + " " + opHp);
+        if (GameObject.FindObjectOfType<HPUpdator>())
+        {
+            GameObject.FindObjectOfType<HPUpdator>().UpdateHP(hp, opHp);
+        }
     }
 
     public void OnResult(int result)

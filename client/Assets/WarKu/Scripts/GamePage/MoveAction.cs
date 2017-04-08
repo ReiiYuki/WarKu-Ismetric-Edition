@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MoveAction : MonoBehaviour {
 
-    void OnMouseDown()
+    public void Perform()
     {
-        GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.parent.parent.GetChild(2).gameObject);
-        transform.parent.parent.GetChild(1).gameObject.SetActive(false);
+        GameObject.FindObjectOfType<Selector>().ReadyToMove(GameObject.FindObjectOfType<Selector>().GetCurrentTile().GetComponentInChildren<UnitBehaviour>().gameObject);
+        GameObject.FindObjectOfType<ToolTipManager>().HideToolTip();
     }
 }

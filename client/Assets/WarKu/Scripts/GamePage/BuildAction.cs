@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BuildAction : MonoBehaviour {
 
-    void OnMouseDown()
+    public void Perform()
     {
-        GameObject.FindObjectOfType<Selector>().ReadyToBuild(transform.parent.parent.gameObject);
-        transform.parent.parent.GetChild(1).gameObject.SetActive(false);
+        GameObject.FindObjectOfType<Selector>().ReadyToBuild(GameObject.FindObjectOfType<Selector>().GetCurrentTile());
+        GameObject.FindObjectOfType<ToolTipManager>().HideToolTip();
     }
 }

@@ -79,6 +79,7 @@ public class BoardController : MonoBehaviour {
             if (type == -1) return;
             boardUnit[x, y] = Instantiate(unitPrototype[type], GetPositionOfTile(x,y)+new Vector3(0f,0f,-1f), Quaternion.identity);
             boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
+            boardUnit[x, y].GetComponent<UnitBehaviour>().type = type;
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetPosition(x,y);
             boardUnit[x, y].GetComponent<UnitBehaviour>().isOwner = isOwner;
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);

@@ -88,4 +88,9 @@ public class Selector : MonoBehaviour {
     {
         SetState(State.NO_SELECTION);
     }
+
+    public void SetCurrentTile(GameObject currentTile)
+    {
+        this.currentTile = currentTile;
+    }
 }
