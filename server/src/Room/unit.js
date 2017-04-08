@@ -14,8 +14,8 @@ class Unit {
 //<editor-fold> Unit Type Description
 /*
   0 = Worker
-  1 = Archer
-  2 = Swordman
+  2 = Archer
+  1 = Swordman
   3 = Lancer
 */
 //</editor-fold>
@@ -46,13 +46,13 @@ class Unit {
       this.range = 1
       this.hp = 6
       this.atkSpd = 6
-    }else if (this.type == 1){
+    }else if (this.type == 2){
       this.attack = 2
       this.speed = 2
       this.range = 2
       this.hp = 7
       this.atkSpd = 1
-    }else if (this.type == 2){
+    }else if (this.type == 1){
       this.attack = 3
       this.speed = 1
       this.range = 1
