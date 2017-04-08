@@ -15,13 +15,17 @@ let packet = {
   CLIENT_WORKER_UNIT_BUILD : 10007,
   CLIENT_UNIT_HIDE : 10008,
   CLIENT_CANCEL_WAITING_QUEUE : 10009,
+  CLIENT_READY : 10010,
 
   SERVER_LOGIN_SUCCESS : 20000,
   SERVER_JOIN_ROOM_SUCCESS : 20001,
   SERVER_UPDATE_BOARD : 20002,
   SERVER_UPDATE_UNIT : 20003,
   SERVER_UPDATE_TILE : 20004,
-  SERVER_NOTIFY_KICK_ROOM : 20005
+  SERVER_NOTIFY_KICK_ROOM : 20005,
+  SERVER_UPDATE_HP : 20006,
+  SERVER_UPDATE_TIME : 20007,
+  SERVER_NOTIFY_START : 20008
 }
 //</editor-fold>
 
@@ -152,6 +156,30 @@ packet[packet.CLIENT_UNIT_HIDE] = (remote,data) => {
   let x = data.read_uint8()
   let y = data.read_uint8()
   remote.hide(x,y)
+}
+//</editor-fold>
+
+//<editor-fold> Exit Condition
+packet.updateHp = (hp,opHp)=>{
+  let pw = new packetWriter(packet.SERVER_UPDATE_HP)
+  pw.append_float(hp)
+  pw.append_float(opHp)
+  pw.finish();
+  return pw.buffer
+}
+packet.updateTime = (time) => {
+  let pw = new packetWriter(packet.SERVER_UPDATE_TIME)
+  pw.append_uint8(time)
+  pw.finish()
+  return pw.buffer
+}
+packet[packet.CLIENT_READY] = (remote,data) =>{
+  remote.ready()
+}
+packet.notifyStart = ()=>{
+  let pw = new packetWriter(packet.SERVER_NOTIFY_START)
+  pw.finish()
+  return pw.buffer
 }
 //</editor-fold>
 module.exports = packet
