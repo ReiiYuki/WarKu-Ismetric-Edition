@@ -32,7 +32,7 @@ class Board {
 //</editor-fold>
 
 //<editor-fold> MoveUnit
-  updateUnit(x,y){
+  updateUnit(remote,x,y){
     if (!this.units[x][y]) return;
     let direction = this.units[x][y].direction
     let changeX = x
@@ -46,8 +46,10 @@ class Board {
       this.units[changeX][changeY] = this.units[x][y]
       this.units[changeX][changeY].setPosition(changeX,changeY)
       delete this.units[x][y]
+      this.units[x][y] = null
     }
     this.getUnit(x,y,changeX,changeY,0)
+    this.reachEndLine(changeX,changeY)
   }
 
   moveUnit(x,y,direction){
@@ -58,6 +60,23 @@ class Board {
   getUnit(x,y,changeX,changeY,status){
     this.remotes[0].updateUnit(x,y,changeX,changeY,this.units[x][y],status)
     this.remotes[1].updateUnit(this.inversePosition(x),this.inversePosition(y),this.inversePosition(changeX),this.inversePosition(changeY),this.units[x][y],status)
+  }
+
+  reachEndLine(x,y){
+    if (this.isEndLine(x,y)){
+      console.log("End");
+      this.remotes.find((rem)=>(rem!=this.units[x][y])).hp -= this.units[x][y].attack
+      delete this.units[x][y]
+      this.units[x][y] = null
+      this.getUnit(x,y,x,y,3)
+    }
+  }
+
+  isEndLine(x,y){
+    let unit = this.units[x][y]
+    if (this.remotes.indexOf(unit.owner)==0) return y==0
+    return y==this.SIZE-1
+    return false
   }
 
   inversePosition(x) {

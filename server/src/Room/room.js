@@ -44,7 +44,7 @@ class Room {
       x = this.inversePosition(x)
       y = this.inversePosition(y)
     }
-    this.board.updateUnit(x,y)
+    this.board.updateUnit(remote,x,y)
   }
 
   changeDirection(remote,x,y,direction){
