@@ -45,6 +45,10 @@ class Lobby {
       console.log(index+" "+remote.getPeerName())
     })
   }
+
+  removeRemote(remote){
+    
+  }
 }
 
 module.exports = Lobby
