@@ -115,6 +115,11 @@ public class DGTProxyRemote : MonoBehaviour {
         SetState(State.START);
     }
     
+    public bool IsStart()
+    {
+        return state == State.START;
+    }
+
     public void UpdateTime(int time)
     {
 
