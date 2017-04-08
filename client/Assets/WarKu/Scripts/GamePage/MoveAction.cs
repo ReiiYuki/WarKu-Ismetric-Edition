@@ -6,7 +6,7 @@ public class MoveAction : MonoBehaviour {
 
     void OnMouseDown()
     {
-        GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.parent.parent.GetChild(1).gameObject);
-        transform.parent.parent.GetChild(0).gameObject.SetActive(false);
+        GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.parent.parent.GetChild(2).gameObject);
+        transform.parent.parent.GetChild(1).gameObject.SetActive(false);
     }
 }

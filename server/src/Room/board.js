@@ -32,7 +32,7 @@ class Board {
 //</editor-fold>
 
 //<editor-fold> MoveUnit
-  updateUnit(x,y){
+  updateUnit(remote,x,y){
     if (!this.units[x][y]) return;
     let direction = this.units[x][y].direction
     let changeX = x
@@ -46,18 +46,46 @@ class Board {
       this.units[changeX][changeY] = this.units[x][y]
       this.units[changeX][changeY].setPosition(changeX,changeY)
       delete this.units[x][y]
+      this.units[x][y] = null
     }
-    this.getUnit(x,y,changeX,changeY)
+    this.getUnit(x,y,changeX,changeY,0)
+    this.reachEndLine(changeX,changeY)
   }
 
   moveUnit(x,y,direction){
       this.units[x][y].direction = direction
-      this.getUnit(x,y,x,y)
+      this.getUnit(x,y,x,y,0)
   }
 
-  getUnit(x,y,changeX,changeY){
-    this.remotes[0].updateUnit(x,y,changeX,changeY,this.units[x][y])
-    this.remotes[1].updateUnit(this.inversePosition(x),this.inversePosition(y),this.inversePosition(changeX),this.inversePosition(changeY),this.units[x][y])
+  getUnit(x,y,changeX,changeY,status){
+    this.remotes[0].updateUnit(x,y,changeX,changeY,this.units[x][y],status)
+    this.remotes[1].updateUnit(this.inversePosition(x),this.inversePosition(y),this.inversePosition(changeX),this.inversePosition(changeY),this.units[x][y],status)
+  }
+
+  reachEndLine(x,y){
+    if (this.isEndLine(x,y)){
+      console.log("End");
+      this.remotes.find((rem)=>(rem!=this.units[x][y])).hp -= this.units[x][y].attack
+      delete this.units[x][y]
+      this.units[x][y] = null
+      this.getUnit(x,y,x,y,3)
+      this.updateHp()
+    }
+  }
+
+  updateHp(){
+    let hp = this.remotes[0].hp
+    let opHp = this.remotes[1].hp
+    console.log(hp+" "+opHp);
+    this.remotes[0].updateHp(hp,opHp)
+    this.remotes[1].updateHp(opHp,hp)
+  }
+
+  isEndLine(x,y){
+    let unit = this.units[x][y]
+    if (this.remotes.indexOf(unit.owner)==0) return y==0
+    return y==this.SIZE-1
+    return false
   }
 
   inversePosition(x) {
@@ -77,7 +105,7 @@ class Board {
     if (direction==4)
       if (this.canMove(x,y+1))
         this.units[x][y].direction = direction
-    this.getUnit(x,y,x,y)
+    this.getUnit(x,y,x,y,0)
   }
 
   canMove(x,y){
@@ -99,7 +127,7 @@ class Board {
         if ([18,20,21].indexOf(this.floors[targetX][targetY])>=0){
           this.units[x][y] = null
           this.updateTile(targetX,targetY)
-          this.getUnit(x,y,x,y)
+          this.getUnit(x,y,x,y,3)
         }
       }
     }
@@ -114,7 +142,7 @@ class Board {
 //<editor-fold> Hide
   hide(x,y){
     if(this.canHide(x,y)) this.units[x][y].hide()
-    this.getUnit(x,y,x,y)
+    this.getUnit(x,y,x,y,3)
   }
 
   canHide(x,y){
@@ -241,9 +269,37 @@ class Board {
 
 //<editor-fold> Exit Condition
   updateTime(){
-    this.remotes.foreach((remote)=>{
+    this.remotes.forEach((remote)=>{
       remote.updateTime(this.time)
     })
+  }
+
+  start(){
+    this.timeloop = setInterval((self)=>{
+      self.time-=1
+      self.updateTime()
+      if (self.time==0){
+        self.end()
+      }
+    },1000,this)
+  }
+
+  end(){
+    clearInterval(this.timeloop)
+    this.result()
+  }
+
+  result(){
+    if (this.remotes[0].hp==this.remotes[1].hp){
+      this.remotes[0].showResult(1)
+      this.remotes[1].showResult(1)
+    }else if (this.remotes[0].hp>this.remotes[1].hp){
+      this.remotes[0].showResult(0)
+      this.remotes[1].showResult(2)
+    }else if (this.remotes[0].hp<this.remotes[1].hp){
+      this.remotes[0].showResult(2)
+      this.remotes[1].showResult(0)
+    }
   }
 //</editor-fold>
 

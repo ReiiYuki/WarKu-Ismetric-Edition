@@ -25,7 +25,8 @@ let packet = {
   SERVER_NOTIFY_KICK_ROOM : 20005,
   SERVER_UPDATE_HP : 20006,
   SERVER_UPDATE_TIME : 20007,
-  SERVER_NOTIFY_START : 20008
+  SERVER_NOTIFY_START : 20008,
+  SERVER_SHOW_RESULT : 20009
 }
 //</editor-fold>
 
@@ -109,7 +110,7 @@ packet[packet.CLIENT_UPDATE_UNIT] = (remote,data)=>{
   remote.updateUnitR(x,y)
 }
 
-packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
+packet.updateUnit = (x,y,changeX,changeY,unit,remote,status) => {
   let pw = new packetWriter(packet.SERVER_UPDATE_UNIT)
   pw.append_uint8(x)
   pw.append_uint8(y)
@@ -123,8 +124,10 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
     else pw.append_uint8(0)
     if (unit.isOwner(remote)) pw.append_uint8(1)
     else pw.append_uint8(0)
+    pw.append_uint8(status)
   }else {
     pw.append_int8(-1)
+    pw.append_uint8(status)
   }
   pw.finish()
   return pw.buffer
@@ -178,6 +181,13 @@ packet[packet.CLIENT_READY] = (remote,data) =>{
 }
 packet.notifyStart = ()=>{
   let pw = new packetWriter(packet.SERVER_NOTIFY_START)
+  pw.finish()
+  return pw.buffer
+}
+
+packet.showResult = (result) => {
+  let pw = new packetWriter(packet.SERVER_SHOW_RESULT)
+  pw.append_uint8(result)
   pw.finish()
   return pw.buffer
 }

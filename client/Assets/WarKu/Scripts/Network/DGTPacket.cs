@@ -44,7 +44,9 @@ public class DGTPacket : PacketManager {
         SERVER_NOTIFY_KICK_ROOM = 20005,
         SERVER_UPDATE_HP = 20006,
         SERVER_UPDATE_TIME = 20007,
-        SERVER_NOTIFY_START = 20008
+        SERVER_NOTIFY_START = 20008,
+        SERVER_SHOW_RESULT = 20009
+
     }
     #endregion
 
@@ -87,6 +89,7 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_UPDATE_HP] = UpdateHP;
         _Mapper[(int)PacketID.SERVER_UPDATE_TIME] = UpdateTime;
         _Mapper[(int)PacketID.SERVER_NOTIFY_START] = NotifyStart;
+        _Mapper[(int)PacketID.SERVER_SHOW_RESULT] = OnResult;
     }
     #endregion
 
@@ -99,8 +102,8 @@ public class DGTPacket : PacketManager {
 
     public void UpdateHP(int packet_id, PacketReader pr)
     {
-        int hp = pr.ReadUInt8();
-        int opHp = pr.ReadInt8();
+        float hp = pr.ReadFloat();
+        float opHp = pr.ReadFloat();
         DGTProxyRemote.GetInstance().UpdateHP(hp, opHp);
     }
 
@@ -113,6 +116,12 @@ public class DGTPacket : PacketManager {
     public void NotifyStart(int packet_id, PacketReader pr)
     {
         DGTProxyRemote.GetInstance().NotifyStart();
+    }
+
+    public void OnResult(int packet_id, PacketReader pr)
+    {
+        int result = pr.ReadUInt8();
+        DGTProxyRemote.GetInstance().OnResult(result);
     }
     #endregion
     #region ping
@@ -197,16 +206,21 @@ public class DGTPacket : PacketManager {
         int changeX = pr.ReadUInt8();
         int changeY = pr.ReadUInt8();
         int type = pr.ReadInt8();
+        int status = 0;
         if (type != -1)
         {
             int direction = pr.ReadUInt8();
             float hp = pr.ReadFloat();
             bool isHide = pr.ReadUInt8() == 1;
             bool isOwner = pr.ReadUInt8() == 1;
-            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction,hp,isHide,isOwner);
+            status = pr.ReadUInt8();
+            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction,hp,isHide,isOwner,status);
             return;
+        }else
+        {
+            status = pr.ReadUInt8();
         }
-        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false,false);
+        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false,false,status);
     }
 
     public void UpdateUnitRequest(int x,int y)
