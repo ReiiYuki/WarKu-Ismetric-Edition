@@ -47,9 +47,6 @@ class Lobby {
     })
   }
 
-  removeRemote(remote){
-
-  }
 }
 
 module.exports = Lobby

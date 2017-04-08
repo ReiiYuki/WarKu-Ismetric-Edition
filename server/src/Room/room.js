@@ -93,7 +93,8 @@ class Room {
 
   shouldStart(){
     if (this.remotes[0].isReady&&this.remotes[1].isReady){
-      
+      this.remotes[0].start()
+      this.remotes[1].start()
     }
   }
 }

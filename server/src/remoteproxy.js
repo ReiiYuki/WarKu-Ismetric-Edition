@@ -99,7 +99,12 @@ class RemoteProxy extends server.RemoteProxy {
   }
 
   ready(){
-    remote.isReady = true
+    this.isReady = true
+    this.room.shouldStart()
+  }
+
+  start(){
+    this.send(packet.notifyStart())
   }
 //</editor-fold>
 }
