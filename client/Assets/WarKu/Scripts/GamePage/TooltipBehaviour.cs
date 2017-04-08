@@ -18,4 +18,5 @@ public class TooltipBehaviour : MonoBehaviour {
     {
         gameObject.SetActive(false);
     }
+    
 }

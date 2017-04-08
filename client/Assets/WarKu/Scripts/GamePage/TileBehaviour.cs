@@ -11,12 +11,12 @@ public class TileBehaviour : MonoBehaviour {
 
     void Start()
     {
-        tooltip = Instantiate(tooltip, transform.position+new Vector3(0f,1.5f),Quaternion.identity);
+       // tooltip = Instantiate(tooltip, transform.position+new Vector3(0f,1.5f),Quaternion.identity);
         explosion = Instantiate(explosion, transform.position + new Vector3(0f, 0.35f), Quaternion.identity);
         explosion.transform.SetParent(transform);
         explosion.SetActive(false);
-        tooltip.transform.SetParent(transform);
-        tooltip.SetActive(false);
+/*        tooltip.transform.SetParent(transform);
+        tooltip.SetActive(false);*/
     }
 
     void Update()
@@ -59,7 +59,11 @@ public class TileBehaviour : MonoBehaviour {
             if (GetComponentInChildren<UnitBehaviour>() && GetComponentInChildren<UnitBehaviour>().isOwner)
             {
                 GetComponentInChildren<UnitBehaviour>().Stop();
-                tooltip.SetActive(true);
+                if (GetComponentInChildren<UnitBehaviour>().direction == 0)
+                {
+                    GameObject.FindObjectOfType<Selector>().SetCurrentTile(gameObject);
+                    GameObject.FindObjectOfType<ToolTipManager>().ShowToolTip();
+                }
             }
         }
     }
