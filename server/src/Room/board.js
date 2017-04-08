@@ -5,6 +5,7 @@ class Board {
     this.SIZE = 16
     this.createFloor()
     this.remotes = remotes
+    this.time = 60
   }
 //</editor-fold>
 
@@ -237,6 +238,14 @@ class Board {
   }
 
 // </editor-fold>
+
+//<editor-fold> Exit Condition
+  updateTime(){
+    this.remotes.foreach((remote)=>{
+      remote.updateTime(this.time)
+    })
+  }
+//</editor-fold>
 
 }
 

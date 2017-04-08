@@ -7,6 +7,7 @@ class Lobby {
   }
 
   addRemote(remote){
+    remote.isReady = false
     this.remotes.push(remote)
     remote.responseLoginSuccess()
   }
@@ -45,6 +46,7 @@ class Lobby {
       console.log(index+" "+remote.getPeerName())
     })
   }
+
 }
 
 module.exports = Lobby
