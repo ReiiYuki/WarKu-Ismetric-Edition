@@ -12,13 +12,13 @@ public class ReadyCloudBehaviour : MonoBehaviour {
 		if (DGTProxyRemote.GetInstance().IsStart() && !isStart)
         {
             isStart = true;
-            GetComponent<Animator>().SetTrigger("Start");
+            transform.parent.GetComponent<Animator>().SetTrigger("Start");
         }
 	}
 
     void OnMouseDown()
     {
         isReady = true;
-        GetComponent<Animator>().SetTrigger("Ready");
+        transform.parent.GetComponent<Animator>().SetTrigger("Ready");
     }
 }
