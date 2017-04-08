@@ -98,7 +98,7 @@ class Unit {
   }
 
   damage(unit){
-    self.board.getUnit(self.x,self.y,self.x,self.y,1)
+    this.board.getUnit(this.x,this.y,this.x,this.y,1)
     unit.defense(this.attack)
   }
 
@@ -106,12 +106,13 @@ class Unit {
     let damage = attack-this.extraDefense
     this.hp -= damage
     if (this.isDead()){
+      this.board.getUnit(this.x,this.y,this.x,this.y,2)
       this.board.units[this.x][this.y] = null
-      self.board.getUnit(self.x,self.y,self.x,self.y,2)
       clearInterval(this.attackLoop)
       delete this
+    }else {
+      this.board.getUnit(this.x,this.y,this.x,this.y,0)
     }
-    this.board.getUnit(this.x,this.y,this.x,this.y,0)
   }
 
   isDead(){

@@ -70,7 +70,7 @@ public class BoardController : MonoBehaviour {
     #endregion
 
     #region unit
-    public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction,float hp,bool isHide,bool isOwner)
+    public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction,float hp,bool isHide,bool isOwner,int status)
     {
         Debug.Log("x = " + x + " y = " + y + " changeX = " + changeX + " changeY = " + changeY + " direction = " + direction + " hp = " + hp + " isHide = " + isHide + " isOwner = " + isOwner);
         if (!boardUnit[x, y])
@@ -86,6 +86,21 @@ public class BoardController : MonoBehaviour {
         }else
         {
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetDirection(direction);
+            if (status == 0)
+            {
+                Debug.Log("Normal");
+            }
+            else if (status == 1)
+            {
+                Debug.Log("Attack");
+            }else if (status == 2)
+            {
+                Debug.Log("Dead");
+            }
+            else if (status == 3)
+            {
+                Debug.Log("Special");
+            }
         }
         if (x != changeX || y != changeY)
         {

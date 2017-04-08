@@ -212,10 +212,11 @@ public class DGTPacket : PacketManager {
             float hp = pr.ReadFloat();
             bool isHide = pr.ReadUInt8() == 1;
             bool isOwner = pr.ReadUInt8() == 1;
-            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction,hp,isHide,isOwner);
+            int status = pr.ReadUInt8();
+            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction,hp,isHide,isOwner,status);
             return;
         }
-        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false,false);
+        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false,false,0);
     }
 
     public void UpdateUnitRequest(int x,int y)
