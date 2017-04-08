@@ -21,7 +21,8 @@ let packet = {
   SERVER_UPDATE_BOARD : 20002,
   SERVER_UPDATE_UNIT : 20003,
   SERVER_UPDATE_TILE : 20004,
-  SERVER_NOTIFY_KICK_ROOM : 20005
+  SERVER_NOTIFY_KICK_ROOM : 20005,
+  SERVER_UPDATE_HP : 20006
 }
 //</editor-fold>
 
@@ -152,6 +153,16 @@ packet[packet.CLIENT_UNIT_HIDE] = (remote,data) => {
   let x = data.read_uint8()
   let y = data.read_uint8()
   remote.hide(x,y)
+}
+//</editor-fold>
+
+//<editor-fold> Exit Condition
+packet.updateHp = (hp,opHp)=>{
+  let pw = new packetWriter(packet.SERVER_UPDATE_HP)
+  pw.append_float(hp)
+  pw.append_float(opHp)
+  pw.finish();
+  return pw.buffer
 }
 //</editor-fold>
 module.exports = packet

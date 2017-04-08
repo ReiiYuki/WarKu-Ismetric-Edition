@@ -84,6 +84,12 @@ class Room {
     else if (direction==3) return 4
     else if (direction==4) return 3
   }
+
+  updateHp(remote){
+    let opRemote = this.remotes.find((rem)=>(rem!=remote))
+    remote.updateHp(remote.hp,opRemote.hp)
+    opRemote.updateHp(opRemote.hp,remote.hp)
+  }
 }
 
 module.exports = Room
