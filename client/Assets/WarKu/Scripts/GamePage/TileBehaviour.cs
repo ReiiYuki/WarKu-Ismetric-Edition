@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TileBehaviour : MonoBehaviour {
 
+    public Texture2D cursor;
     public GameObject tooltip,explosion;
     public bool canMove;
     public int x, y;
@@ -33,6 +34,7 @@ public class TileBehaviour : MonoBehaviour {
 
     void OnMouseDown()
     {
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         if (GameObject.FindObjectOfType<Selector>().IsCreation())
         {
             DGTProxyRemote.GetInstance().RequestSpawnUnit(x, y, GameObject.FindObjectOfType<Selector>().GetUnitCreationType());
