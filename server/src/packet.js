@@ -127,6 +127,7 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote,status) => {
     pw.append_uint8(status)
   }else {
     pw.append_int8(-1)
+    pw.append_uint8(status)
   }
   pw.finish()
   return pw.buffer

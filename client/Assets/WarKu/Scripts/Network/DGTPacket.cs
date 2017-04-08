@@ -206,17 +206,21 @@ public class DGTPacket : PacketManager {
         int changeX = pr.ReadUInt8();
         int changeY = pr.ReadUInt8();
         int type = pr.ReadInt8();
+        int status = 0;
         if (type != -1)
         {
             int direction = pr.ReadUInt8();
             float hp = pr.ReadFloat();
             bool isHide = pr.ReadUInt8() == 1;
             bool isOwner = pr.ReadUInt8() == 1;
-            int status = pr.ReadUInt8();
+            status = pr.ReadUInt8();
             DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction,hp,isHide,isOwner,status);
             return;
+        }else
+        {
+            status = pr.ReadUInt8();
         }
-        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false,false,0);
+        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false,false,status);
     }
 
     public void UpdateUnitRequest(int x,int y)

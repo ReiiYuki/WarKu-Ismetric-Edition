@@ -97,10 +97,9 @@ class Board {
           this.floors[targetX][targetY] = 21
         }
         if ([18,20,21].indexOf(this.floors[targetX][targetY])>=0){
-          this.getUnit(x,y,x,y,3)
           this.units[x][y] = null
           this.updateTile(targetX,targetY)
-          this.getUnit(x,y,x,y,0)
+          this.getUnit(x,y,x,y,3)
         }
       }
     }

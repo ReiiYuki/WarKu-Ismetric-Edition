@@ -114,7 +114,12 @@ public class BoardController : MonoBehaviour {
         {
             Destroy(boardUnit[x, y]);
             boardUnit[x, y] = null;
-        }else
+            if (status == 3)
+            {
+                boardFloor[x, y].GetComponent<TileBehaviour>().Explosion();
+            }
+        }
+        else
         {
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
             boardUnit[x, y].GetComponent<UnitBehaviour>().Hide(isHide);
