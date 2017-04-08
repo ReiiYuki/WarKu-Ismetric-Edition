@@ -95,7 +95,12 @@ class Room {
     if (this.remotes[0].isReady&&this.remotes[1].isReady){
       this.remotes[0].start()
       this.remotes[1].start()
+      this.board.start()
     }
+  }
+
+  end(){
+    this.board.end()
   }
 }
 

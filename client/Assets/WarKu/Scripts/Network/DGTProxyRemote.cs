@@ -112,7 +112,6 @@ public class DGTProxyRemote : MonoBehaviour {
 
     public void NotifyStart()
     {
-        Debug.Log("Start");
         SetState(State.START);
     }
     
@@ -123,7 +122,7 @@ public class DGTProxyRemote : MonoBehaviour {
 
     public void UpdateTime(int time)
     {
-
+        Debug.Log(time);
     }
 
     public void UpdateHP(float hp,float opHp)

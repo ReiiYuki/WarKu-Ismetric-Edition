@@ -241,9 +241,20 @@ class Board {
 
 //<editor-fold> Exit Condition
   updateTime(){
-    this.remotes.foreach((remote)=>{
+    this.remotes.forEach((remote)=>{
       remote.updateTime(this.time)
     })
+  }
+
+  start(){
+    this.timeloop = setInterval((self)=>{
+      self.time-=1
+      self.updateTime()
+    },1000,this)
+  }
+
+  end(){
+    clearInterval(this.timeloop)
   }
 //</editor-fold>
 
