@@ -21,15 +21,13 @@ public class UnitBehaviour : MonoBehaviour {
     Vector3 right = new Vector3(2f, 1f);
     Vector3 down = new Vector3(2f, -1f);
     List<int[]> path;
-    SpriteRenderer renderer;
     #endregion
 
     #region Ordinary
     // Use this for initialization
     void Start () {
-        offsetVector = new Vector3(0, GetComponent<SpriteRenderer>().sprite.bounds.size.y / 2);
+        offsetVector = new Vector3(0, 0.5f);
         path = new List<int[]>();
-        renderer = GetComponent<SpriteRenderer>();
         transform.position += offsetVector;
     }
 	
@@ -44,6 +42,7 @@ public class UnitBehaviour : MonoBehaviour {
     public void SetDirection(int direction)
     {
         this.direction = direction;
+        GetComponent<DirectionController>().direction = direction;
     }
 
     public void SetPosition(int x,int y)
@@ -102,6 +101,12 @@ public class UnitBehaviour : MonoBehaviour {
     public void SetTarget(int toX,int toY)
     {
         UpdatePath(toX, toY);
+    }
+
+    public void Own(bool ownership)
+    {
+        this.isOwner = ownership;
+        GetComponent<DirectionController>().Own(this.isOwner);
     }
 
     public void UpdatePath(int toX, int toY)
@@ -187,6 +192,13 @@ public class UnitBehaviour : MonoBehaviour {
 
     public void Hide(bool hide)
     {
-        if (renderer) renderer.enabled = !hide;
+        if (hide)
+        {
+            foreach (SpriteRenderer renderer in GetComponentsInChildren<SpriteRenderer>()) if (renderer.enabled) renderer.enabled = !renderer.enabled;
+        }
+        else
+        {
+            foreach (SpriteRenderer renderer in GetComponentsInChildren<SpriteRenderer>()) renderer.enabled = true;;
+        }
     }
 }

@@ -87,7 +87,7 @@ class Board {
   isEndLine(x,y){
     let unit = this.units[x][y]
     if (this.remotes.indexOf(unit.owner)==0) return y==0
-    return y==this.SIZE-1
+    else if (this.remotes.indexOf(unit.owner)==1) return y==this.SIZE-1
     return false
   }
 
