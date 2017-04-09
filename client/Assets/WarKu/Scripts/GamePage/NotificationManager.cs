@@ -7,7 +7,7 @@ public class NotificationManager : MonoBehaviour {
 
     public GameObject notification;
 
-    public AudioClip epicEndline,windSound,drawSound,loseSound;
+    public AudioClip epicEndline,windSound,drawSound,loseSound,spawnSound;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +27,8 @@ public class NotificationManager : MonoBehaviour {
         notification.SetActive(true);
         notification.GetComponentInChildren<Text>().text = "Unit Spawn !";
         notification.GetComponentInChildren<Image>().color = new Color(6f / 255, 163f / 255, 0f);
+        notification.GetComponent<AudioSource>().clip = spawnSound;
+        notification.GetComponent<AudioSource>().Play();
     }
 
     public void NotifyKillEnemy()
