@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class NotificationManager : MonoBehaviour {
 
     public GameObject notification;
+
+    public AudioClip epicEndline;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -66,6 +69,8 @@ public class NotificationManager : MonoBehaviour {
         notification.SetActive(true);
         notification.GetComponentInChildren<Text>().text = "WE REACH ENEMY DEADLINE !";
         notification.GetComponentInChildren<Image>().color = new Color(132f / 255, 0, 231f/255);
+        notification.GetComponent<AudioSource>().clip = epicEndline;
+        notification.GetComponent<AudioSource>().Play();
     }
 
     public void NotifyEnemyEndLine()
@@ -73,5 +78,7 @@ public class NotificationManager : MonoBehaviour {
         notification.SetActive(true);
         notification.GetComponentInChildren<Text>().text = "ENEMY REACH OUR DEADLINE !";
         notification.GetComponentInChildren<Image>().color = new Color(1f, 0, 0);
+        notification.GetComponent<AudioSource>().clip = epicEndline;
+        notification.GetComponent<AudioSource>().Play();
     }
 }
