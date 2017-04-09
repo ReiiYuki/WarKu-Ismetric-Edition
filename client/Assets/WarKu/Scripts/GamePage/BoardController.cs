@@ -84,6 +84,10 @@ public class BoardController : MonoBehaviour {
             boardUnit[x, y].GetComponent<UnitBehaviour>().isOwner = isOwner;
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
             DGTProxyRemote.GetInstance().RequestChangeDirection(x, y, 3);
+            if (isOwner)
+            {
+                GameObject.FindObjectOfType<NotificationManager>().NotifySpawnUnit();
+            }
         }else
         {
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetDirection(direction);
@@ -97,6 +101,12 @@ public class BoardController : MonoBehaviour {
             }else if (status == 2)
             {
                 Debug.Log("Dead");
+                Destroy(boardUnit[x, y]);
+                boardUnit[x, y] = null;
+                if (!isOwner)
+                {
+                    GameObject.FindObjectOfType<NotificationManager>().NotifyKillEnemy();
+                }
             }
             else if (status == 3)
             {
@@ -111,7 +121,8 @@ public class BoardController : MonoBehaviour {
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().SetPosition(changeX, changeY);
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().UpdateDirection();
             boardUnit[x, y] = null;
-        }else if (x == changeX && y == changeY && type == -1)
+        }
+        else if (x == changeX && y == changeY && type == -1)
         {
             Destroy(boardUnit[x, y]);
             boardUnit[x, y] = null;
