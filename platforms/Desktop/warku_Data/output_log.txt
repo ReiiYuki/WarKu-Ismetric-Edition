@@ -26,11 +26,16 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
+<<<<<<< HEAD
 UnloadTime: 1.645431 ms
+=======
+UnloadTime: 1.815307 ms
+>>>>>>> master
 ddd
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+<<<<<<< HEAD
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
 UnloadTime: 3.501035 ms
 
@@ -372,3 +377,8 @@ ReceiveCallback catch
 Setting up 2 worker threads for Enlighten.
   Thread -> id: 24e4 -> priority: 1 
   Thread -> id: 4394 -> priority: 1 
+=======
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1810 -> priority: 1 
+  Thread -> id: 3f10 -> priority: 1 
+>>>>>>> master

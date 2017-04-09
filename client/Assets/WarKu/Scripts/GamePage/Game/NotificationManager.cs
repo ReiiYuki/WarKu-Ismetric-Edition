@@ -7,7 +7,7 @@ public class NotificationManager : MonoBehaviour {
 
     public GameObject notification;
 
-    public AudioClip epicEndline;
+    public AudioClip epicEndline,windSound,drawSound,loseSound,spawnSound,buildSound;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +27,8 @@ public class NotificationManager : MonoBehaviour {
         notification.SetActive(true);
         notification.GetComponentInChildren<Text>().text = "Unit Spawn !";
         notification.GetComponentInChildren<Image>().color = new Color(6f / 255, 163f / 255, 0f);
+        notification.GetComponent<AudioSource>().clip = spawnSound;
+        notification.GetComponent<AudioSource>().Play();
     }
 
     public void NotifyKillEnemy()
@@ -41,6 +43,8 @@ public class NotificationManager : MonoBehaviour {
         notification.SetActive(true);
         notification.GetComponentInChildren<Text>().text = "VICTORY !";
         notification.GetComponentInChildren<Image>().color = new Color(3f / 255, 96f / 255, 174f/255);
+        notification.GetComponent<AudioSource>().clip = windSound;
+        notification.GetComponent<AudioSource>().Play();
     }
 
     public void NotifyDraw()
@@ -48,6 +52,8 @@ public class NotificationManager : MonoBehaviour {
         notification.SetActive(true);
         notification.GetComponentInChildren<Text>().text = "RETREAT !";
         notification.GetComponentInChildren<Image>().color = new Color(231f / 255, 177f / 255, 0f);
+        notification.GetComponent<AudioSource>().clip = drawSound;
+        notification.GetComponent<AudioSource>().Play();
     }
 
     public void NotifyLose()
@@ -55,11 +61,15 @@ public class NotificationManager : MonoBehaviour {
         notification.SetActive(true);
         notification.GetComponentInChildren<Text>().text = "WE LOST THE LAND !";
         notification.GetComponentInChildren<Image>().color = new Color(212f / 255, 0, 0);
+        notification.GetComponent<AudioSource>().clip = loseSound;
+        notification.GetComponent<AudioSource>().Play();
     }
 
     public void NotifyNewBuilding()
     {
         notification.SetActive(true);
+        notification.GetComponent<AudioSource>().clip = buildSound;
+        notification.GetComponent<AudioSource>().Play();
         notification.GetComponentInChildren<Text>().text = "NEW BUILDING !";
         notification.GetComponentInChildren<Image>().color = new Color(94f / 255, 228f/255, 1f);
     }
