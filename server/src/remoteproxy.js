@@ -109,6 +109,9 @@ class RemoteProxy extends server.RemoteProxy {
 
   showResult(result){
     this.send(packet.showResult(result))
+    setTimeout((self)=>{
+      lobby.removeRoom(self)
+    },10000,this)
   }
 //</editor-fold>
 }

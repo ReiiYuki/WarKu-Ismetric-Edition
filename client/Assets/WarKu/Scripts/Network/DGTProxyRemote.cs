@@ -138,9 +138,9 @@ public class DGTProxyRemote : MonoBehaviour {
 
     public void OnResult(int result)
     {
-        if (result == 0) GameObject.FindObjectOfType<NotificationManager>().NotifyWin();
+        if (result == 2) GameObject.FindObjectOfType<NotificationManager>().NotifyWin();
         else if (result == 1) GameObject.FindObjectOfType<NotificationManager>().NotifyDraw();
-        else if (result == 2) GameObject.FindObjectOfType<NotificationManager>().NotifyLose();
+        else if (result == 0) GameObject.FindObjectOfType<NotificationManager>().NotifyLose();
     }
     #endregion
 
