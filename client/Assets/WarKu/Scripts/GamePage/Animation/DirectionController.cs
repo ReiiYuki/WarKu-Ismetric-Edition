@@ -14,8 +14,6 @@ public class DirectionController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (front)
-            Debug.Log(front.transform.position);
         if (isOwner)
         {
             if (direction == 0)
@@ -84,7 +82,6 @@ public class DirectionController : MonoBehaviour {
                 front.transform.localPosition = new Vector3(-3.5f, -3);
             }
         }
-		
 	}
 
     public void BackFirst(bool isBack)
@@ -122,8 +119,6 @@ public class DirectionController : MonoBehaviour {
     public void Own(bool ownersip)
     {
         this.isOwner = ownersip;
-        Debug.Log(ownersip);
-
         if (this.isOwner==false)
         {
             front.SetActive(true);
@@ -132,5 +127,15 @@ public class DirectionController : MonoBehaviour {
             foreach (SpriteRenderer ren in GetComponentsInChildren<SpriteRenderer>()) ren.color = new Color(210 / 255f, 173 / 255f, 139 / 255f);
         }
 
+    }
+
+    public void Attack()
+    {
+        GetComponentInChildren<Animator>().SetTrigger("Attack");
+    }
+
+    public void Dead()
+    {
+        GetComponentInChildren<Animator>().SetTrigger("Dead");
     }
 }

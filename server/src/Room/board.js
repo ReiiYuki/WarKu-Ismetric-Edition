@@ -5,7 +5,7 @@ class Board {
     this.SIZE = 16
     this.createFloor()
     this.remotes = remotes
-    this.time = 183
+    this.time = 30
   }
 //</editor-fold>
 
