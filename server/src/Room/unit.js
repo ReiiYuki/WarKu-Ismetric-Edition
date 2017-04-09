@@ -46,7 +46,7 @@ class Unit {
       this.range = 1
       this.hp = 6
       this.atkSpd = 6
-    }else if (this.type == 2){
+    }else if (this.type == 3){
       this.attack = 2
       this.speed = 2
       this.range = 2
@@ -58,7 +58,7 @@ class Unit {
       this.range = 1
       this.hp = 10
       this.atkSpd = 2
-    }else if (this.type == 3){
+    }else if (this.type == 2){
       this.attack = 5
       this.speed = 3
       this.range = 1
