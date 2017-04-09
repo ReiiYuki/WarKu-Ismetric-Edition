@@ -19,18 +19,18 @@ Platform assembly: G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\
 Loading G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.025 seconds
+- Completed reload, in  0.024 seconds
 Platform assembly: G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.815307 ms
+UnloadTime: 1.374419 ms
 ddd
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1810 -> priority: 1 
-  Thread -> id: 3f10 -> priority: 1 
+  Thread -> id: 5a98 -> priority: 1 
+  Thread -> id: 49f4 -> priority: 1 
