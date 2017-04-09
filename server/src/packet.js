@@ -26,7 +26,8 @@ let packet = {
   SERVER_UPDATE_HP : 20006,
   SERVER_UPDATE_TIME : 20007,
   SERVER_NOTIFY_START : 20008,
-  SERVER_SHOW_RESULT : 20009
+  SERVER_SHOW_RESULT : 20009,
+  SERVER_NOTIFY_BACK_TO_LOBBY : 20010
 }
 //</editor-fold>
 
@@ -163,10 +164,11 @@ packet[packet.CLIENT_UNIT_HIDE] = (remote,data) => {
 //</editor-fold>
 
 //<editor-fold> Exit Condition
-packet.updateHp = (hp,opHp)=>{
+packet.updateHp = (hp,opHp,atk)=>{
   let pw = new packetWriter(packet.SERVER_UPDATE_HP)
   pw.append_float(hp)
   pw.append_float(opHp)
+  pw.append_uint8(atk)
   pw.finish();
   return pw.buffer
 }

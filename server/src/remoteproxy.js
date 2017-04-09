@@ -90,8 +90,8 @@ class RemoteProxy extends server.RemoteProxy {
   //</editor-fold>
 
 //<editor-fold> End Condition
-  updateHp(hp,hpOp){
-    this.send(packet.updateHp(hp,hpOp))
+  updateHp(hp,hpOp,atk){
+    this.send(packet.updateHp(hp,hpOp,atk))
   }
 
   updateTime(time) {
@@ -109,6 +109,9 @@ class RemoteProxy extends server.RemoteProxy {
 
   showResult(result){
     this.send(packet.showResult(result))
+    setTimeout((self)=>{
+      lobby.removeRoom(self)
+    },5000,this)
   }
 //</editor-fold>
 }

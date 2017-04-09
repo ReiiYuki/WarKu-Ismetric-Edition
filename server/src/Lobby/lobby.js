@@ -19,10 +19,12 @@ class Lobby {
   removeRoom(remote){
     let room = this.room.find((room)=>(room.remotes.indexOf(remote)>=0))
     room.end()
-    room.remotes.forEach((remote)=>{
-      this.addRemote(remote)
-      remote.notifyKickedToLobby()
-      remote.room = null
+    room.remotes.forEach((rem)=>{
+      if (rem){
+        this.addRemote(rem)
+        rem.notifyKickedToLobby()
+        rem.room = null
+      }
     })
     this.room.splice(this.room.indexOf(room),1)
   }
