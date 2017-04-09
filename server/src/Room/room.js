@@ -9,6 +9,7 @@ class Room {
 
   addPlayer(remote){
     remote.playerNum = this.remotes.length
+    remote.hp = 50
     this.remotes.push(remote)
     if (this.remotes.length == 2){
       this.remotes[0].responseCreateRoomSuccess(this.id)
@@ -43,7 +44,7 @@ class Room {
       x = this.inversePosition(x)
       y = this.inversePosition(y)
     }
-    this.board.updateUnit(x,y)
+    this.board.updateUnit(remote,x,y)
   }
 
   changeDirection(remote,x,y,direction){
@@ -82,6 +83,24 @@ class Room {
     else if (direction==2) return 1
     else if (direction==3) return 4
     else if (direction==4) return 3
+  }
+
+  updateHp(remote){
+    let opRemote = this.remotes.find((rem)=>(rem!=remote))
+    remote.updateHp(remote.hp,opRemote.hp)
+    opRemote.updateHp(opRemote.hp,remote.hp)
+  }
+
+  shouldStart(){
+    if (this.remotes[0].isReady&&this.remotes[1].isReady){
+      this.remotes[0].start()
+      this.remotes[1].start()
+      this.board.start()
+    }
+  }
+
+  end(){
+    this.board.end()
   }
 }
 

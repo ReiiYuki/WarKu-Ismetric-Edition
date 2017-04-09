@@ -10,7 +10,17 @@ class RemoteProxy extends server.RemoteProxy {
   }
 
   onDisconnected() {
+    lobby.removeRoom(this)
+    lobby.removeRemote(this)
     console.log("RemoteProxy Disconnected from " + this.getPeerName())
+  }
+
+  notifyKickedToLobby(){
+    this.send(packet.notifyKickedToLobby())
+  }
+
+  cancelFindRoom(){
+    lobby.removeRoom(this)
   }
 //</editor-fold>
 
@@ -54,8 +64,8 @@ class RemoteProxy extends server.RemoteProxy {
     this.room.moveUnit(this,x,y,direction)
   }
 
-  updateUnit(x,y,changeX,changeY,unit){
-    this.send(packet.updateUnit(x,y,changeX,changeY,unit,this))
+  updateUnit(x,y,changeX,changeY,unit,status){
+    this.send(packet.updateUnit(x,y,changeX,changeY,unit,this,status))
   }
 
   updateUnitR(x,y){
@@ -79,5 +89,30 @@ class RemoteProxy extends server.RemoteProxy {
   }
   //</editor-fold>
 
+//<editor-fold> End Condition
+  updateHp(hp,hpOp,atk){
+    this.send(packet.updateHp(hp,hpOp,atk))
+  }
+
+  updateTime(time) {
+    this.send(packet.updateTime(time))
+  }
+
+  ready(){
+    this.isReady = true
+    this.room.shouldStart()
+  }
+
+  start(){
+    this.send(packet.notifyStart())
+  }
+
+  showResult(result){
+    this.send(packet.showResult(result))
+    setTimeout((self)=>{
+      lobby.removeRoom(self)
+    },10000,this)
+  }
+//</editor-fold>
 }
 module.exports = RemoteProxy
