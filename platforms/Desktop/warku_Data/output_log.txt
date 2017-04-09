@@ -19,25 +19,25 @@ Platform assembly: G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\
 Loading G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
 Loading G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.028 seconds
+- Completed reload, in  0.025 seconds
 Platform assembly: G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: G:\workspace\Unity\WarKu-Isometric-Edition\platforms\Desktop\warku_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.726419 ms
+UnloadTime: 1.435653 ms
 ddd
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.593875 ms
+UnloadTime: 3.956936 ms
 
 Unloading 65 unused Assets to reduce memory usage. Loaded Objects now: 1326.
-Total: 0.431407 ms (FindLiveObjects: 0.068740 ms CreateObjectMapping: 0.034370 ms MarkObjects: 0.267061 ms  DeleteObjects: 0.056493 ms)
+Total: 0.474864 ms (FindLiveObjects: 0.106666 ms CreateObjectMapping: 0.033580 ms MarkObjects: 0.269036 ms  DeleteObjects: 0.060049 ms)
 
-x = 3 y = 0 changeX = 3 changeY = 0 direction = 0 hp = 10 isHide = False isOwner = False
+x = 7 y = 0 changeX = 7 changeY = 0 direction = 0 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -60,7 +60,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 0 changeX = 3 changeY = 0 direction = 4 hp = 10 isHide = False isOwner = False
+x = 7 y = 0 changeX = 7 changeY = 0 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -83,7 +83,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 0 changeX = 3 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+x = 7 y = 0 changeX = 7 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -91,7 +91,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 1 changeX = 3 changeY = 1 direction = 4 hp = 10 isHide = False isOwner = False
+x = 7 y = 1 changeX = 7 changeY = 1 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -114,7 +114,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 1 changeX = 3 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
+x = 7 y = 1 changeX = 7 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -122,7 +122,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 2 changeX = 3 changeY = 2 direction = 4 hp = 10 isHide = False isOwner = False
+x = 7 y = 2 changeX = 7 changeY = 2 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -145,7 +145,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 2 changeX = 3 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
+x = 7 y = 2 changeX = 7 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -153,7 +153,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 3 changeX = 3 changeY = 3 direction = 4 hp = 10 isHide = False isOwner = False
+x = 7 y = 3 changeX = 7 changeY = 3 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -176,7 +176,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 3 changeX = 3 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 7 y = 3 changeX = 7 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -184,7 +184,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 4 changeX = 3 changeY = 4 direction = 4 hp = 10 isHide = False isOwner = False
+x = 7 y = 4 changeX = 7 changeY = 4 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -207,7 +207,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 4 changeX = 3 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+x = 7 y = 4 changeX = 7 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -215,7 +215,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 5 changeX = 3 changeY = 5 direction = 4 hp = 10 isHide = False isOwner = False
+x = 7 y = 5 changeX = 7 changeY = 5 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -238,7 +238,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 5 changeX = 3 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
+x = 7 y = 5 changeX = 7 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -246,7 +246,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 6 changeX = 3 changeY = 6 direction = 4 hp = 10 isHide = False isOwner = False
+x = 7 y = 6 changeX = 7 changeY = 6 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -269,7 +269,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 6 changeX = 3 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
+x = 7 y = 6 changeX = 7 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -277,7 +277,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 7 changeX = 3 changeY = 7 direction = 4 hp = 10 isHide = False isOwner = False
+x = 7 y = 7 changeX = 7 changeY = 7 direction = 1 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -300,7 +300,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 7 changeX = 3 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
+x = 7 y = 7 changeX = 6 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -308,7 +308,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 8 changeX = 3 changeY = 8 direction = 4 hp = 10 isHide = False isOwner = False
+x = 6 y = 7 changeX = 6 changeY = 7 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -331,7 +331,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 8 changeX = 3 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 7 changeX = 6 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -339,7 +339,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 9 changeX = 3 changeY = 9 direction = 4 hp = 10 isHide = False isOwner = False
+x = 6 y = 8 changeX = 6 changeY = 8 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -362,7 +362,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 9 changeX = 3 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 8 changeX = 6 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -370,7 +370,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 10 changeX = 3 changeY = 10 direction = 4 hp = 10 isHide = False isOwner = False
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -393,31 +393,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 10 y = 15 changeX = 10 changeY = 15 direction = 0 hp = 6 isHide = False isOwner = True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Spawn
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-x = 10 y = 15 changeX = 10 changeY = 15 direction = 3 hp = 6 isHide = False isOwner = True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Normal
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-x = 10 y = 15 changeX = 10 changeY = 15 direction = 3 hp = 6 isHide = False isOwner = True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Normal
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-x = 3 y = 10 changeX = 3 changeY = 11 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 9 changeX = 6 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -425,7 +401,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 11 changeX = 3 changeY = 11 direction = 4 hp = 10 isHide = False isOwner = False
+x = 6 y = 10 changeX = 6 changeY = 10 direction = 4 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -448,15 +424,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 10 y = 15 changeX = 10 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Normal
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-x = 3 y = 11 changeX = 3 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 10 changeX = 6 changeY = 11 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -464,7 +432,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 12 changeX = 3 changeY = 12 direction = 2 hp = 10 isHide = False isOwner = False
+x = 6 y = 11 changeX = 6 changeY = 11 direction = 3 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -487,7 +455,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 3 y = 12 changeX = 4 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 11 changeX = 6 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -495,7 +463,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 4 y = 12 changeX = 4 changeY = 12 direction = 2 hp = 10 isHide = False isOwner = False
+x = 6 y = 10 changeX = 6 changeY = 10 direction = 3 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -518,7 +486,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 4 y = 12 changeX = 5 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 10 changeX = 6 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -526,7 +494,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 5 y = 12 changeX = 5 changeY = 12 direction = 2 hp = 10 isHide = False isOwner = False
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 3 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -549,7 +517,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 5 y = 12 changeX = 6 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 9 changeX = 6 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -557,7 +525,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 6 y = 12 changeX = 6 changeY = 12 direction = 2 hp = 10 isHide = False isOwner = False
+x = 6 y = 8 changeX = 6 changeY = 8 direction = 3 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -580,7 +548,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 6 y = 12 changeX = 7 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 8 changeX = 6 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -588,7 +556,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 7 y = 12 changeX = 7 changeY = 12 direction = 2 hp = 10 isHide = False isOwner = False
+x = 6 y = 7 changeX = 6 changeY = 7 direction = 2 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -611,7 +579,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 7 y = 12 changeX = 8 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 7 changeX = 7 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -619,7 +587,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 12 changeX = 8 changeY = 12 direction = 2 hp = 10 isHide = False isOwner = False
+x = 7 y = 7 changeX = 7 changeY = 7 direction = 2 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -642,7 +610,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 8 y = 12 changeX = 9 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+x = 7 y = 7 changeX = 8 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -650,7 +618,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 12 changeX = 9 changeY = 12 direction = 2 hp = 10 isHide = False isOwner = False
+x = 8 y = 7 changeX = 8 changeY = 7 direction = 2 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -673,7 +641,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 9 y = 12 changeX = 10 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+x = 8 y = 7 changeX = 9 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -681,7 +649,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 12 changeX = 10 changeY = 12 direction = 4 hp = 10 isHide = False isOwner = False
+x = 9 y = 7 changeX = 9 changeY = 7 direction = 2 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -704,7 +672,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 10 y = 12 changeX = 10 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+x = 9 y = 7 changeX = 10 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -712,7 +680,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 13 changeX = 10 changeY = 13 direction = 0 hp = 10 isHide = False isOwner = False
+x = 10 y = 7 changeX = 10 changeY = 7 direction = 2 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -735,184 +703,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 10 y = 14 changeX = 10 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Normal
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-x = 10 y = 13 changeX = 10 changeY = 13 direction = 0 hp = 10 isHide = False isOwner = False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Spawn
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-IndexOutOfRangeException: Array index is out of range.
-  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
-  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
-  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
-  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-x = 10 y = 14 changeX = 10 changeY = 14 direction = 0 hp = 3 isHide = False isOwner = True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Normal
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-x = 10 y = 13 changeX = 10 changeY = 13 direction = 0 hp = 10 isHide = False isOwner = False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Spawn
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-IndexOutOfRangeException: Array index is out of range.
-  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
-  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
-  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
-  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-x = 10 y = 13 changeX = 10 changeY = 13 direction = 0 hp = 10 isHide = False isOwner = False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Spawn
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-IndexOutOfRangeException: Array index is out of range.
-  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
-  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
-  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
-  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-x = 10 y = 14 changeX = 10 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = True
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Dead
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
-  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
-  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
-  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-x = 10 y = 13 changeX = 10 changeY = 13 direction = 0 hp = 10 isHide = False isOwner = False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Spawn
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-IndexOutOfRangeException: Array index is out of range.
-  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
-  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
-  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
-  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-x = 10 y = 13 changeX = 10 changeY = 13 direction = 0 hp = 10 isHide = False isOwner = False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Spawn
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-IndexOutOfRangeException: Array index is out of range.
-  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
-  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
-  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
-  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-x = 10 y = 13 changeX = 10 changeY = 13 direction = 2 hp = 10 isHide = False isOwner = False
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Spawn
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-IndexOutOfRangeException: Array index is out of range.
-  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
-  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
-  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
-  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
-  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
-  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
-  at DGTController.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-x = 10 y = 13 changeX = 11 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+x = 10 y = 7 changeX = 11 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -920,7 +711,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 11 y = 13 changeX = 11 changeY = 13 direction = 4 hp = 10 isHide = False isOwner = False
+x = 11 y = 7 changeX = 11 changeY = 7 direction = 2 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -943,7 +734,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 11 y = 13 changeX = 11 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
+x = 11 y = 7 changeX = 12 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -951,7 +742,7 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 11 y = 14 changeX = 11 changeY = 14 direction = 4 hp = 10 isHide = False isOwner = False
+x = 12 y = 7 changeX = 12 changeY = 7 direction = 2 hp = 15 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -974,7 +765,7 @@ IndexOutOfRangeException: Array index is out of range.
  
 (Filename:  Line: -1)
 
-x = 11 y = 14 changeX = 11 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
+x = 12 y = 7 changeX = 13 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -982,7 +773,30 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 11 y = 15 changeX = 11 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
+x = 13 y = 7 changeX = 13 changeY = 7 direction = 4 hp = 15 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+IndexOutOfRangeException: Array index is out of range.
+  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
+  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
+  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
+  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+x = 13 y = 7 changeX = 13 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -990,18 +804,15 @@ Nooooooooooooooooo
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-47 hp 50
+ReceiveCallback catch
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-(1.0, 1.0, 1.0)
+--------------------------------- EventConnectionLost 
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-(47.0, 1.0, 1.0)
+------------------------------ ConnectionLost
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 537c -> priority: 1 
-  Thread -> id: 2f40 -> priority: 1 
