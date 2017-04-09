@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class BuildAction : MonoBehaviour {
 
-    void OnMouseDown()
+    public Texture2D cursor;
+
+    public void Perform()
     {
-        GameObject.FindObjectOfType<Selector>().ReadyToBuild(transform.parent.parent.gameObject);
-        transform.parent.parent.GetChild(0).gameObject.SetActive(false);
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+        GameObject.FindObjectOfType<Selector>().ReadyToBuild(GameObject.FindObjectOfType<Selector>().GetCurrentTile());
+        GameObject.FindObjectOfType<ToolTipManager>().HideToolTip();
     }
 }

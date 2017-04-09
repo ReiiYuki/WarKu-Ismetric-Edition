@@ -33,12 +33,20 @@ public class DGTPacket : PacketManager {
         CLIENT_CHANGE_UNIT_DIRECTION = 10006,
         CLIENT_WORKER_UNIT_BUILD = 10007,
         CLIENT_UNIT_HIDE = 10008,
+        CLIENT_CANCEL_WAITING_QUEUE = 10009,
+        CLIENT_READY = 10010,
 
         SERVER_LOGIN_SUCCESS = 20000,
         SERVER_CREATE_ROOM_SUCCESS = 20001,
         SERVER_UPDATE_BOARD = 20002,
         SERVER_UPDATE_UNIT = 20003,
-        SERVER_UPDATE_TILE = 20004
+        SERVER_UPDATE_TILE = 20004,
+        SERVER_NOTIFY_KICK_ROOM = 20005,
+        SERVER_UPDATE_HP = 20006,
+        SERVER_UPDATE_TIME = 20007,
+        SERVER_NOTIFY_START = 20008,
+        SERVER_SHOW_RESULT = 20009
+
     }
     #endregion
 
@@ -77,9 +85,46 @@ public class DGTPacket : PacketManager {
         _Mapper[(int)PacketID.SERVER_UPDATE_BOARD] = UpdateBoard;
         _Mapper[(int)PacketID.SERVER_UPDATE_UNIT] = OnUpdateUnit;
         _Mapper[(int)PacketID.SERVER_UPDATE_TILE] = OnUpdateTile;
+        _Mapper[(int)PacketID.SERVER_NOTIFY_KICK_ROOM] = OnCancelRoom;
+        _Mapper[(int)PacketID.SERVER_UPDATE_HP] = UpdateHP;
+        _Mapper[(int)PacketID.SERVER_UPDATE_TIME] = UpdateTime;
+        _Mapper[(int)PacketID.SERVER_NOTIFY_START] = NotifyStart;
+        _Mapper[(int)PacketID.SERVER_SHOW_RESULT] = OnResult;
     }
     #endregion
 
+    #region Room Update Status
+    public void Ready()
+    {
+        PacketWriter packetWriter = BeginSend((int)PacketID.CLIENT_READY);
+        EndSend();
+    }
+
+    public void UpdateHP(int packet_id, PacketReader pr)
+    {
+        float hp = pr.ReadFloat();
+        float opHp = pr.ReadFloat();
+        int atk = pr.ReadUInt8();
+        DGTProxyRemote.GetInstance().UpdateHP(hp, opHp,atk);
+    }
+
+    public void UpdateTime(int packet_id, PacketReader pr)
+    {
+        int time = pr.ReadUInt8();
+        DGTProxyRemote.GetInstance().UpdateTime(time);
+    }
+
+    public void NotifyStart(int packet_id, PacketReader pr)
+    {
+        DGTProxyRemote.GetInstance().NotifyStart();
+    }
+
+    public void OnResult(int packet_id, PacketReader pr)
+    {
+        int result = pr.ReadUInt8();
+        DGTProxyRemote.GetInstance().OnResult(result);
+    }
+    #endregion
     #region ping
     public void RequestPing(int pingTime)
     {
@@ -120,6 +165,16 @@ public class DGTPacket : PacketManager {
         int id = pr.ReadUInt32();
         DGTProxyRemote.GetInstance().OnCreatedRoom(id);
     }
+
+    public void CancelRoom()
+    {
+        PacketWriter packetWriter = BeginSend((int)PacketID.CLIENT_CANCEL_WAITING_QUEUE);
+        EndSend();
+    }
+    public void OnCancelRoom(int packet_id, PacketReader pr)
+    {
+        DGTProxyRemote.GetInstance().OnCancelRoom();
+    }
     #endregion
 
     #region board
@@ -152,16 +207,21 @@ public class DGTPacket : PacketManager {
         int changeX = pr.ReadUInt8();
         int changeY = pr.ReadUInt8();
         int type = pr.ReadInt8();
+        int status = 0;
         if (type != -1)
         {
             int direction = pr.ReadUInt8();
             float hp = pr.ReadFloat();
             bool isHide = pr.ReadUInt8() == 1;
             bool isOwner = pr.ReadUInt8() == 1;
-            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction,hp,isHide,isOwner);
+            status = pr.ReadUInt8();
+            DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY ,type,direction,hp,isHide,isOwner,status);
             return;
+        }else
+        {
+            status = pr.ReadUInt8();
         }
-        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false,false);
+        DGTProxyRemote.GetInstance().OnUpdateUnit(x, y,changeX,changeY, type,0,0,false,false,status);
     }
 
     public void UpdateUnitRequest(int x,int y)

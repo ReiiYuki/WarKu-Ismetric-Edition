@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class MoveAction : MonoBehaviour {
 
-    void OnMouseDown()
+    public Texture2D cursor; 
+
+    public void Perform()
     {
-        GameObject.FindObjectOfType<Selector>().ReadyToMove(transform.parent.parent.GetChild(1).gameObject);
-        transform.parent.parent.GetChild(0).gameObject.SetActive(false);
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
+        GameObject.FindObjectOfType<Selector>().ReadyToMove(GameObject.FindObjectOfType<Selector>().GetCurrentTile().GetComponentInChildren<UnitBehaviour>().gameObject);
+        GameObject.FindObjectOfType<ToolTipManager>().HideToolTip();
     }
 }

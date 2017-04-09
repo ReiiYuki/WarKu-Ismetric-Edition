@@ -70,7 +70,7 @@ public class BoardController : MonoBehaviour {
     #endregion
 
     #region unit
-    public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction,float hp,bool isHide,bool isOwner)
+    public void UpdateUnit(int x,int y,int changeX,int changeY,int type,int direction,float hp,bool isHide,bool isOwner,int status)
     {
         Debug.Log("x = " + x + " y = " + y + " changeX = " + changeX + " changeY = " + changeY + " direction = " + direction + " hp = " + hp + " isHide = " + isHide + " isOwner = " + isOwner);
         if (!boardUnit[x, y])
@@ -79,13 +79,39 @@ public class BoardController : MonoBehaviour {
             if (type == -1) return;
             boardUnit[x, y] = Instantiate(unitPrototype[type], GetPositionOfTile(x,y)+new Vector3(0f,0f,-1f), Quaternion.identity);
             boardUnit[x, y].transform.SetParent(boardFloor[x, y].transform);
+            boardUnit[x, y].GetComponent<UnitBehaviour>().type = type;
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetPosition(x,y);
             boardUnit[x, y].GetComponent<UnitBehaviour>().isOwner = isOwner;
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
             DGTProxyRemote.GetInstance().RequestChangeDirection(x, y, 3);
+            if (isOwner)
+            {
+                GameObject.FindObjectOfType<NotificationManager>().NotifySpawnUnit();
+            }
         }else
         {
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetDirection(direction);
+            if (status == 0)
+            {
+                Debug.Log("Normal");
+            }
+            else if (status == 1)
+            {
+                Debug.Log("Attack");
+            }else if (status == 2)
+            {
+                Debug.Log("Dead");
+                Destroy(boardUnit[x, y]);
+                boardUnit[x, y] = null;
+                if (!isOwner)
+                {
+                    GameObject.FindObjectOfType<NotificationManager>().NotifyKillEnemy();
+                }
+            }
+            else if (status == 3)
+            {
+                boardFloor[x, y].GetComponent<TileBehaviour>().Explosion();
+            }
         }
         if (x != changeX || y != changeY)
         {
@@ -95,11 +121,17 @@ public class BoardController : MonoBehaviour {
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().SetPosition(changeX, changeY);
             boardUnit[changeX, changeY].GetComponent<UnitBehaviour>().UpdateDirection();
             boardUnit[x, y] = null;
-        }else if (x == changeX && y == changeY && type == -1)
+        }
+        else if (x == changeX && y == changeY && type == -1)
         {
             Destroy(boardUnit[x, y]);
             boardUnit[x, y] = null;
-        }else
+            if (status == 3)
+            {
+                boardFloor[x, y].GetComponent<TileBehaviour>().Explosion();
+            }
+        }
+        else
         {
             boardUnit[x, y].GetComponent<UnitBehaviour>().SetHp(hp);
             boardUnit[x, y].GetComponent<UnitBehaviour>().Hide(isHide);
@@ -114,6 +146,7 @@ public class BoardController : MonoBehaviour {
 
     public void UpdateTile(int x,int y,int type)
     {
+        GameObject.FindObjectOfType<NotificationManager>().NotifyNewBuilding();
         Destroy(boardFloor[x, y]);
         PlaceTile(x, y, tilePrototype[type]);
     }

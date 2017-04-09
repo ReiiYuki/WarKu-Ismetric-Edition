@@ -14,12 +14,20 @@ let packet = {
   CLIENT_CHANGE_UNIT_DIRECTION : 10006,
   CLIENT_WORKER_UNIT_BUILD : 10007,
   CLIENT_UNIT_HIDE : 10008,
+  CLIENT_CANCEL_WAITING_QUEUE : 10009,
+  CLIENT_READY : 10010,
 
   SERVER_LOGIN_SUCCESS : 20000,
   SERVER_JOIN_ROOM_SUCCESS : 20001,
   SERVER_UPDATE_BOARD : 20002,
   SERVER_UPDATE_UNIT : 20003,
-  SERVER_UPDATE_TILE : 20004
+  SERVER_UPDATE_TILE : 20004,
+  SERVER_NOTIFY_KICK_ROOM : 20005,
+  SERVER_UPDATE_HP : 20006,
+  SERVER_UPDATE_TIME : 20007,
+  SERVER_NOTIFY_START : 20008,
+  SERVER_SHOW_RESULT : 20009,
+  SERVER_NOTIFY_BACK_TO_LOBBY : 20010
 }
 //</editor-fold>
 
@@ -64,6 +72,16 @@ packet.responseCreateRoomSuccess = (id) =>{
   pw.finish()
   return pw.buffer
 }
+
+packet[packet.CLIENT_CANCEL_WAITING_QUEUE] = (remote,data) => {
+  remote.cancelFindRoom()
+}
+
+packet.notifyKickedToLobby = ()=>{
+  let pw = new packetWriter(packet.SERVER_NOTIFY_KICK_ROOM)
+  pw.finish()
+  return pw.buffer
+}
 //</editor-fold>
 
 //<editor-fold> Board
@@ -93,7 +111,7 @@ packet[packet.CLIENT_UPDATE_UNIT] = (remote,data)=>{
   remote.updateUnitR(x,y)
 }
 
-packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
+packet.updateUnit = (x,y,changeX,changeY,unit,remote,status) => {
   let pw = new packetWriter(packet.SERVER_UPDATE_UNIT)
   pw.append_uint8(x)
   pw.append_uint8(y)
@@ -107,8 +125,10 @@ packet.updateUnit = (x,y,changeX,changeY,unit,remote) => {
     else pw.append_uint8(0)
     if (unit.isOwner(remote)) pw.append_uint8(1)
     else pw.append_uint8(0)
+    pw.append_uint8(status)
   }else {
     pw.append_int8(-1)
+    pw.append_uint8(status)
   }
   pw.finish()
   return pw.buffer
@@ -140,6 +160,38 @@ packet[packet.CLIENT_UNIT_HIDE] = (remote,data) => {
   let x = data.read_uint8()
   let y = data.read_uint8()
   remote.hide(x,y)
+}
+//</editor-fold>
+
+//<editor-fold> Exit Condition
+packet.updateHp = (hp,opHp,atk)=>{
+  let pw = new packetWriter(packet.SERVER_UPDATE_HP)
+  pw.append_float(hp)
+  pw.append_float(opHp)
+  pw.append_uint8(atk)
+  pw.finish();
+  return pw.buffer
+}
+packet.updateTime = (time) => {
+  let pw = new packetWriter(packet.SERVER_UPDATE_TIME)
+  pw.append_uint8(time)
+  pw.finish()
+  return pw.buffer
+}
+packet[packet.CLIENT_READY] = (remote,data) =>{
+  remote.ready()
+}
+packet.notifyStart = ()=>{
+  let pw = new packetWriter(packet.SERVER_NOTIFY_START)
+  pw.finish()
+  return pw.buffer
+}
+
+packet.showResult = (result) => {
+  let pw = new packetWriter(packet.SERVER_SHOW_RESULT)
+  pw.append_uint8(result)
+  pw.finish()
+  return pw.buffer
 }
 //</editor-fold>
 module.exports = packet

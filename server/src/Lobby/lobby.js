@@ -7,12 +7,26 @@ class Lobby {
   }
 
   addRemote(remote){
+    remote.isReady = false
     this.remotes.push(remote)
     remote.responseLoginSuccess()
   }
 
   removeRemote(remote){
     this.remotes.splice(this.remotes.indexOf(remote), 1)
+  }
+
+  removeRoom(remote){
+    let room = this.room.find((room)=>(room.remotes.indexOf(remote)>=0))
+    room.end()
+    room.remotes.forEach((rem)=>{
+      if (rem){
+        this.addRemote(rem)
+        rem.notifyKickedToLobby()
+        rem.room = null
+      }
+    })
+    this.room.splice(this.room.indexOf(room),1)
   }
 
   joinRoom(remote,type){
@@ -36,9 +50,6 @@ class Lobby {
     })
   }
 
-  removeRemote(remote){
-    
-  }
 }
 
 module.exports = Lobby
