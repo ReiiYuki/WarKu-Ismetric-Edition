@@ -7,7 +7,7 @@ public class NotificationManager : MonoBehaviour {
 
     public GameObject notification;
 
-    public AudioClip epicEndline,windSound,drawSound,loseSound,spawnSound;
+    public AudioClip epicEndline,windSound,drawSound,loseSound,spawnSound,buildSound;
 
 	// Use this for initialization
 	void Start () {
@@ -68,6 +68,8 @@ public class NotificationManager : MonoBehaviour {
     public void NotifyNewBuilding()
     {
         notification.SetActive(true);
+        notification.GetComponent<AudioSource>().clip = buildSound;
+        notification.GetComponent<AudioSource>().Play();
         notification.GetComponentInChildren<Text>().text = "NEW BUILDING !";
         notification.GetComponentInChildren<Image>().color = new Color(94f / 255, 228f/255, 1f);
     }
