@@ -164,10 +164,11 @@ packet[packet.CLIENT_UNIT_HIDE] = (remote,data) => {
 //</editor-fold>
 
 //<editor-fold> Exit Condition
-packet.updateHp = (hp,opHp)=>{
+packet.updateHp = (hp,opHp,atk)=>{
   let pw = new packetWriter(packet.SERVER_UPDATE_HP)
   pw.append_float(hp)
   pw.append_float(opHp)
+  pw.append_uint8(atk)
   pw.finish();
   return pw.buffer
 }

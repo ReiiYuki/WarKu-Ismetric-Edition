@@ -53,4 +53,25 @@ public class NotificationManager : MonoBehaviour {
         notification.GetComponentInChildren<Text>().text = "WE LOST THE LAND !";
         notification.GetComponentInChildren<Image>().color = new Color(212f / 255, 0, 0);
     }
+
+    public void NotifyNewBuilding()
+    {
+        notification.SetActive(true);
+        notification.GetComponentInChildren<Text>().text = "NEW BUILDING !";
+        notification.GetComponentInChildren<Image>().color = new Color(94f / 255, 228f/255, 1f);
+    }
+
+    public void NotifyEndLine()
+    {
+        notification.SetActive(true);
+        notification.GetComponentInChildren<Text>().text = "WE REACH ENEMY DEADLINE !";
+        notification.GetComponentInChildren<Image>().color = new Color(132f / 255, 0, 231f/255);
+    }
+
+    public void NotifyEnemyEndLine()
+    {
+        notification.SetActive(true);
+        notification.GetComponentInChildren<Text>().text = "ENEMY REACH OUR DEADLINE !";
+        notification.GetComponentInChildren<Image>().color = new Color(1f, 0, 0);
+    }
 }

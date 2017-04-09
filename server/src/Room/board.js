@@ -5,7 +5,7 @@ class Board {
     this.SIZE = 16
     this.createFloor()
     this.remotes = remotes
-    this.time = 60
+    this.time = 183
   }
 //</editor-fold>
 
@@ -65,20 +65,23 @@ class Board {
   reachEndLine(x,y){
     if (this.isEndLine(x,y)){
       console.log("End");
-      this.remotes.find((rem)=>(rem!=this.units[x][y])).hp -= this.units[x][y].attack
+      let atk = this.units[x][y].owner
+      this.remotes.find((rem)=>(rem!=this.units[x][y].owner)).hp -= this.units[x][y].attack
       delete this.units[x][y]
       this.units[x][y] = null
       this.getUnit(x,y,x,y,3)
-      this.updateHp()
+      this.updateHp(atk)
     }
   }
 
-  updateHp(){
+  updateHp(atk){
     let hp = this.remotes[0].hp
     let opHp = this.remotes[1].hp
     console.log(hp+" "+opHp);
-    this.remotes[0].updateHp(hp,opHp)
-    this.remotes[1].updateHp(opHp,hp)
+    let num_atk = 0
+    if (atk == this.remotes[1]) num_atk = 1
+    this.remotes[0].updateHp(hp,opHp,num_atk)
+    this.remotes[1].updateHp(opHp,hp,(num_atk-1)*-1)
   }
 
   isEndLine(x,y){
