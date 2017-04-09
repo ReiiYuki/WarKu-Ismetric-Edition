@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class HideAction : MonoBehaviour {
 
-    void OnMouseDown()
+    public void Perform()
     {
-        transform.parent.parent.GetComponentInChildren<UnitBehaviour>().HideRequest();
-        transform.parent.gameObject.SetActive(false);
+        GameObject.FindObjectOfType<Selector>().GetCurrentTile().GetComponentInChildren<UnitBehaviour>().HideRequest();
+        GameObject.FindObjectOfType<ToolTipManager>().HideToolTip();
     }
 
 }

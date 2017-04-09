@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class TileBehaviour : MonoBehaviour {
 
-    public GameObject tooltip,explosion;
-    public bool canMove;
+    public Texture2D cursor;
+    public GameObject explosion;
+    public bool canMove,canHide;
     public int x, y;
 
     void Start()
     {
-        tooltip = Instantiate(tooltip, transform.position+new Vector3(0f,1.5f),Quaternion.identity);
         explosion = Instantiate(explosion, transform.position + new Vector3(0f, 0.35f), Quaternion.identity);
         explosion.transform.SetParent(transform);
         explosion.SetActive(false);
-        tooltip.transform.SetParent(transform);
-        tooltip.SetActive(false);
     }
 
     void Update()
@@ -33,6 +31,7 @@ public class TileBehaviour : MonoBehaviour {
 
     void OnMouseDown()
     {
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         if (GameObject.FindObjectOfType<Selector>().IsCreation())
         {
             DGTProxyRemote.GetInstance().RequestSpawnUnit(x, y, GameObject.FindObjectOfType<Selector>().GetUnitCreationType());
@@ -57,7 +56,11 @@ public class TileBehaviour : MonoBehaviour {
             if (GetComponentInChildren<UnitBehaviour>() && GetComponentInChildren<UnitBehaviour>().isOwner)
             {
                 GetComponentInChildren<UnitBehaviour>().Stop();
-                tooltip.SetActive(true);
+                if (GetComponentInChildren<UnitBehaviour>().direction == 0)
+                {
+                    GameObject.FindObjectOfType<Selector>().SetCurrentTile(gameObject);
+                    GameObject.FindObjectOfType<ToolTipManager>().ShowToolTip();
+                }
             }
         }
     }
@@ -72,7 +75,17 @@ public class TileBehaviour : MonoBehaviour {
 
     public void Explosion()
     {
-        Debug.Log("AAAAAA");
         explosion.SetActive(true);
     }
+
+    void OnMouseEnter()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(96/255f, 203/255f, 255/255f,255/255f);
+    }
+
+    void OnMouseExit()
+    {
+        GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f,1f);
+    }
+
 }

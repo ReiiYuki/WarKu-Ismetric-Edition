@@ -122,17 +122,25 @@ public class DGTProxyRemote : MonoBehaviour {
 
     public void UpdateTime(int time)
     {
-        Debug.Log(time);
+        if (GameObject.FindObjectOfType<TimeUpdator>())
+        {
+            GameObject.FindObjectOfType<TimeUpdator>().SetTime(time);
+        }
     }
 
     public void UpdateHP(float hp,float opHp)
     {
-        Debug.Log(hp + " " + opHp);
+        if (GameObject.FindObjectOfType<HPUpdator>())
+        {
+            GameObject.FindObjectOfType<HPUpdator>().UpdateHP(hp, opHp);
+        }
     }
 
     public void OnResult(int result)
     {
-        Debug.Log(result);
+        if (result == 2) GameObject.FindObjectOfType<NotificationManager>().NotifyWin();
+        else if (result == 1) GameObject.FindObjectOfType<NotificationManager>().NotifyDraw();
+        else if (result == 0) GameObject.FindObjectOfType<NotificationManager>().NotifyLose();
     }
     #endregion
 
