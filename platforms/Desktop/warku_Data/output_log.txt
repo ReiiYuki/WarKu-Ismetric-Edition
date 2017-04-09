@@ -26,18 +26,18 @@ desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.019554 ms
+UnloadTime: 1.599209 ms
 ddd
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.696591 ms
+UnloadTime: 3.362369 ms
 
 Unloading 65 unused Assets to reduce memory usage. Loaded Objects now: 1326.
-Total: 0.410864 ms (FindLiveObjects: 0.058469 ms CreateObjectMapping: 0.018567 ms MarkObjects: 0.271802 ms  DeleteObjects: 0.056888 ms)
+Total: 0.451950 ms (FindLiveObjects: 0.084543 ms CreateObjectMapping: 0.033185 ms MarkObjects: 0.257975 ms  DeleteObjects: 0.070320 ms)
 
-x = 4 y = 0 changeX = 4 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+x = 3 y = 0 changeX = 3 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -45,7 +45,7 @@ Spawn
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 4 y = 0 changeX = 4 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+x = 3 y = 0 changeX = 3 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -53,7 +53,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 4 y = 0 changeX = 4 changeY = 0 direction = 4 hp = 6 isHide = False isOwner = False
+x = 3 y = 0 changeX = 3 changeY = 0 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -61,7 +61,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 4 y = 0 changeX = 4 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+x = 3 y = 0 changeX = 3 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -69,7 +69,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 4 y = 1 changeX = 4 changeY = 1 direction = 1 hp = 6 isHide = False isOwner = False
+x = 3 y = 1 changeX = 3 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -77,7 +77,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 4 y = 1 changeX = 3 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+x = 3 y = 1 changeX = 4 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -85,7 +85,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 1 changeX = 3 changeY = 1 direction = 1 hp = 6 isHide = False isOwner = False
+x = 4 y = 1 changeX = 4 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -93,7 +93,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 1 changeX = 2 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+x = 4 y = 1 changeX = 5 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -101,7 +101,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 2 y = 1 changeX = 2 changeY = 1 direction = 1 hp = 6 isHide = False isOwner = False
+x = 5 y = 1 changeX = 5 changeY = 1 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -109,7 +109,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 2 y = 1 changeX = 1 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 1 changeX = 5 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -117,7 +117,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 1 changeX = 1 changeY = 1 direction = 4 hp = 6 isHide = False isOwner = False
+x = 5 y = 2 changeX = 5 changeY = 2 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -125,7 +125,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 1 changeX = 1 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 2 changeX = 5 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -133,7 +133,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 2 changeX = 1 changeY = 2 direction = 4 hp = 6 isHide = False isOwner = False
+x = 5 y = 3 changeX = 5 changeY = 3 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -141,7 +141,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 2 changeX = 1 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 3 changeX = 5 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -149,7 +149,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 3 changeX = 1 changeY = 3 direction = 4 hp = 6 isHide = False isOwner = False
+x = 5 y = 4 changeX = 5 changeY = 4 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -157,7 +157,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 3 changeX = 1 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 4 changeX = 5 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -165,7 +165,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 4 changeX = 1 changeY = 4 direction = 4 hp = 6 isHide = False isOwner = False
+x = 5 y = 5 changeX = 5 changeY = 5 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -173,7 +173,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 4 changeX = 1 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 5 changeX = 5 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -181,7 +181,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 5 changeX = 1 changeY = 5 direction = 2 hp = 6 isHide = False isOwner = False
+x = 5 y = 6 changeX = 5 changeY = 6 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -189,7 +189,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 1 y = 5 changeX = 2 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 6 changeX = 5 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -197,7 +197,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 2 y = 5 changeX = 2 changeY = 5 direction = 2 hp = 6 isHide = False isOwner = False
+x = 5 y = 7 changeX = 5 changeY = 7 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -205,7 +205,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 2 y = 5 changeX = 3 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 7 changeX = 5 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -213,7 +213,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 5 changeX = 3 changeY = 5 direction = 3 hp = 6 isHide = False isOwner = False
+x = 5 y = 8 changeX = 5 changeY = 8 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -221,7 +221,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 5 changeX = 3 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 8 changeX = 5 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -229,15 +229,1919 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 4 changeX = 3 changeY = 4 direction = 2 hp = 6 isHide = False isOwner = False
+x = 5 y = 15 changeX = 5 changeY = 15 direction = 0 hp = 6 isHide = False isOwner = True
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 15 changeX = 5 changeY = 15 direction = 3 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 15 changeX = 5 changeY = 15 direction = 3 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 15 changeX = 5 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 8 changeY = 15 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 8 changeY = 15 direction = 3 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 8 changeY = 15 direction = 3 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 8 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 14 changeX = 8 changeY = 14 direction = 1 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 14 changeX = 7 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 14 changeX = 7 changeY = 14 direction = 1 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 14 changeX = 6 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 14 changeX = 6 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 14 changeX = 6 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 14 changeX = 6 changeY = 14 direction = 3 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 14 changeX = 6 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 13 changeX = 6 changeY = 13 direction = 3 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 13 changeX = 6 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 12 changeX = 6 changeY = 12 direction = 3 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 12 changeX = 6 changeY = 11 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 11 changeX = 6 changeY = 11 direction = 3 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 11 changeX = 6 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 10 changeX = 6 changeY = 10 direction = 3 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 10 changeX = 6 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 5 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 5 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 5 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 5 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 5 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 5 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 4 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 5 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 4 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 4 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 4 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 4 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 3 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 4 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 3 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 3 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 3 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 3 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 2 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 3 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 2 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 2 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 2 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 2 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 1 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 2 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 1 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 1 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 9 changeX = 6 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Dead
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
+  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
+  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
+  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 0 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 1 changeX = 2 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Nooooooooooooooooo
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 1 changeX = 2 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 1 changeX = 3 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 1 changeX = 3 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 1 changeX = 4 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 1 changeX = 4 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 1 changeX = 5 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 1 changeX = 5 changeY = 1 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 1 changeX = 5 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 2 changeX = 5 changeY = 2 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 2 changeX = 5 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 3 changeX = 5 changeY = 3 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 3 changeX = 5 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 4 changeX = 5 changeY = 4 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 4 changeX = 5 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 5 changeX = 5 changeY = 5 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 5 changeX = 5 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 6 changeX = 5 changeY = 6 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 6 changeX = 5 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 7 changeX = 5 changeY = 7 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 7 changeX = 5 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 8 changeX = 5 changeY = 8 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 4 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 10 changeX = 5 changeY = 10 direction = 4 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 10 changeX = 5 changeY = 11 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 11 changeX = 5 changeY = 11 direction = 4 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 11 changeX = 5 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 12 changeX = 5 changeY = 12 direction = 4 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 12 changeX = 5 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Dead
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
+  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
+  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
+  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 8 changeX = 5 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 1 changeX = 2 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 1 changeX = 3 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 1 changeX = 3 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 1 changeX = 4 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 1 changeX = 4 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 1 changeX = 5 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 1 changeX = 5 changeY = 1 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 1 changeX = 5 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 2 changeX = 5 changeY = 2 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 2 changeX = 5 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 3 changeX = 5 changeY = 3 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 3 changeX = 5 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 4 changeX = 5 changeY = 4 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 4 changeX = 5 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 5 changeX = 5 changeY = 5 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 5 changeX = 5 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 6 changeX = 5 changeY = 6 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 6 changeX = 5 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 7 changeX = 5 changeY = 7 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 7 changeX = 5 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 8 changeX = 5 changeY = 8 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 8 changeX = 5 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 10 changeX = 5 changeY = 10 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 10 changeX = 5 changeY = 11 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 11 changeX = 5 changeY = 11 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 11 changeX = 5 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 12 changeX = 5 changeY = 12 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 12 changeX = 5 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 5 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 5 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 6 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 5 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 5 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 5 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 5 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 4 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 5 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 4 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 4 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 4 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 4 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 3 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 4 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 3 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 3 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 3 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 3 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 2 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 3 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 2 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 2 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 2 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 2 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 2 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 1 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 1 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 1 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Dead
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
+  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
+  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
+  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 1 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 1 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 0 changeX = 8 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 0 changeX = 8 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 0 changeX = 8 changeY = 0 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 0 changeX = 8 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 1 changeX = 8 changeY = 1 direction = 1 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 1 changeX = 7 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 1 changeX = 7 changeY = 1 direction = 1 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 7 y = 1 changeX = 6 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 1 changeX = 6 changeY = 1 direction = 1 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 6 y = 1 changeX = 5 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 1 changeX = 5 changeY = 1 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 1 changeX = 5 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 2 changeX = 5 changeY = 2 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 2 changeX = 5 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 3 changeX = 5 changeY = 3 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 3 changeX = 5 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 4 changeX = 5 changeY = 4 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 4 changeX = 5 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 5 changeX = 5 changeY = 5 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 5 changeX = 5 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 6 changeX = 5 changeY = 6 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 6 changeX = 5 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 7 changeX = 5 changeY = 7 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 7 changeX = 5 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 8 changeX = 5 changeY = 8 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 8 changeX = 5 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 9 changeX = 5 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 10 changeX = 5 changeY = 10 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 10 changeX = 5 changeY = 11 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 11 changeX = 5 changeY = 11 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 11 changeX = 5 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 12 changeX = 5 changeY = 12 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 12 changeX = 5 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 1 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Attack
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 14 changeX = 5 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = True
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Dead
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at BoardController.UpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.OnUpdateUnit (Int32 x, Int32 y, Int32 changeX, Int32 changeY, Int32 type, Int32 direction, Single hp, Boolean isHide, Boolean isOwner, Int32 status) [0x00000] in <filename unknown>:0 
+  at DGTPacket.OnUpdateUnit (Int32 packed_id, .PacketReader pr) [0x00000] in <filename unknown>:0 
+  at PacketManager.PacketReceived (Int32 packet_id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketManager+InternalPacketListener.PacketReceived (.PacketConnection conn, Int32 packet_id, System.Byte[] content) [0x00000] in <filename unknown>:0 
+  at PacketConnection.EventPacketReceived (Int32 id, System.Byte[] data) [0x00000] in <filename unknown>:0 
+  at PacketConnection+DataTask.Run () [0x00000] in <filename unknown>:0 
+  at PacketConnection.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at PacketManager.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTProxyRemote.ProcessEvents () [0x00000] in <filename unknown>:0 
+  at DGTController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 1 changeX = 2 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 1 changeX = 3 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 1 changeX = 3 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 1 changeX = 4 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 1 changeX = 4 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 1 changeX = 5 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 1 changeX = 5 changeY = 1 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 1 changeX = 5 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 2 changeX = 5 changeY = 2 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 2 changeX = 5 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 3 changeX = 5 changeY = 3 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 3 y = 4 changeX = 4 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 3 changeX = 5 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -245,7 +2149,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 4 y = 4 changeX = 4 changeY = 4 direction = 2 hp = 6 isHide = False isOwner = False
+x = 5 y = 4 changeX = 5 changeY = 4 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -253,7 +2157,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 4 y = 4 changeX = 5 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 4 changeX = 5 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -261,7 +2165,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 5 y = 4 changeX = 5 changeY = 4 direction = 2 hp = 6 isHide = False isOwner = False
+x = 5 y = 5 changeX = 5 changeY = 5 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -269,7 +2173,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 5 y = 4 changeX = 6 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 5 changeX = 5 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -277,7 +2181,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 6 y = 4 changeX = 6 changeY = 4 direction = 2 hp = 6 isHide = False isOwner = False
+x = 5 y = 6 changeX = 5 changeY = 6 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -285,7 +2189,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 6 y = 4 changeX = 7 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 6 changeX = 5 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -293,7 +2197,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 7 y = 4 changeX = 7 changeY = 4 direction = 2 hp = 6 isHide = False isOwner = False
+x = 5 y = 7 changeX = 5 changeY = 7 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -301,7 +2205,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 7 y = 4 changeX = 8 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 7 changeX = 5 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -309,7 +2213,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 4 changeX = 8 changeY = 4 direction = 2 hp = 6 isHide = False isOwner = False
+x = 5 y = 8 changeX = 5 changeY = 8 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -317,7 +2221,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 4 changeX = 9 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 8 changeX = 5 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -325,7 +2229,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 4 changeX = 9 changeY = 4 direction = 2 hp = 6 isHide = False isOwner = False
+x = 5 y = 9 changeX = 5 changeY = 9 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -333,7 +2237,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 4 changeX = 10 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 9 changeX = 5 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -341,7 +2245,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 4 changeX = 10 changeY = 4 direction = 4 hp = 6 isHide = False isOwner = False
+x = 5 y = 10 changeX = 5 changeY = 10 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -349,7 +2253,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 4 changeX = 10 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 10 changeX = 5 changeY = 11 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -357,7 +2261,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 5 changeX = 10 changeY = 5 direction = 4 hp = 6 isHide = False isOwner = False
+x = 5 y = 11 changeX = 5 changeY = 11 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -365,7 +2269,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 5 changeX = 10 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 11 changeX = 5 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -373,7 +2277,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 6 changeX = 10 changeY = 6 direction = 4 hp = 6 isHide = False isOwner = False
+x = 5 y = 13 changeX = 5 changeY = 13 direction = 2 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -381,7 +2285,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 6 changeX = 10 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
+x = 5 y = 13 changeX = 6 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -389,7 +2293,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 7 changeX = 10 changeY = 7 direction = 4 hp = 6 isHide = False isOwner = False
+x = 6 y = 13 changeX = 6 changeY = 13 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -397,7 +2301,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 7 changeX = 10 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 13 changeX = 6 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -405,7 +2309,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 8 changeX = 10 changeY = 8 direction = 4 hp = 6 isHide = False isOwner = False
+x = 6 y = 14 changeX = 6 changeY = 14 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -413,7 +2317,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 8 changeX = 10 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
+x = 6 y = 14 changeX = 6 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -421,15 +2325,63 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 9 changeX = 10 changeY = 9 direction = 4 hp = 6 isHide = False isOwner = False
+x = 6 y = 15 changeX = 6 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+49 hp 50
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(1.0, 1.0, 1.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(49.0, 1.0, 1.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 12 changeX = 5 changeY = 12 direction = 1 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 5 y = 12 changeX = 4 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 12 changeX = 4 changeY = 12 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 12 changeX = 4 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 13 changeX = 4 changeY = 13 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
 Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 9 changeX = 10 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
+x = 4 y = 13 changeX = 4 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -437,15 +2389,47 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 10 changeX = 10 changeY = 10 direction = 3 hp = 6 isHide = False isOwner = False
+x = 4 y = 14 changeX = 4 changeY = 14 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 14 changeX = 4 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 4 y = 15 changeX = 4 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+48 hp 50
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(1.0, 1.0, 1.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(48.0, 1.0, 1.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 11 y = 0 changeX = 11 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 10 changeX = 10 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
+x = 11 y = 0 changeX = 11 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -453,7 +2437,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 9 changeX = 10 changeY = 9 direction = 1 hp = 6 isHide = False isOwner = False
+x = 11 y = 0 changeX = 11 changeY = 0 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -461,7 +2445,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 10 y = 9 changeX = 9 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
+x = 11 y = 0 changeX = 11 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -469,7 +2453,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 9 changeX = 9 changeY = 9 direction = 3 hp = 6 isHide = False isOwner = False
+x = 11 y = 1 changeX = 11 changeY = 1 direction = 1 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -477,7 +2461,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 9 changeX = 9 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
+x = 11 y = 1 changeX = 10 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -485,7 +2469,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 8 changeX = 9 changeY = 8 direction = 3 hp = 6 isHide = False isOwner = False
+x = 10 y = 1 changeX = 10 changeY = 1 direction = 1 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -493,7 +2477,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 8 changeX = 9 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
+x = 10 y = 1 changeX = 9 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -501,7 +2485,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 7 changeX = 9 changeY = 7 direction = 3 hp = 6 isHide = False isOwner = False
+x = 9 y = 1 changeX = 9 changeY = 1 direction = 1 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -509,7 +2493,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 7 changeX = 9 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
+x = 9 y = 1 changeX = 8 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -517,7 +2501,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 6 changeX = 9 changeY = 6 direction = 3 hp = 6 isHide = False isOwner = False
+x = 8 y = 1 changeX = 8 changeY = 1 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -525,7 +2509,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 6 changeX = 9 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+x = 8 y = 1 changeX = 8 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -533,7 +2517,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 5 changeX = 9 changeY = 5 direction = 3 hp = 6 isHide = False isOwner = False
+x = 8 y = 2 changeX = 8 changeY = 2 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -541,7 +2525,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 5 changeX = 9 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 8 y = 2 changeX = 8 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -549,7 +2533,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 4 changeX = 9 changeY = 4 direction = 1 hp = 6 isHide = False isOwner = False
+x = 8 y = 3 changeX = 8 changeY = 3 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -557,7 +2541,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 9 y = 4 changeX = 8 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 8 y = 3 changeX = 8 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -645,7 +2629,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 9 changeX = 8 changeY = 9 direction = 3 hp = 6 isHide = False isOwner = False
+x = 8 y = 9 changeX = 8 changeY = 9 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -653,7 +2637,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 9 changeX = 8 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
+x = 8 y = 9 changeX = 8 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -661,7 +2645,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 8 changeX = 8 changeY = 8 direction = 3 hp = 6 isHide = False isOwner = False
+x = 8 y = 10 changeX = 8 changeY = 10 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -669,7 +2653,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 8 changeX = 8 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
+x = 8 y = 10 changeX = 8 changeY = 11 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -677,7 +2661,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 7 changeX = 8 changeY = 7 direction = 3 hp = 6 isHide = False isOwner = False
+x = 8 y = 11 changeX = 8 changeY = 11 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -685,7 +2669,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 7 changeX = 8 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
+x = 8 y = 11 changeX = 8 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -693,7 +2677,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 6 changeX = 8 changeY = 6 direction = 3 hp = 6 isHide = False isOwner = False
+x = 8 y = 12 changeX = 8 changeY = 12 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -701,7 +2685,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 6 changeX = 8 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+x = 8 y = 12 changeX = 8 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -709,7 +2693,7 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 5 changeX = 8 changeY = 5 direction = 3 hp = 6 isHide = False isOwner = False
+x = 8 y = 13 changeX = 8 changeY = 13 direction = 4 hp = 6 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -717,14 +2701,340 @@ Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-x = 8 y = 5 changeX = 8 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+x = 8 y = 13 changeX = 8 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Normal
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 14 changeX = 8 changeY = 14 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 14 changeX = 8 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 8 y = 15 changeX = 8 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+47 hp 50
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(1.0, 1.0, 1.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(47.0, 1.0, 1.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Spawn
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 0 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 0 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 0 changeX = 2 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 1 changeX = 2 changeY = 1 direction = 2 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 2 y = 1 changeX = 3 changeY = 1 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 1 changeX = 3 changeY = 1 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 1 changeX = 3 changeY = 2 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 2 changeX = 3 changeY = 2 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 2 changeX = 3 changeY = 3 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 3 changeX = 3 changeY = 3 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 3 changeX = 3 changeY = 4 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 4 changeX = 3 changeY = 4 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 4 changeX = 3 changeY = 5 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 5 changeX = 3 changeY = 5 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 5 changeX = 3 changeY = 6 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 6 changeX = 3 changeY = 6 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 6 changeX = 3 changeY = 7 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 7 changeX = 3 changeY = 7 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 7 changeX = 3 changeY = 8 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 8 changeX = 3 changeY = 8 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 8 changeX = 3 changeY = 9 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 9 changeX = 3 changeY = 9 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 9 changeX = 3 changeY = 10 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 10 changeX = 3 changeY = 10 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 10 changeX = 3 changeY = 11 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 11 changeX = 3 changeY = 11 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 11 changeX = 3 changeY = 12 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 12 changeX = 3 changeY = 12 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 12 changeX = 3 changeY = 13 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 13 changeX = 3 changeY = 13 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 13 changeX = 3 changeY = 14 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 14 changeX = 3 changeY = 14 direction = 4 hp = 6 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 14 changeX = 3 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Normal
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+x = 3 y = 15 changeX = 3 changeY = 15 direction = 0 hp = 0 isHide = False isOwner = False
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+46 hp 50
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(1.0, 1.0, 1.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(46.0, 1.0, 1.0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.333825 ms
+
+Unloading 257 unused Assets to reduce memory usage. Loaded Objects now: 5465.
+Total: 1.543505 ms (FindLiveObjects: 0.298666 ms CreateObjectMapping: 0.062419 ms MarkObjects: 0.987653 ms  DeleteObjects: 0.194370 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 3354 -> priority: 1 
-  Thread -> id: 60a4 -> priority: 1 
+  Thread -> id: 5abc -> priority: 1 
+  Thread -> id: 31b4 -> priority: 1 

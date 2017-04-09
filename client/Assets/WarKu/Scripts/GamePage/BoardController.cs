@@ -8,6 +8,7 @@ public class BoardController : MonoBehaviour {
     private float Y_REAL_OFFSET = 3.5f;
     public GameObject[] tilePrototype,unitPrototype;
     GameObject[,] boardFloor, boardUnit;
+    public AudioClip deadSound, attackingSound;
     #endregion
 
     #region mono
@@ -98,11 +99,16 @@ public class BoardController : MonoBehaviour {
             else if (status == 1)
             {
                 Debug.Log("Attack");
-            }else if (status == 2)
+                GetComponent<AudioSource>().clip = attackingSound;
+                GetComponent<AudioSource>().Play();
+                boardUnit[x, y].GetComponent<DirectionController>().Attack();
+            }
+            else if (status == 2)
             {
-                Debug.Log("Dead");
-                Destroy(boardUnit[x, y]);
-                boardUnit[x, y] = null;
+                GetComponent<AudioSource>().clip = deadSound;
+                GetComponent<AudioSource>().Play();
+                boardUnit[x, y].GetComponent<DirectionController>().Dead();
+                StartCoroutine(DeadAnim(x, y));
                 if (!isOwner)
                 {
                     GameObject.FindObjectOfType<NotificationManager>().NotifyKillEnemy();
@@ -149,5 +155,12 @@ public class BoardController : MonoBehaviour {
         GameObject.FindObjectOfType<NotificationManager>().NotifyNewBuilding();
         Destroy(boardFloor[x, y]);
         PlaceTile(x, y, tilePrototype[type]);
+    }
+
+    IEnumerator DeadAnim(int x,int y)
+    {
+        yield return this.boardUnit[x, y].GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Dead") && this.boardUnit[x, y].GetComponentInChildren<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1;
+        Destroy(boardUnit[x, y]);
+        boardUnit[x, y] = null;
     }
 }
