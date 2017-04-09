@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:client/Assets/WarKu/Prefabs/Animation_Knight.meta
+guid: 377318dac238541beb6886384f2f27d5
+folderAsset: yes
+timeCreated: 1491670013
+=======
 guid: 7d95a03cb83ac524e9a76aeac6c0aecc
 folderAsset: yes
 timeCreated: 1491672117
+>>>>>>> 03fd3c3b9d5daf6429c35f4b6f453c1e67b25925:client/Assets/WarKu/Animations/GamePage/Sky.meta
 licenseType: Free
 DefaultImporter:
   userData: 
