@@ -14,8 +14,6 @@ public class DirectionController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (front)
-            Debug.Log(front.transform.position);
         if (isOwner)
         {
             if (direction == 0)
