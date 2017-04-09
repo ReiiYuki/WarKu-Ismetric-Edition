@@ -104,7 +104,8 @@ public class DGTPacket : PacketManager {
     {
         float hp = pr.ReadFloat();
         float opHp = pr.ReadFloat();
-        DGTProxyRemote.GetInstance().UpdateHP(hp, opHp);
+        int atk = pr.ReadUInt8();
+        DGTProxyRemote.GetInstance().UpdateHP(hp, opHp,atk);
     }
 
     public void UpdateTime(int packet_id, PacketReader pr)

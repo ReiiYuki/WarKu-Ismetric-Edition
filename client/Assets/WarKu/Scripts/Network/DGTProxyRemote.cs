@@ -128,8 +128,10 @@ public class DGTProxyRemote : MonoBehaviour {
         }
     }
 
-    public void UpdateHP(float hp,float opHp)
+    public void UpdateHP(float hp,float opHp,int atk)
     {
+        if (atk==0) GameObject.FindObjectOfType<NotificationManager>().NotifyEndLine();
+        else GameObject.FindObjectOfType<NotificationManager>().NotifyEnemyEndLine();
         if (GameObject.FindObjectOfType<HPUpdator>())
         {
             GameObject.FindObjectOfType<HPUpdator>().UpdateHP(hp, opHp);

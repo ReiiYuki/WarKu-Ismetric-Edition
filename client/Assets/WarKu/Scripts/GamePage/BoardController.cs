@@ -146,6 +146,7 @@ public class BoardController : MonoBehaviour {
 
     public void UpdateTile(int x,int y,int type)
     {
+        GameObject.FindObjectOfType<NotificationManager>().NotifyNewBuilding();
         Destroy(boardFloor[x, y]);
         PlaceTile(x, y, tilePrototype[type]);
     }
